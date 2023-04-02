@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('email')->nullable();
             $table->foreignUuid('department_id')->nullable();
             $table->string('phone_no')->nullable();
-            $table->boolean('kospera')->default(0);
+            $table->boolean('kospera')->default(0)->nullable();
             $table->string('extras')->nullable();
             $table->timestamps();
         });
