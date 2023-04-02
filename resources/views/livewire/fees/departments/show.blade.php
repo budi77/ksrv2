@@ -153,8 +153,8 @@
                                     <th  scope="col">Nama</th>
                                     <th  scope="col" class="text-center">No KP</th>
                                     <th  scope="col" class="text-center">Email</th>
-                                    <th  scope="col" class="text-center">Rekod Terkini</th>
-                                    {{-- <th class="sort" data-sort="avg_price" scope="col">Avg Price</th> --}}
+                                    <th  scope="col" class="text-center">Bayaran Terakhir</th>
+                                    <th  scope="col" class="text-center">Tahun Semasa</th>
                                     {{-- <th class="sort" data-sort="price" scope="col">Price</th> --}}
                                     <th  scope="col" class="text-end"></th>
                                 </tr>
@@ -191,6 +191,20 @@
                                             @endif
                                         @endif
 
+
+                                    </td>
+                                    <td class="text-center">
+
+                                        @if(@$row->latestPayment->year == $year)
+                                            <span
+                                                class="badge badge-soft-info text-uppercase"> Paid
+                                            </span>
+
+                                        @else
+                                            <span
+                                            class="badge badge-soft-danger text-uppercase"> Unpaid
+                                            </span>
+                                        @endif
 
                                     </td>
                                     <td class="text-end">

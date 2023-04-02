@@ -139,8 +139,8 @@
                                     <th  scope="col">Nama</th>
                                     <th  scope="col" class="text-center">No KP</th>
                                     <th  scope="col" class="text-center">Email</th>
-                                    <th  scope="col" class="text-center">Rekod Terkini</th>
-                                    
+                                    <th  scope="col" class="text-center">Bayaran Terakhir</th>
+                                    <th  scope="col" class="text-center">Tahun Semasa</th>
                                     
                                     <th  scope="col" class="text-end"></th>
                                 </tr>
@@ -182,6 +182,20 @@
                                             <?php endif; ?>
                                         <?php endif; ?>
 
+
+                                    </td>
+                                    <td class="text-center">
+
+                                        <?php if(@$row->latestPayment->year == $year): ?>
+                                            <span
+                                                class="badge badge-soft-info text-uppercase"> Paid
+                                            </span>
+
+                                        <?php else: ?>
+                                            <span
+                                            class="badge badge-soft-danger text-uppercase"> Unpaid
+                                            </span>
+                                        <?php endif; ?>
 
                                     </td>
                                     <td class="text-end">
