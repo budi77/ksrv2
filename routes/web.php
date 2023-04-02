@@ -30,9 +30,9 @@ Route::middleware('auth')->group(function () {
     Route::get('/tetapan', \App\Http\Livewire\Settings\Index::class)->name('settings');
     Route::get('/keahlian', \App\Http\Livewire\Members::class)->name('members');
     Route::get('/yuran/bahagian', \App\Http\Livewire\Fees\Departments::class)->name('fees.departments');
-    Route::get('/yuran/bahagian/{bahagian}', \App\Http\Livewire\Fees\Departments\Show::class)->name('fees.departments.show');
+    Route::get('/yuran/bahagian/{department}', \App\Http\Livewire\Fees\Departments\Show::class)->name('fees.departments.show');
     Route::get('/yuran/gabungan', \App\Http\Livewire\Fees\Federations::class)->name('fees.federations');
-    Route::get('/yuran/gabungan/{gabungan}', \App\Http\Livewire\Fees\Federations\Show::class)->name('fees.federations.show');
+    Route::get('/yuran/gabungan/{federation}', \App\Http\Livewire\Fees\Federations\Show::class)->name('fees.federations.show');
     
     // Route::get('/members', \App\Http\Livewire\Members\Index::class)->name('members');
     // Route::get('/payments', \App\Http\Livewire\Payments\Index::class)->name('payments');

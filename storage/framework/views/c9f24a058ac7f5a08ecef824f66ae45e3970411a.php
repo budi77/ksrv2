@@ -1,11 +1,11 @@
 <div>
-    {{-- @extends('layouts.master') --}}
-    @section('title') @lang('translation.starter')  @endsection
-    {{-- @section('content') --}}
-    @component('components.breadcrumb')
-    @slot('li_1') Pages @endslot
-    @slot('title') {{ $department_name }}  @endslot
-    @endcomponent
+    
+    <?php $__env->startSection('title'); ?> <?php echo app('translator')->get('translation.starter'); ?>  <?php $__env->stopSection(); ?>
+    
+    <?php $__env->startComponent('components.breadcrumb'); ?>
+    <?php $__env->slot('li_1'); ?> Pages <?php $__env->endSlot(); ?>
+    <?php $__env->slot('title'); ?> <?php echo e($department_name); ?>  <?php $__env->endSlot(); ?>
+    <?php echo $__env->renderComponent(); ?>
 
     <div class="row row-cols-xxl-4 row-cols-lg-4 row-cols-sm-2 row-cols-1">
         <div class="col">
@@ -72,27 +72,14 @@
             </div>
         </div>
         <!--end col-->
-        {{-- <div class="col">
-            <div class="card">
-                <div class="card-body d-flex">
-                    <div class="flex-grow-1">
-                        <h4>1585</h4>
-                        <h6 class="text-muted fs-14 mb-0">Upcoming ICO</h6>
-                    </div>
-                    <div class="flex-shrink-0 avatar-sm">
-                        <div class="avatar-title bg-soft-primary text-primary fs-22 rounded">
-                            <i class="ri-donut-chart-line"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> --}}
+        
         <!--end col-->
     </div>
 
 
-    {{-- @endsection --}}
-    @section('script')
-    <script src="{{ URL::asset('/assets/js/app.min.js') }}"></script>
-    @endsection
+    
+    <?php $__env->startSection('script'); ?>
+    <script src="<?php echo e(URL::asset('/assets/js/app.min.js')); ?>"></script>
+    <?php $__env->stopSection(); ?>
 </div>
+<?php /**PATH D:\laragon\www\ksrv2\resources\views/livewire/fees/departments/show.blade.php ENDPATH**/ ?>
