@@ -137,12 +137,12 @@
                                 <tr>
                                     <th scope="col">#</th>
                                     <th  scope="col">Nama</th>
-                                    <th  scope="col">No KP</th>
-                                    <th  scope="col">Email</th>
-                                    <th  scope="col">Rekod Terkini</th>
+                                    <th  scope="col" class="text-center">No KP</th>
+                                    <th  scope="col" class="text-center">Email</th>
+                                    <th  scope="col" class="text-center">Rekod Terkini</th>
                                     
                                     
-                                    <th  scope="col">Status</th>
+                                    <th  scope="col" class="text-end"></th>
                                 </tr>
                             </thead>
                             <!--end thead-->
@@ -158,13 +158,13 @@
                                         <?php echo e($row->name); ?>
 
                                     </td>
-                                    <td class="type">
+                                    <td class="text-center">
                                         <?php echo e($row->ic_no); ?>
 
                                     </td>
-                                    <td class="quantity_value"><?php echo e($row->email); ?></td>
+                                    <td class="text-center"><?php echo e($row->email); ?></td>
                                    
-                                    <td class="price">
+                                    <td class="text-center">
 
                                         
                                         <?php if(@$row->latestPayment->year <> ''): ?>
@@ -184,8 +184,8 @@
 
 
                                     </td>
-                                    <td class="status">
-                                        <ul class="list-inline hstack gap-2 mb-0">
+                                    <td class="text-end">
+                                        <ul class="list-inline hstack gap-2 mb-0 text-end">
                                             <li class="list-inline-item" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" aria-label="View">
                                                 <a href="javascript:void(0);" class="text-primary d-inline-block" >
                                                     <i class="ri-eye-fill fs-16"></i>
