@@ -19,7 +19,7 @@ class Departments extends Component
 
         // dd($currYear);
 
-        $results = Department::withCount(['members', 'totalpaidmemberforcurrentyear' => function ($query) {
+        $results = Department::withCount(['active_members', 'totalpaidmemberforcurrentyear' => function ($query) {
             $query->where('year',$this->currYear);
         }])
         ->whereExtra('Ibu Pejabat')

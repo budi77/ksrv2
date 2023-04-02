@@ -1,11 +1,11 @@
 <div>
-    {{-- @extends('layouts.master') --}}
-    @section('title') @lang('translation.starter')  @endsection
-    {{-- @section('content') --}}
-    @component('components.breadcrumb')
-    @slot('li_1') Pages @endslot
-    @slot('title') {{ $department_name }}  @endslot
-    @endcomponent
+    
+    <?php $__env->startSection('title'); ?> <?php echo app('translator')->get('translation.starter'); ?>  <?php $__env->stopSection(); ?>
+    
+    <?php $__env->startComponent('components.breadcrumb'); ?>
+    <?php $__env->slot('li_1'); ?> Pages <?php $__env->endSlot(); ?>
+    <?php $__env->slot('title'); ?> <?php echo e($department_name); ?>  <?php $__env->endSlot(); ?>
+    <?php echo $__env->renderComponent(); ?>
 
     <div class="row row-cols-xxl-4 row-cols-lg-4 row-cols-sm-2 row-cols-1">
         <div class="col">
@@ -72,21 +72,7 @@
             </div>
         </div>
         <!--end col-->
-        {{-- <div class="col">
-            <div class="card">
-                <div class="card-body d-flex">
-                    <div class="flex-grow-1">
-                        <h4>1585</h4>
-                        <h6 class="text-muted fs-14 mb-0">Upcoming ICO</h6>
-                    </div>
-                    <div class="flex-shrink-0 avatar-sm">
-                        <div class="avatar-title bg-soft-primary text-primary fs-22 rounded">
-                            <i class="ri-donut-chart-line"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> --}}
+        
         <!--end col-->
     </div>
 
@@ -154,42 +140,47 @@
                                     <th  scope="col">No KP</th>
                                     <th  scope="col">Email</th>
                                     <th  scope="col">Rekod Terkini</th>
-                                    {{-- <th class="sort" data-sort="avg_price" scope="col">Avg Price</th> --}}
-                                    {{-- <th class="sort" data-sort="price" scope="col">Price</th> --}}
+                                    
+                                    
                                     <th  scope="col">Status</th>
                                 </tr>
                             </thead>
                             <!--end thead-->
                             <tbody class="list form-check-all">
-                                @forelse($results as $row)
+                                <?php $__empty_1 = true; $__currentLoopData = $results; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $row): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); $__empty_1 = false; ?>
                                 <tr>
                                     <td class="order_date">
-                                        {{ $loop->iteration }}
+                                        <?php echo e($loop->iteration); ?>
+
                                     </td>
                                     
                                     <td class="name">
-                                        {{ $row->name }}
+                                        <?php echo e($row->name); ?>
+
                                     </td>
                                     <td class="type">
-                                        {{ $row->ic_no }}
+                                        <?php echo e($row->ic_no); ?>
+
                                     </td>
-                                    <td class="quantity_value">{{ $row->email }}</td>
+                                    <td class="quantity_value"><?php echo e($row->email); ?></td>
                                    
                                     <td class="price">
 
-                                        {{-- {{ @$row->latestPayment->year }} --}}
-                                        @if(@$row->latestPayment->year <> '')
-                                            @if(@$row->latestPayment->year == $year)
+                                        
+                                        <?php if(@$row->latestPayment->year <> ''): ?>
+                                            <?php if(@$row->latestPayment->year == $year): ?>
                                             <span
-                                                class="badge text-bg-success text-uppercase"> {{ @$row->latestPayment->year }}
+                                                class="badge text-bg-success text-uppercase"> <?php echo e(@$row->latestPayment->year); ?>
+
                                             </span>
 
-                                            @else
+                                            <?php else: ?>
                                             <span
-                                            class="badge text-bg-warning text-uppercase"> {{ @$row->latestPayment->year }}
+                                            class="badge text-bg-warning text-uppercase"> <?php echo e(@$row->latestPayment->year); ?>
+
                                             </span>
-                                            @endif
-                                        @endif
+                                            <?php endif; ?>
+                                        <?php endif; ?>
 
 
                                     </td>
@@ -201,22 +192,18 @@
                                                 </a>
                                             </li>
                                             <li class="list-inline-item edit" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" aria-label="Edit">
-                                                <a href="javascript:void(0);"  class="text-success d-inline-block edit-item-btn" wire:click="edit('{{ $row->id }}')" >
+                                                <a href="javascript:void(0);"  class="text-success d-inline-block edit-item-btn" wire:click="edit('<?php echo e($row->id); ?>')" >
                                                     <i class="ri-pencil-fill fs-16"></i>
                                                 </a>
                                             </li>
-                                            {{-- <li class="list-inline-item" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" aria-label="Remove">
-                                                <a class="text-danger d-inline-block remove-item-btn" data-bs-toggle="modal" href="#deleteOrder">
-                                                    <i class="ri-delete-bin-5-fill fs-16"></i>
-                                                </a>
-                                            </li> --}}
+                                            
                                         </ul>
-                                        {{-- <a href="javascript:void(0);" class="text=secondary" wire:click="edit('{{ $row->id }}')" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-original-title="Ubah Rekod"><i class="bx bx-edit bx-sm text-secondary"></i></a> --}}
+                                        
                                        
                                     </td>
                                 </tr>
 
-                                @empty
+                                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); if ($__empty_1): ?>
                                 
                                 <div class="noresult" style="display: none">
                                     <div class="text-center">
@@ -228,7 +215,7 @@
                                     </div>
                                 </div>
 
-                                @endforelse
+                                <?php endif; ?>
 
                                 <!--end tr-->
                                 
@@ -238,17 +225,7 @@
                         <!--end table-->
                         
                     </div>
-                    {{-- <div class="d-flex justify-content-end mt-3">
-                        <div class="pagination-wrap hstack gap-2">
-                            <a class="page-item pagination-prev disabled" href="#">
-                                Previous
-                            </a>
-                            <ul class="pagination listjs-pagination mb-0"></ul>
-                            <a class="page-item pagination-next" href="#">
-                                Next
-                            </a>
-                        </div>
-                    </div> --}}
+                    
                 </div>
             </div>
             <!--end card-->
@@ -260,7 +237,7 @@
         <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="modalTitleId">Maklumat Pembayaran Tahun {{ $year }}</h5>
+                    <h5 class="modal-title" id="modalTitleId">Maklumat Pembayaran Tahun <?php echo e($year); ?></h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -269,14 +246,10 @@
                         <div class="col-lg-12 col-sm-12">
                             <div class="p-2 border border-dashed rounded">
                                 <div class="d-flex align-items-center">
-                                    {{-- <div class="avatar-sm me-2">
-                                        <div class="avatar-title rounded bg-transparent text-info fs-24">
-                                            <i class="ri-money-dollar-circle-fill"></i>
-                                        </div>
-                                    </div> --}}
+                                    
                                     <div class="flex-grow-1">
-                                        <p class="fw-bold font-size-15 mb-0 text-center">{{ @$member->name }}</p>
-                                        <p class="fw-bold text-muted mb-0 text-center">{{ @$member->bahagian->name}}</p>
+                                        <p class="fw-bold font-size-15 mb-0 text-center"><?php echo e(@$member->name); ?></p>
+                                        <p class="fw-bold text-muted mb-0 text-center"><?php echo e(@$member->bahagian->name); ?></p>
                                     </div>
                                 </div>
                             </div>
@@ -287,13 +260,10 @@
 
                     <div class="row">
                       
-                        {{-- <div class="col-12">
-                            <p class="fw-bold font-size-15 mb-0 text-center">{{ @$member->name }}</p>
-                            <p class="fw-bold text-muted mb-0 text-center">{{ @$member->bahagian->name}}</p>
-                        </div> --}}
+                        
                     </div>
 
-                    {{-- <hr> --}}
+                    
 
                     <div class="row pt-2">
 
@@ -302,13 +272,27 @@
                                 <label for="" class="form-label">Jumlah</label>
                                 <input type="text"
                                   class="form-control" name="" id="" aria-describedby="helpId" placeholder="" wire:model.defer="value">
-                                {{-- <small id="helpId" class="form-text text-muted">Help text</small> --}}
+                                
                               </div>
                         </div>
                         <div class="col-6">
                             <div class="mb-3">
                                 <label for="" class="form-label">Tarikh Pembayaran</label>
-                                <x-date-picker id="date" wire:model="payment_date" autocomplete="off" value="" />
+                                <?php if (isset($component)) { $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4 = $component; } ?>
+<?php $component = $__env->getContainer()->make(Illuminate\View\AnonymousComponent::class, ['view' => 'components.date-picker','data' => ['id' => 'date','wire:model' => 'payment_date','autocomplete' => 'off','value' => '']] + (isset($attributes) ? (array) $attributes->getIterator() : [])); ?>
+<?php $component->withName('date-picker'); ?>
+<?php if ($component->shouldRender()): ?>
+<?php $__env->startComponent($component->resolveView(), $component->data()); ?>
+<?php if (isset($attributes) && $constructor = (new ReflectionClass(Illuminate\View\AnonymousComponent::class))->getConstructor()): ?>
+<?php $attributes = $attributes->except(collect($constructor->getParameters())->map->getName()->all()); ?>
+<?php endif; ?>
+<?php $component->withAttributes(['id' => 'date','wire:model' => 'payment_date','autocomplete' => 'off','value' => '']); ?>
+<?php echo $__env->renderComponent(); ?>
+<?php endif; ?>
+<?php if (isset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4)): ?>
+<?php $component = $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4; ?>
+<?php unset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4); ?>
+<?php endif; ?>
                 
                             </div> 
                            
@@ -317,9 +301,7 @@
                     </div>
 
                     <div class="row">
-                        {{-- <div class="col-6">
-                           
-                        </div> --}}
+                        
                         <div class="col-12">
                             <p class="mb-1"><label for="" class="form-label">Cara Pembayaran</label></p>
 
@@ -349,9 +331,9 @@
     </div>
 
 
-    {{-- @endsection --}}
-    @section('script')
-    {{-- <script src="{{ URL::asset('/assets/js/app.min.js') }}"></script> --}}
+    
+    <?php $__env->startSection('script'); ?>
+    
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
@@ -367,5 +349,6 @@
         });
     </script>
 
-    @endsection
+    <?php $__env->stopSection(); ?>
 </div>
+<?php /**PATH C:\laragon\www\ksrv2\resources\views/livewire/fees/departments/show.blade.php ENDPATH**/ ?>

@@ -5,6 +5,8 @@
 <script src="<?php echo e(URL::asset('assets/js/pages/plugins/lord-icon-2.1.0.min.js')); ?>"></script>
 <script src="<?php echo e(URL::asset('assets/js/plugins.min.js')); ?>"></script>
 <script src="<?php echo e(URL::asset('assets/libs/sweetalert2/sweetalert2.min.js')); ?>"></script>
+<script src="//unpkg.com/alpinejs" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 <script src="<?php echo e(URL::asset('/assets/js/app.min.js')); ?>"></script>
 
 <?php echo $__env->yieldContent('script'); ?>

@@ -28,9 +28,8 @@
                                     </h5>
                                     <div class="d-flex align-items-center">
                                         <div class="flex-shrink-0">
+                                            <i class="ri-space-ship-line display-6 text-muted"></i>
                                             
-                                            <lord-icon src="https://cdn.lordicon.com/dxjqoygy.json" trigger="loop"
-                                            colors="primary:#405189,secondary:#0ab39c" style="width:55px;height:55px"></lord-icon>
                                         </div>
                                         <div class="flex-grow-1 ms-3">
                                             <h2 class="mb-0"><span class="counter-value" data-target="<?php echo e($jumlah_ahli); ?>"><?php echo e($jumlah_ahli); ?></span>
@@ -45,9 +44,8 @@
                                     </h5>
                                     <div class="d-flex align-items-center">
                                         <div class="flex-shrink-0">
+                                            <i class="ri-exchange-dollar-line display-6 text-muted"></i>
                                             
-                                            <lord-icon src="https://cdn.lordicon.com/rjzlnunf.json" trigger="loop"
-                                            colors="primary:#405189,secondary:#0ab39c" style="width:55px;height:55px"></lord-icon>
                                         </div>
                                         <div class="flex-grow-1 ms-3">
                                             <h2 class="mb-0"><span class="counter-value"
@@ -62,9 +60,8 @@
                                     </h5>
                                     <div class="d-flex align-items-center">
                                         <div class="flex-shrink-0">
+                                            <i class="ri-pulse-line display-6 text-muted"></i>
                                             
-                                            <lord-icon src="https://cdn.lordicon.com/rivoakkk.json" trigger="loop"
-                                            colors="primary:#405189,secondary:#0ab39c" style="width:55px;height:55px"></lord-icon>
                                         </div>
                                         <div class="flex-grow-1 ms-3">
                                             <h2 class="mb-0"><span class="counter-value"
@@ -79,9 +76,8 @@
                                     </h5>
                                     <div class="d-flex align-items-center">
                                         <div class="flex-shrink-0">
+                                            <i class="ri-trophy-line display-6 text-muted"></i>
                                             
-                                            <lord-icon src="https://cdn.lordicon.com/ajyyzcwv.json" trigger="loop"
-                                            colors="primary:#405189,secondary:#0ab39c" style="width:55px;height:55px"></lord-icon>
                                         </div>
                                         <div class="flex-grow-1 ms-3">
                                             <h2 class="mb-0"><span class="counter-value"

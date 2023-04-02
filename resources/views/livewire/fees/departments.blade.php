@@ -47,7 +47,7 @@
                                         
                                         <td><a href="#" class="fw-semibold">{{ $loop->iteration }}</a></td>
                                         <td>{{ $row->name }}</td>
-                                        <td class="text-center">{{ $row->members_count }}</td>
+                                        <td class="text-center">{{ $row->active_members_count }}</td>
                                         {{-- <td>$24.05</td> --}}
                                         <td class="text-center"><span class="badge bg-success">{{ $row->totalpaidmemberforcurrentyear_count }}</span></td>
                                         <td>

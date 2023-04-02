@@ -5,9 +5,14 @@ namespace App\Http\Livewire\Fees\Departments;
 use Livewire\Component;
 use App\Models\Department;
 use Carbon\Carbon;
+use App\Models\Member;
+use App\Models\Fee;
+use Auth;
 
 class Show extends Component
 {
+    public $department_id, $department_name, $member_total, $paid, $unpaid, $year = [], $sum;
+    public $member_id, $payment_date, $payment_year, $value = '24', $mode, $member, $search1, $search2;
 
     public function mount(Department $department)
     {
@@ -23,6 +28,43 @@ class Show extends Component
 
     public function render()
     {
-        return view('livewire.fees.departments.show')->extends('layouts.master');
+
+        $results = Member::where('department_id', $this->department_id)->whereActive('1')->orderby('name')->get();
+
+        // dd($results);
+
+        return view('livewire.fees.departments.show', compact('results'))->extends('layouts.master');
     }
+
+    public function edit($id)
+    {
+        $this->member = Member::find($id);
+
+        $this->dispatchBrowserEvent('show-edit');
+
+
+    }
+
+    public function store()
+    {
+        
+        $store = Fee::create([
+            'member_id' => $this->member->id,
+            'department_id' => $this->department_id,
+            'year' => $this->year,
+            'value' => $this->value,
+            'mode' => $this->mode,
+            'payment_date' => $this->payment_date,
+            'user_id' => Auth::id(),
+
+        ]);
+
+        $this->reset(['member_id','member','value','payment_date','mode']);
+
+        $this->dispatchBrowserEvent('hide-edit');
+
+
+
+    }
+
 }

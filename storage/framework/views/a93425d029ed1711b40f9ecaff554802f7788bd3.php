@@ -27,7 +27,7 @@
                                         <th scope="col" class="text-center">Jumlah Ahli</th>
                                         <th scope="col" class="text-center"># Ahli Selesai Bayar Yuran Tahun Semasa</th>
                                         
-                                        <th scope="col">Action</th>   
+                                        <th scope="col"></th>   
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -36,11 +36,12 @@
                                         
                                         <td><a href="#" class="fw-semibold"><?php echo e($loop->iteration); ?></a></td>
                                         <td><?php echo e($row->name); ?></td>
-                                        <td class="text-center"><?php echo e($row->members_count); ?></td>
+                                        <td class="text-center"><?php echo e($row->active_members_count); ?></td>
                                         
-                                        <td class="text-center"><span class="badge bg-success">Paid</span></td>
+                                        <td class="text-center"><span class="badge bg-success"><?php echo e($row->totalpaidmemberforcurrentyear_count); ?></span></td>
                                         <td>
-                                            <button type="button" class="btn btn-sm btn-light">Details</button>
+                                            <a class="btn btn-primary btn-sm" href="<?php echo e(route('fees.departments.show' , $row->id)); ?>" role="button">Pilih</a>
+                                            
                                         </td>
                                     </tr>
                                     <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
