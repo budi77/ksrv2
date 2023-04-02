@@ -89,7 +89,7 @@
                                             <button class="btn btn-success w-100" type="submit">Sign In</button>
                                         </div>
 
-                                        <div class="mt-4 text-center">
+                                        {{-- <div class="mt-4 text-center">
                                             <div class="signin-other-title">
                                                 <h5 class="fs-13 mb-4 title">Sign In with</h5>
                                             </div>
@@ -107,7 +107,7 @@
                                                     class="btn btn-info btn-icon waves-effect waves-light"><i
                                                         class="ri-twitter-fill fs-16"></i></button>
                                             </div>
-                                        </div>
+                                        </div> --}}
                                     </form>
                                 </div>
                             </div>
@@ -115,10 +115,10 @@
                         </div>
                         <!-- end card -->
 
-                        <div class="mt-4 text-center">
+                        {{-- <div class="mt-4 text-center">
                             <p class="mb-0">Don't have an account ? <a href="register"
                                     class="fw-semibold text-primary text-decoration-underline"> Signup </a> </p>
-                        </div>
+                        </div> --}}
 
                     </div>
                 </div>
