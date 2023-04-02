@@ -38,7 +38,7 @@
                                         <th scope="col" class="text-center">Jumlah Ahli</th>
                                         <th scope="col" class="text-center"># Ahli Selesai Bayar Yuran Tahun Semasa</th>
                                         {{-- <th scope="col">Status</th> --}}
-                                        <th scope="col">Action</th>   
+                                        <th scope="col"></th>   
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -49,9 +49,10 @@
                                         <td>{{ $row->name }}</td>
                                         <td class="text-center">{{ $row->members_count }}</td>
                                         {{-- <td>$24.05</td> --}}
-                                        <td class="text-center"><span class="badge bg-success">Paid</span></td>
+                                        <td class="text-center"><span class="badge bg-success">{{ $row->totalpaidmemberforcurrentyear_count }}</span></td>
                                         <td>
-                                            <button type="button" class="btn btn-sm btn-light">Details</button>
+                                            <a class="btn btn-primary btn-sm" href="{{ route('fees.departments.show' , $row->id) }}" role="button">Pilih</a>
+                                            {{-- <button type="button" class="btn btn-sm btn-light">Details</button> --}}
                                         </td>
                                     </tr>
                                     @endforeach

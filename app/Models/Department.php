@@ -37,4 +37,10 @@ class Department extends Model
         return $this->hasMany(Member::class, 'department_id');
 
     }
+
+    public function totalpaidmemberforcurrentyear()
+    {
+        return $this->hasMany(Fee::class, 'department_id');
+
+    }
 }
