@@ -24,7 +24,7 @@ class MemberFactory extends Factory
                 'name' => $this->faker->name(),
                 'email' => $this->faker->userName().'@sprm.gov.my',
                 'ic_no' =>  $this->faker->numerify('############'),
-                'department_id' => '1700b838-0ec4-4eda-acba-75dcbbc3e762',
+                'department_id' => 'b33406fe-5ed6-4266-86a9-1aeb7045af7a',
             
         ];
     }

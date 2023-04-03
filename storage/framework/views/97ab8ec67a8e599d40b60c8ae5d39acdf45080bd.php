@@ -1,18 +1,14 @@
 <div>
    
-@section('title') Pengguna Sistem @endsection
+<?php $__env->startSection('title'); ?> Pengguna Sistem <?php $__env->stopSection(); ?>
 
-{{-- @component('components.breadcrumb')
-@slot('li_1') Pages @endslot
-@slot('title') Pengguna Sistem  @endslot
-@endcomponent --}}
+
 <div class="d-flex align-items-center">
     <h5 class="card-title mb-0 flex-grow-1"></h5>
     <div class="flex-shrink-0">
         <button class="btn btn-primary add-btn" wire:click="showModal"><i
                 class="ri-add-line align-bottom me-1"></i> Tambah</button>
-        {{-- <button class="btn btn-soft-danger" onClick="deleteMultiple()"><i
-                class="ri-delete-bin-2-line"></i></button> --}}
+        
     </div>
 </div>
 <br>
@@ -29,26 +25,26 @@
         </tr>
     </thead>
     <tbody>
-        @foreach($users as $user)
+        <?php $__currentLoopData = $users; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $user): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
         <tr>
-            <td>{{ $loop->iteration }}</td>
-            <td>{{ @$user->name }}</td>
-            <td>{{ @$user->email }}</td>
-            <td>{{ @$user->bahagian->name }}</td>
+            <td><?php echo e($loop->iteration); ?></td>
+            <td><?php echo e(@$user->name); ?></td>
+            <td><?php echo e(@$user->email); ?></td>
+            <td><?php echo e(@$user->bahagian->name); ?></td>
             <td>
-                <span class="badge text-bg-{{ $user->role == 'Admin' ? 'danger' : 'warning' }}">{{ @$user->role }}</span>
+                <span class="badge text-bg-<?php echo e($user->role == 'Admin' ? 'danger' : 'warning'); ?>"><?php echo e(@$user->role); ?></span>
                 
             </td>
             
             <td class="text-end">
                 <ul class="list-inline hstack gap-2 mb-0">
                     <li class="list-inline-item edit" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" aria-label="Edit">
-                        <a href="javascript:void(0);"  class="text-muted d-inline-block edit-item-btn" wire:click="edit('{{ $user->id }}')">
+                        <a href="javascript:void(0);"  class="text-muted d-inline-block edit-item-btn" wire:click="edit('<?php echo e($user->id); ?>')">
                             <i class=" ri-edit-2-line fs-16"></i>
                         </a>
                     </li>
                     <li class="list-inline-item" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" aria-label="View">
-                        <a href="javascript:void(0);" class="text-muted d-inline-block"  wire:click="editpwd('{{ $user->id }}')">
+                        <a href="javascript:void(0);" class="text-muted d-inline-block"  wire:click="editpwd('<?php echo e($user->id); ?>')">
                             <i class="ri-key-fill fs-16"></i>
                         </a>
                     </li>
@@ -61,7 +57,7 @@
                 </ul>
             </td>
         </tr>
-        @endforeach
+        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
        
     </tbody>
 </table>
@@ -92,9 +88,9 @@
                     <label for="" class="form-label">Bahagian</label>
                     <select class="form-select"  wire:model.defer="department">
                         <option selected>-- Bahagian --</option>
-                        @foreach($departments as $data)
-                        <option value="{{ $data->id }}">{{ $data->name }}</option>
-                        @endforeach
+                        <?php $__currentLoopData = $departments; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $data): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                        <option value="<?php echo e($data->id); ?>"><?php echo e($data->name); ?></option>
+                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                         
                     </select>
                 </div>
@@ -146,18 +142,14 @@
                     <label for="" class="form-label">Bahagian</label>
                     <select class="form-select"  wire:model.defer="department">
                         <option selected>-- Bahagian --</option>
-                        @foreach($departments as $data)
-                        <option value="{{ $data->id }}">{{ $data->name }}</option>
-                        @endforeach
+                        <?php $__currentLoopData = $departments; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $data): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                        <option value="<?php echo e($data->id); ?>"><?php echo e($data->name); ?></option>
+                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                         
                     </select>
                 </div>
 
-                {{-- <div class="mb-3">
-                  <label for="" class="form-label">Password</label>
-                  <input type="text"
-                    class="form-control" name="" id="" aria-describedby="helpId" placeholder="" wire:model.defer="pwd">
-                </div> --}}
+                
 
                 <div class="mb-3">
                     <label for="" class="form-label">Role</label>
@@ -186,7 +178,7 @@
     <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-sm" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="modalTitleId">{{ $name }}</h5>
+                <h5 class="modal-title" id="modalTitleId"><?php echo e($name); ?></h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
@@ -214,8 +206,8 @@
 
 
 
-@section('script')
-<script src="{{ URL::asset('/assets/js/app.min.js') }}"></script>
+<?php $__env->startSection('script'); ?>
+<script src="<?php echo e(URL::asset('/assets/js/app.min.js')); ?>"></script>
 <script>
     document.addEventListener('DOMContentLoaded', () => {
         var modal = new bootstrap.Modal('#showModal');
@@ -244,5 +236,6 @@
 
     });
 </script>
-@endsection
+<?php $__env->stopSection(); ?>
 </div>
+<?php /**PATH C:\laragon\www\ksrv2\resources\views/livewire/settings/users.blade.php ENDPATH**/ ?>

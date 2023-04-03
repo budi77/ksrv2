@@ -1,19 +1,19 @@
 <div>
-    @section('title')
+    <?php $__env->startSection('title'); ?>
     KEAHLIAN
-    @endsection
-    @section('css')
-        <link href="{{ URL::asset('assets/libs/sweetalert2/sweetalert2.min.css') }}" rel="stylesheet" type="text/css" />
-    @endsection
-    {{-- @section('content') --}}
-        @component('components.breadcrumb')
-            @slot('li_1')
+    <?php $__env->stopSection(); ?>
+    <?php $__env->startSection('css'); ?>
+        <link href="<?php echo e(URL::asset('assets/libs/sweetalert2/sweetalert2.min.css')); ?>" rel="stylesheet" type="text/css" />
+    <?php $__env->stopSection(); ?>
+    
+        <?php $__env->startComponent('components.breadcrumb'); ?>
+            <?php $__env->slot('li_1'); ?>
                 Dashboard
-            @endslot
-            @slot('title')
+            <?php $__env->endSlot(); ?>
+            <?php $__env->slot('title'); ?>
                 Keahlian
-            @endslot
-        @endcomponent
+            <?php $__env->endSlot(); ?>
+        <?php echo $__env->renderComponent(); ?>
 
       
         <div class="row">
@@ -29,11 +29,10 @@
                                     <div class="d-flex align-items-center">
                                         <div class="flex-shrink-0">
                                             <i class="ri-space-ship-line display-6 text-muted"></i>
-                                            {{-- <lord-icon src="https://cdn.lordicon.com/dxjqoygy.json" trigger="loop"
-                                            colors="primary:#405189,secondary:#0ab39c" style="width:55px;height:55px"></lord-icon> --}}
+                                            
                                         </div>
                                         <div class="flex-grow-1 ms-3">
-                                            <h2 class="mb-0"><span class="counter-value" data-target="{{ $jumlah_ahli }}">{{ $jumlah_ahli }}</span>
+                                            <h2 class="mb-0"><span class="counter-value" data-target="<?php echo e($jumlah_ahli); ?>"><?php echo e($jumlah_ahli); ?></span>
                                             </h2>
                                         </div>
                                     </div>
@@ -46,12 +45,11 @@
                                     <div class="d-flex align-items-center">
                                         <div class="flex-shrink-0">
                                             <i class="ri-exchange-dollar-line display-6 text-muted"></i>
-                                            {{-- <lord-icon src="https://cdn.lordicon.com/rjzlnunf.json" trigger="loop"
-                                            colors="primary:#405189,secondary:#0ab39c" style="width:55px;height:55px"></lord-icon> --}}
+                                            
                                         </div>
                                         <div class="flex-grow-1 ms-3">
                                             <h2 class="mb-0"><span class="counter-value"
-                                                    data-target="{{ $aktif }}">{{ $aktif }}</span></h2>
+                                                    data-target="<?php echo e($aktif); ?>"><?php echo e($aktif); ?></span></h2>
                                         </div>
                                     </div>
                                 </div>
@@ -63,12 +61,11 @@
                                     <div class="d-flex align-items-center">
                                         <div class="flex-shrink-0">
                                             <i class="ri-pulse-line display-6 text-muted"></i>
-                                            {{-- <lord-icon src="https://cdn.lordicon.com/rivoakkk.json" trigger="loop"
-                                            colors="primary:#405189,secondary:#0ab39c" style="width:55px;height:55px"></lord-icon> --}}
+                                            
                                         </div>
                                         <div class="flex-grow-1 ms-3">
                                             <h2 class="mb-0"><span class="counter-value"
-                                                    data-target="{{ $non_aktif }}">{{ $non_aktif }}</span></h2>
+                                                    data-target="<?php echo e($non_aktif); ?>"><?php echo e($non_aktif); ?></span></h2>
                                         </div>
                                     </div>
                                 </div>
@@ -80,32 +77,16 @@
                                     <div class="d-flex align-items-center">
                                         <div class="flex-shrink-0">
                                             <i class="ri-trophy-line display-6 text-muted"></i>
-                                            {{-- <lord-icon src="https://cdn.lordicon.com/ajyyzcwv.json" trigger="loop"
-                                            colors="primary:#405189,secondary:#0ab39c" style="width:55px;height:55px"></lord-icon> --}}
+                                            
                                         </div>
                                         <div class="flex-grow-1 ms-3">
                                             <h2 class="mb-0"><span class="counter-value"
-                                                    data-target="{{ $kospera }}">{{ $kospera }}</span></h2>
+                                                    data-target="<?php echo e($kospera); ?>"><?php echo e($kospera); ?></span></h2>
                                         </div>
                                     </div>
                                 </div>
                             </div><!-- end col -->
-                            {{-- <div class="col col-lg">
-                                <div class="mt-3 mt-lg-0 py-4 px-3">
-                                    <h5 class="text-muted text-uppercase fs-13">Annual Deals <i
-                                            class="ri-arrow-down-circle-line text-danger fs-18 float-end align-middle"></i>
-                                    </h5>
-                                    <div class="d-flex align-items-center">
-                                        <div class="flex-shrink-0">
-                                            <i class="ri-service-line display-6 text-muted"></i>
-                                        </div>
-                                        <div class="flex-grow-1 ms-3">
-                                            <h2 class="mb-0"><span class="counter-value"
-                                                    data-target="2659">0</span></h2>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div><!-- end col --> --}}
+                            
                         </div><!-- end row -->
                     </div><!-- end card body -->
                 </div><!-- end card -->
@@ -123,8 +104,7 @@
                             <div class="flex-shrink-0">
                                 <button class="btn btn-primary add-btn" wire:click="showModal"><i
                                         class="ri-add-line align-bottom me-1"></i> Tambah Ahli</button>
-                                {{-- <button class="btn btn-soft-danger" onClick="deleteMultiple()"><i
-                                        class="ri-delete-bin-2-line"></i></button> --}}
+                                
                             </div>
                         </div>
                     </div>
@@ -140,20 +120,16 @@
                                 </div>
                                 <!--end col-->
 
-                                {{-- <div class="col-xxl-3 col-sm-4">
-                                    <input type="text" class="form-control bg-light border-light" id="demo-datepicker"
-                                        data-provider="flatpickr" data-date-format="d M, Y" data-range-date="true"
-                                        placeholder="Select date range">
-                                </div> --}}
+                                
                                 <!--end col-->
 
                                 <div class="col-xxl-5 col-sm-5">
                                     <div class="input-light">
                                         <select class="form-select" wire:model="filter_department">
                                             <option selected value="">Pilih Bahagian</option>
-                                            @foreach($departments as $department)
-                                            <option value="{{ $department->id }}">{{ $department->name }}</option>
-                                            @endforeach
+                                            <?php $__currentLoopData = $departments; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $department): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                            <option value="<?php echo e($department->id); ?>"><?php echo e($department->name); ?></option>
+                                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                                             
                                         </select>
                                     </div>
@@ -183,12 +159,7 @@
                                     </div>
                                 </div>
                                 <!--end col-->
-                                {{-- <div class="col-xxl-1 col-sm-4">
-                                    <button type="button" class="btn btn-info w-100" onclick="SearchData();"> <i
-                                            class="ri-equalizer-fill me-1 align-bottom"></i>
-                                        Filters
-                                    </button>
-                                </div> --}}
+                                
                                 <!--end col-->
                             </div>
                             <!--end row-->
@@ -200,11 +171,7 @@
                             <table class="table align-middle table-nowrap mb-0" id="tasksTable">
                                 <thead class="table-light text-muted">
                                     <tr>
-                                        {{-- <th scope="col" style="width: 40px;">
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" id="checkAll" value="option">
-                                            </div>
-                                        </th> --}}
+                                        
                                         <th>#</th>
                                         <th width="20%">Nama</th>
                                         <th>No Kad Pengenalan</th>
@@ -216,113 +183,68 @@
                                     </tr>
                                 </thead>
                                 <tbody class="">
-                                    @foreach($results as $result)
+                                    <?php $__currentLoopData = $results; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $result): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                     <tr>
                                         <th scope="row">
                                             
 
-                                            {{ $loop->iteration }}
+                                            <?php echo e($loop->iteration); ?>
+
                                         </th>
                                         <td class="">
                                            
-                                                {{  $result->name }}
+                                                <?php echo e($result->name); ?>
+
                                         </td>
                                         <td class="project_name"> 
-                                            {{  $result->ic_no }}                                               
+                                            <?php echo e($result->ic_no); ?>                                               
                                         </td>
                                         <td>
-                                            {{ $result->email }}
-                                            {{-- <div class="d-flex">
-                                                <div class="flex-grow-1 tasks_name">Profile Page Satructure</div>
-                                                <div class="flex-shrink-0 ms-4">
-                                                    <ul class="list-inline tasks-list-menu mb-0">
-                                                        <li class="list-inline-item"><a
-                                                                href="{{ URL::asset('/apps-tasks-details') }}"><i
-                                                                    class="ri-eye-fill align-bottom me-2 text-muted"></i></a>
-                                                        </li>
-                                                        <li class="list-inline-item"><a class="edit-item-btn"
-                                                                href="#showModal" data-bs-toggle="modal"><i
-                                                                    class="ri-pencil-fill align-bottom me-2 text-muted"></i></a>
-                                                        </li>
-                                                        <li class="list-inline-item">
-                                                            <a class="remove-item-btn" data-bs-toggle="modal"
-                                                                href="#deleteOrder">
-                                                                <i class="ri-delete-bin-fill align-bottom me-2 text-muted"></i>
-                                                            </a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div> --}}
+                                            <?php echo e($result->email); ?>
+
+                                            
                                         </td>
                                         <td class="">
-                                            {{ @$result->bahagian->name }}
+                                            <?php echo e(@$result->bahagian->name); ?>
+
                                         </td>
                                         <td class="text-info">
-                                            @if($result->kospera == 1)
+                                            <?php if($result->kospera == 1): ?>
                                             <span class="badge text-bg-warning text-uppercase">Kospera</span>
-                                            @endif
+                                            <?php endif; ?>
                                         </td>
                                         <td class="">
-                                            @if($result->active == 1)
+                                            <?php if($result->active == 1): ?>
                                             <span class="badge text-bg-success text-uppercase">Aktif</span>
-                                            @else
+                                            <?php else: ?>
                                             <span class="badge text-bg-danger text-uppercase">Non Aktif</span>
 
-                                            @endif
+                                            <?php endif; ?>
                                         </td>
                                         <td>
                                             <ul class="list-inline hstack gap-2 mb-0">
-                                                {{-- <li class="list-inline-item edit" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" aria-label="Call">
-                                                    <a href="javascript:void(0);" class="text-muted d-inline-block">
-                                                        <i class="ri-phone-line fs-16"></i>
-                                                    </a>
-                                                </li> --}}
-                                                {{-- <li class="list-inline-item edit" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" aria-label="Message">
-                                                    <a href="javascript:void(0);" class="text-muted d-inline-block">
-                                                        <i class="ri-question-answer-line fs-16"></i>
-                                                    </a>
-                                                </li> --}}
+                                                
+                                                
                                                 <li class="list-inline-item" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" aria-label="View">
-                                                    <a href="javascript:void(0);" class="view-item-btn" wire:click="list('{{ $result->id }}')"><i class="ri-eye-fill align-bottom text-muted"></i></a>
+                                                    <a href="javascript:void(0);" class="view-item-btn" wire:click="list('<?php echo e($result->id); ?>')"><i class="ri-eye-fill align-bottom text-muted"></i></a>
                                                 </li>
                                                 <li class="list-inline-item" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" aria-label="Edit">
-                                                    <a class="edit-item-btn" href="javascript:void(0);" wire:click="edit('{{ $result->id }}')"><i class="ri-pencil-fill align-bottom text-muted"></i></a>
+                                                    <a class="edit-item-btn" href="javascript:void(0);" wire:click="edit('<?php echo e($result->id); ?>')"><i class="ri-pencil-fill align-bottom text-muted"></i></a>
                                                 </li>
-                                                {{-- <li class="list-inline-item" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" aria-label="Delete">
-                                                    <a class="remove-item-btn" data-bs-toggle="modal" href="#deleteRecordModal">
-                                                        <i class="ri-delete-bin-fill align-bottom text-muted"></i>
-                                                    </a>
-                                                </li> --}}
+                                                
                                             </ul>
                                         </td>
                                     </tr>
-                                    @endforeach
+                                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                                 </tbody>
                             </table>
                             <!--end table-->
-                            {{-- <div class="noresult" style="display: none">
-                                <div class="text-center">
-                                    <lord-icon src="https://cdn.lordicon.com/msoeawqm.json" trigger="loop"
-                                        colors="primary:#121331,secondary:#08a88a" style="width:75px;height:75px"></lord-icon>
-                                    <h5 class="mt-2">Sorry! No Result Found</h5>
-                                    <p class="text-muted mb-0">We've searched more than 200k+ tasks We did not find any tasks
-                                        for you search.</p>
-                                </div>
-                            </div> --}}
+                            
                         </div>
-                        {{ $results->links() }}
+                        <?php echo e($results->links()); ?>
 
-                        {{-- <div class="d-flex justify-content-end mt-2">
-                            <div class="pagination-wrap hstack gap-2">
-                                <a class="page-item pagination-prev disabled" href="#">
-                                    Previous
-                                </a>
-                                <ul class="pagination listjs-pagination mb-0"></ul>
-                                <a class="page-item pagination-next" href="#">
-                                    Next
-                                </a>
-                            </div>
-                        </div> --}}
+
+                        
                     </div>
                     <!--end card-body-->
                 </div>
@@ -375,9 +297,9 @@
                                     <label for="priority-field" class="form-label">Bahagian</label>
                                     <select class="form-control"  wire:model.defer="department">
                                         <option value="">-- Sila Pilih --</option>
-                                        @foreach($departments as $data)
-                                        <option value="{{ $data->id }}">{{ $data->name }}</option>
-                                        @endforeach
+                                        <?php $__currentLoopData = $departments; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $data): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                        <option value="<?php echo e($data->id); ?>"><?php echo e($data->name); ?></option>
+                                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                                         
                                     </select>
                                 </div>
@@ -405,7 +327,7 @@
                             <div class="hstack gap-2 justify-content-end">
                                 <button type="button" class="btn btn-light" id="close-modal"
                                     data-bs-dismiss="modal">Close</button>
-                                {{-- <button type="submit" class="btn btn-success" id="add-btn">Add Task</button> --}}
+                                
                                 <button type="button" class="btn btn-success" id="edit-btn"  wire:click="store">Simpan</button>
                             </div>
                         </div>
@@ -424,15 +346,15 @@
                     <div class="modal-body">
     
                         <div class="row">
-                          {{-- {{ $member_list }} --}}
+                          
                             <div class="col-12">
-                                <p class="fw-bold font-size-18 mb-0 text-center">{{ @$member_list->name }}</p>
-                                <p class="fw-bold text-muted mb-0 text-center">{{ @$member_list->bahagian->name}}</p>
+                                <p class="fw-bold font-size-18 mb-0 text-center"><?php echo e(@$member_list->name); ?></p>
+                                <p class="fw-bold text-muted mb-0 text-center"><?php echo e(@$member_list->bahagian->name); ?></p>
                             </div>
                         </div>
     
-                        {{-- <hr> --}}
-                        @isset($member_list->payments)
+                        
+                        <?php if(isset($member_list->payments)): ?>
     
                         <div class="table-responsive mt-2">
                             <table class="table">
@@ -444,19 +366,19 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach($member_list->payments as $data)
+                                    <?php $__currentLoopData = $member_list->payments; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $data): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                     <tr class="">
-                                        <td scope="row">{{ @$data->year }}</td>
-                                        <td>{{ @$data->payment_date }}</td>
-                                        <td>{{ @$data->department->name }}</td>
+                                        <td scope="row"><?php echo e(@$data->year); ?></td>
+                                        <td><?php echo e(@$data->payment_date); ?></td>
+                                        <td><?php echo e(@$data->department->name); ?></td>
                                     </tr>
-                                    @endforeach
+                                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                                    
                                 </tbody>
                             </table>
                         </div>
     
-                        @endisset
+                        <?php endif; ?>
                         
     
     
@@ -464,20 +386,20 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        {{-- <button type="button" class="btn btn-primary">Save</button> --}}
+                        
                     </div>
                 </div>
             </div>
         </div>
         <!--end modal-->
-    {{-- @endsection --}}
+    
 
-    @section('script')
-        {{-- <script src="{{ URL::asset('assets/libs/list.js/list.js.min.js') }}"></script> --}}
-        <script src="{{ URL::asset('assets/libs/list.pagination.js/list.pagination.js.min.js') }}"></script>
-        <script src="{{ URL::asset('assets/js/pages/tasks-list.init.js') }}"></script>
-        {{-- <script src="{{ URL::asset('assets/libs/sweetalert2/sweetalert2.min.js') }}"></script> --}}
-        {{-- <script src="{{ URL::asset('/assets/js/app.min.js') }}"></script> --}}
+    <?php $__env->startSection('script'); ?>
+        
+        <script src="<?php echo e(URL::asset('assets/libs/list.pagination.js/list.pagination.js.min.js')); ?>"></script>
+        <script src="<?php echo e(URL::asset('assets/js/pages/tasks-list.init.js')); ?>"></script>
+        
+        
 
         <script>
             document.addEventListener('DOMContentLoaded', () => {
@@ -499,6 +421,7 @@
 
             });
         </script>
-    @endsection
+    <?php $__env->stopSection(); ?>
 
 </div>
+<?php /**PATH C:\laragon\www\ksrv2\resources\views/livewire/members.blade.php ENDPATH**/ ?>
