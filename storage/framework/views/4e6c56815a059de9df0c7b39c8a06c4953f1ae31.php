@@ -16,7 +16,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
-                        <div class="text-center mt-sm-2 mb-2 text-white-10">
+                        <div class="text-center mt-sm-2 mb-2 text-white-50">
                             <div>
                                 <a href="index" class="d-inline-block auth-logo">
                                     <img src="<?php echo e(URL::asset('assets/images/KSR.png')); ?>" alt="" height="90">
