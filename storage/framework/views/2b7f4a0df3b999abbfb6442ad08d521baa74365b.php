@@ -348,7 +348,7 @@
                         <div class="row">
                           
                             <div class="col-12">
-                                <p class="fw-bold font-size-18 mb-0 text-center"><?php echo e(@$member_list->name); ?></p>
+                                <p class="fw-bold h4 mb-0 text-center"><?php echo e(@$member_list->name); ?></p>
                                 <p class="fw-bold text-muted mb-0 text-center"><?php echo e(@$member_list->bahagian->name); ?></p>
                             </div>
                         </div>
