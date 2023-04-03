@@ -160,22 +160,24 @@
                                 </div>
                                 <div class="col-xxl-2 col-sm-2">
                                     <div class="input-light">
-                                        <select class="form-select" wire:model="filter_department">
-                                            <option selected value="">Pilih Bahagian</option>
-                                            @foreach($departments as $department)
-                                            <option value="{{ $department->id }}">{{ $department->name }}</option>
-                                            @endforeach
+                                        <select class="form-select" wire:model="filter_kospera">
+                                            <option selected value="">-- Pilih Kospera --</option>
+                                            
+                                            <option value="1">Ahli Kospera</option>
+                                            <option value="0">Bukan Ahli Kospera</option>
+                                           
                                             
                                         </select>
                                     </div>
                                 </div>
                                 <div class="col-xxl-2 col-sm-2">
                                     <div class="input-light">
-                                        <select class="form-select" wire:model="filter_department">
-                                            <option selected value="">Pilih Bahagian</option>
-                                            @foreach($departments as $department)
-                                            <option value="{{ $department->id }}">{{ $department->name }}</option>
-                                            @endforeach
+                                        <select class="form-select" wire:model="filter_aktif">
+                                            <option selected value="">-- Pilih Aktif --</option>
+                                            
+                                            <option value="1">Aktif</option>
+                                            <option value="0">Tak Aktif</option>
+                                           
                                             
                                         </select>
                                     </div>
@@ -281,7 +283,7 @@
                                                     </a>
                                                 </li> --}}
                                                 <li class="list-inline-item" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" aria-label="View">
-                                                    <a href="javascript:void(0);" class="view-item-btn"><i class="ri-eye-fill align-bottom text-muted"></i></a>
+                                                    <a href="javascript:void(0);" class="view-item-btn" wire:click="list('{{ $result->id }}')"><i class="ri-eye-fill align-bottom text-muted"></i></a>
                                                 </li>
                                                 <li class="list-inline-item" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" aria-label="Edit">
                                                     <a class="edit-item-btn" href="javascript:void(0);" wire:click="edit('{{ $result->id }}')"><i class="ri-pencil-fill align-bottom text-muted"></i></a>
@@ -330,26 +332,7 @@
         </div>
         <!--end row-->
 
-        {{-- <div class="modal fade flip" id="deleteOrder" tabindex="-1" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-body p-5 text-center">
-                        <lord-icon src="https://cdn.lordicon.com/gsqxdxog.json" trigger="loop"
-                            colors="primary:#405189,secondary:#f06548" style="width:90px;height:90px"></lord-icon>
-                        <div class="mt-4 text-center">
-                            <h4>You are about to delete a task ?</h4>
-                            <p class="text-muted fs-14 mb-4">Deleting your task will remove all of
-                                your information from our database.</p>
-                            <div class="hstack gap-2 justify-content-center remove">
-                                <button class="btn btn-link btn-ghost-primary fw-medium text-decoration-none" id="deleteRecord-close" 
-                                    data-bs-dismiss="modal"><i class="ri-close-line me-1 align-middle"></i> Close</button>
-                                <button class="btn btn-info" id="delete-record">Yes, Delete It</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> --}}
+        
         <!--end delete modal -->
 
         <div wire:ignore.self class="modal fade zoomIn" id="showModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -427,6 +410,62 @@
                             </div>
                         </div>
                     </form>
+                </div>
+            </div>
+        </div>
+
+        <div wire:ignore.self class="modal fade" id="list" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-lg role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalTitleId">Sejarah Pembayaran</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+    
+                        <div class="row">
+                          {{-- {{ $member_list }} --}}
+                            <div class="col-12">
+                                <p class="fw-bold font-size-18 mb-0 text-center">{{ @$member_list->name }}</p>
+                                <p class="fw-bold text-muted mb-0 text-center">{{ @$member_list->bahagian->name}}</p>
+                            </div>
+                        </div>
+    
+                        {{-- <hr> --}}
+                        @isset($member_list->payments)
+    
+                        <div class="table-responsive mt-2">
+                            <table class="table">
+                                <thead class="bg-primary text-white">
+                                    <tr>
+                                        <th scope="col">Tahun</th>
+                                        <th scope="col">Tarikh</th>
+                                        <th scope="col">Bahagian</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach($member_list->payments as $data)
+                                    <tr class="">
+                                        <td scope="row">{{ @$data->year }}</td>
+                                        <td>{{ @$data->payment_date }}</td>
+                                        <td>{{ @$data->department->name }}</td>
+                                    </tr>
+                                    @endforeach
+                                   
+                                </tbody>
+                            </table>
+                        </div>
+    
+                        @endisset
+                        
+    
+    
+                        
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        {{-- <button type="button" class="btn btn-primary">Save</button> --}}
+                    </div>
                 </div>
             </div>
         </div>

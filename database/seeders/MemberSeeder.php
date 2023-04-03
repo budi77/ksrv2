@@ -17,13 +17,13 @@ class MemberSeeder extends Seeder
      */
     public function run()
     {
-        // Member::factory()->count(60)->create();
-        DB::table('members')->insert([
-            'name' => $this->faker->name(),
-             'email' => $this->faker->unique()->safeEmail(),
-             'ic_no' =>  $this->faker->numerify('############'),
-             'department_id' => '950487bd-0237-4ef2-bffa-e965340878cc',
-        ]);
+        Member::factory()->count(50)->create();
+        // DB::table('members')->insert([
+        //     'name' => $this->faker->name(),
+        //      'email' => $this->faker->unique()->safeEmail(),
+        //      'ic_no' =>  $this->faker->numerify('############'),
+        //      'department_id' => '950487bd-0237-4ef2-bffa-e965340878cc',
+        // ]);
 
     }
 }

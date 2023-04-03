@@ -1,3 +1,4 @@
+
 <?php $__env->startSection('title'); ?>
 <?php echo app('translator')->get('translation.basic-tables'); ?>
 <?php $__env->stopSection(); ?>
@@ -3169,4 +3170,4 @@ Basic Tables
 <script src="<?php echo e(URL::asset('/assets/js/app.min.js')); ?>"></script>
 <?php $__env->stopSection(); ?>
 
-<?php echo $__env->make('layouts.master', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\laragon\www\ksrv2\resources\views/tables-basic.blade.php ENDPATH**/ ?>
+<?php echo $__env->make('layouts.master', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH D:\laragon\www\ksrv2\resources\views/tables-basic.blade.php ENDPATH**/ ?>

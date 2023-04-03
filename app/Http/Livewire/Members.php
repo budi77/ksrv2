@@ -13,7 +13,7 @@ class Members extends Component
     protected $paginationTheme = 'bootstrap';
 
     public $departments, $name, $email, $department, $koperasi, $ic_no, $member_id, $search, $member_list, $active;
-    public $filter_department;
+    public $filter_department, $filter_kospera, $filter_aktif;
     public $jumlah_ahli, $aktif, $non_aktif, $kospera;
 
     public function mount()
@@ -36,6 +36,12 @@ class Members extends Component
         })
         ->when($this->filter_department, function($query) {
             return $query->where('department_id' , $this->filter_department);
+        })
+        ->when($this->filter_kospera, function($query) {
+            return $query->where('kospera' , $this->filter_kospera);
+        })
+        ->when($this->filter_aktif, function($query) {
+            return $query->where('active' , $this->filter_aktif);
         })
         ->orderby('name')->paginate(20);
 
@@ -84,6 +90,19 @@ class Members extends Component
 
         $this->dispatchBrowserEvent('show-modal');
 
+
+    }
+
+    public function list($id)
+    {
+
+        // dd('x');
+        $this->member_list = Member::with('payments','bahagian:id,name')->whereId($id)->first();
+
+        // dd($this->member);
+
+       
+        $this->dispatchBrowserEvent('show-list');
 
     }
 

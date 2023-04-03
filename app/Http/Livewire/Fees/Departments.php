@@ -5,17 +5,29 @@ namespace App\Http\Livewire\Fees;
 use Livewire\Component;
 use App\Models\Department;
 use Carbon\Carbon;
+use App\Models\Member;
+use App\Models\Fee;
 
 class Departments extends Component
 {
     
 
-    public $currYear;
+    public $currYear, $tot_members, $tot_paid, $tot_unpaid, $tot_sum;
 
     public function render()
     {
 
         $this->currYear =  Carbon::now()->year;
+
+        $this->tot_members = Member::whereActive('1')->count();
+
+        $this->tot_paid = Fee::with('member')->where('year', $this->currYear )
+        ->count();
+
+        $this->tot_sum = Fee::with('member')->where('year', $this->currYear )
+        ->sum('value');
+
+        // $this->currYear =  Carbon::now()->year;
 
         // dd($currYear);
 

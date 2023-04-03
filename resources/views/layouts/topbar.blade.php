@@ -8,19 +8,19 @@
                     {{-- <div class="text-white text-bold h4 pt-3">SISPAKS</div> --}}
                     <a href="index" class="logo logo-dark">
                         <span class="logo-sm">
-                            <img src="{{ URL::asset('assets/images/SISPAKS.png') }}" alt="" height="60">
+                            <img src="{{ URL::asset('assets/images/SISPAKS.png') }}" alt="" height="68">
                         </span>
                         <span class="logo-lg">
-                            <img src="{{ URL::asset('assets/images/SISPAKS.png') }}" alt="" height="60">
+                            <img src="{{ URL::asset('assets/images/SISPAKS.png') }}" alt="" height="68">
                         </span>
                     </a>
 
                     <a href="index" class="logo logo-light">
                         <span class="logo-sm">
-                            <img src="{{ URL::asset('assets/images/SISPAKS.png') }}" alt="" height="60">
+                            <img src="{{ URL::asset('assets/images/SISPAKS.png') }}" alt="" height="68">
                         </span>
                         <span class="logo-lg">
-                            <img src="{{ URL::asset('assets/images/SISPAKS.png') }}" alt="" height="60">
+                            <img src="{{ URL::asset('assets/images/SISPAKS.png') }}" alt="" height="68">
                         </span>
                     </a>
                 </div>

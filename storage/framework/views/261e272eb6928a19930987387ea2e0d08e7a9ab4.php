@@ -8,19 +8,19 @@
                     
                     <a href="index" class="logo logo-dark">
                         <span class="logo-sm">
-                            <img src="<?php echo e(URL::asset('assets/images/SISPAKS.png')); ?>" alt="" height="60">
+                            <img src="<?php echo e(URL::asset('assets/images/SISPAKS.png')); ?>" alt="" height="68">
                         </span>
                         <span class="logo-lg">
-                            <img src="<?php echo e(URL::asset('assets/images/SISPAKS.png')); ?>" alt="" height="60">
+                            <img src="<?php echo e(URL::asset('assets/images/SISPAKS.png')); ?>" alt="" height="68">
                         </span>
                     </a>
 
                     <a href="index" class="logo logo-light">
                         <span class="logo-sm">
-                            <img src="<?php echo e(URL::asset('assets/images/SISPAKS.png')); ?>" alt="" height="60">
+                            <img src="<?php echo e(URL::asset('assets/images/SISPAKS.png')); ?>" alt="" height="68">
                         </span>
                         <span class="logo-lg">
-                            <img src="<?php echo e(URL::asset('assets/images/SISPAKS.png')); ?>" alt="" height="60">
+                            <img src="<?php echo e(URL::asset('assets/images/SISPAKS.png')); ?>" alt="" height="68">
                         </span>
                     </a>
                 </div>

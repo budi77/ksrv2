@@ -136,22 +136,24 @@
                                 </div>
                                 <div class="col-xxl-2 col-sm-2">
                                     <div class="input-light">
-                                        <select class="form-select" wire:model="filter_department">
-                                            <option selected value="">Pilih Bahagian</option>
-                                            <?php $__currentLoopData = $departments; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $department): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                                            <option value="<?php echo e($department->id); ?>"><?php echo e($department->name); ?></option>
-                                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                                        <select class="form-select" wire:model="filter_kospera">
+                                            <option selected value="">-- Pilih Kospera --</option>
+                                            
+                                            <option value="1">Ahli Kospera</option>
+                                            <option value="0">Bukan Ahli Kospera</option>
+                                           
                                             
                                         </select>
                                     </div>
                                 </div>
                                 <div class="col-xxl-2 col-sm-2">
                                     <div class="input-light">
-                                        <select class="form-select" wire:model="filter_department">
-                                            <option selected value="">Pilih Bahagian</option>
-                                            <?php $__currentLoopData = $departments; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $department): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                                            <option value="<?php echo e($department->id); ?>"><?php echo e($department->name); ?></option>
-                                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                                        <select class="form-select" wire:model="filter_aktif">
+                                            <option selected value="">-- Pilih Aktif --</option>
+                                            
+                                            <option value="1">Aktif</option>
+                                            <option value="0">Tak Aktif</option>
+                                           
                                             
                                         </select>
                                     </div>
@@ -224,7 +226,7 @@
                                                 
                                                 
                                                 <li class="list-inline-item" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" aria-label="View">
-                                                    <a href="javascript:void(0);" class="view-item-btn"><i class="ri-eye-fill align-bottom text-muted"></i></a>
+                                                    <a href="javascript:void(0);" class="view-item-btn" wire:click="list('<?php echo e($result->id); ?>')"><i class="ri-eye-fill align-bottom text-muted"></i></a>
                                                 </li>
                                                 <li class="list-inline-item" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" aria-label="Edit">
                                                     <a class="edit-item-btn" href="javascript:void(0);" wire:click="edit('<?php echo e($result->id); ?>')"><i class="ri-pencil-fill align-bottom text-muted"></i></a>
@@ -330,6 +332,62 @@
                             </div>
                         </div>
                     </form>
+                </div>
+            </div>
+        </div>
+
+        <div wire:ignore.self class="modal fade" id="list" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-lg role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalTitleId">Sejarah Pembayaran</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+    
+                        <div class="row">
+                          
+                            <div class="col-12">
+                                <p class="fw-bold font-size-18 mb-0 text-center"><?php echo e(@$member_list->name); ?></p>
+                                <p class="fw-bold text-muted mb-0 text-center"><?php echo e(@$member_list->bahagian->name); ?></p>
+                            </div>
+                        </div>
+    
+                        
+                        <?php if(isset($member_list->payments)): ?>
+    
+                        <div class="table-responsive mt-2">
+                            <table class="table">
+                                <thead class="bg-primary text-white">
+                                    <tr>
+                                        <th scope="col">Tahun</th>
+                                        <th scope="col">Tarikh</th>
+                                        <th scope="col">Bahagian</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <?php $__currentLoopData = $member_list->payments; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $data): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                    <tr class="">
+                                        <td scope="row"><?php echo e(@$data->year); ?></td>
+                                        <td><?php echo e(@$data->payment_date); ?></td>
+                                        <td><?php echo e(@$data->department->name); ?></td>
+                                    </tr>
+                                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                                   
+                                </tbody>
+                            </table>
+                        </div>
+    
+                        <?php endif; ?>
+                        
+    
+    
+                        
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        
+                    </div>
                 </div>
             </div>
         </div>

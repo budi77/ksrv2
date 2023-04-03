@@ -70,4 +70,9 @@ class Member extends Model
 
         return $this->hasOne(GeneralMeetingAttendee::class,'member_id')->latestOfMany();
     }
+
+    protected static function newFactory()
+    {
+        return \Database\Factories\MemberFactory::new();
+    }
 }
