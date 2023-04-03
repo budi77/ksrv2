@@ -3,9 +3,14 @@
     <?php $__env->startSection('title'); ?> <?php echo app('translator')->get('translation.starter'); ?>  <?php $__env->stopSection(); ?>
     
     <?php $__env->startComponent('components.breadcrumb'); ?>
-    <?php $__env->slot('li_1'); ?> Pages <?php $__env->endSlot(); ?>
-    <?php $__env->slot('title'); ?> <?php echo e($department_name); ?>  <?php $__env->endSlot(); ?>
+    <?php $__env->slot('li_1'); ?> Dashboard <?php $__env->endSlot(); ?>
+    <?php $__env->slot('title'); ?> Yuran Bahagian  <?php $__env->endSlot(); ?>
     <?php echo $__env->renderComponent(); ?>
+
+    <div class="text-center h3 pb-2">
+        <?php echo e($department_name); ?>
+
+    </div>
 
     <div class="row row-cols-xxl-4 row-cols-lg-4 row-cols-sm-2 row-cols-1">
         <div class="col">

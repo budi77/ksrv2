@@ -27,7 +27,7 @@
         <!--end col-->
         <div class="col-xxl-3 col-md-6">
             <div class="card card-animate">
-                <div class="card-body bg-soft-success">
+                <div class="card-body bg-soft-primary">
                     <div class="d-flex mb-3">
                         <div class="flex-grow-1">
                             <lord-icon src="https://cdn.lordicon.com/vaeagfzc.json" trigger="loop"

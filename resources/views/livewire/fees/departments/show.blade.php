@@ -3,9 +3,13 @@
     @section('title') @lang('translation.starter')  @endsection
     {{-- @section('content') --}}
     @component('components.breadcrumb')
-    @slot('li_1') Pages @endslot
-    @slot('title') {{ $department_name }}  @endslot
+    @slot('li_1') Dashboard @endslot
+    @slot('title') Yuran Bahagian  @endslot
     @endcomponent
+
+    <div class="text-center h3 pb-2">
+        {{ $department_name }}
+    </div>
 
     <div class="row row-cols-xxl-4 row-cols-lg-4 row-cols-sm-2 row-cols-1">
         <div class="col">
