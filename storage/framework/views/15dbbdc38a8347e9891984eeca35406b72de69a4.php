@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8" />
-    <title> <?php echo $__env->yieldContent('title'); ?> | SISPAKS KSR</title>
+    <title> SISPAKS - KSR</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
     <meta content="Themesbrand" name="author" />
@@ -45,6 +45,8 @@
     <?php echo $__env->make('layouts.vendor-scripts', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
     <?php echo \Livewire\Livewire::scripts(); ?>
 
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
     <?php if (isset($component)) { $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4 = $component; } ?>
 <?php $component = $__env->getContainer()->make(Illuminate\View\AnonymousComponent::class, ['view' => 'livewire-alert::components.scripts','data' => []] + (isset($attributes) ? (array) $attributes->getIterator() : [])); ?>
 <?php $component->withName('livewire-alert::scripts'); ?>
@@ -60,6 +62,8 @@
 <?php $component = $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4; ?>
 <?php unset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4); ?>
 <?php endif; ?>
+
+ 
 </body>
 
 </html>

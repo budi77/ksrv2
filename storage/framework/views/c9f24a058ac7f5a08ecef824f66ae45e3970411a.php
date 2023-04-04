@@ -98,12 +98,6 @@
                         </div>
                         <!--end col-->
                         
-                        <!--end col-->
-                        
-                        <!--end col-->
-                        
-                        <!--end col-->
-                        
                     </div>
                     <!--end row-->
                 </div>
@@ -177,19 +171,19 @@
                                     </td>
                                     <td class="text-end">
                                         <ul class="list-inline hstack gap-2 mb-0 text-end">
-                                            <li class="list-inline-item" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" aria-label="View">
-                                                <a href="javascript:void(0);" class="text-muted d-inline-block" wire:click="list('<?php echo e($row->id); ?>')" >
-                                                    <i class="ri-eye-fill fs-16"></i>
-                                                </a>
-                                            </li>
+                                            
                                             <li class="list-inline-item edit" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" aria-label="Edit">
                                                 <a href="javascript:void(0);"  class="text-muted d-inline-block edit-item-btn" wire:click="edit('<?php echo e($row->id); ?>')" >
                                                     <i class="ri-pencil-fill fs-16"></i>
                                                 </a>
                                             </li>
-                                            
+                                            <li class="list-inline-item" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" aria-label="View">
+                                                <a href="javascript:void(0);" class="text-muted d-inline-block" wire:click="list('<?php echo e($row->id); ?>')" >
+                                                    <i class="ri-eye-fill fs-16"></i>
+                                                </a>
+                                            </li>
+                                           
                                         </ul>
-                                        
                                        
                                     </td>
                                 </tr>
@@ -227,7 +221,7 @@
     <div wire:ignore.self class="modal fadeInUp" id="edit" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
         <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document">
             <div class="modal-content">
-                <div class="modal-header">
+                <div class="modal-header bg-soft-info">
                     <h5 class="modal-title" id="modalTitleId">Maklumat Pembayaran Tahun <?php echo e($year); ?></h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
@@ -291,26 +285,7 @@
 
                     </div>
 
-                    <div class="row">
-                        
-                        <div class="col-12">
-                            <p class="mb-1"><label for="" class="form-label">Cara Pembayaran</label></p>
-
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="mode" id="mode" value="Tunai" checked wire:model="mode">
-                                <label class="form-check-label font-size-14 fw-bold" for="">Tunai</label>
-                              </div>
-                              <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="mode" id="mode" value="Bank-In" wire:model="mode">
-                                <label class="form-check-label font-size-14 fw-bold" for="">Bank-In</label>
-                              </div>
-                              <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="mode" id="mode" value="Kospera" wire:model="mode">
-                                <label class="form-check-label font-size-14 fw-bold" for="">Kospera</label>
-                              </div>
-                             
-                        </div>
-                    </div>
+                    
                     
                 </div>
                 <div class="modal-footer">
@@ -324,7 +299,7 @@
     <div wire:ignore.self class="modal flip" id="list" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
         <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-lg role="document">
             <div class="modal-content">
-                <div class="modal-header">
+                <div class="modal-header bg-soft-info">
                     <h5 class="modal-title" id="modalTitleId">Rekod Pembayaran</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>

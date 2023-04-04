@@ -115,36 +115,7 @@
                             </div>
                         </div>
                         <!--end col-->
-                        {{-- <div class="col-xl-3 col-md-6">
-                            <div class="input-group">
-                                <span class="input-group-text" id="basic-addon1"><i class="ri-calendar-2-line"></i></span>
-                                <input type="text" class="form-control" data-provider="flatpickr"
-                                    data-date-format="d M, Y" data-range-date="true" placeholder="Select date"
-                                    aria-describedby="basic-addon1">
-                            </div>
-                        </div> --}}
-                        <!--end col-->
-                        {{-- <div class="col-xl-2 col-md-4">
-                            <select class="form-control" data-choices data-choices-search-false
-                                name="choices-single-default" id="choices-single-default">
-                                <option value="">Select Type</option>
-                                <option value="Buy">Sell</option>
-                                <option value="Sell">Buy</option>
-                            </select>
-                        </div> --}}
-                        <!--end col-->
-                        {{-- <div class="col-xl-2 col-md-4">
-                            <select class="form-control" data-choices data-choices-search-false
-                                name="choices-single-default2" id="choices-single-default2">
-                                <option value="">Select Status</option>
-                                <option value="Successful">Successful</option>
-                                <option value="Cancelled">Cancelled</option>
-                            </select>
-                        </div> --}}
-                        <!--end col-->
-                        {{-- <div class="col-xl-1 col-md-4">
-                            <button class="btn btn-primary w-100">Filters</button>
-                        </div> --}}
+                        
                     </div>
                     <!--end row-->
                 </div>
@@ -213,23 +184,19 @@
                                     </td>
                                     <td class="text-end">
                                         <ul class="list-inline hstack gap-2 mb-0 text-end">
-                                            <li class="list-inline-item" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" aria-label="View">
-                                                <a href="javascript:void(0);" class="text-muted d-inline-block" wire:click="list('{{ $row->id }}')" >
-                                                    <i class="ri-eye-fill fs-16"></i>
-                                                </a>
-                                            </li>
+                                            
                                             <li class="list-inline-item edit" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" aria-label="Edit">
                                                 <a href="javascript:void(0);"  class="text-muted d-inline-block edit-item-btn" wire:click="edit('{{ $row->id }}')" >
                                                     <i class="ri-pencil-fill fs-16"></i>
                                                 </a>
                                             </li>
-                                            {{-- <li class="list-inline-item" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" aria-label="Remove">
-                                                <a class="text-danger d-inline-block remove-item-btn" data-bs-toggle="modal" href="#deleteOrder">
-                                                    <i class="ri-delete-bin-5-fill fs-16"></i>
+                                            <li class="list-inline-item" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" aria-label="View">
+                                                <a href="javascript:void(0);" class="text-muted d-inline-block" wire:click="list('{{ $row->id }}')" >
+                                                    <i class="ri-eye-fill fs-16"></i>
                                                 </a>
-                                            </li> --}}
+                                            </li>
+                                           
                                         </ul>
-                                        {{-- <a href="javascript:void(0);" class="text=secondary" wire:click="edit('{{ $row->id }}')" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-original-title="Ubah Rekod"><i class="bx bx-edit bx-sm text-secondary"></i></a> --}}
                                        
                                     </td>
                                 </tr>
@@ -277,7 +244,7 @@
     <div wire:ignore.self class="modal fadeInUp" id="edit" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
         <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document">
             <div class="modal-content">
-                <div class="modal-header">
+                <div class="modal-header bg-soft-info">
                     <h5 class="modal-title" id="modalTitleId">Maklumat Pembayaran Tahun {{ $year }}</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
@@ -334,10 +301,8 @@
 
                     </div>
 
-                    <div class="row">
-                        {{-- <div class="col-6">
-                           
-                        </div> --}}
+                    {{-- <div class="row">
+                       
                         <div class="col-12">
                             <p class="mb-1"><label for="" class="form-label">Cara Pembayaran</label></p>
 
@@ -355,7 +320,7 @@
                               </div>
                              
                         </div>
-                    </div>
+                    </div> --}}
                     
                 </div>
                 <div class="modal-footer">
@@ -369,7 +334,7 @@
     <div wire:ignore.self class="modal flip" id="list" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
         <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-lg role="document">
             <div class="modal-content">
-                <div class="modal-header">
+                <div class="modal-header bg-soft-info">
                     <h5 class="modal-title" id="modalTitleId">Rekod Pembayaran</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>

@@ -68,7 +68,7 @@ class Show extends Component
             'department_id' => $this->department_id,
             'year' => $this->year,
             'value' => $this->value,
-            'mode' => $this->mode,
+            // 'mode' => $this->mode,
             'payment_date' => $this->payment_date,
             'user_id' => Auth::id(),
 

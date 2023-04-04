@@ -257,7 +257,7 @@
         
         <!--end delete modal -->
 
-        <div wire:ignore.self class="modal fade zoomIn" id="showModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div wire:ignore.self class="modal zoomIn" id="showModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-lg">
                 <div class="modal-content border-0">
                     <div class="modal-header p-3 bg-soft-info">
@@ -348,7 +348,7 @@
                         <div class="row">
                           
                             <div class="col-12">
-                                <p class="fw-bold font-size-18 mb-0 text-center"><?php echo e(@$member_list->name); ?></p>
+                                <p class="fw-bold h4 mb-0 text-center"><?php echo e(@$member_list->name); ?></p>
                                 <p class="fw-bold text-muted mb-0 text-center"><?php echo e(@$member_list->bahagian->name); ?></p>
                             </div>
                         </div>

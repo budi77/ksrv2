@@ -16,7 +16,7 @@
                                 colors="primary:#405189,secondary:#0ab39c" style="width:55px;height:55px">
                             </lord-icon>
                         </div>
-                        
+                       
                     </div>
                     <h3 class="mb-2"><span class="counter-value" data-target="<?php echo e($tot_members); ?>">0</span></h3>
                     <h6 class="text-muted mb-0">Jumlah Ahli Aktif</h6>
@@ -33,7 +33,7 @@
                             <lord-icon src="https://cdn.lordicon.com/vaeagfzc.json" trigger="loop"
                                 colors="primary:#405189,secondary:#0ab39c" style="width:55px;height:55px"></lord-icon>
                         </div>
-                        
+                       
                     </div>
                     <h3 class="mb-2"><span class="counter-value" data-target="<?php echo e($tot_paid); ?>">0</span></h3>
                     <h6 class="text-muted mb-0">Selesai Bayar Yuran</h6>
@@ -51,7 +51,7 @@
                                 colors="primary:#405189,secondary:#0ab39c" style="width:55px;height:55px">
                             </lord-icon>
                         </div>
-                        
+                       
                     </div>
                     <h3 class="mb-2"><span class="counter-value" data-target="<?php echo e($tot_members - $tot_paid); ?>">0</span></h3>
                     <h6 class="text-muted mb-0">Belum Bayar Yuran</h6>
@@ -80,8 +80,7 @@
                         </div>
                         <!--end card-->
                     </div>
-                    
-                    
+                   
                 </div>
             </div>
             <!--end swiper-->
@@ -101,7 +100,7 @@
                 </div><!-- end card header -->
     
                 <div class="card-body">
-                    
+              
     
                         <div class="table-responsive table-card">
                             <table class="table table-nowrap mb-0">
@@ -112,7 +111,6 @@
                                         <th scope="col">Bahagian</th>
                                         <th scope="col" class="text-center">Jumlah Ahli</th>
                                         <th scope="col" class="text-center"># Ahli Selesai Bayar Yuran Tahun Semasa</th>
-                                        
                                         <th scope="col"></th>   
                                     </tr>
                                 </thead>
@@ -123,11 +121,9 @@
                                         <td><a href="#" class="fw-semibold"><?php echo e($loop->iteration); ?></a></td>
                                         <td><?php echo e($row->name); ?></td>
                                         <td class="text-center"><?php echo e($row->active_members_count); ?></td>
-                                        
                                         <td class="text-center"><span class="badge bg-success"><?php echo e($row->totalpaidmemberforcurrentyear_count); ?></span></td>
                                         <td>
                                             <a class="btn btn-primary btn-sm" href="<?php echo e(route('fees.departments.show' , $row->id)); ?>" role="button">Pilih</a>
-                                            
                                         </td>
                                     </tr>
                                     <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
@@ -141,9 +137,7 @@
     </div>
 
     <?php $__env->startSection('script'); ?>
-    
-    
-    
+  
 
     <script src="<?php echo e(URL::asset('/assets/js/app.min.js')); ?>"></script>
     <?php $__env->stopSection(); ?>
