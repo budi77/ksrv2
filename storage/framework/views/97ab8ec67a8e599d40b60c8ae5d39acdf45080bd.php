@@ -50,7 +50,7 @@
                     </li>
                    
                     <li class="list-inline-item" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" aria-label="Remove">
-                        <a class="text-muted d-inline-block remove-item-btn" data-bs-toggle="modal" href="#deleteOrder">
+                        <a class="text-muted d-inline-block remove-item-btn" data-bs-toggle="modal" href="javascript:void(0);" wire:click="delete('<?php echo e($user->id); ?>')">
                             <i class="ri-delete-bin-5-fill fs-16"></i>
                         </a>
                     </li>
@@ -69,7 +69,7 @@
 <div wire:ignore.self class="modal zoomIn" id="showModal" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
     <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document">
         <div class="modal-content">
-            <div class="modal-header">
+            <div class="modal-header bg-soft-info">
                 <h5 class="modal-title" id="modalTitleId">Tambah Pengguna Sistem</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
@@ -123,7 +123,7 @@
 <div wire:ignore.self class="modal zoomIn" id="showModal2" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
     <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document">
         <div class="modal-content">
-            <div class="modal-header">
+            <div class="modal-header bg-soft-info">
                 <h5 class="modal-title" id="modalTitleId">Tambah Pengguna Sistem</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
