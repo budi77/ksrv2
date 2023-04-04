@@ -169,7 +169,7 @@
                     <div class="card-body">
                         <div class="table-responsive table-card mb-4">
                             <table class="table align-middle table-nowrap mb-0" id="tasksTable">
-                                <thead class="table-info text-muted">
+                                <thead class="table bg-info text-white">
                                     <tr>
                                         
                                         <th>#</th>
