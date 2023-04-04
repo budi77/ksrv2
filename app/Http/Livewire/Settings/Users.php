@@ -63,6 +63,8 @@ class Users extends Component
         $this->reset(['name','email','department','pwd','role']);
 
         $this->dispatchBrowserEvent('close-add-modal');
+        $this->alert('success', 'Berjaya!');
+
 
     }
 
@@ -78,6 +80,7 @@ class Users extends Component
         $this->department = $user->department_id;
         $this->role = $user->role;
         
+
         $this->dispatchBrowserEvent('show-edit');
 
 
