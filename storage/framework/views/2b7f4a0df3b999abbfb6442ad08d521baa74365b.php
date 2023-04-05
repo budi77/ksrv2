@@ -6,14 +6,26 @@
         <link href="<?php echo e(URL::asset('assets/libs/sweetalert2/sweetalert2.min.css')); ?>" rel="stylesheet" type="text/css" />
     <?php $__env->stopSection(); ?>
     
-        <?php $__env->startComponent('components.breadcrumb'); ?>
-            <?php $__env->slot('li_1'); ?>
-                Dashboard
-            <?php $__env->endSlot(); ?>
-            <?php $__env->slot('title'); ?>
-                Keahlian
-            <?php $__env->endSlot(); ?>
-        <?php echo $__env->renderComponent(); ?>
+        
+
+        <div class="row">
+            <div class="col-12">
+                <div class="page-title-box d-sm-flex align-items-center justify-content-between">
+                    <h4 class="mb-sm-0 font-size-18">KEAHLIAN</h4>
+        
+                    <div class="page-title-right">
+                        <ol class="breadcrumb m-0">
+                            <li class="breadcrumb-item"><a href="#"><i class="ri-home-5-fill"></i></a></li>
+                            <li class="breadcrumb-item"><a href="#">dashboard</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">keahlian</li>
+                        </ol>
+                    </div>
+        
+                </div>
+            </div>
+        </div>
+
+        
 
       
         <div class="row">
@@ -202,7 +214,7 @@
                                         <td>
                                             <?php echo e($result->email); ?>
 
-                                            
+                                           
                                         </td>
                                         <td class="">
                                             <?php echo e(@$result->bahagian->name); ?>
@@ -223,15 +235,14 @@
                                         </td>
                                         <td>
                                             <ul class="list-inline hstack gap-2 mb-0">
-                                                
-                                                
+                                               
                                                 <li class="list-inline-item" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" aria-label="View">
                                                     <a href="javascript:void(0);" class="view-item-btn" wire:click="list('<?php echo e($result->id); ?>')"><i class="ri-eye-fill align-bottom text-muted"></i></a>
                                                 </li>
                                                 <li class="list-inline-item" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" aria-label="Edit">
                                                     <a class="edit-item-btn" href="javascript:void(0);" wire:click="edit('<?php echo e($result->id); ?>')"><i class="ri-pencil-fill align-bottom text-muted"></i></a>
                                                 </li>
-                                                
+                                              
                                             </ul>
                                         </td>
                                     </tr>
@@ -244,7 +255,7 @@
                         <?php echo e($results->links()); ?>
 
 
-                        
+                       
                     </div>
                     <!--end card-body-->
                 </div>
@@ -257,7 +268,7 @@
         
         <!--end delete modal -->
 
-        <div wire:ignore.self class="modal zoomIn" id="showModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div wire:ignore.self class="modal fade zoomIn" id="showModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" data-bs-backdrop="static">
             <div class="modal-dialog modal-dialog-centered modal-lg">
                 <div class="modal-content border-0">
                     <div class="modal-header p-3 bg-soft-info">
@@ -337,7 +348,7 @@
         </div>
 
         <div wire:ignore.self class="modal fade" id="list" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-lg role="document">
+            <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-lg" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title" id="modalTitleId">Sejarah Pembayaran</h5>

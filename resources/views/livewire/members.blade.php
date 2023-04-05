@@ -6,14 +6,39 @@
         <link href="{{ URL::asset('assets/libs/sweetalert2/sweetalert2.min.css') }}" rel="stylesheet" type="text/css" />
     @endsection
     {{-- @section('content') --}}
-        @component('components.breadcrumb')
+        {{-- @component('components.breadcrumb')
             @slot('li_1')
                 Dashboard
             @endslot
             @slot('title')
                 Keahlian
             @endslot
-        @endcomponent
+        @endcomponent --}}
+
+        <div class="row">
+            <div class="col-12">
+                <div class="page-title-box d-sm-flex align-items-center justify-content-between">
+                    <h4 class="mb-sm-0 font-size-18">KEAHLIAN</h4>
+        
+                    <div class="page-title-right">
+                        <ol class="breadcrumb m-0">
+                            <li class="breadcrumb-item"><a href="#"><i class="ri-home-5-fill"></i></a></li>
+                            <li class="breadcrumb-item"><a href="#">dashboard</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">keahlian</li>
+                        </ol>
+                    </div>
+        
+                </div>
+            </div>
+        </div>
+
+        {{-- <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#"><i class="ri-home-5-fill"></i></a></li>
+                <li class="breadcrumb-item"><a href="#">Base UI</a></li>
+                <li class="breadcrumb-item active" aria-current="page">General</li>
+            </ol>
+        </nav> --}}
 
       
         <div class="row">
@@ -232,27 +257,7 @@
                                         </td>
                                         <td>
                                             {{ $result->email }}
-                                            {{-- <div class="d-flex">
-                                                <div class="flex-grow-1 tasks_name">Profile Page Satructure</div>
-                                                <div class="flex-shrink-0 ms-4">
-                                                    <ul class="list-inline tasks-list-menu mb-0">
-                                                        <li class="list-inline-item"><a
-                                                                href="{{ URL::asset('/apps-tasks-details') }}"><i
-                                                                    class="ri-eye-fill align-bottom me-2 text-muted"></i></a>
-                                                        </li>
-                                                        <li class="list-inline-item"><a class="edit-item-btn"
-                                                                href="#showModal" data-bs-toggle="modal"><i
-                                                                    class="ri-pencil-fill align-bottom me-2 text-muted"></i></a>
-                                                        </li>
-                                                        <li class="list-inline-item">
-                                                            <a class="remove-item-btn" data-bs-toggle="modal"
-                                                                href="#deleteOrder">
-                                                                <i class="ri-delete-bin-fill align-bottom me-2 text-muted"></i>
-                                                            </a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div> --}}
+                                           
                                         </td>
                                         <td class="">
                                             {{ @$result->bahagian->name }}
@@ -272,27 +277,14 @@
                                         </td>
                                         <td>
                                             <ul class="list-inline hstack gap-2 mb-0">
-                                                {{-- <li class="list-inline-item edit" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" aria-label="Call">
-                                                    <a href="javascript:void(0);" class="text-muted d-inline-block">
-                                                        <i class="ri-phone-line fs-16"></i>
-                                                    </a>
-                                                </li> --}}
-                                                {{-- <li class="list-inline-item edit" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" aria-label="Message">
-                                                    <a href="javascript:void(0);" class="text-muted d-inline-block">
-                                                        <i class="ri-question-answer-line fs-16"></i>
-                                                    </a>
-                                                </li> --}}
+                                               
                                                 <li class="list-inline-item" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" aria-label="View">
                                                     <a href="javascript:void(0);" class="view-item-btn" wire:click="list('{{ $result->id }}')"><i class="ri-eye-fill align-bottom text-muted"></i></a>
                                                 </li>
                                                 <li class="list-inline-item" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" aria-label="Edit">
                                                     <a class="edit-item-btn" href="javascript:void(0);" wire:click="edit('{{ $result->id }}')"><i class="ri-pencil-fill align-bottom text-muted"></i></a>
                                                 </li>
-                                                {{-- <li class="list-inline-item" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" aria-label="Delete">
-                                                    <a class="remove-item-btn" data-bs-toggle="modal" href="#deleteRecordModal">
-                                                        <i class="ri-delete-bin-fill align-bottom text-muted"></i>
-                                                    </a>
-                                                </li> --}}
+                                              
                                             </ul>
                                         </td>
                                     </tr>
@@ -300,29 +292,11 @@
                                 </tbody>
                             </table>
                             <!--end table-->
-                            {{-- <div class="noresult" style="display: none">
-                                <div class="text-center">
-                                    <lord-icon src="https://cdn.lordicon.com/msoeawqm.json" trigger="loop"
-                                        colors="primary:#121331,secondary:#08a88a" style="width:75px;height:75px"></lord-icon>
-                                    <h5 class="mt-2">Sorry! No Result Found</h5>
-                                    <p class="text-muted mb-0">We've searched more than 200k+ tasks We did not find any tasks
-                                        for you search.</p>
-                                </div>
-                            </div> --}}
+                            
                         </div>
                         {{ $results->links() }}
 
-                        {{-- <div class="d-flex justify-content-end mt-2">
-                            <div class="pagination-wrap hstack gap-2">
-                                <a class="page-item pagination-prev disabled" href="#">
-                                    Previous
-                                </a>
-                                <ul class="pagination listjs-pagination mb-0"></ul>
-                                <a class="page-item pagination-next" href="#">
-                                    Next
-                                </a>
-                            </div>
-                        </div> --}}
+                       
                     </div>
                     <!--end card-body-->
                 </div>

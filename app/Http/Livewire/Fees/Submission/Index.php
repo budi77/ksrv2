@@ -12,7 +12,8 @@ class Index extends Component
 {
     use WithFileUploads;
 
-    public $departments, $department, $mode, $type, $year, $document, $remarks, $total, $data_id;
+    public $departments, $department, $mode, $type, $year, $document, $remarks, $total, $data_id, $department_id;
+    public $approve_id, $result, $approve;
 
     public function mount()
     {
@@ -22,10 +23,8 @@ class Index extends Component
     }
     public function render()
     {
-        $results = FeeSubmission::with('user:id,name','approver', 'department')->orderby('created_at', 'desc')->get();
-
-        // dd($results);
-
+        $results = FeeSubmission::with(['user:id,name','approver', 'department'])->orderby('created_at', 'desc')->get();
+        
         return view('livewire.fees.submission.index', compact('results'))->extends('layouts.master');
     }
 
@@ -38,8 +37,10 @@ class Index extends Component
 
     public function store()
     {
+        
 
-        $store = FeeSubmission::create([
+        $store = FeeSubmission::updateOrCreate(['id' =>  $this->data_id],
+        [
             'department_id' => $this->department,
             'user_id' => Auth::id(),
             'type' => $this->type,
@@ -66,4 +67,36 @@ class Index extends Component
         $this->dispatchBrowserEvent('hide-modal');
 
     }
+
+    public function edit($id)
+    {
+        
+        // dd($id);
+        $this->data_id = $id;
+
+        $data = FeeSubmission::find($id);
+
+        // dd($data->department_id);
+        $this->department_id = $data->department_id;
+        $this->type = $data->type;
+        $this->year = $data->year;
+        $this->total = $data->total;
+        $this->mode = $data->mode;
+        $this->remarks = $data->remarks;
+        
+
+        $this->dispatchBrowserEvent('show-modal');
+
+
+    }
+
+    public function approve($id)
+    {
+        $this->approve_id = $id;
+        $this->approve = FeeSubmission::with(['user:id,name','approver', 'department:id,name'])->where('id', $id)->first();
+
+        // dd($this->approve);
+        $this->dispatchBrowserEvent('show-approve');
+    }
+
 }
