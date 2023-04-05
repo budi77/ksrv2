@@ -30,10 +30,10 @@
                                             class="ri-delete-bin-2-line"></i></button> --}}
                                     <button type="button" class="btn btn-success add-btn" wire:click="showModal"><i class="ri-add-line align-bottom me-1"></i> Cipta
                                         Serahan</button>
-                                    <button type="button" class="btn btn-info"><i
+                                    {{-- <button type="button" class="btn btn-info"><i
                                             class="ri-file-download-line align-bottom me-1"></i>
                                         Import
-                                    </button>
+                                    </button> --}}
                                 </div>
                             </div>
                         </div>
@@ -73,10 +73,10 @@
                                         <!--end col-->
     
                                         <div class="col-sm-4">
-                                            <div>
+                                            {{-- <div>
                                                 <button type="button" class="btn btn-primary w-100" onclick="SearchData();"> <i
                                                         class="ri-equalizer-fill me-2 align-bottom"></i>Filters</button>
-                                            </div>
+                                            </div> --}}
                                         </div>
                                         <!--end col-->
                                     </div>
@@ -220,7 +220,7 @@
                             </div>
                         </div>
 
-                        
+
                         <div class="col-12 mb-3">
                             <p class="mb-1"><label for="" class="form-label">Cara Serahan</label></p>
 
