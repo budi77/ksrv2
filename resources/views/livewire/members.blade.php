@@ -6,14 +6,39 @@
         <link href="{{ URL::asset('assets/libs/sweetalert2/sweetalert2.min.css') }}" rel="stylesheet" type="text/css" />
     @endsection
     {{-- @section('content') --}}
-        @component('components.breadcrumb')
+        {{-- @component('components.breadcrumb')
             @slot('li_1')
                 Dashboard
             @endslot
             @slot('title')
                 Keahlian
             @endslot
-        @endcomponent
+        @endcomponent --}}
+
+        <div class="row">
+            <div class="col-12">
+                <div class="page-title-box d-sm-flex align-items-center justify-content-between">
+                    <h4 class="mb-sm-0 font-size-18">KEAHLIAN</h4>
+        
+                    <div class="page-title-right">
+                        <ol class="breadcrumb m-0">
+                            <li class="breadcrumb-item"><a href="#"><i class="ri-home-5-fill"></i></a></li>
+                            <li class="breadcrumb-item"><a href="#">dashboard</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">keahlian</li>
+                        </ol>
+                    </div>
+        
+                </div>
+            </div>
+        </div>
+
+        {{-- <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#"><i class="ri-home-5-fill"></i></a></li>
+                <li class="breadcrumb-item"><a href="#">Base UI</a></li>
+                <li class="breadcrumb-item active" aria-current="page">General</li>
+            </ol>
+        </nav> --}}
 
       
         <div class="row">

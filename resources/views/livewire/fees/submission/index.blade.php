@@ -119,13 +119,19 @@
                                             <td>
                                                 <ul class="list-inline hstack gap-2 mb-0">
                                                     <li class="list-inline-item" data-bs-toggle="tooltip"
-                                                        data-bs-trigger="hover" data-bs-placement="top" title="Edit">
+                                                        data-bs-trigger="hover" data-bs-placement="top" title="Kemaskini Data">
                                                         <a href="javascript:void(0);" class="text-primary d-inline-block edit-item-btn" wire:click="edit('{{ $result->id }}')">
                                                             <i class="ri-pencil-fill fs-16"></i>
                                                         </a>
                                                     </li>
                                                     <li class="list-inline-item" data-bs-toggle="tooltip"
-                                                        data-bs-trigger="hover" data-bs-placement="top" title="Remove">
+                                                        data-bs-trigger="hover" data-bs-placement="top" title="Pengesahan">
+                                                        <a href="javascript:void(0);" class="text-success d-inline-block edit-item-btn" wire:click="approve('{{ $result->id }}')">
+                                                            <i class="ri-checkbox-circle-line fs-16"></i>
+                                                        </a>
+                                                    </li>
+                                                    <li class="list-inline-item" data-bs-toggle="tooltip"
+                                                        data-bs-trigger="hover" data-bs-placement="top" title="Padam">
                                                         <a class="text-danger d-inline-block remove-item-btn"
                                                             data-bs-toggle="modal" href="#deleteRecordModal">
                                                             <i class="ri-delete-bin-5-fill fs-16"></i>
@@ -256,7 +262,7 @@
         </div>
 
         <!-- Modal -->
-        <div class="modal fade zoomIn" id="deleteRecordModal" tabindex="-1" aria-hidden="true">
+        <div wire:ignore.self class="modal fade zoomIn" id="deleteRecordModal" tabindex="-1" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -285,6 +291,35 @@
             </div>
         </div>
 
+      
+        
+        <!-- Modal -->
+       
+        <div wire:ignore.self class="modal fade show" id="showApprove" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" role="dialog" aria-modal="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-body text-center p-5">
+                        <lord-icon src="https://cdn.lordicon.com/lupuorrc.json" trigger="loop" colors="primary:#121331,secondary:#08a88a" style="width:120px;height:120px">
+                        </lord-icon>
+
+                        <div class="mt-4">
+                            <h4 class="mb-3">Pengesahan Penerimaan Yuran!</h4>
+                            <p class="text-muted mb-4"> Saya telah menerima bayaran yuran sebanyak <span class='fw-bold'>RM{{ @$approve->total }}</span> daripada <span class="fw-bold">{{ @$approve->user->name }}</span> sebagai bayaran yuran KSR  {{ @$approve->department->name }} untuk tahun {{ @$approve->year }}
+                                </p>
+                            <div class="hstack gap-2 justify-content-center">
+                                <a href="javascript:void(0);" class="btn btn-link link-success fw-medium" data-bs-dismiss="modal"><i class="ri-close-line me-1 align-middle"></i> Close</a>
+                                <a href="javascript:void(0);" class="btn btn-success">Sahkan</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        
+
            
                    
 
@@ -304,11 +339,11 @@
                     modal.show();
                 });
 
-                var modal2 = new bootstrap.Modal('#list');
-                document.addEventListener('show-list', () => {
+                var modal2 = new bootstrap.Modal('#showApprove');
+                document.addEventListener('show-approve', () => {
                     modal2.show();
                 });
-                document.addEventListener('hide-list', () => {
+                document.addEventListener('hide-approve', () => {
                     modal2.hide();
                 });
 
