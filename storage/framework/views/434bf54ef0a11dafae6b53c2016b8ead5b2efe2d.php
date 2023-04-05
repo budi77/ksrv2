@@ -81,6 +81,9 @@
                             <li class="nav-item">
                                 <a href="<?php echo e(route('fees.federations')); ?>"  class="nav-link">Gabungan</a>
                             </li>
+                            <li class="nav-item">
+                                <a href="<?php echo e(route('fees.submission')); ?>"  class="nav-link">Serahan</a>
+                            </li>
                             
                         </ul>
                     </div>

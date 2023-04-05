@@ -1,17 +1,17 @@
 <div>
-    {{-- @extends('layouts.master') --}}
-    @section('title')
+    
+    <?php $__env->startSection('title'); ?>
         Serahan
-    @endsection
+    <?php $__env->stopSection(); ?>
   
-        @component('components.breadcrumb')
-            @slot('li_1')
+        <?php $__env->startComponent('components.breadcrumb'); ?>
+            <?php $__env->slot('li_1'); ?>
                Dashboard
-            @endslot
-            @slot('title')
+            <?php $__env->endSlot(); ?>
+            <?php $__env->slot('title'); ?>
                Serahan Yuran
-            @endslot
-        @endcomponent
+            <?php $__env->endSlot(); ?>
+        <?php echo $__env->renderComponent(); ?>
 
         <div class="row">
             <div class="col-lg-12">
@@ -26,8 +26,7 @@
                             </div>
                             <div class="col-sm-auto">
                                 <div>
-                                    {{-- <button class="btn btn-soft-danger" onClick="deleteMultiple()"><i
-                                            class="ri-delete-bin-2-line"></i></button> --}}
+                                    
                                     <button type="button" class="btn btn-success add-btn" wire:click="showModal"><i class="ri-add-line align-bottom me-1"></i> Cipta
                                         Serahan</button>
                                     <button type="button" class="btn btn-info"><i
@@ -144,30 +143,9 @@
                                         </tr>
                                     </tbody>
                                 </table>
-                                {{-- <div class="noresult" style="display: none">
-                                    <div class="text-center">
-                                        <lord-icon src="https://cdn.lordicon.com/msoeawqm.json" trigger="loop"
-                                            colors="primary:#121331,secondary:#08a88a" style="width:75px;height:75px">
-                                        </lord-icon>
-                                        <h5 class="mt-2">Sorry! No Result Found</h5>
-                                        <p class="text-muted mb-0">We've searched more than 150+ customers
-                                            We
-                                            did not find any
-                                            customers for you search.</p>
-                                    </div>
-                                </div> --}}
+                                
                             </div>
-                            {{-- <div class="d-flex justify-content-end">
-                                <div class="pagination-wrap hstack gap-2">
-                                    <a class="page-item pagination-prev disabled" href="#">
-                                        Previous
-                                    </a>
-                                    <ul class="pagination listjs-pagination mb-0"></ul>
-                                    <a class="page-item pagination-next" href="#">
-                                        Next
-                                    </a>
-                                </div>
-                            </div> --}}
+                            
                         </div>
 
                         
@@ -200,9 +178,9 @@
                                 <label for="priority-field" class="form-label">Bahagian</label>
                                 <select class="form-control form-select"  wire:model.defer="department">
                                     <option value="">-- Sila Pilih --</option>
-                                    @foreach($departments as $data)
-                                    <option value="{{ $data->id }}">{{ $data->name }}</option>
-                                    @endforeach
+                                    <?php $__currentLoopData = $departments; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $data): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                    <option value="<?php echo e($data->id); ?>"><?php echo e($data->name); ?></option>
+                                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                                     
                                 </select>
                             </div>
@@ -262,7 +240,7 @@
                         <div class="mb-3">
                           <label for="" class="form-label">Muat Naik Dokumen (jika ada)</label>
                           <input type="file" class="form-control" name="" id="" placeholder="" aria-describedby="fileHelpId">
-                          {{-- <div id="fileHelpId" class="form-text">Help text</div> --}}
+                          
                         </div>
 
                         <div class="mb-3">
@@ -278,7 +256,7 @@
                                 <button type="button" class="btn btn-light"
                                     data-bs-dismiss="modal">Close</button>
                                 <button type="submit" class="btn btn-success" id="add-btn">Hantar</button>
-                                {{-- <button type="button" class="btn btn-success" id="edit-btn">Update</button> --}}
+                                
                             </div>
                         </div>
                 </div>
@@ -319,10 +297,10 @@
                    
 
         <!--end row-->
-    @section('script')
+    <?php $__env->startSection('script'); ?>
        
     
-        <script src="{{ URL::asset('/assets/js/app.min.js') }}"></script>
+        <script src="<?php echo e(URL::asset('/assets/js/app.min.js')); ?>"></script>
 
         <script>
             document.addEventListener('DOMContentLoaded', () => {
@@ -345,5 +323,6 @@
             });
         </script>
 
-    @endsection  
+    <?php $__env->stopSection(); ?>  
 </div>
+<?php /**PATH D:\laragon\www\ksrv2\resources\views/livewire/fees/submission/index.blade.php ENDPATH**/ ?>

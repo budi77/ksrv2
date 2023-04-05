@@ -81,12 +81,10 @@
                             <li class="nav-item">
                                 <a href="{{ route('fees.federations') }}"  class="nav-link">Gabungan</a>
                             </li>
-                            {{-- <li class="nav-item">
-                                <a href="layouts-two-column" target="_blank" class="nav-link">@lang('translation.two-column')</a>
-                            </li>
                             <li class="nav-item">
-                                <a href="layouts-vertical-hovered" target="_blank" class="nav-link">@lang('translation.hovered')</a>
-                            </li> --}}
+                                <a href="{{ route('fees.submission') }}"  class="nav-link">Serahan</a>
+                            </li>
+                            
                         </ul>
                     </div>
                 </li> <!-- end Dashboard Menu -->
