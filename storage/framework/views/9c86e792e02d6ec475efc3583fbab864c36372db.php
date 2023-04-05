@@ -127,7 +127,7 @@
                                                     <li class="list-inline-item" data-bs-toggle="tooltip"
                                                         data-bs-trigger="hover" data-bs-placement="top" title="Remove">
                                                         <a class="text-danger d-inline-block remove-item-btn"
-                                                            data-bs-toggle="modal" href="#deleteRecordModal">
+                                                            data-bs-toggle="modal" href="#deleteRecordModal" wire:click="$set('data_id', '<?php echo e($data->id); ?>')">
                                                             <i class="ri-delete-bin-5-fill fs-16"></i>
                                                         </a>
                                                     </li>
@@ -256,7 +256,7 @@
         </div>
 
         <!-- Modal -->
-        <div class="modal fade zoomIn" id="deleteRecordModal" tabindex="-1" aria-hidden="true">
+        <div wire:ignore.self class="modal fade zoomIn" id="deleteRecordModal" tabindex="-1" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -272,6 +272,7 @@
                                 <h4>Are you sure ?</h4>
                                 <p class="text-muted mx-4 mb-0">Are you sure you want to
                                     remove this record ?</p>
+                                    
                             </div>
                         </div>
                         <div class="d-flex gap-2 justify-content-center mt-4 mb-2">

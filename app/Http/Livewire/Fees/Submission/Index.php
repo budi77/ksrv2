@@ -12,7 +12,7 @@ class Index extends Component
 {
     use WithFileUploads;
 
-    public $departments, $department, $mode, $type, $year, $document, $remarks, $total;
+    public $departments, $department, $mode, $type, $year, $document, $remarks, $total, $data_id;
 
     public function mount()
     {
