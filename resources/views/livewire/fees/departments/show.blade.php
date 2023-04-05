@@ -334,7 +334,7 @@
     <div wire:ignore.self class="modal fade flip" id="list" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
         <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-lg role="document">
             <div class="modal-content">
-                <div class="modal-header bg-soft-info">
+                <div class="modal-header bg-light">
                     <h5 class="modal-title" id="modalTitleId">Rekod Pembayaran</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
