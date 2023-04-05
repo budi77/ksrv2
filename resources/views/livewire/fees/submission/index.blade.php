@@ -195,10 +195,8 @@
                                     <select class="form-select" 
                                         id="choices-priority-input" wire:model.defer="type">
                                         <option selected>-- Sila Pilih --</option>
-
                                         <option value="Sebahagian">Sebahagian</option>
                                         <option value="Selesai">Selesai</option>
-                                        {{-- <option value="Low">Low</option> --}}
                                     </select>
                                 </div>
                             </div>
@@ -208,7 +206,6 @@
                                     <select class="form-select"
                                         id="choices-status-input" wire:model.defer="year">
                                         <option selected >-- Sila Pilih --</option>
-
                                         <option value="2023">2023</option>
                                         <option value="2024">2024</option>
                                     </select>
@@ -223,6 +220,7 @@
                             </div>
                         </div>
 
+                        
                         <div class="col-12 mb-3">
                             <p class="mb-1"><label for="" class="form-label">Cara Serahan</label></p>
 
