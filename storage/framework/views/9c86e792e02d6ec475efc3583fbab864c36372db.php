@@ -21,7 +21,7 @@
                         <div class="row g-4 align-items-center">
                             <div class="col-sm">
                                 <div>
-                                    <h5 class="card-title mb-0">Customer List</h5>
+                                    <h5 class="card-title mb-0">Maklumat Serahan</h5>
                                 </div>
                             </div>
                             <div class="col-sm-auto">
@@ -90,38 +90,37 @@
                                 <table class="table align-middle" id="customerTable">
                                     <thead class="table-light text-muted">
                                         <tr>
-                                            <th scope="col" style="width: 50px;">
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" id="checkAll"
-                                                        value="option">
-                                                </div>
-                                            </th>
+                                            
     
-                                            <th class="sort" data-sort="customer_name">Customer</th>
-                                            <th class="sort" data-sort="email">Email</th>
-                                            <th class="sort" data-sort="phone">Phone</th>
-                                            <th class="sort" data-sort="date">Joining Date</th>
-                                            <th class="sort" data-sort="status">Status</th>
-                                            <th class="sort" data-sort="action">Action</th>
+                                            <th>#</th>
+                                            <th>Bahagian</th>
+                                            <th>Diserah oleh</th>
+                                            <th>Jumlah</th>
+                                            <th>Cara Bayaran</th>
+                                            <th>Tahun</th>
+                                            <th>Status</th>
+                                            <th>Action</th>
                                         </tr>
                                     </thead>
                                     <tbody class="list form-check-all">
+                                       <?php $__currentLoopData = $results; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $data): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                         <tr>
-                                            <th scope="row">
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" name="chk_child"
-                                                        value="option1">
-                                                </div>
-                                            </th>
-                                            <td class="id" style="display:none;"><a href="javascript:void(0);"
-                                                    class="fw-medium link-primary">#VZ2101</a></td>
-                                            <td class="customer_name">Mary Cousar</td>
-                                            <td class="email">marycousar@velzon.com</td>
-                                            <td class="phone">580-464-4694</td>
-                                            <td class="date">06 Apr, 2021</td>
-                                            <td class="status"><span
-                                                    class="badge badge-soft-success text-uppercase">Active</span>
+                                           
+                                            <td class=""><?php echo e($loop->iteration); ?></td>
+                                            <td class=""><?php echo e($data->department->name); ?></td>
+                                            <td class=""><?php echo e($data->user->name); ?></td>
+                                            <td class=""><?php echo e($data->total); ?></td>
+                                            <td class=""><?php echo e($data->mode); ?></td>
+                                            <td class=""><?php echo e($data->year); ?></td>
+                                            <td class="">
+                                                <?php if($data->approver_id == ''): ?>
+                                                <span class="badge badge-soft-warning text-uppercase">Belum disahkan</span>
+                                                <?php else: ?>
+                                                <span class="badge badge-soft-success text-uppercase">telah disahkan</span>
+
+                                                <?php endif; ?>
                                             </td>
+
                                             <td>
                                                 <ul class="list-inline hstack gap-2 mb-0">
                                                     <li class="list-inline-item edit" data-bs-toggle="tooltip"
@@ -141,20 +140,15 @@
                                                 </ul>
                                             </td>
                                         </tr>
+                                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                                     </tbody>
                                 </table>
-                                
+                              
                             </div>
                             
                         </div>
 
-                        
-                    
-
-                      
-                     
-                        
-                        
+                              
                         
                         <!--end modal -->
                     </div>
@@ -191,22 +185,26 @@
                         <div class="row mb-3">
                             <div class="col-lg-4">
                                 <div class="mb-3 mb-lg-0">
-                                    <label for="choices-priority-input" class="form-label">Priority</label>
-                                    <select class="form-select" data-choices data-choices-search-false
-                                        id="choices-priority-input">
-                                        <option value="High" selected>High</option>
-                                        <option value="Medium">Medium</option>
-                                        <option value="Low">Low</option>
+                                    <label for="choices-priority-input" class="form-label">Status</label>
+                                    <select class="form-select" 
+                                        id="choices-priority-input" wire:model.defer="type">
+                                        <option selected>-- Sila Pilih --</option>
+
+                                        <option value="Sebahagian">Sebahagian</option>
+                                        <option value="Selesai">Selesai</option>
+                                        
                                     </select>
                                 </div>
                             </div>
                             <div class="col-lg-4">
                                 <div class="mb-3 mb-lg-0">
-                                    <label for="choices-status-input" class="form-label">Status</label>
-                                    <select class="form-select" data-choices data-choices-search-false
-                                        id="choices-status-input">
-                                        <option value="Inprogress" selected>Inprogress</option>
-                                        <option value="Completed">Completed</option>
+                                    <label for="choices-status-input" class="form-label">Tahun</label>
+                                    <select class="form-select"
+                                        id="choices-status-input" wire:model.defer="year">
+                                        <option selected >-- Sila Pilih --</option>
+
+                                        <option value="2023">2023</option>
+                                        <option value="2024">2024</option>
                                     </select>
                                 </div>
                             </div>
@@ -214,13 +212,13 @@
                                 <div>
                                     <label for="datepicker-deadline-input" class="form-label">Jumlah</label>
                                     <input type="text" class="form-control" 
-                                        placeholder="Jumlah" >
+                                        placeholder="Jumlah" wire:model.defer="total">
                                 </div>
                             </div>
                         </div>
 
                         <div class="col-12 mb-3">
-                            <p class="mb-1"><label for="" class="form-label">Cara Pembayaran</label></p>
+                            <p class="mb-1"><label for="" class="form-label">Cara Serahan</label></p>
 
                             <div class="form-check form-check-inline">
                                 <input class="form-check-input" type="radio" name="mode" id="mode" value="Tunai" checked wire:model="mode">
@@ -241,13 +239,13 @@
 
                         <div class="mb-3">
                           <label for="" class="form-label">Muat Naik Dokumen (jika ada)</label>
-                          <input type="file" class="form-control" name="" id="" placeholder="" aria-describedby="fileHelpId">
+                          <input type="file" class="form-control" name="" id="" placeholder="" aria-describedby="fileHelpId" wire:model.defer="document">
                           
                         </div>
 
                         <div class="mb-3">
                           <label for="" class="form-label">Catatan</label>
-                          <textarea class="form-control" name="" id="" rows="5"></textarea>
+                          <textarea class="form-control" name="" id="" rows="5" wire:model.defer="remarks"></textarea>
                         </div>
 
                            
@@ -257,7 +255,7 @@
                             <div class="hstack gap-2 justify-content-end">
                                 <button type="button" class="btn btn-light"
                                     data-bs-dismiss="modal">Close</button>
-                                <button type="submit" class="btn btn-success" id="add-btn">Hantar</button>
+                                <button type="submit" class="btn btn-success" id="add-btn" wire:click="store">Hantar</button>
                                 
                             </div>
                         </div>
@@ -307,7 +305,7 @@
         <script>
             document.addEventListener('DOMContentLoaded', () => {
                 var modal = new bootstrap.Modal('#showModal');
-                document.addEventListener('close-add-modal', () => {
+                document.addEventListener('hide-modal', () => {
                     modal.hide();
                 });
                 document.addEventListener('show-modal', () => {
