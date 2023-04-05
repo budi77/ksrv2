@@ -26,14 +26,10 @@
                             </div>
                             <div class="col-sm-auto">
                                 <div>
-                                    {{-- <button class="btn btn-soft-danger" onClick="deleteMultiple()"><i
-                                            class="ri-delete-bin-2-line"></i></button> --}}
+                                    
                                     <button type="button" class="btn btn-success add-btn" wire:click="showModal"><i class="ri-add-line align-bottom me-1"></i> Cipta
                                         Serahan</button>
-                                    {{-- <button type="button" class="btn btn-info"><i
-                                            class="ri-file-download-line align-bottom me-1"></i>
-                                        Import
-                                    </button> --}}
+                                   
                                 </div>
                             </div>
                         </div>
@@ -88,16 +84,9 @@
                     <div class="card-body">
                         <div>
                             <div class="table-responsive table-card mb-1">
-                                <table class="table align-middle" id="customerTable">
+                                <table class="table align-middle" id="">
                                     <thead class="table-light text-muted">
                                         <tr>
-                                            {{-- <th scope="col" style="width: 50px;">
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" id="checkAll"
-                                                        value="option">
-                                                </div>
-                                            </th> --}}
-    
                                             <th>#</th>
                                             <th>Bahagian</th>
                                             <th>Diserah oleh</th>
@@ -108,18 +97,18 @@
                                             <th>Action</th>
                                         </tr>
                                     </thead>
-                                    <tbody class="list form-check-all">
-                                       @foreach($results as $data)
+                                    <tbody class="">
+                                       @foreach($results as $result)
                                         <tr>
-                                           
+                                           {{-- {{ $result }} --}}
                                             <td class="">{{ $loop->iteration }}</td>
-                                            <td class="">{{ $data->department->name }}</td>
-                                            <td class="">{{ $data->user->name }}</td>
-                                            <td class="">{{ $data->total}}</td>
-                                            <td class="">{{ $data->mode }}</td>
-                                            <td class="">{{ $data->year }}</td>
+                                            <td class="">{{ @$result->department->name }}</td>
+                                            <td class="">{{ @$result->user->name }}</td>
+                                            <td class="">{{ @$result->total}}</td>
+                                            <td class="">{{ @$result->mode }}</td>
+                                            <td class="">{{ @$result->year }}</td>
                                             <td class="">
-                                                @if($data->approver_id == '')
+                                                @if($result->approver_id == '')
                                                 <span class="badge badge-soft-warning text-uppercase">Belum disahkan</span>
                                                 @else
                                                 <span class="badge badge-soft-success text-uppercase">telah disahkan</span>
@@ -129,10 +118,9 @@
 
                                             <td>
                                                 <ul class="list-inline hstack gap-2 mb-0">
-                                                    <li class="list-inline-item edit" data-bs-toggle="tooltip"
+                                                    <li class="list-inline-item" data-bs-toggle="tooltip"
                                                         data-bs-trigger="hover" data-bs-placement="top" title="Edit">
-                                                        <a href="#showModal" data-bs-toggle="modal"
-                                                            class="text-primary d-inline-block edit-item-btn">
+                                                        <a href="javascript:void(0);" class="text-primary d-inline-block edit-item-btn" wire:click="edit('{{ $result->id }}')">
                                                             <i class="ri-pencil-fill fs-16"></i>
                                                         </a>
                                                     </li>
@@ -176,10 +164,10 @@
 
                             <div class="col-lg-12 mb-3">
                                 <label for="priority-field" class="form-label">Bahagian</label>
-                                <select class="form-control form-select"  wire:model.defer="department">
-                                    <option value="">-- Sila Pilih --</option>
+                                <select class="form-select"  wire:model.defer="department">
+                                    <option >-- Sila Pilih --</option>
                                     @foreach($departments as $data)
-                                    <option value="{{ $data->id }}">{{ $data->name }}</option>
+                                    <option value="{{ $data->id }}" @selected($department_id == $data->id)>{{ $data->name }}</option>
                                     @endforeach
                                     
                                 </select>
@@ -195,8 +183,8 @@
                                     <select class="form-select" 
                                         id="choices-priority-input" wire:model.defer="type">
                                         <option selected>-- Sila Pilih --</option>
-                                        <option value="Sebahagian">Sebahagian</option>
-                                        <option value="Selesai">Selesai</option>
+                                        <option value="Sebahagian" @selected($type == 'Sebahagian')>Sebahagian</option>
+                                        <option value="Selesai" @selected($type == 'Selesai')>Selesai</option>
                                     </select>
                                 </div>
                             </div>
@@ -206,8 +194,8 @@
                                     <select class="form-select"
                                         id="choices-status-input" wire:model.defer="year">
                                         <option selected >-- Sila Pilih --</option>
-                                        <option value="2023">2023</option>
-                                        <option value="2024">2024</option>
+                                        <option value="2023" @selected($year == '2023')>2023</option>
+                                        <option value="2024" @selected($year == '2024')>2024</option>
                                     </select>
                                 </div>
                             </div>
@@ -225,15 +213,15 @@
                             <p class="mb-1"><label for="" class="form-label">Cara Serahan</label></p>
 
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="mode" id="mode" value="Tunai" checked wire:model="mode">
+                                <input class="form-check-input" type="radio" name="mode" id="mode" value="Tunai" checked wire:model="mode" @checked($mode == 'Tunai')>
                                 <label class="form-check-label font-size-14 fw-bold" for="">Tunai</label>
                               </div>
                               <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="mode" id="mode" value="Bank-In" wire:model="mode">
+                                <input class="form-check-input" type="radio" name="mode" id="mode" value="Bank-In" wire:model="mode" @checked($mode == 'Bank-In')>
                                 <label class="form-check-label font-size-14 fw-bold" for="">Bank-In</label>
                               </div>
                               <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="mode" id="mode" value="Kospera" wire:model="mode">
+                                <input class="form-check-input" type="radio" name="mode" id="mode" value="Kospera" wire:model="mode" @checked($mode == 'Kospera')>
                                 <label class="form-check-label font-size-14 fw-bold" for="">Kospera</label>
                               </div>
                              
@@ -304,7 +292,7 @@
     @section('script')
        
     
-        <script src="{{ URL::asset('/assets/js/app.min.js') }}"></script>
+        {{-- <script src="{{ URL::asset('/assets/js/app.min.js') }}"></script> --}}
 
         <script>
             document.addEventListener('DOMContentLoaded', () => {

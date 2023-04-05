@@ -202,7 +202,7 @@
                                         <td>
                                             <?php echo e($result->email); ?>
 
-                                            
+                                           
                                         </td>
                                         <td class="">
                                             <?php echo e(@$result->bahagian->name); ?>
@@ -223,15 +223,14 @@
                                         </td>
                                         <td>
                                             <ul class="list-inline hstack gap-2 mb-0">
-                                                
-                                                
+                                               
                                                 <li class="list-inline-item" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" aria-label="View">
                                                     <a href="javascript:void(0);" class="view-item-btn" wire:click="list('<?php echo e($result->id); ?>')"><i class="ri-eye-fill align-bottom text-muted"></i></a>
                                                 </li>
                                                 <li class="list-inline-item" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" aria-label="Edit">
                                                     <a class="edit-item-btn" href="javascript:void(0);" wire:click="edit('<?php echo e($result->id); ?>')"><i class="ri-pencil-fill align-bottom text-muted"></i></a>
                                                 </li>
-                                                
+                                              
                                             </ul>
                                         </td>
                                     </tr>
@@ -244,7 +243,7 @@
                         <?php echo e($results->links()); ?>
 
 
-                        
+                       
                     </div>
                     <!--end card-body-->
                 </div>
@@ -257,7 +256,7 @@
         
         <!--end delete modal -->
 
-        <div wire:ignore.self class="modal zoomIn" id="showModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div wire:ignore.self class="modal fade zoomIn" id="showModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" data-bs-backdrop="static">
             <div class="modal-dialog modal-dialog-centered modal-lg">
                 <div class="modal-content border-0">
                     <div class="modal-header p-3 bg-soft-info">
@@ -337,7 +336,7 @@
         </div>
 
         <div wire:ignore.self class="modal fade" id="list" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-lg role="document">
+            <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-lg" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title" id="modalTitleId">Sejarah Pembayaran</h5>

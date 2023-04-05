@@ -232,27 +232,7 @@
                                         </td>
                                         <td>
                                             {{ $result->email }}
-                                            {{-- <div class="d-flex">
-                                                <div class="flex-grow-1 tasks_name">Profile Page Satructure</div>
-                                                <div class="flex-shrink-0 ms-4">
-                                                    <ul class="list-inline tasks-list-menu mb-0">
-                                                        <li class="list-inline-item"><a
-                                                                href="{{ URL::asset('/apps-tasks-details') }}"><i
-                                                                    class="ri-eye-fill align-bottom me-2 text-muted"></i></a>
-                                                        </li>
-                                                        <li class="list-inline-item"><a class="edit-item-btn"
-                                                                href="#showModal" data-bs-toggle="modal"><i
-                                                                    class="ri-pencil-fill align-bottom me-2 text-muted"></i></a>
-                                                        </li>
-                                                        <li class="list-inline-item">
-                                                            <a class="remove-item-btn" data-bs-toggle="modal"
-                                                                href="#deleteOrder">
-                                                                <i class="ri-delete-bin-fill align-bottom me-2 text-muted"></i>
-                                                            </a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div> --}}
+                                           
                                         </td>
                                         <td class="">
                                             {{ @$result->bahagian->name }}
@@ -272,27 +252,14 @@
                                         </td>
                                         <td>
                                             <ul class="list-inline hstack gap-2 mb-0">
-                                                {{-- <li class="list-inline-item edit" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" aria-label="Call">
-                                                    <a href="javascript:void(0);" class="text-muted d-inline-block">
-                                                        <i class="ri-phone-line fs-16"></i>
-                                                    </a>
-                                                </li> --}}
-                                                {{-- <li class="list-inline-item edit" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" aria-label="Message">
-                                                    <a href="javascript:void(0);" class="text-muted d-inline-block">
-                                                        <i class="ri-question-answer-line fs-16"></i>
-                                                    </a>
-                                                </li> --}}
+                                               
                                                 <li class="list-inline-item" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" aria-label="View">
                                                     <a href="javascript:void(0);" class="view-item-btn" wire:click="list('{{ $result->id }}')"><i class="ri-eye-fill align-bottom text-muted"></i></a>
                                                 </li>
                                                 <li class="list-inline-item" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" aria-label="Edit">
                                                     <a class="edit-item-btn" href="javascript:void(0);" wire:click="edit('{{ $result->id }}')"><i class="ri-pencil-fill align-bottom text-muted"></i></a>
                                                 </li>
-                                                {{-- <li class="list-inline-item" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" aria-label="Delete">
-                                                    <a class="remove-item-btn" data-bs-toggle="modal" href="#deleteRecordModal">
-                                                        <i class="ri-delete-bin-fill align-bottom text-muted"></i>
-                                                    </a>
-                                                </li> --}}
+                                              
                                             </ul>
                                         </td>
                                     </tr>
@@ -300,29 +267,11 @@
                                 </tbody>
                             </table>
                             <!--end table-->
-                            {{-- <div class="noresult" style="display: none">
-                                <div class="text-center">
-                                    <lord-icon src="https://cdn.lordicon.com/msoeawqm.json" trigger="loop"
-                                        colors="primary:#121331,secondary:#08a88a" style="width:75px;height:75px"></lord-icon>
-                                    <h5 class="mt-2">Sorry! No Result Found</h5>
-                                    <p class="text-muted mb-0">We've searched more than 200k+ tasks We did not find any tasks
-                                        for you search.</p>
-                                </div>
-                            </div> --}}
+                            
                         </div>
                         {{ $results->links() }}
 
-                        {{-- <div class="d-flex justify-content-end mt-2">
-                            <div class="pagination-wrap hstack gap-2">
-                                <a class="page-item pagination-prev disabled" href="#">
-                                    Previous
-                                </a>
-                                <ul class="pagination listjs-pagination mb-0"></ul>
-                                <a class="page-item pagination-next" href="#">
-                                    Next
-                                </a>
-                            </div>
-                        </div> --}}
+                       
                     </div>
                     <!--end card-body-->
                 </div>
