@@ -209,25 +209,7 @@
 
                               <div class="row">
                        
-                        <div class="col-12 mb-3">
-                            <p class="mb-1"><label for="" class="form-label">Cara Pembayaran</label></p>
-
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="mode" id="mode" value="Tunai" checked wire:model="mode">
-                                <label class="form-check-label font-size-14 fw-bold" for="">Tunai</label>
-                              </div>
-                              <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="mode" id="mode" value="Bank-In" wire:model="mode">
-                                <label class="form-check-label font-size-14 fw-bold" for="">Bank-In</label>
-                              </div>
-                              <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="mode" id="mode" value="Kospera" wire:model="mode">
-                                <label class="form-check-label font-size-14 fw-bold" for="">Kospera</label>
-                              </div>
-                             
-                            </div>
-                        </div>
-
+                       
                         <div class="row mb-3">
                             <div class="col-lg-4">
                                 <div class="mb-3 mb-lg-0">
@@ -252,12 +234,32 @@
                             </div>
                             <div class="col-lg-4">
                                 <div>
-                                    <label for="datepicker-deadline-input" class="form-label">Deadline</label>
-                                    <input type="text" class="form-control" id="datepicker-deadline-input"
-                                        placeholder="Enter due date" data-provider="flatpickr">
+                                    <label for="datepicker-deadline-input" class="form-label">Jumlah</label>
+                                    <input type="text" class="form-control" 
+                                        placeholder="Jumlah" >
                                 </div>
                             </div>
                         </div>
+
+                        <div class="col-12 mb-3">
+                            <p class="mb-1"><label for="" class="form-label">Cara Pembayaran</label></p>
+
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="mode" id="mode" value="Tunai" checked wire:model="mode">
+                                <label class="form-check-label font-size-14 fw-bold" for="">Tunai</label>
+                              </div>
+                              <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="mode" id="mode" value="Bank-In" wire:model="mode">
+                                <label class="form-check-label font-size-14 fw-bold" for="">Bank-In</label>
+                              </div>
+                              <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="mode" id="mode" value="Kospera" wire:model="mode">
+                                <label class="form-check-label font-size-14 fw-bold" for="">Kospera</label>
+                              </div>
+                             
+                            </div>
+                        </div>
+
 
                         <div class="mb-3">
                           <label for="" class="form-label">Muat Naik Dokumen (jika ada)</label>
