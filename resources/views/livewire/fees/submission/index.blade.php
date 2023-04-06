@@ -69,10 +69,7 @@
                                         <!--end col-->
     
                                         <div class="col-sm-4">
-                                            {{-- <div>
-                                                <button type="button" class="btn btn-primary w-100" onclick="SearchData();"> <i
-                                                        class="ri-equalizer-fill me-2 align-bottom"></i>Filters</button>
-                                            </div> --}}
+                                           
                                         </div>
                                         <!--end col-->
                                     </div>
@@ -119,21 +116,21 @@
                                             <td>
                                                 <ul class="list-inline hstack gap-2 mb-0">
                                                     <li class="list-inline-item" data-bs-toggle="tooltip"
-                                                        data-bs-trigger="hover" data-bs-placement="top" title="Kemaskini Data">
-                                                        <a href="javascript:void(0);" class="text-primary d-inline-block edit-item-btn" wire:click="edit('{{ $result->id }}')">
-                                                            <i class="ri-pencil-fill fs-16"></i>
+                                                        data-bs-trigger="hover" data-bs-placement="top" title="Lihat Data">
+                                                        <a href="javascript:void(0);" class="text-primary d-inline-block edit-item-btn" wire:click="show('{{ $result->id }}')">
+                                                            <i class=" ri-eye-line fs-16"></i>
                                                         </a>
                                                     </li>
-                                                    <li class="list-inline-item" data-bs-toggle="tooltip"
+                                                    {{-- <li class="list-inline-item" data-bs-toggle="tooltip"
                                                         data-bs-trigger="hover" data-bs-placement="top" title="Pengesahan">
                                                         <a href="javascript:void(0);" class="text-success d-inline-block edit-item-btn" wire:click="approve('{{ $result->id }}')">
                                                             <i class="ri-checkbox-circle-line fs-16"></i>
                                                         </a>
-                                                    </li>
+                                                    </li> --}}
                                                     <li class="list-inline-item" data-bs-toggle="tooltip"
                                                         data-bs-trigger="hover" data-bs-placement="top" title="Padam">
                                                         <a class="text-danger d-inline-block remove-item-btn"
-                                                            data-bs-toggle="modal" href="#deleteRecordModal" wire:click="$set('data_id', '{{ $data->id }}')">
+                                                            data-bs-toggle="modal" href="#deleteRecordModal" wire:click="$set('data_id', '{{ $result->id }}')">
                                                             <i class="ri-delete-bin-5-fill fs-16"></i>
                                                         </a>
                                                     </li>
@@ -235,16 +232,18 @@
                         </div>
 
 
-                        <div class="mb-3">
+                        {{-- <div class="mb-3">
                           <label for="" class="form-label">Muat Naik Dokumen (jika ada)</label>
                           <input type="file" class="form-control" name="" id="" placeholder="" aria-describedby="fileHelpId" wire:model.defer="document">
-                          {{-- <div id="fileHelpId" class="form-text">Help text</div> --}}
-                        </div>
+                        </div> --}}
 
                         <div class="mb-3">
                           <label for="" class="form-label">Catatan</label>
                           <textarea class="form-control" name="" id="" rows="5" wire:model.defer="remarks"></textarea>
                         </div>
+
+                        
+
 
                            
 
@@ -255,6 +254,101 @@
                                     data-bs-dismiss="modal">Close</button>
                                 <button type="submit" class="btn btn-success" id="add-btn" wire:click="store">Hantar</button>
                                 {{-- <button type="button" class="btn btn-success" id="edit-btn">Update</button> --}}
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+
+        <div wire:ignore.self class="modal fade" id="viewModal" tabindex="-1" aria-hidden="true" data-bs-backdrop="static">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header bg-light p-3">
+                        <h5 class="modal-title" id="exampleModalLabel">Lihat Maklumat Serahan</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+                            id="close-modal"></button>
+                    </div>
+                        <div class="modal-body">
+                        @if($showdata)    
+                        @if(@$showdata->approver_id <> '')
+                        <div class="alert alert-success alert-dismissible alert-label-icon label-arrow fade show" role="alert">
+                            <i class="ri-check-double-line label-icon"></i><strong>Telah disahkan oleh {{ @$showdata->approver->name  }} pada {{ @$showdata->approved_at }}</strong>
+                            {{-- <button type="button" class="btn-close" data-bs-dismiss=" alert" aria-label="Close"></button> --}}
+                        </div>
+                        @else
+
+                        <div class="alert alert-danger alert-dismissible alert-label-icon label-arrow fade show" role="alert">
+                            <i class="ri-error-warning-line label-icon"></i><strong>Belum disahkan</strong>
+                            {{-- <button type="button" class="btn-close" data-bs-dismiss=" alert" aria-label="Close"></button> --}}
+                        </div>
+                        @endif
+                        @endif
+
+
+                            <div class="mb-3">
+                              <label for="" class="form-label">Bahagian</label>
+                              <input type="text"
+                                class="form-control" name="" id="" aria-describedby="helpId" placeholder="" value="{{ @$showdata->department->name }}">
+                            </div>
+
+                            
+
+                        <div class="row">
+                       
+                       
+                        <div class="row mb-3">
+                            <div class="col-lg-4">
+                                <div>
+                                    <label for="datepicker-deadline-input" class="form-label">Status</label>
+                                    <input type="text" class="form-control" 
+                                        placeholder="Jumlah" value={{ @$showdata->type }}>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div>
+                                    <label for="datepicker-deadline-input" class="form-label">Tahun</label>
+                                    <input type="text" class="form-control" 
+                                        placeholder="Jumlah" value={{ @$showdata->year }}>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div>
+                                    <label for="datepicker-deadline-input" class="form-label">Jumlah</label>
+                                    <input type="text" class="form-control" 
+                                        placeholder="Jumlah" value={{ @$showdata->total }}>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-12 mb-3">
+                            <div class="row">
+                                <div class="col-6">
+                                    <p class="mb-1"><label for="" class="form-label">Cara Serahan</label></p>
+                                    <input type="text" class="form-control" placeholder="Jumlah" value={{ @$showdata->mode }}>
+                                </div>
+                                <div class="col-6">
+
+                                    <p class="mb-1"><label for="" class="form-label">PIC</label></p>
+                            <input type="text" class="form-control" placeholder="" value={{ @$showdata->user->name }}>
+                                </div>
+                            </div>
+                            
+                        </div>
+
+
+                        <div class="mb-3">
+                          <label for="" class="form-label">Catatan</label>
+                          <textarea class="form-control" name="" id="" rows="3" >{{ @$showdata->remarks }}</textarea>
+                        </div>
+
+                       
+
+                        </div>
+                        <div class="modal-footer">
+                            <div class="hstack gap-2 justify-content-end">
+                                <button type="button" class="btn btn-light"
+                                    data-bs-dismiss="modal">Close</button>
                             </div>
                         </div>
                 </div>
@@ -309,7 +403,7 @@
                                 </p>
                             <div class="hstack gap-2 justify-content-center">
                                 <a href="javascript:void(0);" class="btn btn-link link-success fw-medium" data-bs-dismiss="modal"><i class="ri-close-line me-1 align-middle"></i> Close</a>
-                                <a href="javascript:void(0);" class="btn btn-success">Sahkan</a>
+                                <a href="javascript:void(0);" class="btn btn-success" wire:click="confirm_approve">Sahkan</a>
                             </div>
                         </div>
                     </div>
@@ -338,6 +432,13 @@
                 });
                 document.addEventListener('show-modal', () => {
                     modal.show();
+                });
+                var modal3 = new bootstrap.Modal('#viewModal');
+                document.addEventListener('hide-viewmodal', () => {
+                    modal3.hide();
+                });
+                document.addEventListener('show-viewmodal', () => {
+                    modal3.show();
                 });
 
                 var modal2 = new bootstrap.Modal('#showApprove');

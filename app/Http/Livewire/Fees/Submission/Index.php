@@ -13,7 +13,7 @@ class Index extends Component
     use WithFileUploads;
 
     public $departments, $department, $mode, $type, $year, $document, $remarks, $total, $data_id, $department_id;
-    public $approve_id, $result, $approve;
+    public $approve_id, $result, $approve, $showdata;
 
     public function mount()
     {
@@ -90,6 +90,23 @@ class Index extends Component
 
     }
 
+    public function show($id)
+    {
+        
+        // dd($id);
+        $this->data_id = $id;
+
+        // $data = FeeSubmission::find($id);
+
+        $this->showdata = FeeSubmission::with(['user:id,name','approver', 'department'])->find($id);
+
+
+
+        $this->dispatchBrowserEvent('show-viewmodal');
+
+
+    }
+
     public function approve($id)
     {
         $this->approve_id = $id;
@@ -97,6 +114,20 @@ class Index extends Component
 
         // dd($this->approve);
         $this->dispatchBrowserEvent('show-approve');
+    }
+
+    public function confirm_approve()
+    {
+        $update = FeeSubmission::find($this->approve_id)->update([
+            'approver_id' => Auth::id(),
+            'approved_at' => now(),
+        ]);
+
+        $this->dispatchBrowserEvent('hide-approve');
+
+        $this->reset(['approve_id']);
+
+
     }
 
 }
