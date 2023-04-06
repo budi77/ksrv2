@@ -69,7 +69,7 @@
                                         <!--end col-->
     
                                         <div class="col-sm-4">
-                                            
+                                           
                                         </div>
                                         <!--end col-->
                                     </div>
@@ -116,21 +116,16 @@
                                             <td>
                                                 <ul class="list-inline hstack gap-2 mb-0">
                                                     <li class="list-inline-item" data-bs-toggle="tooltip"
-                                                        data-bs-trigger="hover" data-bs-placement="top" title="Kemaskini Data">
-                                                        <a href="javascript:void(0);" class="text-primary d-inline-block edit-item-btn" wire:click="edit('<?php echo e($result->id); ?>')">
-                                                            <i class="ri-pencil-fill fs-16"></i>
+                                                        data-bs-trigger="hover" data-bs-placement="top" title="Lihat Data">
+                                                        <a href="javascript:void(0);" class="text-primary d-inline-block edit-item-btn" wire:click="show('<?php echo e($result->id); ?>')">
+                                                            <i class=" ri-eye-line fs-16"></i>
                                                         </a>
                                                     </li>
-                                                    <li class="list-inline-item" data-bs-toggle="tooltip"
-                                                        data-bs-trigger="hover" data-bs-placement="top" title="Pengesahan">
-                                                        <a href="javascript:void(0);" class="text-success d-inline-block edit-item-btn" wire:click="approve('<?php echo e($result->id); ?>')">
-                                                            <i class="ri-checkbox-circle-line fs-16"></i>
-                                                        </a>
-                                                    </li>
+                                                    
                                                     <li class="list-inline-item" data-bs-toggle="tooltip"
                                                         data-bs-trigger="hover" data-bs-placement="top" title="Padam">
                                                         <a class="text-danger d-inline-block remove-item-btn"
-                                                            data-bs-toggle="modal" href="#deleteRecordModal">
+                                                            data-bs-toggle="modal" href="#deleteRecordModal" wire:click="$set('data_id', '<?php echo e($result->id); ?>')">
                                                             <i class="ri-delete-bin-5-fill fs-16"></i>
                                                         </a>
                                                     </li>
@@ -154,6 +149,29 @@
             </div>
             <!--end col-->
         </div>
+
+         <div wire:ignore.self class="modal fade show" id="showApprove" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" role="dialog" aria-modal="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-body text-center p-5">
+                        <lord-icon src="https://cdn.lordicon.com/lupuorrc.json" trigger="loop" colors="primary:#121331,secondary:#08a88a" style="width:120px;height:120px">
+                        </lord-icon>
+
+                        <div class="mt-4">
+                            <h4 class="mb-3">Pengesahan Penerimaan Yuran!</h4>
+                            <p class="text-muted mb-4"> Saya telah menerima bayaran yuran sebanyak <span class='fw-bold'>RM<?php echo e(@$approve->total); ?></span> daripada <span class="fw-bold"><?php echo e(@$approve->user->name); ?></span> sebagai bayaran yuran KSR  <?php echo e(@$approve->department->name); ?> untuk tahun <?php echo e(@$approve->year); ?>
+
+                                </p>
+                            <div class="hstack gap-2 justify-content-center">
+                                <a href="javascript:void(0);" class="btn btn-link link-success fw-medium" data-bs-dismiss="modal"><i class="ri-close-line me-1 align-middle"></i> Close</a>
+                                <a href="javascript:void(0);" class="btn btn-success" wire:click="confirm_approve">Sahkan</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
 
         <div wire:ignore.self class="modal fade" id="showModal" tabindex="-1" aria-hidden="true" data-bs-backdrop="static">
             <div class="modal-dialog modal-dialog-centered modal-lg">
@@ -232,16 +250,15 @@
                         </div>
 
 
-                        <div class="mb-3">
-                          <label for="" class="form-label">Muat Naik Dokumen (jika ada)</label>
-                          <input type="file" class="form-control" name="" id="" placeholder="" aria-describedby="fileHelpId" wire:model.defer="document">
-                          
-                        </div>
+                        
 
                         <div class="mb-3">
                           <label for="" class="form-label">Catatan</label>
                           <textarea class="form-control" name="" id="" rows="5" wire:model.defer="remarks"></textarea>
                         </div>
+
+                        
+
 
                            
 
@@ -252,6 +269,99 @@
                                     data-bs-dismiss="modal">Close</button>
                                 <button type="submit" class="btn btn-success" id="add-btn" wire:click="store">Hantar</button>
                                 
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+
+        <div wire:ignore.self class="modal fade" id="viewModal" tabindex="-1" aria-hidden="true" data-bs-backdrop="static">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header bg-light p-3">
+                        <h5 class="modal-title" id="exampleModalLabel">Lihat Maklumat Serahan</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+                            id="close-modal"></button>
+                    </div>
+                        <div class="modal-body">
+                        <?php if($showdata): ?>    
+                        <?php if(@$showdata->approver_id <> ''): ?>
+                        <div class="alert alert-success alert-dismissible alert-label-icon label-arrow fade show" role="alert">
+                            <i class="ri-check-double-line label-icon"></i><strong>Telah disahkan oleh <?php echo e(@$showdata->approver->name); ?> pada <?php echo e(@$showdata->approved_at); ?></strong>
+                        </div>
+                        <?php else: ?>
+
+                        <div class="alert alert-danger alert-dismissible alert-label-icon label-arrow fade show" role="alert">
+                            <i class="ri-error-warning-line label-icon"></i><strong>Belum disahkan</strong>
+                        </div>
+                        <?php endif; ?>
+                        <?php endif; ?>
+
+
+                            <div class="mb-3">
+                              <label for="" class="form-label">Bahagian</label>
+                              <input type="text"
+                                class="form-control" name="" id="" aria-describedby="helpId" placeholder="" value="<?php echo e(@$showdata->department->name); ?>">
+                            </div>
+
+                            
+
+                        <div class="row">
+                       
+                       
+                        <div class="row mb-3">
+                            <div class="col-lg-4">
+                                <div>
+                                    <label for="datepicker-deadline-input" class="form-label">Status</label>
+                                    <input type="text" class="form-control" 
+                                        placeholder="Jumlah" value=<?php echo e(@$showdata->type); ?>>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div>
+                                    <label for="datepicker-deadline-input" class="form-label">Tahun</label>
+                                    <input type="text" class="form-control" 
+                                        placeholder="Jumlah" value=<?php echo e(@$showdata->year); ?>>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div>
+                                    <label for="datepicker-deadline-input" class="form-label">Jumlah</label>
+                                    <input type="text" class="form-control" 
+                                        placeholder="Jumlah" value=<?php echo e(@$showdata->total); ?>>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-12 mb-3">
+                            <div class="row">
+                                <div class="col-6">
+                                    <p class="mb-1"><label for="" class="form-label">Cara Serahan</label></p>
+                                    <input type="text" class="form-control" placeholder="Jumlah" value=<?php echo e(@$showdata->mode); ?>>
+                                </div>
+                                <div class="col-6">
+
+                                    <p class="mb-1"><label for="" class="form-label">PIC</label></p>
+                            <input type="text" class="form-control" placeholder="" value=<?php echo e(@$showdata->user->name); ?>>
+                                </div>
+                            </div>
+                            
+                        </div>
+
+
+                        <div class="mb-3">
+                          <label for="" class="form-label">Catatan</label>
+                          <textarea class="form-control" name="" id="" rows="3" ><?php echo e(@$showdata->remarks); ?></textarea>
+                        </div>
+
+                       
+
+                        </div>
+                        <div class="modal-footer">
+                            <div class="hstack gap-2 justify-content-end">
+                                <button type="button" class="btn btn-light"
+                                    data-bs-dismiss="modal">Close</button>
                             </div>
                         </div>
                 </div>
@@ -275,6 +385,7 @@
                                 <h4>Are you sure ?</h4>
                                 <p class="text-muted mx-4 mb-0">Are you sure you want to
                                     remove this record ?</p>
+                                    
                             </div>
                         </div>
                         <div class="d-flex gap-2 justify-content-center mt-4 mb-2">
@@ -292,28 +403,7 @@
         
         <!-- Modal -->
        
-        <div wire:ignore.self class="modal fade show" id="showApprove" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" role="dialog" aria-modal="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <div class="modal-body text-center p-5">
-                        <lord-icon src="https://cdn.lordicon.com/lupuorrc.json" trigger="loop" colors="primary:#121331,secondary:#08a88a" style="width:120px;height:120px">
-                        </lord-icon>
-
-                        <div class="mt-4">
-                            <h4 class="mb-3">Pengesahan Penerimaan Yuran!</h4>
-                            <p class="text-muted mb-4"> Saya telah menerima bayaran yuran sebanyak <span class='fw-bold'>RM<?php echo e(@$approve->total); ?></span> daripada <span class="fw-bold"><?php echo e(@$approve->user->name); ?></span> sebagai bayaran yuran KSR  <?php echo e(@$approve->department->name); ?> untuk tahun <?php echo e(@$approve->year); ?>
-
-                                </p>
-                            <div class="hstack gap-2 justify-content-center">
-                                <a href="javascript:void(0);" class="btn btn-link link-success fw-medium" data-bs-dismiss="modal"><i class="ri-close-line me-1 align-middle"></i> Close</a>
-                                <a href="javascript:void(0);" class="btn btn-success">Sahkan</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
+       
         
         
         
@@ -335,6 +425,13 @@
                 });
                 document.addEventListener('show-modal', () => {
                     modal.show();
+                });
+                var modal3 = new bootstrap.Modal('#viewModal');
+                document.addEventListener('hide-viewmodal', () => {
+                    modal3.hide();
+                });
+                document.addEventListener('show-viewmodal', () => {
+                    modal3.show();
                 });
 
                 var modal2 = new bootstrap.Modal('#showApprove');

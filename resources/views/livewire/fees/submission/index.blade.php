@@ -155,6 +155,28 @@
             <!--end col-->
         </div>
 
+         <div wire:ignore.self class="modal fade show" id="showApprove" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" role="dialog" aria-modal="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-body text-center p-5">
+                        <lord-icon src="https://cdn.lordicon.com/lupuorrc.json" trigger="loop" colors="primary:#121331,secondary:#08a88a" style="width:120px;height:120px">
+                        </lord-icon>
+
+                        <div class="mt-4">
+                            <h4 class="mb-3">Pengesahan Penerimaan Yuran!</h4>
+                            <p class="text-muted mb-4"> Saya telah menerima bayaran yuran sebanyak <span class='fw-bold'>RM{{ @$approve->total }}</span> daripada <span class="fw-bold">{{ @$approve->user->name }}</span> sebagai bayaran yuran KSR  {{ @$approve->department->name }} untuk tahun {{ @$approve->year }}
+                                </p>
+                            <div class="hstack gap-2 justify-content-center">
+                                <a href="javascript:void(0);" class="btn btn-link link-success fw-medium" data-bs-dismiss="modal"><i class="ri-close-line me-1 align-middle"></i> Close</a>
+                                <a href="javascript:void(0);" class="btn btn-success" wire:click="confirm_approve">Sahkan</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
         <div wire:ignore.self class="modal fade" id="showModal" tabindex="-1" aria-hidden="true" data-bs-backdrop="static">
             <div class="modal-dialog modal-dialog-centered modal-lg">
                 <div class="modal-content">
@@ -273,13 +295,11 @@
                         @if(@$showdata->approver_id <> '')
                         <div class="alert alert-success alert-dismissible alert-label-icon label-arrow fade show" role="alert">
                             <i class="ri-check-double-line label-icon"></i><strong>Telah disahkan oleh {{ @$showdata->approver->name  }} pada {{ @$showdata->approved_at }}</strong>
-                            {{-- <button type="button" class="btn-close" data-bs-dismiss=" alert" aria-label="Close"></button> --}}
                         </div>
                         @else
 
                         <div class="alert alert-danger alert-dismissible alert-label-icon label-arrow fade show" role="alert">
                             <i class="ri-error-warning-line label-icon"></i><strong>Belum disahkan</strong>
-                            {{-- <button type="button" class="btn-close" data-bs-dismiss=" alert" aria-label="Close"></button> --}}
                         </div>
                         @endif
                         @endif
@@ -390,27 +410,7 @@
         
         <!-- Modal -->
        
-        <div wire:ignore.self class="modal fade show" id="showApprove" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" role="dialog" aria-modal="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <div class="modal-body text-center p-5">
-                        <lord-icon src="https://cdn.lordicon.com/lupuorrc.json" trigger="loop" colors="primary:#121331,secondary:#08a88a" style="width:120px;height:120px">
-                        </lord-icon>
-
-                        <div class="mt-4">
-                            <h4 class="mb-3">Pengesahan Penerimaan Yuran!</h4>
-                            <p class="text-muted mb-4"> Saya telah menerima bayaran yuran sebanyak <span class='fw-bold'>RM{{ @$approve->total }}</span> daripada <span class="fw-bold">{{ @$approve->user->name }}</span> sebagai bayaran yuran KSR  {{ @$approve->department->name }} untuk tahun {{ @$approve->year }}
-                                </p>
-                            <div class="hstack gap-2 justify-content-center">
-                                <a href="javascript:void(0);" class="btn btn-link link-success fw-medium" data-bs-dismiss="modal"><i class="ri-close-line me-1 align-middle"></i> Close</a>
-                                <a href="javascript:void(0);" class="btn btn-success" wire:click="confirm_approve">Sahkan</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
+       
         
         
         

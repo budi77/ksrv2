@@ -254,11 +254,7 @@
                         <div class="col-lg-12 col-sm-12">
                             <div class="p-2 border border-dashed rounded">
                                 <div class="d-flex align-items-center">
-                                    {{-- <div class="avatar-sm me-2">
-                                        <div class="avatar-title rounded bg-transparent text-info fs-24">
-                                            <i class="ri-money-dollar-circle-fill"></i>
-                                        </div>
-                                    </div> --}}
+                                   
                                     <div class="flex-grow-1">
                                         <p class="fw-bold font-size-15 mb-0 text-center">{{ @$member->name }}</p>
                                         <p class="fw-bold text-muted mb-0 text-center">{{ @$member->bahagian->name}}</p>
@@ -272,13 +268,9 @@
 
                     <div class="row">
                       
-                        {{-- <div class="col-12">
-                            <p class="fw-bold font-size-15 mb-0 text-center">{{ @$member->name }}</p>
-                            <p class="fw-bold text-muted mb-0 text-center">{{ @$member->bahagian->name}}</p>
-                        </div> --}}
+                       
                     </div>
 
-                    {{-- <hr> --}}
 
                     <div class="row pt-2">
 
@@ -301,26 +293,7 @@
 
                     </div>
 
-                    {{-- <div class="row">
-                       
-                        <div class="col-12">
-                            <p class="mb-1"><label for="" class="form-label">Cara Pembayaran</label></p>
-
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="mode" id="mode" value="Tunai" checked wire:model="mode">
-                                <label class="form-check-label font-size-14 fw-bold" for="">Tunai</label>
-                              </div>
-                              <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="mode" id="mode" value="Bank-In" wire:model="mode">
-                                <label class="form-check-label font-size-14 fw-bold" for="">Bank-In</label>
-                              </div>
-                              <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="mode" id="mode" value="Kospera" wire:model="mode">
-                                <label class="form-check-label font-size-14 fw-bold" for="">Kospera</label>
-                              </div>
-                             
-                        </div>
-                    </div> --}}
+                   
                     
                 </div>
                 <div class="modal-footer">
