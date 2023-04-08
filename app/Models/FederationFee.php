@@ -35,9 +35,9 @@ class FederationFee extends Model
      */
     protected $guarded = [];
 
-    public function member()
-    {
-        return $this->belongsTo(Federation::class, 'federation_id');
+    // public function member()
+    // {
+    //     return $this->belongsTo(Federation::class, 'federation_id');
 
-    }
+    // }
 }

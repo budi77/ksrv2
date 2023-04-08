@@ -8,6 +8,8 @@
 <script src="//unpkg.com/alpinejs" defer></script>
 <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 <script src="{{ URL::asset('/assets/js/app.min.js') }}"></script>
+<script src="{{ asset('vendor/file-manager/js/file-manager.js') }}"></script>
+
 
 @yield('script')
 @yield('script-bottom')

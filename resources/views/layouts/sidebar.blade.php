@@ -79,7 +79,7 @@
                                 <a href="{{ route('fees.departments') }}"  class="nav-link">Ibu Pejabat</a>
                             </li>
                             <li class="nav-item">
-                                <a href="{{ route('fees.federations') }}"  class="nav-link">Gabungan</a>
+                                <a href="{{ route('fees.federations.show') }}"  class="nav-link">Gabungan</a>
                             </li>
                             <li class="nav-item">
                                 <a href="{{ route('fees.submission') }}"  class="nav-link">Serahan</a>
@@ -98,7 +98,7 @@
                                 <a href="{{ route('fees.departments') }}"  class="nav-link">Ibu Pejabat</a>
                             </li>
                             <li class="nav-item">
-                                <a href="{{ route('fees.federations') }}"  class="nav-link">Gabungan</a>
+                                <a href="{{ route('fees.federations.show') }}"  class="nav-link">Gabungan</a>
                             </li>
                             {{-- <li class="nav-item">
                                 <a href="layouts-two-column" target="_blank" class="nav-link">@lang('translation.two-column')</a>
@@ -113,6 +113,12 @@
                 <li class="nav-item">
                     <a class="nav-link menu-link" href="{{ route('settings') }}">
                         <i class=" ri-calendar-todo-fill"></i> <span>Mesyuarat</span>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link menu-link" href="{{ route('dokumen') }}">
+                        <i class=" ri-contacts-book-2-line"></i> <span>Dokumen</span>
                     </a>
                 </li>
 

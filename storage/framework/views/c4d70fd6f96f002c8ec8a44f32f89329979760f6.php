@@ -1,12 +1,13 @@
 <div>
-    @section('title') @lang('translation.starter')  @endsection
-    @component('components.breadcrumb')
-    @slot('li_1') Dashboard @endslot
-    @slot('title') Yuran Gabungan  @endslot
-    @endcomponent
+    <?php $__env->startSection('title'); ?> <?php echo app('translator')->get('translation.starter'); ?>  <?php $__env->stopSection(); ?>
+    <?php $__env->startComponent('components.breadcrumb'); ?>
+    <?php $__env->slot('li_1'); ?> Dashboard <?php $__env->endSlot(); ?>
+    <?php $__env->slot('title'); ?> Yuran Gabungan  <?php $__env->endSlot(); ?>
+    <?php echo $__env->renderComponent(); ?>
 
     <div class="text-center h3 pb-2">
-        {{ $department_name }}
+        <?php echo e($department_name); ?>
+
     </div>
 
     <div class="row row-cols-xxl-4 row-cols-lg-4 row-cols-sm-2 row-cols-1">
@@ -14,7 +15,7 @@
             <div class="card">
                 <div class="card-body d-flex">
                     <div class="flex-grow-1">
-                        <h4>{{ $tot_members }}</h4>
+                        <h4><?php echo e($tot_members); ?></h4>
                         <h6 class="text-muted fs-14 mb-0">Jumlah Ahli</h6>
                     </div>
                     <div class="flex-shrink-0 avatar-sm">
@@ -30,7 +31,7 @@
             <div class="card">
                 <div class="card-body d-flex">
                     <div class="flex-grow-1">
-                        <h4>{{ $tot_paid }}</h4>
+                        <h4><?php echo e($tot_paid); ?></h4>
                         <h6 class="text-muted fs-14 mb-0">Selesai</h6>
                     </div>
                     <div class="flex-shrink-0 avatar-sm">
@@ -46,7 +47,7 @@
             <div class="card">
                 <div class="card-body d-flex">
                     <div class="flex-grow-1">
-                        <h4>{{ $tot_members - $tot_paid }}</h4>
+                        <h4><?php echo e($tot_members - $tot_paid); ?></h4>
                         <h6 class="text-muted fs-14 mb-0">Belum Bayar</h6>
                     </div>
                     <div class="flex-shrink-0 avatar-sm">
@@ -62,7 +63,7 @@
             <div class="card">
                 <div class="card-body d-flex">
                     <div class="flex-grow-1">
-                        <h4>RM{{ $tot_sum }}</h4>
+                        <h4>RM<?php echo e($tot_sum); ?></h4>
                         <h6 class="text-muted fs-14 mb-0">Jumlah Kutipan</h6>
                     </div>
                     <div class="flex-shrink-0 avatar-sm">
@@ -110,57 +111,61 @@
                             </thead>
                             <!--end thead-->
                             <tbody class="list form-check-all">
-                                @forelse($results as $row)
+                                <?php $__empty_1 = true; $__currentLoopData = $results; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $row): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); $__empty_1 = false; ?>
                                 <tr>
                                     <td class="order_date">
-                                        {{ $loop->iteration }}
+                                        <?php echo e($loop->iteration); ?>
+
                                     </td>
                                     
                                     <td class="name">
-                                        {{ $row->name }}
+                                        <?php echo e($row->name); ?>
+
                                     </td>
                                     
                                     <td class="text-center">
 
-                                        @if(@$row->latestPaymentFederation->year <> '')
-                                            @if(@$row->latestPaymentFederation->year == $curryear)
+                                        <?php if(@$row->latestPaymentFederation->year <> ''): ?>
+                                            <?php if(@$row->latestPaymentFederation->year == $curryear): ?>
                                             <span
-                                                class="badge text-bg-success text-uppercase"> {{ @$row->latestPaymentFederation->year }}
+                                                class="badge text-bg-success text-uppercase"> <?php echo e(@$row->latestPaymentFederation->year); ?>
+
                                             </span>
 
-                                            @else
+                                            <?php else: ?>
                                             <span
-                                            class="badge text-bg-warning text-uppercase"> {{ @$row->latestPaymentFederation->year }}
+                                            class="badge text-bg-warning text-uppercase"> <?php echo e(@$row->latestPaymentFederation->year); ?>
+
                                             </span>
-                                            @endif
-                                        @endif
+                                            <?php endif; ?>
+                                        <?php endif; ?>
 
 
                                     </td>
                                     <td class="text-center">
 
-                                        @if(@$row->latestPaymentFederation->year == $curryear)
+                                        <?php if(@$row->latestPaymentFederation->year == $curryear): ?>
                                             <span
                                                 class="badge badge-soft-info text-uppercase"> Paid
                                             </span>
 
-                                        @else
+                                        <?php else: ?>
                                             <span
                                             class="badge badge-soft-danger text-uppercase"> Unpaid
                                             </span>
-                                        @endif
+                                        <?php endif; ?>
 
                                     </td>
                                     <td class="text-end">
                                         <ul class="list-inline hstack gap-2 mb-0 text-end">
                                             
                                             <li class="list-inline-item edit" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" aria-label="Edit">
-                                                <a href="javascript:void(0);"  class="text-muted d-inline-block edit-item-btn" wire:click="edit('{{ $row->id }}')" >
+                                                <a href="javascript:void(0);"  class="text-muted d-inline-block edit-item-btn" wire:click="edit('<?php echo e($row->id); ?>')" >
                                                     <i class="ri-pencil-fill fs-16"></i>
                                                 </a>
                                             </li>
                                             <li class="list-inline-item" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" aria-label="View">
-                                                <a href="javascript:void(0);" class="text-muted d-inline-block" wire:click="list('{{ $row->id }}')" >
+                                                <a href="javascript:void(0);" class="text-muted d-inline-block" wire:click="list('<?php echo e($row->id); ?>')" >
                                                     <i class="ri-eye-fill fs-16"></i>
                                                 </a>
                                             </li>
@@ -170,7 +175,7 @@
                                     </td>
                                 </tr>
 
-                                @empty
+                                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); if ($__empty_1): ?>
                                 
                                 <div class="noresult" style="display: none">
                                     <div class="text-center">
@@ -182,7 +187,7 @@
                                     </div>
                                 </div>
 
-                                @endforelse
+                                <?php endif; ?>
 
                                 <!--end tr-->
                                 
@@ -204,7 +209,7 @@
         <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header bg-soft-info">
-                    <h5 class="modal-title" id="modalTitleId">Maklumat Pembayaran Tahun {{ $curryear }}</h5>
+                    <h5 class="modal-title" id="modalTitleId">Maklumat Pembayaran Tahun <?php echo e($curryear); ?></h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -215,8 +220,8 @@
                                 <div class="d-flex align-items-center">
                                    
                                     <div class="flex-grow-1">
-                                        <p class="fw-bold font-size-15 mb-0 text-center">{{ @$federation->name }}</p>
-                                        {{-- <p class="fw-bold text-muted mb-0 text-center">{{ @$member->bahagian->name}}</p> --}}
+                                        <p class="fw-bold font-size-15 mb-0 text-center"><?php echo e(@$federation->name); ?></p>
+                                        
                                     </div>
                                 </div>
                             </div>
@@ -243,7 +248,21 @@
                         <div class="col-6">
                             <div class="mb-3">
                                 <label for="" class="form-label">Tarikh Pembayaran</label>
-                                <x-date-picker id="date" wire:model="payment_date" autocomplete="off" value="" />
+                                <?php if (isset($component)) { $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4 = $component; } ?>
+<?php $component = $__env->getContainer()->make(Illuminate\View\AnonymousComponent::class, ['view' => 'components.date-picker','data' => ['id' => 'date','wire:model' => 'payment_date','autocomplete' => 'off','value' => '']] + (isset($attributes) ? (array) $attributes->getIterator() : [])); ?>
+<?php $component->withName('date-picker'); ?>
+<?php if ($component->shouldRender()): ?>
+<?php $__env->startComponent($component->resolveView(), $component->data()); ?>
+<?php if (isset($attributes) && $constructor = (new ReflectionClass(Illuminate\View\AnonymousComponent::class))->getConstructor()): ?>
+<?php $attributes = $attributes->except(collect($constructor->getParameters())->map->getName()->all()); ?>
+<?php endif; ?>
+<?php $component->withAttributes(['id' => 'date','wire:model' => 'payment_date','autocomplete' => 'off','value' => '']); ?>
+<?php echo $__env->renderComponent(); ?>
+<?php endif; ?>
+<?php if (isset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4)): ?>
+<?php $component = $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4; ?>
+<?php unset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4); ?>
+<?php endif; ?>
                 
                             </div> 
                            
@@ -262,62 +281,11 @@
         </div>
     </div>
 
-    {{-- <div wire:ignore.self class="modal fade flip" id="list" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-lg role="document">
-            <div class="modal-content">
-                <div class="modal-header bg-light">
-                    <h5 class="modal-title" id="modalTitleId">Rekod Pembayaran</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-
-                    <div class="row pb-1">
-                        <div class="col-12">
-                            <p class="fw-bold h4 mb-0 text-center">{{ @$member_list->name }}</p>
-                            <p class="fw-bold text-muted mb-0 text-center">{{ @$member_list->bahagian->name}}</p>
-                        </div>
-                    </div>
-
-                    @isset($member_list->payments)
-
-                    <div class="table-responsive">
-                        <table class="table table-sm">
-                            <thead class="bg-info text-white">
-                                <tr>
-                                    <th scope="col">Tahun</th>
-                                    <th scope="col">Tarikh</th>
-                                    <th scope="col">Bahagian</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                @foreach($member_list->payments as $data)
-                                <tr class="">
-                                    <td scope="row">{{ @$data->year }}</td>
-                                    <td>{{ @$data->payment_date }}</td>
-                                    <td>{{ @$data->department->name }}</td>
-                                </tr>
-                                @endforeach
-                               
-                            </tbody>
-                        </table>
-                    </div>
-
-                    @endisset
-                    
+    
 
 
-                    
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
-    </div> --}}
-
-
-    {{-- @endsection --}}
-    @section('script')
+    
+    <?php $__env->startSection('script'); ?>
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
@@ -341,6 +309,7 @@
         });
     </script>
 
-    @endsection
+    <?php $__env->stopSection(); ?>
 </div>
 
+<?php /**PATH C:\laragon\www\ksrv2\resources\views/livewire/fees/federations/show.blade.php ENDPATH**/ ?>

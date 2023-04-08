@@ -48,4 +48,18 @@ class Department extends Model
         return $this->hasMany(Fee::class, 'department_id');
 
     }
+
+    public function latestPaymentFederation() 
+    {
+        return $this->hasOne(FederationFee::class, 'federation_id','id')->latestOfMany();
+    }
+
+    public function paymentsFederation()
+    {
+
+        return $this->hasMany(FederationFee::class, 'federation_id');
+
+    }
+
+
 }

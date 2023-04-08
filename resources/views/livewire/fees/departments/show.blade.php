@@ -1,7 +1,5 @@
 <div>
-    {{-- @extends('layouts.master') --}}
     @section('title') @lang('translation.starter')  @endsection
-    {{-- @section('content') --}}
     @component('components.breadcrumb')
     @slot('li_1') Dashboard @endslot
     @slot('title') Yuran Bahagian  @endslot
@@ -75,23 +73,7 @@
                 </div>
             </div>
         </div>
-        <!--end col-->
-        {{-- <div class="col">
-            <div class="card">
-                <div class="card-body d-flex">
-                    <div class="flex-grow-1">
-                        <h4>1585</h4>
-                        <h6 class="text-muted fs-14 mb-0">Upcoming ICO</h6>
-                    </div>
-                    <div class="flex-shrink-0 avatar-sm">
-                        <div class="avatar-title bg-soft-primary text-primary fs-22 rounded">
-                            <i class="ri-donut-chart-line"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> --}}
-        <!--end col-->
+        
     </div>
 
     <div class="row" id="contactList">
@@ -99,12 +81,7 @@
             <div class="card">
                 <div class="card-header d-flex align-items-center border-0">
                     <h5 class="card-title mb-0 flex-grow-1">Rekod Pembayaran</h5>
-                    {{-- <div class="flex-shrink-0">
-                        <div class="flax-shrink-0 hstack gap-2">
-                            <button class="btn btn-primary">Today's Orders</button>
-                            <button class="btn btn-soft-info">Past Orders</button>
-                        </div>
-                    </div> --}}
+                 
                 </div>
                 <div class="card-body border border-dashed border-end-0 border-start-0">
                     <div class="row g-2">
@@ -130,7 +107,6 @@
                                     <th  scope="col" class="text-center">Email</th>
                                     <th  scope="col" class="text-center">Bayaran Terakhir</th>
                                     <th  scope="col" class="text-center">Tahun Semasa</th>
-                                    {{-- <th class="sort" data-sort="price" scope="col">Price</th> --}}
                                     <th  scope="col" class="text-end"></th>
                                 </tr>
                             </thead>
@@ -152,7 +128,6 @@
                                    
                                     <td class="text-center">
 
-                                        {{-- {{ @$row->latestPayment->year }} --}}
                                         @if(@$row->latestPayment->year <> '')
                                             @if(@$row->latestPayment->year == $year)
                                             <span
@@ -223,17 +198,7 @@
                         <!--end table-->
                         
                     </div>
-                    {{-- <div class="d-flex justify-content-end mt-3">
-                        <div class="pagination-wrap hstack gap-2">
-                            <a class="page-item pagination-prev disabled" href="#">
-                                Previous
-                            </a>
-                            <ul class="pagination listjs-pagination mb-0"></ul>
-                            <a class="page-item pagination-next" href="#">
-                                Next
-                            </a>
-                        </div>
-                    </div> --}}
+                    
                 </div>
             </div>
             <!--end card-->
@@ -279,7 +244,6 @@
                                 <label for="" class="form-label">Jumlah</label>
                                 <input type="text"
                                   class="form-control" name="" id="" aria-describedby="helpId" placeholder="" wire:model.defer="value">
-                                {{-- <small id="helpId" class="form-text text-muted">Help text</small> --}}
                               </div>
                         </div>
                         <div class="col-6">
@@ -314,14 +278,12 @@
                 <div class="modal-body">
 
                     <div class="row pb-1">
-                      {{-- {{ $member_list }} --}}
                         <div class="col-12">
                             <p class="fw-bold h4 mb-0 text-center">{{ @$member_list->name }}</p>
                             <p class="fw-bold text-muted mb-0 text-center">{{ @$member_list->bahagian->name}}</p>
                         </div>
                     </div>
 
-                    {{-- <hr> --}}
                     @isset($member_list->payments)
 
                     <div class="table-responsive">
@@ -354,7 +316,6 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    {{-- <button type="button" class="btn btn-primary">Save</button> --}}
                 </div>
             </div>
         </div>
@@ -363,7 +324,6 @@
 
     {{-- @endsection --}}
     @section('script')
-    {{-- <script src="{{ URL::asset('/assets/js/app.min.js') }}"></script> --}}
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {

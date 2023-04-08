@@ -18,14 +18,16 @@ Auth::routes(['register' => false]);
 
 
 Route::middleware('auth')->group(function () {
-
     
+    Route::get('/yuran/gabungan', \App\Http\Livewire\Fees\Federations\Show::class)->name('fees.federations.show');
+
+    Route::get('/dokumen', [App\Http\Controllers\HomeController::class, 'dokumen'])->name('dokumen');
+
     Route::get('/tetapan', \App\Http\Livewire\Settings\Index::class)->name('settings');
     Route::get('/keahlian', \App\Http\Livewire\Members::class)->name('members');
     Route::get('/yuran/bahagian', \App\Http\Livewire\Fees\Departments::class)->name('fees.departments');
     Route::get('/yuran/bahagian/{department}', \App\Http\Livewire\Fees\Departments\Show::class)->name('fees.departments.show');
-    Route::get('/yuran/gabungan', \App\Http\Livewire\Fees\Federations::class)->name('fees.federations');
-    Route::get('/yuran/gabungan/{federation}', \App\Http\Livewire\Fees\Federations\Show::class)->name('fees.federations.show');
+    // Route::get('/yuran/gabungan', \App\Http\Livewire\Fees\Federations::class)->name('fees.federations');
    
     Route::get('/yuran/serahan', \App\Http\Livewire\Fees\Submission\Index::class)->name('fees.submission');
     Route::get('/yuran/serahan/cipta', \App\Http\Livewire\Fees\Submission\Create::class)->name('fees.create');

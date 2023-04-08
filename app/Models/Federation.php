@@ -34,11 +34,6 @@ class Federation extends Model
      */
     protected $guarded = [];
 
-    public function members()
-    {
-        return $this->hasMany(Member::class, 'federation_id');
-
-    }
 
     public function payments()
     {
@@ -46,5 +41,12 @@ class Federation extends Model
         return $this->hasMany(FederationFee::class, 'federation_id');
 
     }
+
+    public function latestPayment() : HasOne
+    {
+        return $this->hasOne(FederationFee::class, 'federation_id')->latestOfMany();
+    }
+
+    
 
 }

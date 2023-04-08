@@ -8,6 +8,8 @@
 <script src="//unpkg.com/alpinejs" defer></script>
 <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 <script src="<?php echo e(URL::asset('/assets/js/app.min.js')); ?>"></script>
+<script src="<?php echo e(asset('vendor/file-manager/js/file-manager.js')); ?>"></script>
+
 
 <?php echo $__env->yieldContent('script'); ?>
 <?php echo $__env->yieldContent('script-bottom'); ?>

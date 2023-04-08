@@ -79,7 +79,7 @@
                                 <a href="<?php echo e(route('fees.departments')); ?>"  class="nav-link">Ibu Pejabat</a>
                             </li>
                             <li class="nav-item">
-                                <a href="<?php echo e(route('fees.federations')); ?>"  class="nav-link">Gabungan</a>
+                                <a href="<?php echo e(route('fees.federations.show')); ?>"  class="nav-link">Gabungan</a>
                             </li>
                             <li class="nav-item">
                                 <a href="<?php echo e(route('fees.submission')); ?>"  class="nav-link">Serahan</a>
@@ -98,7 +98,7 @@
                                 <a href="<?php echo e(route('fees.departments')); ?>"  class="nav-link">Ibu Pejabat</a>
                             </li>
                             <li class="nav-item">
-                                <a href="<?php echo e(route('fees.federations')); ?>"  class="nav-link">Gabungan</a>
+                                <a href="<?php echo e(route('fees.federations.show')); ?>"  class="nav-link">Gabungan</a>
                             </li>
                             
                         </ul>
@@ -108,6 +108,12 @@
                 <li class="nav-item">
                     <a class="nav-link menu-link" href="<?php echo e(route('settings')); ?>">
                         <i class=" ri-calendar-todo-fill"></i> <span>Mesyuarat</span>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link menu-link" href="<?php echo e(route('dokumen')); ?>">
+                        <i class=" ri-contacts-book-2-line"></i> <span>Dokumen</span>
                     </a>
                 </li>
 
