@@ -121,16 +121,20 @@
                                                             <i class=" ri-eye-line fs-16"></i>
                                                         </a>
                                                     </li>
-                                                    {{-- <li class="list-inline-item" data-bs-toggle="tooltip"
-                                                        data-bs-trigger="hover" data-bs-placement="top" title="Pengesahan">
-                                                        <a href="javascript:void(0);" class="text-success d-inline-block edit-item-btn" wire:click="approve('{{ $result->id }}')">
-                                                            <i class="ri-checkbox-circle-line fs-16"></i>
-                                                        </a>
-                                                    </li> --}}
+                                                    @isset($result->approved_at)
+                                                        @if($result->approved_at <> '')
+                                                        <li class="list-inline-item" data-bs-toggle="tooltip"
+                                                            data-bs-trigger="hover" data-bs-placement="top" title="Pengesahan">
+                                                            <a href="javascript:void(0);" class="text-success d-inline-block edit-item-btn" wire:click="approve('{{ $result->id }}')">
+                                                                <i class="ri-checkbox-circle-line fs-16"></i>
+                                                            </a>
+                                                        </li>
+                                                        @endif
+                                                    @endisset
                                                     <li class="list-inline-item" data-bs-toggle="tooltip"
                                                         data-bs-trigger="hover" data-bs-placement="top" title="Padam">
                                                         <a class="text-danger d-inline-block remove-item-btn"
-                                                            data-bs-toggle="modal" href="#deleteRecordModal" wire:click="$set('data_id', '{{ $result->id }}')">
+                                                            data-bs-toggle="modal" href="#deleteRecordModal" >
                                                             <i class="ri-delete-bin-5-fill fs-16"></i>
                                                         </a>
                                                     </li>
@@ -155,11 +159,13 @@
             <!--end col-->
         </div>
 
+       
+
          <div wire:ignore.self class="modal fade show" id="showApprove" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" role="dialog" aria-modal="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                     <div class="modal-body text-center p-5">
-                        <lord-icon src="https://cdn.lordicon.com/lupuorrc.json" trigger="loop" colors="primary:#121331,secondary:#08a88a" style="width:120px;height:120px">
+                        <lord-icon src="https://cdn.lordicon.com/rfbqeber.json" trigger="loop" colors="primary:#121331,secondary:#08a88a" style="width:120px;height:120px">
                         </lord-icon>
 
                         <div class="mt-4">
@@ -254,10 +260,7 @@
                         </div>
 
 
-                        {{-- <div class="mb-3">
-                          <label for="" class="form-label">Muat Naik Dokumen (jika ada)</label>
-                          <input type="file" class="form-control" name="" id="" placeholder="" aria-describedby="fileHelpId" wire:model.defer="document">
-                        </div> --}}
+                       
 
                         <div class="mb-3">
                           <label for="" class="form-label">Catatan</label>
@@ -275,7 +278,6 @@
                                 <button type="button" class="btn btn-light"
                                     data-bs-dismiss="modal">Close</button>
                                 <button type="submit" class="btn btn-success" id="add-btn" wire:click="store">Hantar</button>
-                                {{-- <button type="button" class="btn btn-success" id="edit-btn">Update</button> --}}
                             </div>
                         </div>
                 </div>
@@ -375,54 +377,16 @@
             </div>
         </div>
 
-        <!-- Modal -->
-        <div wire:ignore.self class="modal fade zoomIn" id="deleteRecordModal" tabindex="-1" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="btn-close" id="deleteRecord-close" data-bs-dismiss="modal" aria-label="Close"
-                            id="btn-close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="mt-2 text-center">
-                            <lord-icon src="https://cdn.lordicon.com/gsqxdxog.json" trigger="loop"
-                                colors="primary:#f7b84b,secondary:#f06548" style="width:100px;height:100px">
-                            </lord-icon>
-                            <div class="mt-4 pt-2 fs-15 mx-4 mx-sm-5">
-                                <h4>Are you sure ?</h4>
-                                <p class="text-muted mx-4 mb-0">Are you sure you want to
-                                    remove this record ?</p>
-                                    {{-- {{ $data_id }} --}}
-                            </div>
-                        </div>
-                        <div class="d-flex gap-2 justify-content-center mt-4 mb-2">
-                            <button type="button" class="btn w-sm btn-light"
-                                data-bs-dismiss="modal">Close</button>
-                            <button type="button" class="btn w-sm btn-danger " id="delete-record">Yes, Delete
-                                It!</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
       
-        
-        <!-- Modal -->
-       
-       
-        
-        
-        
 
-           
-                   
-
-        <!--end row-->
+        
+     
+      
+ 
     @section('script')
        
     
-        {{-- <script src="{{ URL::asset('/assets/js/app.min.js') }}"></script> --}}
+        <script src="{{ URL::asset('/assets/js/app.min.js') }}"></script>
 
         <script>
             document.addEventListener('DOMContentLoaded', () => {
