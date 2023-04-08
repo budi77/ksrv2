@@ -122,7 +122,7 @@
                                                         </a>
                                                     </li>
                                                     @isset($result->approved_at)
-                                                        @if($result->approved_at <> '')
+                                                        @if($result->approved_at == '')
                                                         <li class="list-inline-item" data-bs-toggle="tooltip"
                                                             data-bs-trigger="hover" data-bs-placement="top" title="Pengesahan">
                                                             <a href="javascript:void(0);" class="text-success d-inline-block edit-item-btn" wire:click="approve('{{ $result->id }}')">
