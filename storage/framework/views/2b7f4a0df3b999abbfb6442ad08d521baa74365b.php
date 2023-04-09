@@ -16,7 +16,7 @@
                     <div class="page-title-right">
                         <ol class="breadcrumb m-0">
                             <li class="breadcrumb-item"><a href="#"><i class="ri-home-5-fill"></i></a></li>
-                            <li class="breadcrumb-item"><a href="#">dashboard</a></li>
+                            
                             <li class="breadcrumb-item active" aria-current="page">keahlian</li>
                         </ol>
                     </div>
