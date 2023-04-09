@@ -1,15 +1,15 @@
-<div>
-    @extends('layouts.master')
-@section('title') @lang('translation.starter')  @endsection
-{{-- @section('content') --}}
-@component('components.breadcrumb')
-@slot('li_1') Pages @endslot
-@slot('title') Starter  @endslot
-@endcomponent
-{{-- @endsection --}}
-
-sdfsdf sdfsdfsdf
-@section('script')
-<script src="{{ URL::asset('/assets/js/app.min.js') }}"></script>
-@endsection
+<div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title">Modal title</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <p>Modal body text goes here.</p>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+    </div>
 </div>

@@ -1,8 +1,12 @@
 window._ = require('lodash');
+require('@popperjs/core');
+
 
 try {
     require('bootstrap');
 } catch (e) {}
+
+window.bootstrap = bootstrap;
 
 /**
  * We'll load the axios HTTP library which allows us to easily issue requests
@@ -13,6 +17,9 @@ try {
 window.axios = require('axios');
 
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
+
+require('../../vendor/aliqasemzadeh/livewire-bootstrap-modal/resources/js/modals');
+
 
 /**
  * Echo exposes an expressive API for subscribing to channels and listening

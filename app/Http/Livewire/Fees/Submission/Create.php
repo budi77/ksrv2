@@ -8,6 +8,8 @@ class Create extends Component
 {
     public function render()
     {
-        return view('livewire.fees.submission.create')->extends('layouts.master');
+        // dd('dd');
+
+        return view('livewire.fees.submission.create');
     }
 }

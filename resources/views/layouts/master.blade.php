@@ -44,11 +44,12 @@
     {{-- @include('layouts.customizer') --}}
     <!-- END Right Sidebar -->
 
-    @include('layouts.vendor-scripts')
+    <livewire:modals/>
     @livewireScripts
+    <x-livewire-alert::scripts />
+    @include('layouts.vendor-scripts')
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-    <x-livewire-alert::scripts />
 
  
 </body>

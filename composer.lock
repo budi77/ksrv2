@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "76aa0caa59350a232bbf04a6d7063bc3",
+    "content-hash": "eeab5c8336133274bf909a693c837fdd",
     "packages": [
         {
             "name": "alexusmai/laravel-file-manager",
@@ -65,6 +65,62 @@
                 "source": "https://github.com/alexusmai/laravel-file-manager/tree/v3.0.5"
             },
             "time": "2023-02-26T08:58:15+00:00"
+        },
+        {
+            "name": "aliqasemzadeh/livewire-bootstrap-modal",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/aliqasemzadeh/livewire-bootstrap-modal.git",
+                "reference": "14d25e1b913941585692c1523a960bacba1eefbf"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/aliqasemzadeh/livewire-bootstrap-modal/zipball/14d25e1b913941585692c1523a960bacba1eefbf",
+                "reference": "14d25e1b913941585692c1523a960bacba1eefbf",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/framework": "^9.0|^10.0",
+                "livewire/livewire": "^2.0"
+            },
+            "default-branch": true,
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "AliQasemzadeh\\LaravelLivewireModals\\Providers\\LaravelLivewireModalsProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "AliQasemzadeh\\LaravelLivewireModals\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Kevin Dion",
+                    "email": "bastinald@icloud.com",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Ali Qasemzadeh",
+                    "email": "alighasemzadeh.dev@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Dynamic Laravel Livewire Bootstrap modals.",
+            "homepage": "https://github.com/aliqasemzadeh/livewire-bootstrap-modal",
+            "support": {
+                "issues": "https://github.com/aliqasemzadeh/livewire-bootstrap-modal/issues",
+                "source": "https://github.com/aliqasemzadeh/livewire-bootstrap-modal/tree/master"
+            },
+            "time": "2023-02-17T03:14:09+00:00"
         },
         {
             "name": "asm89/stack-cors",
@@ -8331,7 +8387,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "aliqasemzadeh/livewire-bootstrap-modal": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
