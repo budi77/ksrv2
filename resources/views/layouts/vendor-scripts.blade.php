@@ -9,6 +9,7 @@
 <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 <script src="{{ URL::asset('/assets/js/app.min.js') }}"></script>
 <script src="{{ asset('vendor/file-manager/js/file-manager.js') }}"></script>
+<script src="https://unpkg.com/@popperjs/core@2"></script>
 
 
 @yield('script')

@@ -9,6 +9,7 @@
 <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 <script src="<?php echo e(URL::asset('/assets/js/app.min.js')); ?>"></script>
 <script src="<?php echo e(asset('vendor/file-manager/js/file-manager.js')); ?>"></script>
+<script src="https://unpkg.com/@popperjs/core@2"></script>
 
 
 <?php echo $__env->yieldContent('script'); ?>
