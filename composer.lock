@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "eeab5c8336133274bf909a693c837fdd",
+    "content-hash": "5cb5ca888b8b9952b4f66e5e21dc2efe",
     "packages": [
         {
             "name": "alexusmai/laravel-file-manager",
@@ -1510,6 +1510,76 @@
                 }
             ],
             "time": "2023-02-15T18:05:31+00:00"
+        },
+        {
+            "name": "laracraft-tech/laravel-date-scopes",
+            "version": "v1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laracraft-tech/laravel-date-scopes.git",
+                "reference": "ed9e95f75edd50822d57706b762be153b7a34ede"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laracraft-tech/laravel-date-scopes/zipball/ed9e95f75edd50822d57706b762be153b7a34ede",
+                "reference": "ed9e95f75edd50822d57706b762be153b7a34ede",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/contracts": "^9.0 || ^10.0",
+                "php": "^8.1",
+                "spatie/laravel-package-tools": "^1.13.0"
+            },
+            "require-dev": {
+                "nunomaduro/larastan": "^2.0.1",
+                "orchestra/testbench": "^7.0  || ^8.0",
+                "pestphp/pest": "^1.22 || ^2.0",
+                "pestphp/pest-plugin-laravel": "^1.22 || ^2.0",
+                "phpstan/extension-installer": "^1.1",
+                "phpstan/phpstan-deprecation-rules": "^1.0",
+                "phpstan/phpstan-phpunit": "^1.0",
+                "spatie/laravel-ray": "^1.26"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "LaracraftTech\\LaravelDateScopes\\LaravelDateScopesServiceProvider"
+                    ],
+                    "aliases": {
+                        "LaravelDateScopes": "LaracraftTech\\LaravelDateScopes\\Facades\\LaravelDateScopes"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "LaracraftTech\\LaravelDateScopes\\": "src",
+                    "LaracraftTech\\LaravelDateScopes\\Database\\Factories\\": "database/factories"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Zacharias Creutznacher",
+                    "email": "zacharias@laracraft.tech",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Some useful date scopes for your Laravel Eloquent models!",
+            "homepage": "https://github.com/laracraft-tech/laravel-date-scopes",
+            "keywords": [
+                "laracraft-tech",
+                "laravel",
+                "laravel-date-scopes"
+            ],
+            "support": {
+                "issues": "https://github.com/laracraft-tech/laravel-date-scopes/issues",
+                "source": "https://github.com/laracraft-tech/laravel-date-scopes/tree/v1.0.2"
+            },
+            "time": "2023-04-08T20:46:06+00:00"
         },
         {
             "name": "laravel/framework",
@@ -3671,6 +3741,66 @@
                 }
             ],
             "time": "2023-03-27T22:05:11+00:00"
+        },
+        {
+            "name": "spatie/laravel-package-tools",
+            "version": "1.14.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spatie/laravel-package-tools.git",
+                "reference": "bab62023a4745a61170ad5424184533685e73c2d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spatie/laravel-package-tools/zipball/bab62023a4745a61170ad5424184533685e73c2d",
+                "reference": "bab62023a4745a61170ad5424184533685e73c2d",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/contracts": "^9.28|^10.0",
+                "php": "^8.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "^1.5",
+                "orchestra/testbench": "^7.7|^8.0",
+                "pestphp/pest": "^1.22",
+                "phpunit/phpunit": "^9.5.24",
+                "spatie/pest-plugin-test-time": "^1.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Spatie\\LaravelPackageTools\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Freek Van der Herten",
+                    "email": "freek@spatie.be",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Tools for creating Laravel packages",
+            "homepage": "https://github.com/spatie/laravel-package-tools",
+            "keywords": [
+                "laravel-package-tools",
+                "spatie"
+            ],
+            "support": {
+                "issues": "https://github.com/spatie/laravel-package-tools/issues",
+                "source": "https://github.com/spatie/laravel-package-tools/tree/1.14.2"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/spatie",
+                    "type": "github"
+                }
+            ],
+            "time": "2023-03-14T16:41:21+00:00"
         },
         {
             "name": "symfony/console",

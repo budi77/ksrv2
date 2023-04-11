@@ -27,11 +27,9 @@
                             <div class="col-sm-auto">
                                 <div>
                                     
-                                    
-                                         <button type="button" wire:click="$emit('showModal', 'fees.submission.create')">
-                                            <?php echo e(__('Submission')); ?>
-
-                                        </button>
+                                    <button type="button" class="btn btn-success add-btn" wire:click="showModal"><i class="ri-add-line align-bottom me-1"></i> Cipta
+                                        Serahan</button>
+                                         
                                    
                                 </div>
                             </div>

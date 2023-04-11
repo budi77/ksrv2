@@ -5,13 +5,14 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use GoldSpecDigital\LaravelEloquentUUID\Database\Eloquent\Uuid;
+use LaracraftTech\LaravelDateScopes\DateScopes;
 
 
 class Fee extends Model
 {
    
     use HasFactory;
-
+    use DateScopes;
     use Uuid;
     
     /**
