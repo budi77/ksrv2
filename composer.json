@@ -8,16 +8,19 @@
         "php": "^8.0.2",
         "alexusmai/laravel-file-manager": "^3.0",
         "aliqasemzadeh/livewire-bootstrap-modal": "dev-master",
+        "arcanedev/log-viewer": "~9.0",
         "fruitcake/laravel-cors": "^2.0",
         "goldspecdigital/laravel-eloquent-uuid": "9.0",
         "guzzlehttp/guzzle": "^7.0.1",
+        "illuminate/contracts": "^9.0|^10.0",
         "jantinnerezo/livewire-alert": "^2.2",
         "laracraft-tech/laravel-date-scopes": "^1.0",
         "laravel/framework": "^9.0",
         "laravel/sanctum": "^2.11",
         "laravel/tinker": "^2.5",
         "laravel/ui": "^3.4",
-        "livewire/livewire": "^2.12"
+        "livewire/livewire": "^2.12",
+        "rappasoft/laravel-authentication-log": "2.0"
     },
     "require-dev": {
         "spatie/laravel-ignition": "^1.0",
