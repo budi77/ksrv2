@@ -32,7 +32,7 @@ Tetapan Sistem
                     <li class="nav-item" role="presentation">
                         <a class="nav-link" data-bs-toggle="tab" href="#arrow-contact" role="tab" aria-selected="false" tabindex="-1">
                             <span class="d-block d-sm-none"><i class="mdi mdi-email"></i></span>
-                            <span class="d-none d-sm-block">Contact</span>
+                            <span class="d-none d-sm-block">Ubah Rekod Pembayaran</span>
                         </a>
                     </li>
                 </ul>
@@ -45,14 +45,7 @@ Tetapan Sistem
                         <livewire:settings.departments />
                     </div>
                     <div class="tab-pane" id="arrow-contact" role="tabpanel">
-                        <h6>Contact</h6>
-                        <p class="mb-0">
-                            Consistency is the one thing that can take all of the different elements in your design, and
-                            tie them all together and make them work. In an awareness campaign, it is vital for people
-                            to begin put 2 and 2 together and begin to recognize your cause. Consistency piques people’s
-                            interest is that it has become more and more popular over the years, which is excellent news
-                            to the beginner and advanced <a href="javascript:void(0);" class="text-decoration-underline"><b>Contact Designer</b></a>.
-                        </p>
+                        <livewire:settings.edit.index />
                     </div>
                 </div>
             </div><!-- end card-body -->
