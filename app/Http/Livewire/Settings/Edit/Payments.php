@@ -5,10 +5,11 @@ namespace App\Http\Livewire\Settings\Edit;
 use Livewire\Component;
 
 use App\Models\Fee;
+use App\Models\Member;
 
 class Payments extends Component
 {
-    public $records, $data_id;
+    public $records, $data_id, $payment, $value, $payment_date;
 
     protected $listeners = ['showPayments'];
 
@@ -33,6 +34,19 @@ class Payments extends Component
         $delete = Fee::find($id)->delete();
 
         $this->emitSelf('showPayments', $this->data_id );
+
+    }
+
+    public function edit($id)
+    {
+
+        // $this->payment = 
+        // $this->member = Member::find($id);
+
+
+
+        $this->dispatchBrowserEvent('show-edit');
+
 
     }
 }
