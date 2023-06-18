@@ -11,7 +11,7 @@
 
     <!-- App favicon -->
     <link rel="shortcut icon" href="<?php echo e(URL::asset('assets/images/favicon.ico')); ?>">
-
+    <?php echo $__env->yieldPushContent('styles'); ?>
     <?php echo $__env->make('layouts.head-css', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
     <?php echo \Livewire\Livewire::styles(); ?>
 
@@ -44,19 +44,20 @@
     <!-- Right Sidebar -->
     
     <!-- END Right Sidebar -->
+    <?php echo $__env->yieldPushContent('scripts'); ?>
     <?php echo $__env->make('layouts.vendor-scripts', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
     <?php
 if (! isset($_instance)) {
     $html = \Livewire\Livewire::mount('modals', [])->html();
-} elseif ($_instance->childHasBeenRendered('5WCkfXF')) {
-    $componentId = $_instance->getRenderedChildComponentId('5WCkfXF');
-    $componentTag = $_instance->getRenderedChildComponentTagName('5WCkfXF');
+} elseif ($_instance->childHasBeenRendered('0UH1ceq')) {
+    $componentId = $_instance->getRenderedChildComponentId('0UH1ceq');
+    $componentTag = $_instance->getRenderedChildComponentTagName('0UH1ceq');
     $html = \Livewire\Livewire::dummyMount($componentId, $componentTag);
-    $_instance->preserveRenderedChild('5WCkfXF');
+    $_instance->preserveRenderedChild('0UH1ceq');
 } else {
     $response = \Livewire\Livewire::mount('modals', []);
     $html = $response->html();
-    $_instance->logRenderedChild('5WCkfXF', $response->id(), \Livewire\Livewire::getRootElementTagName($html));
+    $_instance->logRenderedChild('0UH1ceq', $response->id(), \Livewire\Livewire::getRootElementTagName($html));
 }
 echo $html;
 ?>

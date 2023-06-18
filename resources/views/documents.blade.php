@@ -1,10 +1,16 @@
 @extends('layouts.master')
 @section('title') @lang('translation.starter')  @endsection
 
-@section('css')
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
-@endsection
+{{-- @section('css')
+
+<link rel="stylesheet" href="{{ asset('vendor/file-manager/css/file-manager.css') }}">
+
+@endsection --}}
+@push('styles')
+<link rel="stylesheet" href="{{ asset('vendor/file-manager/css/file-manager.css') }}">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+@endpush
 
 @section('content')
 
@@ -33,5 +39,10 @@
 
 @section('script')
 <script src="{{ URL::asset('/assets/js/app.min.js') }}"></script>
+<script src="{{ asset('vendor/file-manager/js/file-manager.js') }}"></script>
 
 @endsection
+
+@push('scripts')
+<script src="{{ asset('vendor/file-manager/js/file-manager.js') }}"></script>
+@endpush

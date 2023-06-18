@@ -11,7 +11,7 @@
 
     <!-- App favicon -->
     <link rel="shortcut icon" href="{{ URL::asset('assets/images/favicon.ico')}}">
-
+    @stack('styles')
     @include('layouts.head-css')
     @livewireStyles
 
@@ -43,6 +43,7 @@
     <!-- Right Sidebar -->
     {{-- @include('layouts.customizer') --}}
     <!-- END Right Sidebar -->
+    @stack('scripts')
     @include('layouts.vendor-scripts')
     <livewire:modals/>
     @livewireScripts
