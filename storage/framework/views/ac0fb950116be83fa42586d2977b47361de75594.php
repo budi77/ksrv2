@@ -35,6 +35,12 @@ Tetapan Sistem
                             <span class="d-none d-sm-block">Ubah Rekod Pembayaran</span>
                         </a>
                     </li>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link" data-bs-toggle="tab" href="#import-members" role="tab" aria-selected="false" tabindex="-1">
+                            <span class="d-block d-sm-none"><i class="mdi mdi-email"></i></span>
+                            <span class="d-none d-sm-block">Import Members</span>
+                        </a>
+                    </li>
                 </ul>
                 <!-- Tab panes -->
                 <div class="tab-content text-muted">
@@ -72,17 +78,17 @@ if (! isset($_instance)) {
 echo $html;
 ?>
                     </div>
-                    <div class="tab-pane" id="arrow-contact" role="tabpanel">
+                    <div class="tab-pane" id="import-members" role="tabpanel">
                         <?php
 if (! isset($_instance)) {
-    $html = \Livewire\Livewire::mount('settings.edit.index', [])->html();
+    $html = \Livewire\Livewire::mount('settings.importmembers', [])->html();
 } elseif ($_instance->childHasBeenRendered('l338543171-2')) {
     $componentId = $_instance->getRenderedChildComponentId('l338543171-2');
     $componentTag = $_instance->getRenderedChildComponentTagName('l338543171-2');
     $html = \Livewire\Livewire::dummyMount($componentId, $componentTag);
     $_instance->preserveRenderedChild('l338543171-2');
 } else {
-    $response = \Livewire\Livewire::mount('settings.edit.index', []);
+    $response = \Livewire\Livewire::mount('settings.importmembers', []);
     $html = $response->html();
     $_instance->logRenderedChild('l338543171-2', $response->id(), \Livewire\Livewire::getRootElementTagName($html));
 }

@@ -20,6 +20,7 @@
         "laravel/tinker": "^2.5",
         "laravel/ui": "^3.4",
         "livewire/livewire": "^2.12",
+        "maatwebsite/excel": "^3.1",
         "rappasoft/laravel-authentication-log": "2.0"
     },
     "require-dev": {

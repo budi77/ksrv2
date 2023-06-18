@@ -35,6 +35,12 @@ Tetapan Sistem
                             <span class="d-none d-sm-block">Ubah Rekod Pembayaran</span>
                         </a>
                     </li>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link" data-bs-toggle="tab" href="#import-members" role="tab" aria-selected="false" tabindex="-1">
+                            <span class="d-block d-sm-none"><i class="mdi mdi-email"></i></span>
+                            <span class="d-none d-sm-block">Import Members</span>
+                        </a>
+                    </li>
                 </ul>
                 <!-- Tab panes -->
                 <div class="tab-content text-muted">
@@ -44,8 +50,8 @@ Tetapan Sistem
                     <div class="tab-pane" id="arrow-profile" role="tabpanel">
                         <livewire:settings.departments />
                     </div>
-                    <div class="tab-pane" id="arrow-contact" role="tabpanel">
-                        <livewire:settings.edit.index />
+                    <div class="tab-pane" id="import-members" role="tabpanel">
+                        <livewire:settings.importmembers />
                     </div>
                 </div>
             </div><!-- end card-body -->
