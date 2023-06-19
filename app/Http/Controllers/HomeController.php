@@ -41,10 +41,10 @@ class HomeController extends Controller
         return view('documents');
     }
 
-    // public function root()
-    // {
-    //     return view('index');
-    // }
+    public function root()
+    {
+        return view('index');
+    }
 
     /*Language Translation*/
     public function lang($locale)
