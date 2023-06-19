@@ -162,12 +162,12 @@
                                             
                                             <li class="list-inline-item edit" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" aria-label="Edit">
                                                 <a href="javascript:void(0);"  class="text-muted d-inline-block edit-item-btn" wire:click="edit('{{ $row->id }}')" >
-                                                    <i class="ri-pencil-fill fs-16"></i>
+                                                    <i class="ri-money-dollar-box-fill fs-18"></i>
                                                 </a>
                                             </li>
                                             <li class="list-inline-item" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" aria-label="View">
                                                 <a href="javascript:void(0);" class="text-muted d-inline-block" wire:click="list('{{ $row->id }}')" >
-                                                    <i class="ri-eye-fill fs-16"></i>
+                                                    <i class="ri-eye-fill fs-18"></i>
                                                 </a>
                                             </li>
                                            

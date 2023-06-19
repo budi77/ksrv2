@@ -6,15 +6,18 @@ use Livewire\Component;
 use App\Models\Department;
 use App\Models\Member;
 use Livewire\WithPagination;
+use Jantinnerezo\LivewireAlert\LivewireAlert;
 
 class Members extends Component
 {
     use WithPagination;
     protected $paginationTheme = 'bootstrap';
+    use LivewireAlert;
+
 
     public $departments, $name, $email, $department, $koperasi, $ic_no, $member_id, $search, $member_list, $active;
     public $filter_department, $filter_kospera, $filter_aktif;
-    public $jumlah_ahli, $aktif, $non_aktif, $kospera;
+    public $jumlah_ahli, $aktif, $non_aktif, $kospera, $data_id;
 
     public function mount()
     {
@@ -22,6 +25,14 @@ class Members extends Component
         $this->departments = Department::orderby('name')->get();
 
     }
+
+    public function getListeners()
+{
+    return [
+    	'delete',
+      
+    ];
+}
 
     public function render()
     {
@@ -72,6 +83,7 @@ class Members extends Component
         $this->reset(['name','ic_no', 'member_id','email','department','active','koperasi']);
 
         $this->dispatchBrowserEvent('close-add-modal');
+        $this->alert('success', 'Berjaya!');
 
 
     }
@@ -106,9 +118,32 @@ class Members extends Component
 
     }
 
-    public function delete($id)
+    public function confirm($id)
+
     {
-        $delete = Member::find($id)->delete();
+
+        $this->data_id = $id;
+
+        $this->alert('warning', 'Padam Data?', [
+            'timer' => 5000,
+            // 'toast' => false,
+            'showDenyButton' => true,
+            'denyButtonText' => 'Padam',
+            'showCancelButton' => true,
+            'cancelButtonText' => 'Batal',
+            'onDenied' => 'delete',
+            'onDismissed' => 'cancelled'
+        ]);
+        // $this->confirm('Are you sure do want to leave?', [
+        //     'onConfirmed' => 'delete',
+        // ]);
+    }
+
+    public function delete()
+    {
+        $delete = Member::find($this->data_id)->delete();
+        $this->alert('success', 'Deleted!');
+
     }
     
 }

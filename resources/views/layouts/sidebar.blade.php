@@ -35,7 +35,13 @@
             <ul class="navbar-nav" id="navbar-nav">
                 <li class="menu-title"><span>@lang('translation.menu')</span></li>
 
-                <li class="nav-item">
+                 <li class="nav-item">
+                    <a class="nav-link menu-link" href="/index">
+                        <i class="ri-dashboard-2-line"></i> <span>@lang('translation.dashboards')</span>
+                    </a>
+                </li>
+
+                {{-- <li class="nav-item">
                     <a class="nav-link menu-link" href="#sidebarDashboards" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarDashboards">
                         <i class="ri-dashboard-2-line"></i> <span>@lang('translation.dashboards')</span>
                     </a>
@@ -61,7 +67,7 @@
                             </li>
                         </ul>
                     </div>
-                </li> <!-- end Dashboard Menu -->
+                </li> <!-- end Dashboard Menu --> --}}
 
                 <li class="nav-item">
                     <a class="nav-link menu-link" href="{{ route('members') }}">

@@ -42,4 +42,4 @@
 <?php $__env->startPush('scripts'); ?>
 <script src="<?php echo e(asset('vendor/file-manager/js/file-manager.js')); ?>"></script>
 <?php $__env->stopPush(); ?>
-<?php echo $__env->make('layouts.master', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\laragon\www\ksrv2\resources\views/documents.blade.php ENDPATH**/ ?>
+<?php echo $__env->make('layouts.master', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH D:\laragon\www\ksrv2\resources\views/documents.blade.php ENDPATH**/ ?>

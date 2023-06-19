@@ -26,12 +26,14 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index(Request $request)
+    public function index()
     {
-        if (view()->exists($request->path())) {
-            return view($request->path());
-        }
-        return abort(404);
+        // if (view()->exists($request->path())) {
+        //     return view($request->path());
+        // }
+        // return abort(404);
+
+        return view('dashboard');
     }
 
     public function dokumen()
@@ -39,10 +41,10 @@ class HomeController extends Controller
         return view('documents');
     }
 
-    public function root()
-    {
-        return view('index');
-    }
+    // public function root()
+    // {
+    //     return view('index');
+    // }
 
     /*Language Translation*/
     public function lang($locale)

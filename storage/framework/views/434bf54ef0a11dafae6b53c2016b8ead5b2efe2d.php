@@ -35,33 +35,13 @@
             <ul class="navbar-nav" id="navbar-nav">
                 <li class="menu-title"><span><?php echo app('translator')->get('translation.menu'); ?></span></li>
 
-                <li class="nav-item">
-                    <a class="nav-link menu-link" href="#sidebarDashboards" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarDashboards">
+                 <li class="nav-item">
+                    <a class="nav-link menu-link" href="/index">
                         <i class="ri-dashboard-2-line"></i> <span><?php echo app('translator')->get('translation.dashboards'); ?></span>
                     </a>
-                    <div class="collapse menu-dropdown" id="sidebarDashboards">
-                        <ul class="nav nav-sm flex-column">
-                            <li class="nav-item">
-                                <a href="dashboard-analytics" class="nav-link"><?php echo app('translator')->get('translation.analytics'); ?></a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="dashboard-crm" class="nav-link"><?php echo app('translator')->get('translation.crm'); ?></a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="index" class="nav-link"><?php echo app('translator')->get('translation.ecommerce'); ?></a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="dashboard-crypto" class="nav-link"><?php echo app('translator')->get('translation.crypto'); ?></a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="dashboard-projects" class="nav-link"><?php echo app('translator')->get('translation.projects'); ?></a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="dashboard-nft" class="nav-link"> <?php echo app('translator')->get('translation.nft'); ?></a>
-                            </li>
-                        </ul>
-                    </div>
-                </li> <!-- end Dashboard Menu -->
+                </li>
+
+                
 
                 <li class="nav-item">
                     <a class="nav-link menu-link" href="<?php echo e(route('members')); ?>">
@@ -980,4 +960,4 @@
 <!-- Left Sidebar End -->
 <!-- Vertical Overlay-->
 <div class="vertical-overlay"></div>
-<?php /**PATH C:\laragon\www\ksrv2\resources\views/layouts/sidebar.blade.php ENDPATH**/ ?>
+<?php /**PATH D:\laragon\www\ksrv2\resources\views/layouts/sidebar.blade.php ENDPATH**/ ?>

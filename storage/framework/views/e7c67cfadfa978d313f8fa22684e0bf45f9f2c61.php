@@ -12,4 +12,4 @@
         </div>
     </div>
 </footer>
-<?php /**PATH C:\laragon\www\ksrv2\resources\views/layouts/footer.blade.php ENDPATH**/ ?>
+<?php /**PATH D:\laragon\www\ksrv2\resources\views/layouts/footer.blade.php ENDPATH**/ ?>
