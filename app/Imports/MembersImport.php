@@ -23,6 +23,10 @@ class MembersImport implements ToModel, WithUpserts, WithHeadingRow, WithChunkRe
         if (!isset($row['nokp'])) {
             return null;
         }
+
+        if ($row['nama_bahagian'] == 'Tiada Maklumat') {
+            return null;
+        }
     
         return new Member([
             'id' => Str::uuid()->toString(),
@@ -44,7 +48,7 @@ class MembersImport implements ToModel, WithUpserts, WithHeadingRow, WithChunkRe
         $department = Department::where('name', $value)->first();
     
         if(!$department){
-            return 'ac8d2fa4-3329-4894-a64e-3fa06cc5a2bf';
+            return '';
         }
     
         return $department->id;
