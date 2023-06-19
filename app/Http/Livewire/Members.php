@@ -106,5 +106,9 @@ class Members extends Component
 
     }
 
+    public function delete($id)
+    {
+        $delete = Member::find($id)->delete();
+    }
     
 }
