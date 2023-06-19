@@ -285,7 +285,7 @@
                                                     <a class="edit-item-btn" href="javascript:void(0);" wire:click="edit('{{ $result->id }}')"><i class="ri-pencil-fill align-bottom text-muted"></i></a>
                                                 </li>
                                                 <li class="list-inline-item" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" aria-label="Edit">
-                                                    <a class="edit-item-btn" href="javascript:void(0);" wire:click="delete('{{ $result->id }}')" onclick="return confirm('Are you sure to delete?')"><i class="ri-pencil-fill align-bottom text-danger"></i></a>
+                                                    <a class="edit-item-btn" href="javascript:void(0);" wire:click="delete('{{ $result->id }}')" onclick="return confirm('Are you sure to delete?')"><i class="ri-delete-bin-fill align-bottom text-danger"></i></a>
                                                 </li>
                                               
                                             </ul>
