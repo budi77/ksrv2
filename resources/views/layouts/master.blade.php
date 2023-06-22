@@ -14,6 +14,8 @@
     @stack('styles')
     @include('layouts.head-css')
     @livewireStyles
+    {{-- @laraflashStyles() --}}
+
 
 </head>
 <body>
@@ -22,11 +24,13 @@
     <div id="layout-wrapper">
         @include('layouts.topbar')
         @include('layouts.sidebar')
+
         <!-- ============================================================== -->
         <!-- Start right Content here -->
         <!-- ============================================================== -->
         <div class="main-content">
             <div class="page-content">
+                {{-- <livewire:laraflash.container /> --}}
                 <!-- Start content -->
                 <div class="container-fluid">
                     @yield('content')

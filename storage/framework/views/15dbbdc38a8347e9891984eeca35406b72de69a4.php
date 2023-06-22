@@ -15,6 +15,8 @@
     <?php echo $__env->make('layouts.head-css', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
     <?php echo \Livewire\Livewire::styles(); ?>
 
+    
+
 
 </head>
 <body>
@@ -23,11 +25,13 @@
     <div id="layout-wrapper">
         <?php echo $__env->make('layouts.topbar', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
         <?php echo $__env->make('layouts.sidebar', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+
         <!-- ============================================================== -->
         <!-- Start right Content here -->
         <!-- ============================================================== -->
         <div class="main-content">
             <div class="page-content">
+                
                 <!-- Start content -->
                 <div class="container-fluid">
                     <?php echo $__env->yieldContent('content'); ?>
@@ -49,15 +53,15 @@
     <?php
 if (! isset($_instance)) {
     $html = \Livewire\Livewire::mount('modals', [])->html();
-} elseif ($_instance->childHasBeenRendered('xyebAfe')) {
-    $componentId = $_instance->getRenderedChildComponentId('xyebAfe');
-    $componentTag = $_instance->getRenderedChildComponentTagName('xyebAfe');
+} elseif ($_instance->childHasBeenRendered('fAUI0ji')) {
+    $componentId = $_instance->getRenderedChildComponentId('fAUI0ji');
+    $componentTag = $_instance->getRenderedChildComponentTagName('fAUI0ji');
     $html = \Livewire\Livewire::dummyMount($componentId, $componentTag);
-    $_instance->preserveRenderedChild('xyebAfe');
+    $_instance->preserveRenderedChild('fAUI0ji');
 } else {
     $response = \Livewire\Livewire::mount('modals', []);
     $html = $response->html();
-    $_instance->logRenderedChild('xyebAfe', $response->id(), \Livewire\Livewire::getRootElementTagName($html));
+    $_instance->logRenderedChild('fAUI0ji', $response->id(), \Livewire\Livewire::getRootElementTagName($html));
 }
 echo $html;
 ?>

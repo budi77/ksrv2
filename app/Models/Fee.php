@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use GoldSpecDigital\LaravelEloquentUUID\Database\Eloquent\Uuid;
 use LaracraftTech\LaravelDateScopes\DateScopes;
+use Carbon;
 
 
 class Fee extends Model
@@ -54,6 +55,14 @@ class Fee extends Model
     {
         return $this->belongsTo(User::class, 'user_id');
 
+    }
+
+    protected function paymentDate(): Attribute
+    {
+        return new Attribute(
+            get: fn ($value) =>  Carbon::parse($value)->format('d/m/Y'),
+            // set: fn ($value) =>  Carbon::parse($value)->format('Y-m-d'),
+        );
     }
 
 }
