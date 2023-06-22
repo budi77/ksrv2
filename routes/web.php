@@ -16,6 +16,9 @@ use Illuminate\Support\Facades\Auth;
 Auth::routes(['register' => false]);
 //Language Translation
 
+Route::get('/landing', function () {
+    return view('landing');
+});
 
 Route::middleware('auth')->group(function () {
     

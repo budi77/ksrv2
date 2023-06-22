@@ -54,7 +54,7 @@ class Index extends Component
         {
             $filename = $this->document->getClientOriginalName();
 
-            $this->document->storeAs('documents', 'public');
+            $this->document->store('public');
 
             FeeSubmission::find($store->id)->update([
                 'extra1' => $filename

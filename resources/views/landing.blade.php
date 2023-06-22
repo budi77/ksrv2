@@ -1,6 +1,6 @@
 @extends('layouts.master-without-nav')
 @section('title')
-    Landing
+   KSR
 @endsection
 @section('css')
     <link href="{{ URL::asset('assets/libs/swiper/swiper.min.css') }}" rel="stylesheet" type="text/css" />
@@ -18,8 +18,10 @@
         <nav class="navbar navbar-expand-lg navbar-landing navbar-light fixed-top" id="navbar">
             <div class="container">
                 <a class="navbar-brand" href="index">
-                    <img src="{{URL::asset('assets/images/logo-dark.png')}}" class="card-logo card-logo-dark" alt="logo dark" height="17">
-                    <img src="{{URL::asset('assets/images/logo-light.png')}}" class="card-logo card-logo-light" alt="logo light" height="17">
+                    {{-- <img src="{{ URL::asset('assets/images/KSR.png') }}" class="card-logo card-logo-dark" height="17"> --}}
+
+                    <img src="{{URL::asset('assets/images/KSR.png')}}" class="card-logo card-logo-dark" alt="logo dark" height="60">
+                    <img src="{{URL::asset('assets/images/KSR.png')}}" class="card-logo card-logo-light" alt="logo light" height="60">
                 </a>
                 <button class="navbar-toggler py-0 fs-20 text-body" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <i class="mdi mdi-menu"></i>
@@ -31,10 +33,10 @@
                             <a class="nav-link active" href="#hero">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#wallet">Wallet</a>
+                            <a class="nav-link" href="#wallet">Keahlian</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#marketplace">Marketplace</a>
+                            <a class="nav-link" href="#marketplace">Aktiviti</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#categories">Categories</a>
@@ -45,7 +47,7 @@
                     </ul>
 
                     <div class="">
-                        <a href="apps-nft-wallet" class="btn btn-success">Wallet Connect</a>
+                        <a href="/login" class="btn btn-primary btn-sm">SISPAKS</a>
                     </div>
                 </div>
 
@@ -61,13 +63,14 @@
                 <div class="row justify-content-center">
                     <div class="col-lg-8 col-sm-10">
                         <div class="text-center">
-                            <h1 class="display-4 fw-medium mb-4 lh-base text-white">Discover Digital Art & Collect <span class="text-success">NFT Marketplace</span></h1>
-                            <p class="lead text-white-50 lh-base mb-4 pb-2">Can artwork be NFT? NFTs (non-fungible tokens) are one-of-a-kind digital assets. Given they're digital in nature, can physical works of art be turned into NFTs?.</p>
+                            <h1 class="display-4 fw-medium mb-4 lh-base text-white">SELAMAT DATANG </h1>
+                            <h1 class="display-6 fw-medium mb-4 lh-base text-muted">PORTAL KELAB SUKAN & REKREASI SPRM </h1>
+                            {{-- <p class="lead text-white-50 lh-base mb-4 pb-2">Can artwork be NFT? NFTs (non-fungible tokens) are one-of-a-kind digital assets. Given they're digital in nature, can physical works of art be turned into NFTs?.</p> --}}
 
-                            <div class="hstack gap-2 justify-content-center">
+                            {{-- <div class="hstack gap-2 justify-content-center">
                                 <a href="apps-nft-create" class="btn btn-primary">Create Own <i class="ri-arrow-right-line align-middle ms-1"></i></a>
                                 <a href="apps-nft-explore" class="btn btn-danger">Explore Now <i class="ri-arrow-right-line align-middle ms-1"></i></a>
-                            </div>
+                            </div> --}}
                         </div>
                     </div><!--end col-->
                 </div><!-- end row -->

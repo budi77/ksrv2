@@ -1,17 +1,17 @@
 <div>
-    {{-- @extends('layouts.master') --}}
-    @section('title')
+    
+    <?php $__env->startSection('title'); ?>
         Serahan
-    @endsection
+    <?php $__env->stopSection(); ?>
   
-        @component('components.breadcrumb')
-            @slot('li_1')
+        <?php $__env->startComponent('components.breadcrumb'); ?>
+            <?php $__env->slot('li_1'); ?>
                Dashboard
-            @endslot
-            @slot('title')
+            <?php $__env->endSlot(); ?>
+            <?php $__env->slot('title'); ?>
                Serahan Yuran
-            @endslot
-        @endcomponent
+            <?php $__env->endSlot(); ?>
+        <?php echo $__env->renderComponent(); ?>
 
         <div class="row">
             <div class="col-lg-12">
@@ -29,58 +29,13 @@
                                     
                                     <button type="button" class="btn btn-success add-btn" wire:click="showModal"><i class="ri-add-line align-bottom me-1"></i> Cipta
                                         Serahan</button>
-                                         {{-- <button type="button" wire:click="$emit('showModal', 'fees.submission.create')">
-                                            {{ __('Submission') }}
-                                        </button> --}}
+                                         
                                    
                                 </div>
                             </div>
                         </div>
                     </div>
-                    {{-- <div class="card-body border-bottom-dashed border-bottom">
-                        <form>
-                            <div class="row g-3">
-                                <div class="col-xl-6">
-                                    <div class="search-box">
-                                        <input type="text" class="form-control search"
-                                            placeholder="Search for customer, email, phone, status or something...">
-                                        <i class="ri-search-line search-icon"></i>
-                                    </div>
-                                </div>
-                                <!--end col-->
-                                <div class="col-xl-6">
-                                    <div class="row g-3">
-                                        <div class="col-sm-4">
-                                            <div class="">
-                                                <input type="text" class="form-control" id="datepicker-range"
-                                                    data-provider="flatpickr" data-date-format="d M, Y" data-range-date="true"
-                                                    placeholder="Select date">
-                                            </div>
-                                        </div>
-                                        <!--end col-->
-                                        <div class="col-sm-4">
-                                            <div>
-                                                <select class="form-control" data-plugin="choices" data-choices
-                                                    data-choices-search-false name="choices-single-default" id="idStatus">
-                                                    <option value="">Status</option>
-                                                    <option value="all" selected>All</option>
-                                                    <option value="Active">Active</option>
-                                                    <option value="Block">Block</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <!--end col-->
-    
-                                        <div class="col-sm-4">
-                                           
-                                        </div>
-                                        <!--end col-->
-                                    </div>
-                                </div>
-                            </div>
-                            <!--end row-->
-                        </form>
-                    </div> --}}
+                    
                     <div class="card-body">
                         <div>
                             <div class="table-responsive table-card mb-1">
@@ -98,42 +53,42 @@
                                         </tr>
                                     </thead>
                                     <tbody class="">
-                                       @foreach($results as $result)
+                                       <?php $__currentLoopData = $results; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $result): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                         <tr>
-                                           {{-- {{ $result }} --}}
-                                            <td class="">{{ $loop->iteration }}</td>
-                                            <td class="">{{ @$result->department->name }}</td>
-                                            <td class="">{{ @$result->user->name }}</td>
-                                            <td class="">{{ @$result->total}}</td>
-                                            <td class="">{{ @$result->mode }}</td>
-                                            <td class="">{{ @$result->year }}</td>
+                                           
+                                            <td class=""><?php echo e($loop->iteration); ?></td>
+                                            <td class=""><?php echo e(@$result->department->name); ?></td>
+                                            <td class=""><?php echo e(@$result->user->name); ?></td>
+                                            <td class=""><?php echo e(@$result->total); ?></td>
+                                            <td class=""><?php echo e(@$result->mode); ?></td>
+                                            <td class=""><?php echo e(@$result->year); ?></td>
                                             <td class="">
-                                                @if($result->approver_id == '')
+                                                <?php if($result->approver_id == ''): ?>
                                                 <span class="badge badge-soft-warning text-uppercase">Belum disahkan</span>
-                                                @else
+                                                <?php else: ?>
                                                 <span class="badge badge-soft-success text-uppercase">telah disahkan</span>
 
-                                                @endif
+                                                <?php endif; ?>
                                             </td>
 
                                             <td>
                                                 <ul class="list-inline hstack gap-2 mb-0">
                                                     <li class="list-inline-item" data-bs-toggle="tooltip"
                                                         data-bs-trigger="hover" data-bs-placement="top" title="Lihat Data">
-                                                        <a href="javascript:void(0);" class="text-primary d-inline-block edit-item-btn" wire:click="show('{{ $result->id }}')">
+                                                        <a href="javascript:void(0);" class="text-primary d-inline-block edit-item-btn" wire:click="show('<?php echo e($result->id); ?>')">
                                                             <i class=" ri-eye-line fs-16"></i>
                                                         </a>
                                                     </li>
-                                                    @isset($result->approved_at)
-                                                        @if($result->approved_at == '')
+                                                    <?php if(isset($result->approved_at)): ?>
+                                                        <?php if($result->approved_at == ''): ?>
                                                         <li class="list-inline-item" data-bs-toggle="tooltip"
                                                             data-bs-trigger="hover" data-bs-placement="top" title="Pengesahan">
-                                                            <a href="javascript:void(0);" class="text-success d-inline-block edit-item-btn" wire:click="approve('{{ $result->id }}')">
+                                                            <a href="javascript:void(0);" class="text-success d-inline-block edit-item-btn" wire:click="approve('<?php echo e($result->id); ?>')">
                                                                 <i class="ri-checkbox-circle-line fs-16"></i>
                                                             </a>
                                                         </li>
-                                                        @endif
-                                                    @endisset
+                                                        <?php endif; ?>
+                                                    <?php endif; ?>
                                                     <li class="list-inline-item" data-bs-toggle="tooltip"
                                                         data-bs-trigger="hover" data-bs-placement="top" title="Padam">
                                                         <a class="text-danger d-inline-block remove-item-btn"
@@ -144,7 +99,7 @@
                                                 </ul>
                                             </td>
                                         </tr>
-                                        @endforeach
+                                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                                     </tbody>
                                 </table>
                               
@@ -173,7 +128,8 @@
 
                         <div class="mt-4">
                             <h4 class="mb-3">Pengesahan Penerimaan Yuran!</h4>
-                            <p class="text-muted mb-4"> Saya telah menerima bayaran yuran sebanyak <span class='fw-bold'>RM{{ @$approve->total }}</span> daripada <span class="fw-bold">{{ @$approve->user->name }}</span> sebagai bayaran yuran KSR  {{ @$approve->department->name }} untuk tahun {{ @$approve->year }}
+                            <p class="text-muted mb-4"> Saya telah menerima bayaran yuran sebanyak <span class='fw-bold'>RM<?php echo e(@$approve->total); ?></span> daripada <span class="fw-bold"><?php echo e(@$approve->user->name); ?></span> sebagai bayaran yuran KSR  <?php echo e(@$approve->department->name); ?> untuk tahun <?php echo e(@$approve->year); ?>
+
                                 </p>
                             <div class="hstack gap-2 justify-content-center">
                                 <a href="javascript:void(0);" class="btn btn-link link-success fw-medium" data-bs-dismiss="modal"><i class="ri-close-line me-1 align-middle"></i> Close</a>
@@ -200,9 +156,9 @@
                                 <label for="priority-field" class="form-label">Bahagian</label>
                                 <select class="form-select"  wire:model.defer="department">
                                     <option >-- Sila Pilih --</option>
-                                    @foreach($departments as $data)
-                                    <option value="{{ $data->id }}" @selected($department_id == $data->id)>{{ $data->name }}</option>
-                                    @endforeach
+                                    <?php $__currentLoopData = $departments; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $data): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                    <option value="<?php echo e($data->id); ?>" <?php if($department_id == $data->id): echo 'selected'; endif; ?>><?php echo e($data->name); ?></option>
+                                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                                     
                                 </select>
                             </div>
@@ -217,8 +173,8 @@
                                     <select class="form-select" 
                                         id="choices-priority-input" wire:model.defer="type">
                                         <option selected>-- Sila Pilih --</option>
-                                        <option value="Sebahagian" @selected($type == 'Sebahagian')>Sebahagian</option>
-                                        <option value="Selesai" @selected($type == 'Selesai')>Selesai</option>
+                                        <option value="Sebahagian" <?php if($type == 'Sebahagian'): echo 'selected'; endif; ?>>Sebahagian</option>
+                                        <option value="Selesai" <?php if($type == 'Selesai'): echo 'selected'; endif; ?>>Selesai</option>
                                     </select>
                                 </div>
                             </div>
@@ -228,8 +184,8 @@
                                     <select class="form-select"
                                         id="choices-status-input" wire:model.defer="year">
                                         <option selected >-- Sila Pilih --</option>
-                                        <option value="2023" @selected($year == '2023')>2023</option>
-                                        <option value="2024" @selected($year == '2024')>2024</option>
+                                        <option value="2023" <?php if($year == '2023'): echo 'selected'; endif; ?>>2023</option>
+                                        <option value="2024" <?php if($year == '2024'): echo 'selected'; endif; ?>>2024</option>
                                     </select>
                                 </div>
                             </div>
@@ -247,15 +203,15 @@
                             <p class="mb-1"><label for="" class="form-label">Cara Serahan</label></p>
 
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="mode" id="mode" value="Tunai" checked wire:model="mode" @checked($mode == 'Tunai')>
+                                <input class="form-check-input" type="radio" name="mode" id="mode" value="Tunai" checked wire:model="mode" <?php if($mode == 'Tunai'): echo 'checked'; endif; ?>>
                                 <label class="form-check-label font-size-14 fw-bold" for="">Tunai</label>
                               </div>
                               <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="mode" id="mode" value="Bank-In" wire:model="mode" @checked($mode == 'Bank-In')>
+                                <input class="form-check-input" type="radio" name="mode" id="mode" value="Bank-In" wire:model="mode" <?php if($mode == 'Bank-In'): echo 'checked'; endif; ?>>
                                 <label class="form-check-label font-size-14 fw-bold" for="">Bank-In</label>
                               </div>
                               <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="mode" id="mode" value="Kospera" wire:model="mode" @checked($mode == 'Kospera')>
+                                <input class="form-check-input" type="radio" name="mode" id="mode" value="Kospera" wire:model="mode" <?php if($mode == 'Kospera'): echo 'checked'; endif; ?>>
                                 <label class="form-check-label font-size-14 fw-bold" for="">Kospera</label>
                               </div>
                              
@@ -272,7 +228,7 @@
 
                         <div class="mb-3 form-label">Muat Naik Dokumen *Jika ada</label>
                           <input type="file" class="form-control" name="" id="" placeholder="" aria-describedby="fileHelpId" wire:model="document">
-                          {{-- <div id="fileHelpId" class="form-text">Help text</div> --}}
+                          
                         </div>
 
 
@@ -299,24 +255,24 @@
                             id="close-modal"></button>
                     </div>
                         <div class="modal-body">
-                        @if($showdata)    
-                        @if(@$showdata->approver_id <> '')
+                        <?php if($showdata): ?>    
+                        <?php if(@$showdata->approver_id <> ''): ?>
                         <div class="alert alert-success alert-dismissible alert-label-icon label-arrow fade show" role="alert">
-                            <i class="ri-check-double-line label-icon"></i><strong>Telah disahkan oleh {{ @$showdata->approver->name  }} pada {{ @$showdata->approved_at }}</strong>
+                            <i class="ri-check-double-line label-icon"></i><strong>Telah disahkan oleh <?php echo e(@$showdata->approver->name); ?> pada <?php echo e(@$showdata->approved_at); ?></strong>
                         </div>
-                        @else
+                        <?php else: ?>
 
                         <div class="alert alert-danger alert-dismissible alert-label-icon label-arrow fade show" role="alert">
                             <i class="ri-error-warning-line label-icon"></i><strong>Belum disahkan</strong>
                         </div>
-                        @endif
-                        @endif
+                        <?php endif; ?>
+                        <?php endif; ?>
 
 
                             <div class="mb-3">
                               <label for="" class="form-label">Bahagian</label>
                               <input type="text"
-                                class="form-control" name="" id="" aria-describedby="helpId" placeholder="" value="{{ @$showdata->department->name }}">
+                                class="form-control" name="" id="" aria-describedby="helpId" placeholder="" value="<?php echo e(@$showdata->department->name); ?>">
                             </div>
 
                             
@@ -329,21 +285,21 @@
                                 <div>
                                     <label for="datepicker-deadline-input" class="form-label">Status</label>
                                     <input type="text" class="form-control" 
-                                        placeholder="Jumlah" value={{ @$showdata->type }}>
+                                        placeholder="Jumlah" value=<?php echo e(@$showdata->type); ?>>
                                 </div>
                             </div>
                             <div class="col-lg-4">
                                 <div>
                                     <label for="datepicker-deadline-input" class="form-label">Tahun</label>
                                     <input type="text" class="form-control" 
-                                        placeholder="Jumlah" value={{ @$showdata->year }}>
+                                        placeholder="Jumlah" value=<?php echo e(@$showdata->year); ?>>
                                 </div>
                             </div>
                             <div class="col-lg-4">
                                 <div>
                                     <label for="datepicker-deadline-input" class="form-label">Jumlah</label>
                                     <input type="text" class="form-control" 
-                                        placeholder="Jumlah" value={{ @$showdata->total }}>
+                                        placeholder="Jumlah" value=<?php echo e(@$showdata->total); ?>>
                                 </div>
                             </div>
                         </div>
@@ -353,12 +309,12 @@
                             <div class="row">
                                 <div class="col-6">
                                     <p class="mb-1"><label for="" class="form-label">Cara Serahan</label></p>
-                                    <input type="text" class="form-control" placeholder="Jumlah" value={{ @$showdata->mode }}>
+                                    <input type="text" class="form-control" placeholder="Jumlah" value=<?php echo e(@$showdata->mode); ?>>
                                 </div>
                                 <div class="col-6">
 
                                     <p class="mb-1"><label for="" class="form-label">PIC</label></p>
-                            <input type="text" class="form-control" placeholder="" value={{ @$showdata->user->name }}>
+                            <input type="text" class="form-control" placeholder="" value=<?php echo e(@$showdata->user->name); ?>>
                                 </div>
                             </div>
                             
@@ -367,7 +323,7 @@
 
                         <div class="mb-3">
                           <label for="" class="form-label">Catatan</label>
-                          <textarea class="form-control" name="" id="" rows="3" >{{ @$showdata->remarks }}</textarea>
+                          <textarea class="form-control" name="" id="" rows="3" ><?php echo e(@$showdata->remarks); ?></textarea>
                         </div>
 
                        
@@ -389,10 +345,10 @@
      
       
  
-    @section('script')
+    <?php $__env->startSection('script'); ?>
        
     
-        <script src="{{ URL::asset('/assets/js/app.min.js') }}"></script>
+        <script src="<?php echo e(URL::asset('/assets/js/app.min.js')); ?>"></script>
 
         <script>
             document.addEventListener('DOMContentLoaded', () => {
@@ -422,5 +378,6 @@
             });
         </script>
 
-    @endsection  
+    <?php $__env->stopSection(); ?>  
 </div>
+<?php /**PATH D:\laragon\www\ksrv2\resources\views/livewire/fees/submission/index.blade.php ENDPATH**/ ?>
