@@ -20,6 +20,10 @@ Route::get('/landing', function () {
     return view('landing');
 });
 
+Route::get('/patriotik2023', \App\Http\Livewire\Patriotik\Index::class)->name('patriotik');
+
+
+
 Route::middleware('auth')->group(function () {
     
     Route::get('/yuran/gabungan', \App\Http\Livewire\Fees\Federations\Show::class)->name('fees.federations.show');
