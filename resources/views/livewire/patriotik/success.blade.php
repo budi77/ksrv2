@@ -85,7 +85,7 @@
                             </div>
 
                             <div>
-                                <a href="{{ route('patriotik') }}" class="btn btn-primary">Tutup</a>
+                                <a href="{{ route('patriotik') }}" class="btn btn-success">Kembali</a>
                             </div>
                         </div>
                     </div>

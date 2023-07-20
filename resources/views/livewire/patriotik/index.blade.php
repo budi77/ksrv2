@@ -30,7 +30,7 @@
     <h5 class="alert-heading">PERHATIAN!</h5>
     <p class="mb-0">Borang ini hendaklah dihantar bersama pautan google drive video persembahan nyanyian sebelum atau pada 11 Ogos 2023 (Jumaat) sebelum jam 12.00 tengahari.</p>
     <p class="mb-0">
-    Sebarang pertanyaan boleh hubungi Ps Harussani Bin Hamzah ditalian 03-88911791 atau 012-4844521
+    Sebarang pertanyaan boleh hubungi Ps Harussani Bin Hamzah ditalian 03-88911791 / 012-4844521 atau Ps Omar Mokhtar Bin Jahari 03-88911801 / 017-2611004
     <!-- Button trigger modal -->
     
     </p>
@@ -40,7 +40,7 @@
 <div class="alert-content">
 <p class="mb-0">
 <button type="button" class="btn btn-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#modalId">
-    LIHAT SYARAT SYARAT PERTANDINGAN
+    >> LIHAT SYARAT SYARAT PERTANDINGAN
         </button>
 </p>
 </div>
