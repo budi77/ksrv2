@@ -9,11 +9,11 @@
             <div class="text-center mt-sm-2 mb-2 text-dark-50">
                 <div>
                     <a href="index" class="d-inline-block auth-logo">
-                        <img src="{{ URL::asset('assets/images/KSR.png') }}" alt="" height="90">
+                        <img src="<?php echo e(URL::asset('assets/images/KSR.png')); ?>" alt="" height="90">
                     </a>
                 </div>
                 <p class="mt-1 fs-18 fw-bold"> BORANG PENYERTAAN PERTANDINGAN NYANYIAN LAGU PATRIOTIK SEMPENA SAMBUTAN ULANGTAHUN SPRM KE 56 TAHUN 2023.</p>
-                {{-- <p class="mt-0 fs-20 fw-bold"></p> --}}
+                
             </div>
         </div>
     </div>
@@ -43,19 +43,19 @@
 </div>
 </div>
 
-@if ($errors->any())
+<?php if($errors->any()): ?>
     <div class="alert alert-danger">
         <ul>
-            @foreach ($errors->all() as $error)
-                <li>{{ $error }}</li>
-            @endforeach
+            <?php $__currentLoopData = $errors->all(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $error): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                <li><?php echo e($error); ?></li>
+            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
         </ul>
     </div>
-@endif
+<?php endif; ?>
 
     <div class="card">
    <div class="card-header bg-success bg-gradient">
-                    {{-- <button type="button" class="btn-close float-end fs-11" aria-label="Close"></button> --}}
+                    
                     <h6 class="card-title mb-0">MAKLUMAT PESERTA</h6>
                 </div>
     <div class="card-body">
@@ -68,7 +68,7 @@
                 <option selected>-- Sila Pilih --</option>
                 <option value="SOLO">SOLO</option>
                 <option value="BERKUMPULAN">BERKUMPULAN</option>
-                {{-- <option value="3">Three</option> --}}
+                
                 </select>
             </div>
             </div>
@@ -89,9 +89,9 @@
             <div class="col-lg-9">
                 <select class="form-select mb-3" wire:model.defer="department_id">
                 <option selected>-- Sila Pilih --</option>
-                @foreach($departments as $department)
-                <option value="{{ $department->id }}">{{ $department->name }}</option>
-                @endforeach
+                <?php $__currentLoopData = $departments; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $department): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                <option value="<?php echo e($department->id); ?>"><?php echo e($department->name); ?></option>
+                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                 </select>
             </div>
         </div>
@@ -137,16 +137,14 @@
         </div>
 
 
-        {{-- <div class="text-end">
-        <button type="submit" class="btn btn-primary">Add Leave</button>
-        </div> --}}
+        
     </div>
     </div> 
 
 
     <div class="card">
    <div class="card-header bg-info bg-gradient">
-                    {{-- <button type="button" class="btn-close float-end fs-11" aria-label="Close"></button> --}}
+                    
                     <h6 class="card-title mb-0">MAKLUMAT LAGU</h6>
                 </div>
     <div class="card-body">
@@ -163,19 +161,12 @@
                     <option value="Negaraku - Joe Flizzow, Altimet, SonaOne dan Faizal Tahir ">Negaraku - Joe Flizzow, Altimet, SonaOne dan Faizal Tahir</option>
                     <option value="Fikirkan Boleh ">Fikirkan Boleh</option>
                     <option value="Sejahtera Malaysia">Sejahtera Malaysia</option>
-                    {{-- <option value="3">Three</option> --}}
+                    
                     </select>
             </div>
             </div>
 
-        {{-- <div class="row mb-3">
-            <div class="col-lg-3">
-                <label for="websiteUrl" class="form-label">PENYANYI ASAL</label>
-            </div>
-            <div class="col-lg-9">
-                <input type="text" class="form-control" wire:model.defer="penyanyi">
-            </div>
-        </div> --}}
+        
 
         
 
@@ -419,7 +410,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
-                {{-- <button type="button" class="btn btn-primary">Save</button> --}}
+                
             </div>
         </div>
     </div>
@@ -431,3 +422,4 @@
 
 
 </div>
+<?php /**PATH C:\laragon\www\ksrv2\resources\views/livewire/patriotik/index.blade.php ENDPATH**/ ?>

@@ -21,6 +21,7 @@ Route::get('/landing', function () {
 });
 
 Route::get('/patriotik2023', \App\Http\Livewire\Patriotik\Index::class)->name('patriotik');
+Route::get('/patriotik2023/berjaya', \App\Http\Livewire\Patriotik\Success::class)->name('patriotik.berjaya');
 
 
 

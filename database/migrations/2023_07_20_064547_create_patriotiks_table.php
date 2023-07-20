@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('penyertaan');
             $table->string('nama');
-            $table->foreignId('department_id');
+            $table->string('department_id');
             $table->string('alamat');
             $table->string('telefon')->nullable();
             $table->string('emel')->nullable();
