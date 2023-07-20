@@ -9,7 +9,7 @@
                             
 
                             
-                            <img src="http://velzon.laravel-default.themesbrand.com/assets/images/about.jpg" alt="" class="img-fluid mx-auto rounded-3">
+                            <img src="<?php echo e(asset('/images/about.jpg')); ?>" alt="" class="img-fluid mx-auto rounded-3">
                         </div>
                     </div>
                     <div class="col-lg-6">
@@ -70,4 +70,4 @@
         </section>
     </div>
 </div>
-<?php /**PATH C:\laragon\www\ksrv2\resources\views/livewire/patriotik/success.blade.php ENDPATH**/ ?>
+<?php /**PATH D:\laragon\www\ksrv2\resources\views/livewire/patriotik/success.blade.php ENDPATH**/ ?>

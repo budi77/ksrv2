@@ -36,7 +36,7 @@
                                     </div>
                                 </div>
                             </div> --}}
-                            <img src="http://velzon.laravel-default.themesbrand.com/assets/images/about.jpg" alt="" class="img-fluid mx-auto rounded-3">
+                            <img src="{{ asset('/images/about.jpg') }}" alt="" class="img-fluid mx-auto rounded-3">
                         </div>
                     </div>
                     <div class="col-lg-6">
