@@ -24,7 +24,7 @@
         <div class="alert-body">
         <div class="d-flex">
         <div class="flex-shrink-0 me-3">
-        <i class="ri-information-line fs-16 align-middle"></i>
+        <i class="ri-information-line fs-20 align-middle"></i>
         </div>
     <div class="flex-grow-1">
     <h5 class="alert-heading">PERHATIAN!</h5>
