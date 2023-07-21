@@ -23,8 +23,7 @@
     <div class="alert alert-primary alert-dismissible alert-additional fade show" role="alert">
         <div class="alert-body">
         <div class="d-flex">
-        <div class="flex-shrink-0 me-3">
-        <i class="ri-information-line fs-18 align-middle"></i>
+        <div class="flex-shrink-0 me-3">6 align-middle"></i>
         </div>
     <div class="flex-grow-1">
     <h5 class="alert-heading">PERHATIAN!</h5>
