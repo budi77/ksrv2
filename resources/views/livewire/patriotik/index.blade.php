@@ -64,7 +64,7 @@
     <div class="card-body">
             <div class="row mb-3">
             <div class="col-lg-3">
-            <label for="nameInput" class="form-label">PENYERTAAN</label>
+            <label for="nameInput" class="form-label">KATEGORI</label>
             </div>
             <div class="col-lg-9">
              <select class="form-select mb-3" wire:model.defer="penyertaan">
