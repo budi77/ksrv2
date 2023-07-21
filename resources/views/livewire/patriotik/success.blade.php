@@ -55,6 +55,18 @@
                                         </div>
                                     </div>
                                     <div class="flex-grow-1">
+                                        <p class="mb-0">Urusetia berhak menolak mana-mana penyertaan yang tidak menepati syarat penyertaan pertandingan yang ditetapkan.</p>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <div class="flex-shrink-0 me-2">
+                                        <div class="avatar-xs icon-effect">
+                                            <div class="avatar-title bg-transparent text-success rounded-circle h2">
+                                                <i class="ri-check-fill"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flex-grow-1">
                                         <p class="mb-0">Setiap penyertaan (video) akan melalui proses saringan yang akan dinilai oleh juri profesional.</p>
                                     </div>
                                 </div>
@@ -80,6 +92,18 @@
                                     </div>
                                     <div class="flex-grow-1">
                                         <p class="mb-0">Peserta yang layak akan membuat persembahan secara langsung (live) di hadapan penonton menggunakan lagu yang sama seperti penyertaaan video. </p>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <div class="flex-shrink-0 me-2">
+                                        <div class="avatar-xs icon-effect">
+                                            <div class="avatar-title bg-transparent text-success rounded-circle h2">
+                                                <i class="ri-check-fill"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flex-grow-1">
+                                        <p class="mb-0">Keputusan Juri adalah MUKTAMAD.</p>
                                     </div>
                                 </div>
                             </div>
