@@ -25,7 +25,7 @@ class Index extends Component
         'telefon' => 'required',
         'emel' => 'required|email',
         'tajuk_lagu' => 'required',
-        // 'penyanyi' => 'required',
+        'penyanyi' => 'required',
         'pautan' => 'required',
         'extra1' => 'required',
     ];
@@ -38,7 +38,7 @@ class Index extends Component
         'telefon.required' => 'Sila masukkan TELEFON.',
         'emel.required' => 'Sila masukkan EMEL.',
         'tajuk_lagu.required' => 'Sila masukkan TAJUK LAGU.',
-        // 'penyanyi.required' => 'Sila masukkan PENYANYI.',
+        'penyanyi.required' => 'Sila masukkan BILANGAN PESERTA.',
         'pautan.required' => 'Sila masukkan PAUTAN.',
         'extra1.required' => 'Sila masukkan EMEL.',
         'emel.email' => 'Semak format Email',
