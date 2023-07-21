@@ -353,18 +353,18 @@
                 
                 <p style="margin-left:72px; text-align:justify">&nbsp;</p>
                 
-                <ol start="11">
+                {{-- <ol start="11">
                     <li style="text-align:justify"><span style="font-family:Tahoma,Geneva,sans-serif"><span style="font-size:11pt"><strong>Borang Penyertaan :</strong></span></span></li>
                 </ol>
                 
                 <ol style="list-style-type:lower-alpha">
                     <li style="text-align:justify"><span style="font-family:Tahoma,Geneva,sans-serif"><span style="font-size:11pt">Borang penyertaan hendaklah menggunakan borang penyertaan yang disertakan. Borang penyertaan boleh dibuat salinan.</span></span></li>
                     <li style="text-align:justify"><span style="font-family:Tahoma,Geneva,sans-serif"><span style="font-size:11pt">Borang Penyertaan hendaklah dihantar kepada urusetia melalui emel ksr@sprm.gov.my beserta google link video persembahan.</span></span></li>
-                </ol>
+                </ol> --}}
                 
                 <p style="margin-left:72px; text-align:justify">&nbsp;</p>
                 
-                <ol start="12">
+                <ol start="11">
                     <li style="text-align:justify"><span style="font-family:Tahoma,Geneva,sans-serif"><span style="font-size:11pt"><strong>Hadiah :</strong></span></span></li>
                 </ol>
                 
@@ -399,7 +399,7 @@
                 
                 <p style="margin-left:48px; text-align:justify">&nbsp;</p>
                 
-                <ol start="13">
+                <ol start="12">
                     <li style="text-align:justify"><span style="font-family:Tahoma,Geneva,sans-serif"><span style="font-size:11pt"><strong>Tarikh tutup:</strong></span></span></li>
                 </ol>
                 
