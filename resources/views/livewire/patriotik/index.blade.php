@@ -89,7 +89,7 @@
                 <label for="websiteUrl" class="form-label">BILANGAN PESERTA</label>
             </div>
             <div class="col-lg-9">
-                <input type="text" class="form-control" wire:model.defer="penyanyi"  >
+                <input type="text" class="form-control" wire:model.defer="penyanyi" placeholder="Maksimum 20 peserta" >
             </div>
         </div>
 
