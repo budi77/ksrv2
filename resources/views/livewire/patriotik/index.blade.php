@@ -23,7 +23,8 @@
     <div class="alert alert-primary alert-dismissible alert-additional fade show" role="alert">
         <div class="alert-body">
         <div class="d-flex">
-        <div class="flex-shrink-0 me-3">6 align-middle"></i>
+        <div class="flex-shrink-0 me-3">
+        <i class="ri-information-line fs-18 align-middle"></i>
         </div>
     <div class="flex-grow-1">
     <h5 class="alert-heading">PERHATIAN!</h5>
@@ -38,8 +39,8 @@
 </div>
 <div class="alert-content">
 <p class="mb-0">
-<button type="button" class="btn btn-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#modalId">
-    >> LIHAT SYARAT SYARAT PERTANDINGAN
+<button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modalId">
+    <i class="ri-todo-line fs-14 align-middle"></i>  LIHAT SYARAT SYARAT PERTANDINGAN
         </button>
 </p>
 </div>
