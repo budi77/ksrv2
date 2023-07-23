@@ -40,4 +40,4 @@
 <?php endif; ?>
     </body>
 </html>
-<?php /**PATH D:\laragon\www\ksrv2\resources\views/layouts/master-without-nav.blade.php ENDPATH**/ ?>
+<?php /**PATH C:\laragon\www\ksrv2\resources\views/layouts/master-without-nav.blade.php ENDPATH**/ ?>

@@ -18,4 +18,4 @@
 <?php if (isset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4)): ?>
 <?php $component = $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4; ?>
 <?php unset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4); ?>
-<?php endif; ?><?php /**PATH D:\laragon\www\ksrv2\vendor\jantinnerezo\livewire-alert\src/../resources/views/components/scripts.blade.php ENDPATH**/ ?>
+<?php endif; ?><?php /**PATH C:\laragon\www\ksrv2\vendor\jantinnerezo\livewire-alert\src/../resources/views/components/scripts.blade.php ENDPATH**/ ?>

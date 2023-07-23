@@ -26,7 +26,9 @@ Route::get('/patriotik2023/berjaya', \App\Http\Livewire\Patriotik\Success::class
 
 
 Route::middleware('auth')->group(function () {
-    
+
+    Route::get('/patriotik2023/permohonan/lihat', \App\Http\Livewire\Patriotik\Application::class)->name('patriotik.lihat');
+
     Route::get('/yuran/gabungan', \App\Http\Livewire\Fees\Federations\Show::class)->name('fees.federations.show');
 
     Route::get('/dokumen', [App\Http\Controllers\HomeController::class, 'dokumen'])->name('dokumen');

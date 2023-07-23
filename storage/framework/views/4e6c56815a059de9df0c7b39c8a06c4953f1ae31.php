@@ -154,4 +154,4 @@ unset($__errorArgs, $__bag); ?>
     <script src="<?php echo e(URL::asset('assets/js/pages/password-addon.init.js')); ?>"></script>
 <?php $__env->stopSection(); ?>
 
-<?php echo $__env->make('layouts.master-without-nav', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH D:\laragon\www\ksrv2\resources\views/auth/login.blade.php ENDPATH**/ ?>
+<?php echo $__env->make('layouts.master-without-nav', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\laragon\www\ksrv2\resources\views/auth/login.blade.php ENDPATH**/ ?>

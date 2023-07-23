@@ -11,6 +11,8 @@ class Patriotik extends Model
 
     protected $guarded = [];
 
+    public $with = 'department:id,name';
+
     public function department()
     {
         return $this->belongsTo(Department::class, 'department_id');
