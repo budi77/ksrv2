@@ -39,9 +39,15 @@
 </div>
 <div class="alert-content">
 <p class="mb-0">
-<button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modalId">
-    <i class="ri-todo-line fs-14 align-middle"></i>  LIHAT SYARAT SYARAT PERTANDINGAN
+
+
+<button type="button" class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#modalId">
+    <span class="icon-on"><i class="ri-todo-line fs-14 align-bottom me-1"></i> LIHAT SYARAT SYARAT PERTANDINGAN</span>
+    
         </button>
+
+    <a class="btn btn-danger btn-sm" target="_blank" href="<?php echo e(asset('/documents/Syarat_syarat_pertandingan_patriotik2023.pdf')); ?>" role="button"><i class="ri-file-download-line fs-14 me-1 align-bottom"></i>MUAT TURUN SYARAT SYARAT PERTANDINGAN</a>
+
 </p>
 </div>
 </div>
