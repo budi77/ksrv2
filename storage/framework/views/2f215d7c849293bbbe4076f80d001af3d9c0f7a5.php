@@ -9,11 +9,11 @@
             <div class="text-center mt-sm-2 mb-2 text-dark-50">
                 <div>
                     <a href="index" class="d-inline-block auth-logo">
-                        <img src="{{ URL::asset('assets/images/KSR.png') }}" alt="" height="90">
+                        <img src="<?php echo e(URL::asset('assets/images/KSR.png')); ?>" alt="" height="90">
                     </a>
                 </div>
                 <p class="mt-1 fs-18 fw-bold"> BORANG PENYERTAAN PERTANDINGAN NYANYIAN LAGU PATRIOTIK SEMPENA SAMBUTAN ULANGTAHUN SPRM KE 56 TAHUN 2023.</p>
-                {{-- <p class="mt-0 fs-20 fw-bold"></p> --}}
+                
             </div>
         </div>
     </div>
@@ -40,33 +40,28 @@
 <div class="alert-content">
 <p class="mb-0">
 
-{{-- <button type="button" class="btn btn-secondary custom-toggle active" data-bs-toggle="button">
- <span class="icon-on"><i class="ri-user-add-line align-bottom me-1"></i> Connect</span>
-                                    <span class="icon-off"><i class="ri-check-fill align-bottom me-1"></i> Unconnect</span>
-                                </button> --}}
-{{-- <button type="button" class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#modalId">
-    <span class="icon-on"><i class="ri-todo-line fs-14 align-bottom me-1"></i> LIHAT SYARAT SYARAT PERTANDINGAN</span>
-        </button> --}}
 
-    <a class="btn btn-primary btn-sm" target="_blank" href="{{ asset('/documents/Syarat_syarat_pertandingan_patriotik2023.pdf') }}" role="button"><i class="ri-file-download-line fs-14 me-1 align-bottom"></i>MUAT TURUN SYARAT SYARAT PERTANDINGAN</a>
+
+
+    <a class="btn btn-primary btn-sm" target="_blank" href="<?php echo e(asset('/documents/Syarat_syarat_pertandingan_patriotik2023.pdf')); ?>" role="button"><i class="ri-file-download-line fs-14 me-1 align-bottom"></i>MUAT TURUN SYARAT SYARAT PERTANDINGAN</a>
 
 </p>
 </div>
 </div>
 
-@if ($errors->any())
+<?php if($errors->any()): ?>
     <div class="alert alert-danger">
         <ul>
-            @foreach ($errors->all() as $error)
-                <li>{{ $error }}</li>
-            @endforeach
+            <?php $__currentLoopData = $errors->all(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $error): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                <li><?php echo e($error); ?></li>
+            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
         </ul>
     </div>
-@endif
+<?php endif; ?>
 
     <div class="card">
    <div class="card-header bg-success bg-gradient">
-                    {{-- <button type="button" class="btn-close float-end fs-11" aria-label="Close"></button> --}}
+                    
                     <h6 class="card-title mb-0">MAKLUMAT PESERTA</h6>
                 </div>
     <div class="card-body">
@@ -79,7 +74,7 @@
                 <option selected>-- Sila Pilih --</option>
                 <option value="SOLO">SOLO</option>
                 <option value="BERKUMPULAN">BERKUMPULAN</option>
-                {{-- <option value="3">Three</option> --}}
+                
                 </select>
             </div>
             </div>
@@ -108,9 +103,9 @@
             <div class="col-lg-9">
                 <select class="form-select mb-3" wire:model.defer="department_id">
                 <option selected>-- Sila Pilih --</option>
-                @foreach($departments as $department)
-                <option value="{{ $department->id }}">{{ $department->name }}</option>
-                @endforeach
+                <?php $__currentLoopData = $departments; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $department): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                <option value="<?php echo e($department->id); ?>"><?php echo e($department->name); ?></option>
+                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                 </select>
             </div>
         </div>
@@ -156,16 +151,14 @@
         </div>
 
 
-        {{-- <div class="text-end">
-        <button type="submit" class="btn btn-primary">Add Leave</button>
-        </div> --}}
+        
     </div>
     </div> 
 
 
     <div class="card">
    <div class="card-header bg-info bg-gradient">
-                    {{-- <button type="button" class="btn-close float-end fs-11" aria-label="Close"></button> --}}
+                    
                     <h6 class="card-title mb-0">MAKLUMAT LAGU</h6>
                 </div>
     <div class="card-body">
@@ -184,19 +177,12 @@
                     <option value="Nyalakan Tekad">Nyalakan Tekad</option>
                     <option value="Bahtera Merdeka">Bahtera Merdeka</option>
                     <option value="Pahlawanku">Pahlawanku</option>
-                    {{-- <option value="3">Three</option> --}}
+                    
                     </select>
             </div>
             </div>
 
-        {{-- <div class="row mb-3">
-            <div class="col-lg-3">
-                <label for="websiteUrl" class="form-label">PENYANYI ASAL</label>
-            </div>
-            <div class="col-lg-9">
-                <input type="text" class="form-control" wire:model.defer="penyanyi">
-            </div>
-        </div> --}}
+        
 
         
 
@@ -371,14 +357,7 @@
                 
                 <p style="margin-left:72px; text-align:justify">&nbsp;</p>
                 
-                {{-- <ol start="11">
-                    <li style="text-align:justify"><span style="font-family:Tahoma,Geneva,sans-serif"><span style="font-size:11pt"><strong>Borang Penyertaan :</strong></span></span></li>
-                </ol>
                 
-                <ol style="list-style-type:lower-alpha">
-                    <li style="text-align:justify"><span style="font-family:Tahoma,Geneva,sans-serif"><span style="font-size:11pt">Borang penyertaan hendaklah menggunakan borang penyertaan yang disertakan. Borang penyertaan boleh dibuat salinan.</span></span></li>
-                    <li style="text-align:justify"><span style="font-family:Tahoma,Geneva,sans-serif"><span style="font-size:11pt">Borang Penyertaan hendaklah dihantar kepada urusetia melalui emel ksr@sprm.gov.my beserta google link video persembahan.</span></span></li>
-                </ol> --}}
                 
                 <p style="margin-left:72px; text-align:justify">&nbsp;</p>
                 
@@ -440,7 +419,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
-                {{-- <button type="button" class="btn btn-primary">Save</button> --}}
+                
             </div>
         </div>
     </div>
@@ -452,3 +431,4 @@
 
 
 </div>
+<?php /**PATH D:\laragon\www\ksrv2\resources\views/livewire/patriotik/index.blade.php ENDPATH**/ ?>
