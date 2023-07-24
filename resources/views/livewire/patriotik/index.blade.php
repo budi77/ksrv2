@@ -48,7 +48,7 @@
     <span class="icon-on"><i class="ri-todo-line fs-14 align-bottom me-1"></i> LIHAT SYARAT SYARAT PERTANDINGAN</span>
         </button> --}}
 
-    <a class="btn btn-primary btn-sm" target="_blank" href="{{ asset('/documents/Syarat_syarat_pertandingan_patriotik2023.pdf') }}" role="button"><i class="ri-file-download-line fs-14 me-1 align-bottom"></i>MUAT TURUN SYARAT SYARAT PERTANDINGAN</a>
+    <a class="btn btn-primary btn-sm" target="_blank" href="{{ asset('/documents/Syarat_syarat_pertandingan_patriotik2023.pdf') }}" role="button"><i class="ri-file-download-line fs-14 me-1 align-top"></i>MUAT TURUN SYARAT SYARAT PERTANDINGAN</a>
 
 </p>
 </div>
@@ -65,7 +65,7 @@
 @endif
 
 <div class="alert alert-warning alert-dismissible alert-label-icon label-arrow fade show" role="alert">
-    <i class="ri-alert-line label-icon"></i>Anda <strong>digalakkan</strong>  untuk membaca syarat-syarat pertandingan dahulu sebelum mengisi borang di bawah
+    <i class="ri-alert-line label-icon"></i>Anda <strong>DIWAJIBKAN</strong>  untuk membaca syarat-syarat pertandingan dahulu sebelum mengisi borang di bawah
     <button type="button" class="btn-close" data-bs-dismiss=" alert" aria-label="Close"></button>
 </div>
 

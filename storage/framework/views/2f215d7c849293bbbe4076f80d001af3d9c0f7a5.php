@@ -43,7 +43,7 @@
 
 
 
-    <a class="btn btn-primary btn-sm" target="_blank" href="<?php echo e(asset('/documents/Syarat_syarat_pertandingan_patriotik2023.pdf')); ?>" role="button"><i class="ri-file-download-line fs-14 me-1 align-bottom"></i>MUAT TURUN SYARAT SYARAT PERTANDINGAN</a>
+    <a class="btn btn-primary btn-sm" target="_blank" href="<?php echo e(asset('/documents/Syarat_syarat_pertandingan_patriotik2023.pdf')); ?>" role="button"><i class="ri-file-download-line fs-14 me-1 align-top"></i>MUAT TURUN SYARAT SYARAT PERTANDINGAN</a>
 
 </p>
 </div>
