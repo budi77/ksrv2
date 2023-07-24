@@ -59,12 +59,19 @@
     </div>
 <?php endif; ?>
 
+<div class="alert alert-warning alert-dismissible alert-label-icon label-arrow fade show" role="alert">
+    <i class="ri-alert-line label-icon"></i>Anda <strong>digalakkan</strong>  untuk membaca syarat-syarat pertandingan dahulu sebelum mengisi borang di bawah
+    <button type="button" class="btn-close" data-bs-dismiss=" alert" aria-label="Close"></button>
+</div>
+
     <div class="card">
    <div class="card-header bg-success bg-gradient">
                     
                     <h6 class="card-title mb-0">MAKLUMAT PESERTA</h6>
                 </div>
     <div class="card-body">
+    <!-- Warning Alert -->
+
             <div class="row mb-3">
             <div class="col-lg-3">
             <label for="nameInput" class="form-label">KATEGORI</label>
