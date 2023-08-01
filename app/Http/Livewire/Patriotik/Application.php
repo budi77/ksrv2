@@ -16,4 +16,12 @@ class Application extends Component
 
         return view('livewire.patriotik.application', compact('results'))->extends('layouts.master');
     }
+
+    public function delete($id)
+    {
+
+        // dd('test');
+        $delete = Patriotik::find($id)->delete();
+
+    }
 }

@@ -102,6 +102,12 @@
                     </a>
                 </li>
 
+                <li class="nav-item">
+                    <a class="nav-link menu-link" href="{{ route('patriotik.lihat') }}">
+                        <i class="ri-flag-2-line"></i> <span>Patriotik 2023</span>
+                    </a>
+                </li>
+
                
             </ul>
         </div>
