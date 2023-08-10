@@ -9,6 +9,8 @@
     <meta content="" name="author" />
     <!-- App favicon -->
     <link rel="shortcut icon" href="<?php echo e(URL::asset('assets/images/favicon.ico')); ?>">
+    <link href="https://vjs.zencdn.net/8.3.0/video-js.css" rel="stylesheet" />
+
         <?php echo $__env->make('layouts.head-css', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
         <?php echo \Livewire\Livewire::styles(); ?>
 
@@ -38,6 +40,7 @@
 <?php $component = $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4; ?>
 <?php unset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4); ?>
 <?php endif; ?>
+
     </body>
 </html>
 <?php /**PATH C:\laragon\www\ksrv2\resources\views/layouts/master-without-nav.blade.php ENDPATH**/ ?>
