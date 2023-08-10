@@ -21,13 +21,13 @@
 <body>
     
     <div class="text-center">
-        {{-- <img src="{{ URL::asset('assets/images/KSR.png') }}" alt="" height="90"> --}}
+        <img src="https://ksr.sprm.gov.my/assets/images/KSR.png" alt="" height="90">
 
-        <h6>PERTANDINGAN NYANYIAN LAGU PATRIOTIK SEMPENA SAMBUTAN ULANGTAHUN SPRM KE 56 TAHUN 2023.</h6>
+        <p class="fw-bold pt-2">PERTANDINGAN NYANYIAN LAGU PATRIOTIK SEMPENA SAMBUTAN ULANGTAHUN SPRM KE 56 TAHUN 2023.</p>
     </div>
     <hr>
     {{-- {{ $result['nama'] }} --}}
-    <p class="text-center">Maklumat Penyertaan</p>
+    <p class="text-center">MAKLUMAT PENYERTAAN</p>
 
 
     <div class="table-responsive">
