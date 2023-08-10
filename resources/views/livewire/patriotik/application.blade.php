@@ -9,7 +9,7 @@
   <div class="row">
 
     <table class="table align-middle table-nowrap mb-0">
-        <thead class="table-light">
+        <thead class="table-dark">
             <tr>
             <th></th>
             <th scope="col">Kategori</th>
