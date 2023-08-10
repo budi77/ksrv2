@@ -32,7 +32,7 @@
             <td>{{ $result->telefon }}</td>
             <td>{{ $result->tajuk_lagu }}</td>
             <td>
-                <a href="{{ $result->pautan }}" class="link-dark fs-20"><i class="ri-vidicon-line"></i></a>
+                <a href="{{ $result->pautan }}" class="link-dark fs-20" target="_blank"><i class="ri-vidicon-line"></i></a>
     
                 {{-- <a name="" id="" class="btn btn-secondary btn-sm" href="#" role="button">Lihat</a> --}}
             </td>
