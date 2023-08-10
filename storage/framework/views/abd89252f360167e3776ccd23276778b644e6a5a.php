@@ -42,7 +42,7 @@
                 <div class="hstack gap-3 fs-15">
                 
                 <a href="<?php echo e(route('pdf.patriotik', $result->id)); ?>" class="link-success"><i class="ri-printer-line"></i></a>
-                <a href="javascript:void(0);" class="link-danger" onclick="return confirm('Are you sure?');" wire:click="delete(<?php echo e($result->id); ?>)"><i class="ri-delete-bin-2-line"></i></a>
+                
                 </div>
                 </td>
         </tr>

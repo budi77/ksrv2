@@ -12,6 +12,7 @@
   table, th, td {
   border: 1px solid;
   padding: 10px;
+  table-layout: fixed;
 
 }
 </style>
@@ -26,7 +27,7 @@
     </div>
     <hr>
     {{-- {{ $result['nama'] }} --}}
-    <p class="text-center">Maklumat Peserta</p>
+    <p class="text-center">Maklumat Penyertaan</p>
 
 
     <div class="table-responsive">
@@ -71,7 +72,7 @@
           </tr>
           <tr class="">
             <td scope="row" class="fw-bold">PAUTAN VIDEO</td>
-            <td>{{ $result['pautan'] }}</td>
+            <td  style="word-break:break-all; word-wrap:break-word;">{{ $result['pautan'] }}</td>
           </tr>
           <tr class="">
             <td scope="row" class="fw-bold">TIMESTAMP DAFTAR</td>
