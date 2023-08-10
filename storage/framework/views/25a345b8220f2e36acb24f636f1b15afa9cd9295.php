@@ -26,7 +26,7 @@
     </div>
     <hr>
     
-    <p class="text-center">Maklumat Permohonan</p>
+    <p class="text-center">Maklumat Peserta</p>
 
 
     <div class="table-responsive">
