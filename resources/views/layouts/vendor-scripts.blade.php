@@ -10,6 +10,7 @@
 <script src="{{ URL::asset('/assets/js/app.min.js') }}"></script>
 <script src="{{ asset('vendor/file-manager/js/file-manager.js') }}"></script>
 <script src="https://unpkg.com/@popperjs/core@2"></script>
+<script src="https://vjs.zencdn.net/8.3.0/video.min.js"></script>
 
 
 @yield('script')

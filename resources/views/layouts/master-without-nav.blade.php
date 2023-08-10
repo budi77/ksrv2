@@ -9,6 +9,8 @@
     <meta content="" name="author" />
     <!-- App favicon -->
     <link rel="shortcut icon" href="{{ URL::asset('assets/images/favicon.ico')}}">
+    <link href="https://vjs.zencdn.net/8.3.0/video-js.css" rel="stylesheet" />
+
         @include('layouts.head-css')
         @livewireStyles
 
@@ -22,5 +24,6 @@
 
     @livewireScripts
     <x-livewire-alert::scripts />
+
     </body>
 </html>

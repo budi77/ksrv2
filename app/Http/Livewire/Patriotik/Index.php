@@ -48,22 +48,10 @@ class Index extends Component
     
     public function render()
     {
-        // $close_date = Carbon::parse('11-08-2023 17:00')->format('d-m-Y H:i');
-        // $curr_date = Carbon::now()->format('d-m-Y H:i');
-
-        // $compare = $curr_date->gt($close_date);
-
-        // dd($compare);
-
-        // if ($curr_date->gt($close_date)) { 
-        //     dd($curr_date . ' is greater than ' . $close_date);
-        // } else {
-        //     dd($curr_date . ' is not greater than ' . $close_date);
-        // }
-
-        // dd($close_date);
-        // dd(Carbon::now()->format('d-m-Y H:m'));
+       
         return view('livewire.patriotik.index')->extends('layouts.master-without-nav');
+        // return view('livewire.patriotik.tutup')->extends('layouts.master-without-nav');
+        // return view('livewire.patriotik.topten')->extends('layouts.master-without-nav');
     }
 
     public function store()
