@@ -28,7 +28,7 @@
         </div>
     <div class="flex-grow-1">
     <h5 class="alert-heading">PERHATIAN!</h5>
-    <p class="mb-0">Borang ini hendaklah dihantar bersama pautan video persembahan nyanyian sebelum atau pada 11 Ogos 2023 (Jumaat) sebelum jam 12.00 tengahari.</p>
+    <p class="mb-0">Borang ini hendaklah dihantar bersama pautan video persembahan nyanyian sebelum atau pada 11 Ogos 2023 (Jumaat) sebelum jam 04.00 petang.</p>
     <p class="mb-0">
     Sebarang pertanyaan boleh hubungi Ps Harussani Bin Hamzah ditalian 03-88911791 / 012-4844521 atau Ps Omar Mokhtar Bin Jahari 03-88911801 / 017-2611004
     <!-- Button trigger modal -->
@@ -40,13 +40,7 @@
 <div class="alert-content">
 <p class="mb-0">
 
-{{-- <button type="button" class="btn btn-secondary custom-toggle active" data-bs-toggle="button">
- <span class="icon-on"><i class="ri-user-add-line align-bottom me-1"></i> Connect</span>
-                                    <span class="icon-off"><i class="ri-check-fill align-bottom me-1"></i> Unconnect</span>
-                                </button> --}}
-{{-- <button type="button" class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#modalId">
-    <span class="icon-on"><i class="ri-todo-line fs-14 align-bottom me-1"></i> LIHAT SYARAT SYARAT PERTANDINGAN</span>
-        </button> --}}
+
 
     <a class="btn btn-primary btn-sm" target="_blank" href="{{ asset('/documents/Syarat_syarat_pertandingan_patriotik2023.pdf') }}" role="button"><i class="ri-file-download-line fs-14 me-1 align-top"></i>MUAT TURUN SYARAT SYARAT PERTANDINGAN</a>
 
@@ -195,15 +189,6 @@
                     </select>
             </div>
             </div>
-
-        {{-- <div class="row mb-3">
-            <div class="col-lg-3">
-                <label for="websiteUrl" class="form-label">PENYANYI ASAL</label>
-            </div>
-            <div class="col-lg-9">
-                <input type="text" class="form-control" wire:model.defer="penyanyi">
-            </div>
-        </div> --}}
 
         
 
