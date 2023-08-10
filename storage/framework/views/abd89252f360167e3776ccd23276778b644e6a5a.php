@@ -17,7 +17,7 @@
             <th scope="col">PIC</th>
             <th scope="col">Telefon</th>
             <th scope="col">Lagu</th>
-            <th scope="col">Pautan</th>
+            <th scope="col">Video</th>
             <th scope="col">Tarikh Daftar</th>
             <th scope="col"></th>
             </tr>

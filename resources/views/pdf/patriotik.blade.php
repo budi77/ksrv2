@@ -19,6 +19,24 @@
 </head>
 
 <body>
+
+<div class="text-center">
+
+     <table class="table text-center" style="width:40%">
+        
+        <tbody>
+          <tr class="">
+            <td scope="row" class="text-center fw-bold fs-2">KOD</td>
+            <td class="text-center fw-bold">P{{ sprintf('%02d',$result['id']) }}</td>
+            
+          </tr>
+         
+        </tbody>
+      </table>
+    
+
+    
+    </div>
     
     <div class="text-center">
         {{-- <img src="https://ksr.sprm.gov.my/assets/images/KSR.png" alt="" height="90"> --}}
@@ -29,11 +47,19 @@
     {{-- {{ $result['nama'] }} --}}
     <p class="text-center">MAKLUMAT PENYERTAAN</p>
 
+    
+    
+
+     
 
     <div class="table-responsive">
       <table class="table table-primary">
         
         <tbody>
+          {{-- <tr class="">
+            <td scope="row" style="width:30%" class="fw-bold">ID</td>
+            <td>P{{ sprintf('%02d',$result['id']) }}</td>
+          </tr> --}}
           <tr class="">
             <td scope="row" style="width:30%" class="fw-bold">KATEGORI</td>
             <td>{{ $result['penyertaan'] }}</td>
