@@ -13,11 +13,11 @@
             <tr>
             <th scope="col">Kategori</th>
             <th scope="col">Nama Kumpulan</th>
-            <th scope="col">Bahagian</th>
+            <th scope="col">Bahagian/Negeri</th>
             <th scope="col">PIC</th>
             <th scope="col">Telefon</th>
             <th scope="col">Lagu</th>
-            <th scope="col">Pautan</th>
+            <th scope="col">Video</th>
             <th scope="col">Tarikh Daftar</th>
             <th scope="col"></th>
             </tr>
@@ -37,7 +37,7 @@
                 {{-- <a name="" id="" class="btn btn-secondary btn-sm" href="#" role="button">Lihat</a> --}}
             </td>
             
-            <td>{{ Carbon\Carbon::parse($result->created_at)->format('d-m-Y h:i:s A') }}</td>
+            <td>{{ Carbon\Carbon::parse($result->created_at, 'Asia/Kuala_Lumpur' )->format('d-m-Y h:i:s A') }}</td>
             <td>
                 <div class="hstack gap-3 fs-15">
                 {{-- <a href="javascript:void(0);" class="link-primary"><i class="ri-settings-4-line"></i></a> --}}
