@@ -41,7 +41,7 @@
             <td>
                 <div class="hstack gap-3 fs-15">
                 
-                <a href="<?php echo e(route('pdf.patriotik', $result->id)); ?>" class="link-success"><i class="ri-printer-line"></i></a>
+                <a href="<?php echo e(route('pdf.patriotik', $result->id)); ?>" class="link-success" target="_blank"><i class="ri-printer-line"></i></a>
                 
                 </div>
                 </td>
