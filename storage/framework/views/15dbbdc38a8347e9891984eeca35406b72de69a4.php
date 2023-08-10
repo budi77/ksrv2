@@ -53,15 +53,15 @@
     <?php
 if (! isset($_instance)) {
     $html = \Livewire\Livewire::mount('modals', [])->html();
-} elseif ($_instance->childHasBeenRendered('wvzvf3M')) {
-    $componentId = $_instance->getRenderedChildComponentId('wvzvf3M');
-    $componentTag = $_instance->getRenderedChildComponentTagName('wvzvf3M');
+} elseif ($_instance->childHasBeenRendered('EVBGHAU')) {
+    $componentId = $_instance->getRenderedChildComponentId('EVBGHAU');
+    $componentTag = $_instance->getRenderedChildComponentTagName('EVBGHAU');
     $html = \Livewire\Livewire::dummyMount($componentId, $componentTag);
-    $_instance->preserveRenderedChild('wvzvf3M');
+    $_instance->preserveRenderedChild('EVBGHAU');
 } else {
     $response = \Livewire\Livewire::mount('modals', []);
     $html = $response->html();
-    $_instance->logRenderedChild('wvzvf3M', $response->id(), \Livewire\Livewire::getRootElementTagName($html));
+    $_instance->logRenderedChild('EVBGHAU', $response->id(), \Livewire\Livewire::getRootElementTagName($html));
 }
 echo $html;
 ?>
@@ -90,4 +90,4 @@ echo $html;
 
 </html>
 
-<?php /**PATH C:\laragon\www\ksrv2\resources\views/layouts/master.blade.php ENDPATH**/ ?>
+<?php /**PATH D:\laragon\www\ksrv2\resources\views/layouts/master.blade.php ENDPATH**/ ?>

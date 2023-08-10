@@ -41,7 +41,7 @@
             <td>
                 <div class="hstack gap-3 fs-15">
                 <a href="javascript:void(0);" class="link-primary"><i class="ri-settings-4-line"></i></a>
-                <a href="javascript:void(0);" class="link-success"><i class="ri-printer-line"></i></a>
+                <a href="<?php echo e(route('pdf.patriotik', $result->id)); ?>" class="link-success"><i class="ri-printer-line"></i></a>
                 <a href="javascript:void(0);" class="link-danger" onclick="return confirm('Are you sure?');" wire:click="delete(<?php echo e($result->id); ?>)"><i class="ri-delete-bin-2-line"></i></a>
                 </div>
                 </td>
@@ -64,4 +64,4 @@
     <script src="<?php echo e(URL::asset('/assets/js/app.min.js')); ?>"></script>
     <?php $__env->stopSection(); ?>
 </div>
-<?php /**PATH C:\laragon\www\ksrv2\resources\views/livewire/patriotik/application.blade.php ENDPATH**/ ?>
+<?php /**PATH D:\laragon\www\ksrv2\resources\views/livewire/patriotik/application.blade.php ENDPATH**/ ?>

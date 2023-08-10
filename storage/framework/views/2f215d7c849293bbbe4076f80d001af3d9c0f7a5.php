@@ -28,7 +28,7 @@
         </div>
     <div class="flex-grow-1">
     <h5 class="alert-heading">PERHATIAN!</h5>
-    <p class="mb-0">Borang ini hendaklah dihantar bersama pautan google drive video persembahan nyanyian sebelum atau pada 11 Ogos 2023 (Jumaat) sebelum jam 12.00 tengahari.</p>
+    <p class="mb-0">Borang ini hendaklah dihantar bersama pautan video persembahan nyanyian sebelum atau pada 11 Ogos 2023 (Jumaat) sebelum jam 12.00 tengahari.</p>
     <p class="mb-0">
     Sebarang pertanyaan boleh hubungi Ps Harussani Bin Hamzah ditalian 03-88911791 / 012-4844521 atau Ps Omar Mokhtar Bin Jahari 03-88911801 / 017-2611004
     <!-- Button trigger modal -->
@@ -60,7 +60,7 @@
 <?php endif; ?>
 
 <div class="alert alert-warning alert-dismissible alert-label-icon label-arrow fade show" role="alert">
-    <i class="ri-alert-line label-icon"></i>Anda <strong>digalakkan</strong>  untuk membaca syarat-syarat pertandingan dahulu sebelum mengisi borang di bawah
+    <i class="ri-alert-line label-icon"></i>Anda <strong>DIWAJIBKAN</strong>  untuk membaca syarat-syarat pertandingan dahulu sebelum mengisi borang di bawah
     <button type="button" class="btn-close" data-bs-dismiss=" alert" aria-label="Close"></button>
 </div>
 

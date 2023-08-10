@@ -21,4 +21,4 @@ echo $html;
     <?php endif; ?>
 
 </div>
-<?php /**PATH C:\laragon\www\ksrv2\resources\views/vendor/livewire-bootstrap-modal/modals.blade.php ENDPATH**/ ?>
+<?php /**PATH D:\laragon\www\ksrv2\resources\views/vendor/livewire-bootstrap-modal/modals.blade.php ENDPATH**/ ?>
