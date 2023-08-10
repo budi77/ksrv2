@@ -20,7 +20,7 @@
 <body>
     
     <div class="text-center">
-        <img src="{{ URL::asset('assets/images/KSR.png') }}" alt="" height="90">
+        {{-- <img src="{{ URL::asset('assets/images/KSR.png') }}" alt="" height="90"> --}}
 
         <h6>PERTANDINGAN NYANYIAN LAGU PATRIOTIK SEMPENA SAMBUTAN ULANGTAHUN SPRM KE 56 TAHUN 2023.</h6>
     </div>
