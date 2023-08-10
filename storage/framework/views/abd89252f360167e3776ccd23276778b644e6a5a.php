@@ -11,6 +11,7 @@
     <table class="table align-middle table-nowrap mb-0">
         <thead class="table-light">
             <tr>
+            <th></th>
             <th scope="col">Kategori</th>
             <th scope="col">Nama Kumpulan</th>
             <th scope="col">Bahagian/Negeri</th>
@@ -25,6 +26,7 @@
         <tbody class="bg-white">
         <?php $__currentLoopData = $results; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $result): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
         <tr>
+            <td class="fw-bold">P<?php echo e(sprintf('%02d',$result['id'])); ?></td>
             <td><?php echo e($result->penyertaan); ?></td>
             <td><?php echo e($result->nama); ?></td>
             <td><?php echo e($result->department->name); ?></td>

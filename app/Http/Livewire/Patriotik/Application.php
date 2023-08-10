@@ -10,7 +10,7 @@ class Application extends Component
 {
     public function render()
     {
-        $results = Patriotik::latest()->get();
+        $results = Patriotik::all();
 
         // dd($results);
 

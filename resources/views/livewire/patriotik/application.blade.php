@@ -11,6 +11,7 @@
     <table class="table align-middle table-nowrap mb-0">
         <thead class="table-light">
             <tr>
+            <th></th>
             <th scope="col">Kategori</th>
             <th scope="col">Nama Kumpulan</th>
             <th scope="col">Bahagian/Negeri</th>
@@ -25,6 +26,7 @@
         <tbody class="bg-white">
         @foreach($results as $result)
         <tr>
+            <td class="fw-bold">P{{ sprintf('%02d',$result['id']) }}</td>
             <td>{{ $result->penyertaan }}</td>
             <td>{{ $result->nama }}</td>
             <td>{{ $result->department->name }}</td>
