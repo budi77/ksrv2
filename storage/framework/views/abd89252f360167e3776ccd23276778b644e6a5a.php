@@ -32,15 +32,15 @@
             <td><?php echo e($result->telefon); ?></td>
             <td><?php echo e($result->tajuk_lagu); ?></td>
             <td>
-                <a href="javascript:void(0);" class="link-dark fs-20"><i class="ri-vidicon-line"></i></a>
+                <a href="<?php echo e($result->pautan); ?>" class="link-dark fs-20" target="_blank"><i class="ri-vidicon-line"></i></a>
     
                 
             </td>
             
-            <td><?php echo e($result->created_at); ?></td>
+            <td><?php echo e(Carbon\Carbon::parse($result->created_at)->format('d-m-Y h:i:s A')); ?></td>
             <td>
                 <div class="hstack gap-3 fs-15">
-                <a href="javascript:void(0);" class="link-primary"><i class="ri-settings-4-line"></i></a>
+                
                 <a href="<?php echo e(route('pdf.patriotik', $result->id)); ?>" class="link-success"><i class="ri-printer-line"></i></a>
                 <a href="javascript:void(0);" class="link-danger" onclick="return confirm('Are you sure?');" wire:click="delete(<?php echo e($result->id); ?>)"><i class="ri-delete-bin-2-line"></i></a>
                 </div>

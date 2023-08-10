@@ -37,10 +37,10 @@
                 {{-- <a name="" id="" class="btn btn-secondary btn-sm" href="#" role="button">Lihat</a> --}}
             </td>
             
-            <td>{{ $result->created_at }}</td>
+            <td>{{ Carbon\Carbon::parse($result->created_at)->format('d-m-Y h:i:s A') }}</td>
             <td>
                 <div class="hstack gap-3 fs-15">
-                <a href="javascript:void(0);" class="link-primary"><i class="ri-settings-4-line"></i></a>
+                {{-- <a href="javascript:void(0);" class="link-primary"><i class="ri-settings-4-line"></i></a> --}}
                 <a href="{{ route('pdf.patriotik', $result->id) }}" class="link-success"><i class="ri-printer-line"></i></a>
                 <a href="javascript:void(0);" class="link-danger" onclick="return confirm('Are you sure?');" wire:click="delete({{ $result->id }})"><i class="ri-delete-bin-2-line"></i></a>
                 </div>
