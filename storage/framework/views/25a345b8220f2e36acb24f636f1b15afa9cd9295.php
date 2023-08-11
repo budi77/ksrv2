@@ -70,7 +70,7 @@
             <td><?php echo e($result['penyanyi']); ?></td>
           </tr>
           <tr class="">
-            <td scope="row" class="fw-bold">BAHAGIAN</td>
+            <td scope="row" class="fw-bold">BAHAGIAN/NEGERI</td>
             <td><?php echo e($result['department']['name']); ?></td>
           </tr>
           <tr class="">
