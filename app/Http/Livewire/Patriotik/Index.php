@@ -63,7 +63,7 @@ class Index extends Component
 
         // dd($close_date);
         // dd(Carbon::now()->format('d-m-Y H:m'));
-        return view('livewire.patriotik.tutup')->extends('layouts.master-without-nav');
+        return view('livewire.patriotik.index')->extends('layouts.master-without-nav');
     }
 
     public function store()
