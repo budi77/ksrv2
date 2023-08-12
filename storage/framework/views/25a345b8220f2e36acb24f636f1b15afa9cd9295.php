@@ -70,7 +70,7 @@
             <td><?php echo e($result['penyanyi']); ?></td>
           </tr>
           <tr class="">
-            <td scope="row" class="fw-bold">BAHAGIAN</td>
+            <td scope="row" class="fw-bold">BAHAGIAN/NEGERI</td>
             <td><?php echo e($result['department']['name']); ?></td>
           </tr>
           <tr class="">
@@ -105,7 +105,54 @@
 
       </table>
     </div>
-    
+
+
+        
+        <hr>
+
+         <table class="table text-center" style="width:50%">
+        
+        <tbody>
+          <tr class="">
+            <td scope="row" class="text-center fw-bold fs-2">DITERIMA</td>
+            <td class="text-center fw-bold"></td>
+           
+            
+          </tr>
+          <tr class="">
+           
+            <td scope="row" class="text-center fw-bold fs-2">DITOLAK</td>
+            <td class="text-center fw-bold"></td>
+            
+          </tr>
+         
+        </tbody>
+      </table>
+
+      
+
+
+      <table class="table text-center" style="width:100%">
+        
+        <tbody>
+          
+          <tr class="">
+           
+            
+            <td class="text-center fw-bold">
+            <br>
+            <br>
+            <br>
+            
+            </td>
+            
+          </tr>
+         
+        </tbody>
+      </table>
+
+
+
 
     
 

@@ -10,11 +10,11 @@
                 <div class="text-center mt-sm-2 mb-2 text-dark-50">
                     <div>
                         <a href="index" class="d-inline-block auth-logo">
-                            <img src="{{ URL::asset('assets/images/KSR.png') }}" alt="" height="90">
+                            <img src="<?php echo e(URL::asset('assets/images/KSR.png')); ?>" alt="" height="90">
                         </a>
                     </div>
                     <p class="mt-1 fs-18 fw-bold"> PERTANDINGAN NYANYIAN LAGU PATRIOTIK SEMPENA SAMBUTAN ULANGTAHUN SPRM KE 56 TAHUN 2023.</p>
-                    {{-- <p class="mt-0 fs-20 fw-bold"></p> --}}
+                    
                 </div>
             </div>
         </div>
@@ -53,4 +53,4 @@
     
     
     </div>
-    
+    <?php /**PATH D:\laragon\www\ksrv2\resources\views/livewire/patriotik/tutup.blade.php ENDPATH**/ ?>
