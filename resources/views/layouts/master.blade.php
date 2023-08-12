@@ -16,6 +16,21 @@
     @livewireStyles
     {{-- @laraflashStyles() --}}
 
+    <style>
+      
+      table {
+        /* border-spacing: 0px; */
+        /* table-layout: fixed; */
+        /* margin-left: auto; */
+        /* margin-right: auto; */
+        /* width: 310px; */
+      }
+      td {
+        /* border: 1px solid #666; */
+        word-break: break-all;
+      }
+      </style>
+
 
 </head>
 <body>

@@ -30,6 +30,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/pdf/patriotik2023/{id}', [App\Http\Controllers\PDFController::class, 'patriotik'])->name('pdf.patriotik');
 
     Route::get('/patriotik2023/permohonan/lihat', \App\Http\Livewire\Patriotik\Application::class)->name('patriotik.lihat');
+    Route::get('/patriotik2023/permohonan/keputusan', \App\Http\Livewire\Patriotik\Keputusan::class)->name('patriotik.keputusan');
 
     Route::get('/yuran/gabungan', \App\Http\Livewire\Fees\Federations\Show::class)->name('fees.federations.show');
 
