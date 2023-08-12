@@ -3,6 +3,7 @@
 
     <div class="container-fluid">
     
+    <div class="container">
         
         <div class="row pt-2">
             <div class="col-lg-12">
@@ -18,9 +19,8 @@
             </div>
         </div>
     
-    <div class="container">
     
-        <div class="alert alert-danger alert-dismissible alert-additional fade show" role="alert">
+        <div class="alert alert-primary alert-dismissible alert-additional fade show" role="alert">
             <div class="alert-body">
             <div class="d-flex">
             <div class="flex-shrink-0 me-3">
@@ -40,12 +40,16 @@
     </div>
     
     
- 
-  
+        </div> 
+   
+        
+        </div>
     
+
     
+    </div>
     
-    
+
     
     
     </div>

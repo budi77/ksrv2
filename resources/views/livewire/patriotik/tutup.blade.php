@@ -14,7 +14,6 @@
                         </a>
                     </div>
                     <p class="mt-1 fs-18 fw-bold"> PERTANDINGAN NYANYIAN LAGU PATRIOTIK SEMPENA SAMBUTAN ULANGTAHUN SPRM KE 56 TAHUN 2023.</p>
-                    {{-- <p class="mt-0 fs-20 fw-bold"></p> --}}
                 </div>
             </div>
         </div>
