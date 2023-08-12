@@ -108,7 +108,54 @@
 
       </table>
     </div>
-    
+
+
+        {{-- <p class="text-start">Diisi oleh urusetia</p> --}}
+        <hr>
+
+         <table class="table text-center" style="width:50%">
+        
+        <tbody>
+          <tr class="">
+            <td scope="row" class="text-center fw-bold fs-2">DITERIMA</td>
+            <td class="text-center fw-bold"></td>
+           
+            
+          </tr>
+          <tr class="">
+           
+            <td scope="row" class="text-center fw-bold fs-2">DITOLAK</td>
+            <td class="text-center fw-bold"></td>
+            
+          </tr>
+         
+        </tbody>
+      </table>
+
+      {{-- <p class="text-start">Catatan</p> --}}
+
+
+      <table class="table text-center" style="width:100%">
+        
+        <tbody>
+          
+          <tr class="">
+           
+            {{-- <td scope="row" class="text-center fw-bold fs-2">DITOLAK</td> --}}
+            <td class="text-center fw-bold">
+            <br>
+            <br>
+            <br>
+            
+            </td>
+            
+          </tr>
+         
+        </tbody>
+      </table>
+
+
+
 
     
 
