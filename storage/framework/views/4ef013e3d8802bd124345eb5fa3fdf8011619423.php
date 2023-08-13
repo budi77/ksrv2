@@ -2,7 +2,7 @@
     <?php $__env->startSection('title'); ?> <?php echo app('translator')->get('translation.starter'); ?>  <?php $__env->stopSection(); ?>
     <?php $__env->startComponent('components.breadcrumb'); ?>
     <?php $__env->slot('li_1'); ?> Pages <?php $__env->endSlot(); ?>
-    <?php $__env->slot('title'); ?> SENARAI BORANG PENYERTAAN <?php $__env->endSlot(); ?>
+    <?php $__env->slot('title'); ?> VIDEO PENYERTAAN <?php $__env->endSlot(); ?>
     <?php echo $__env->renderComponent(); ?>
 
 

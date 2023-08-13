@@ -5,18 +5,20 @@
     @slot('title') SENARAI BORANG PENYERTAAN @endslot
     @endcomponent
 
-
-  <div class="row">
-    <a href="javascript:void(0);" class="btn btn-primary btn-label">
+    <a href="{{ route('patriotik.video') }}" class="btn btn-primary btn-label">
         <div class="d-flex">
             <div class="flex-shrink-0">
                 <i class="ri-user-smile-line label-icon align-middle fs-16 me-2"></i>
             </div>
             <div class="flex-grow-1">
-                Senarai Video Yang Layak Ke PEringkat Saringan
+                Senarai Video Yang Layak Ke Peringkat Saringan
             </div>
         </div>
     </a>
+
+
+  <div class="row pt-2">
+    
 
     <table class="table align-middle table-nowrap mb-0">
         <thead class="table-dark">
@@ -30,6 +32,7 @@
             <th scope="col">Lagu</th>
             <th scope="col">Video</th>
             <th scope="col">Tarikh Daftar</th>
+            <th scope="col">Status</th>
             <th scope="col"></th>
             </tr>
         </thead>
@@ -48,6 +51,7 @@
             </td>
             
             <td>{{ Carbon\Carbon::parse($result->created_at, 'Asia/Kuala_Lumpur' )->format('d-m-Y h:i:s A') }}</td>
+            <td>{{ @$result->extra3 }} </td>
             <td>
                 <div class="hstack gap-3 fs-15">
                     <ul class="list-inline hstack gap-2 mb-0">
@@ -58,9 +62,9 @@
                         <li class="list-inline-item" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" aria-label="Edit">
                             <a href="javascript:void(0);" class="view-item-btn" wire:click="upload('{{ $result->id }}')"><i class="ri-upload-line align-bottom text-muted"></i></a>
                         </li>
-                        {{-- <li class="list-inline-item" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" aria-label="Edit">
-                            <a class="edit-item-btn" href="javascript:void(0);" wire:click="confirm('{{ $result->id }}')"><i class="ri-delete-bin-fill align-bottom text-danger"></i></a>
-                        </li> --}}
+                        <li class="list-inline-item" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" aria-label="Edit">
+                            <a class="edit-item-btn" href="javascript:void(0);" wire:click="saringan('{{ $result->id }}')"><i class="ri-file-edit-fill align-bottom text-info"></i></a>
+                        </li>
                       
                     </ul>
                 {{-- <a href="{{ route('pdf.patriotik', $result->id) }}" class="link-success" target="_blank"><i class="ri-printer-line"></i></a> --}}
@@ -99,20 +103,47 @@
                           <label for="" class="form-label">Link Video</label>
                           <input type="text"
                             class="form-control" name="" id="" aria-describedby="helpId" placeholder="" wire:model="video">
-                          {{-- <small id="helpId" class="form-text text-muted">Help text</small> --}}
                         </div>
 
-                        {{-- <form wire:submit.prevent="store_video" enctype="multipart/form-data">
-                            <input type="file" class="form-control" wire:model="video">
-                         
-                            <br>
-                            <button type="submit" class="btn btn-info">Upload Video</button>
-                        </form> --}}
+                       
 
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                         <button type="button" class="btn btn-primary" wire:click="store_video">Save</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div wire:ignore.self class="modal fade" id="saringanModal" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalTitleId">Keputusan Saringan</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>{{ $nama }}</p>
+                        <p>{{ $bahagian }}</p>
+                        <p>{{ $lagu }}</p>
+
+                        <div class="mb-3">
+                            <label for="" class="form-label">Keputusan</label>
+                            <select class="form-select " name="" id="" wire:model="saringan">
+                                <option selected>-- Pilih --</option>
+                                <option value="Layak" {{ $result->extra3 == 'Layak' ? 'selected' : '' }}>Layak</option>
+                                <option value="Tidak Layak" {{ $result->extra3 == 'Tidak Layak' ? 'selected' : '' }}>Tidak Layak</option>
+                                {{-- <option value="">Jakarta</option> --}}
+                            </select>
+                        </div>
+
+                       
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" wire:click="store_saringan">Save</button>
                     </div>
                 </div>
             </div>
@@ -135,13 +166,13 @@
                 modal.show();
             });
 
-            // var modal2 = new bootstrap.Modal('#list');
-            // document.addEventListener('show-list', () => {
-            //     modal2.show();
-            // });
-            // document.addEventListener('hide-list', () => {
-            //     modal2.hide();
-            // });
+            var modal2 = new bootstrap.Modal('#saringanModal');
+            document.addEventListener('show-saringan-modal', () => {
+                modal2.show();
+            });
+            document.addEventListener('close-saringan-modal', () => {
+                modal2.hide();
+            });
 
         });
     </script>
