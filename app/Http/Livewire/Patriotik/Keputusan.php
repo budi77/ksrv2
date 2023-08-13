@@ -12,7 +12,7 @@ class Keputusan extends Component
 
     public function render()
     {
-        $results = Patriotik::all();
+        $results = Patriotik::whereExtra3('Layak')->get();
 
         return view('livewire.patriotik.keputusan', compact('results'))->extends('layouts.master');
     }
