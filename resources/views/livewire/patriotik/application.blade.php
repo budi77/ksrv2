@@ -51,7 +51,14 @@
             </td>
             
             <td>{{ Carbon\Carbon::parse($result->created_at, 'Asia/Kuala_Lumpur' )->format('d-m-Y h:i:s A') }}</td>
-            <td>{{ @$result->extra3 }} </td>
+            <td>
+                @if($result->extra3 == "Layak")
+                <span class="badge bg-success">Layak</span>
+                @elseif($result->extra3 == "Tidak Layak")
+                <span class="badge bg-danger">Tidak Layak</span>
+                @endif
+
+             </td>
             <td>
                 <div class="hstack gap-3 fs-15">
                     <ul class="list-inline hstack gap-2 mb-0">

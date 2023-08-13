@@ -51,7 +51,14 @@
             </td>
             
             <td><?php echo e(Carbon\Carbon::parse($result->created_at, 'Asia/Kuala_Lumpur' )->format('d-m-Y h:i:s A')); ?></td>
-            <td><?php echo e(@$result->extra3); ?> </td>
+            <td>
+                <?php if($result->extra3 == "Layak"): ?>
+                <span class="badge bg-success">Layak</span>
+                <?php elseif($result->extra3 == "Tidak Layak"): ?>
+                <span class="badge bg-danger">Tidak Layak</span>
+                <?php endif; ?>
+
+             </td>
             <td>
                 <div class="hstack gap-3 fs-15">
                     <ul class="list-inline hstack gap-2 mb-0">
