@@ -22,7 +22,7 @@ class Application extends Component
 
         // dd($results);
 
-        return view('livewire.patriotik.tutup', compact('results'))->extends('layouts.master');
+        return view('livewire.patriotik.application', compact('results'))->extends('layouts.master');
     }
 
     public function delete($id)
