@@ -20,21 +20,21 @@
             
             
             
-            <th scope="col"></th>
+            
             </tr>
         </thead>
         <tbody class="bg-white">
         <?php $__currentLoopData = $results; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $result): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
         <tr>
-            <td class="fw-bold">
+            <td class="fw-bold align-top">
                 P<?php echo e(sprintf('%02d',$result['id'])); ?>
 
             </td>
-            <td>
+            <td class="align-top">
                 
-                <p><?php echo e($result->nama); ?></p>
-                <p><?php echo e($result->department->name); ?></p>
-                <p><?php echo e($result->tajuk_lagu); ?></p>
+                <p><span class="fw-bold">NAMA KUMPULAN</span> : <?php echo e($result->nama); ?></p>
+                <p><span class="fw-bold">BAHAGIAN/NEGERI</span> : <?php echo e($result->department->name); ?></p>
+                <p><span class="fw-bold">TAJUK LAGU</span> : <?php echo e($result->tajuk_lagu); ?></p>
             </td>
            
             <td>
@@ -44,7 +44,7 @@
                 class="video-js"
                 controls
                 preload="auto"
-                width="500"
+                width="480"
                 height="250"
                 
                 data-setup="{}"
@@ -65,20 +65,7 @@
 
             </td>
             
-            <td>
-                <div class="hstack gap-3 fs-15">
-                    <ul class="list-inline hstack gap-2 mb-0">
-                                               
-                        <li class="list-inline-item" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" aria-label="View">
-                            <a href="javascript:void(0);" class="view-item-btn" wire:click="upload('<?php echo e($result->id); ?>')"><i class="ri-eye-fill align-bottom text-muted"></i></a>
-                        </li>
-                        
-                        
-                      
-                    </ul>
-                
-                </div>
-                </td>
+            
         </tr>
         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
         

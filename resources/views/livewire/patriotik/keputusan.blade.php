@@ -20,20 +20,20 @@
             {{-- <th scope="col">Lagu</th> --}}
             {{-- <th scope="col">Video</th> --}}
             {{-- <th scope="col">Tarikh Daftar</th> --}}
-            <th scope="col"></th>
+            {{-- <th scope="col"></th> --}}
             </tr>
         </thead>
         <tbody class="bg-white">
         @foreach($results as $result)
         <tr>
-            <td class="fw-bold">
+            <td class="fw-bold align-top">
                 P{{ sprintf('%02d',$result['id']) }}
             </td>
-            <td>
+            <td class="align-top">
                 {{-- <p>{{ $result->penyertaan }}</p> --}}
-                <p>{{ $result->nama }}</p>
-                <p>{{ $result->department->name }}</p>
-                <p>{{ $result->tajuk_lagu }}</p>
+                <p><span class="fw-bold">NAMA KUMPULAN</span> : {{ $result->nama }}</p>
+                <p><span class="fw-bold">BAHAGIAN/NEGERI</span> : {{ $result->department->name }}</p>
+                <p><span class="fw-bold">TAJUK LAGU</span> : {{ $result->tajuk_lagu }}</p>
             </td>
            
             <td>
@@ -43,7 +43,7 @@
                 class="video-js"
                 controls
                 preload="auto"
-                width="500"
+                width="480"
                 height="250"
                 {{-- poster="MY_VIDEO_POSTER.jpg" --}}
                 data-setup="{}"
@@ -64,24 +64,18 @@
 
             </td>
             
-            <td>
+            {{-- <td>
                 <div class="hstack gap-3 fs-15">
                     <ul class="list-inline hstack gap-2 mb-0">
                                                
                         <li class="list-inline-item" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" aria-label="View">
                             <a href="javascript:void(0);" class="view-item-btn" wire:click="upload('{{ $result->id }}')"><i class="ri-eye-fill align-bottom text-muted"></i></a>
                         </li>
-                        {{-- <li class="list-inline-item" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" aria-label="Edit">
-                            <a class="edit-item-btn" href="javascript:void(0);" wire:click="edit('{{ $result->id }}')"><i class="ri-pencil-fill align-bottom text-muted"></i></a>
-                        </li> --}}
-                        {{-- <li class="list-inline-item" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" aria-label="Edit">
-                            <a class="edit-item-btn" href="javascript:void(0);" wire:click="confirm('{{ $result->id }}')"><i class="ri-delete-bin-fill align-bottom text-danger"></i></a>
-                        </li> --}}
+                        
                       
                     </ul>
-                {{-- <a href="{{ route('pdf.patriotik', $result->id) }}" class="link-success" target="_blank"><i class="ri-printer-line"></i></a> --}}
                 </div>
-                </td>
+            </td> --}}
         </tr>
         @endforeach
         
