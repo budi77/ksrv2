@@ -14,7 +14,7 @@ class Keputusan extends Component
     {
         $results = Patriotik::whereExtra3('Layak')->get();
 
-        return view('livewire.patriotik.keputusan', compact('results'))->extends('layouts.master');
+        return view('livewire.patriotik.keputusan', compact('results'))->extends('layouts.master-without-nav');
     }
 
     public function upload($id)

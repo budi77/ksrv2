@@ -17,6 +17,21 @@
 
     
 
+    <style>
+      
+      table {
+        /* border-spacing: 0px; */
+        /* table-layout: fixed; */
+        /* margin-left: auto; */
+        /* margin-right: auto; */
+        /* width: 310px; */
+      }
+      td {
+        /* border: 1px solid #666; */
+        word-break: break-all;
+      }
+      </style>
+
 
 </head>
 <body>
@@ -53,15 +68,15 @@
     <?php
 if (! isset($_instance)) {
     $html = \Livewire\Livewire::mount('modals', [])->html();
-} elseif ($_instance->childHasBeenRendered('8Zb0uop')) {
-    $componentId = $_instance->getRenderedChildComponentId('8Zb0uop');
-    $componentTag = $_instance->getRenderedChildComponentTagName('8Zb0uop');
+} elseif ($_instance->childHasBeenRendered('3zXVS3c')) {
+    $componentId = $_instance->getRenderedChildComponentId('3zXVS3c');
+    $componentTag = $_instance->getRenderedChildComponentTagName('3zXVS3c');
     $html = \Livewire\Livewire::dummyMount($componentId, $componentTag);
-    $_instance->preserveRenderedChild('8Zb0uop');
+    $_instance->preserveRenderedChild('3zXVS3c');
 } else {
     $response = \Livewire\Livewire::mount('modals', []);
     $html = $response->html();
-    $_instance->logRenderedChild('8Zb0uop', $response->id(), \Livewire\Livewire::getRootElementTagName($html));
+    $_instance->logRenderedChild('3zXVS3c', $response->id(), \Livewire\Livewire::getRootElementTagName($html));
 }
 echo $html;
 ?>

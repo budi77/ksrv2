@@ -8,18 +8,18 @@
             <div class="text-center mt-sm-2 mb-2 text-dark-50">
                 <div>
                     <a href="index" class="d-inline-block auth-logo">
-                        <img src="{{ URL::asset('assets/images/KSR.png') }}" alt="" height="90">
+                        <img src="<?php echo e(URL::asset('assets/images/KSR.png')); ?>" alt="" height="90">
                     </a>
                 </div>
                 <p class="mt-1 fs-18 fw-bold"> PERTANDINGAN NYANYIAN LAGU PATRIOTIK SEMPENA SAMBUTAN ULANGTAHUN SPRM KE 56 TAHUN 2023</p>
-                {{-- <p class="mt-0 fs-20 fw-bold"></p> --}}
+                
             </div>
         </div>
     </div>
 
     <div class="alert alert-primary alert-dismissible alert-additional fade show" role="alert">
                                                     <div class="alert-body">
-                                                        {{-- <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button> --}}
+                                                        
                                                         <div class="d-flex">
                                                             <div class="flex-shrink-0 me-3">
                                                                 <i class="ri-error-warning-line fs-16 align-middle"></i>
@@ -46,26 +46,27 @@
             <th>Kod</th>
             <th scope="col">Kategori</th>
             <th scope="col" style="width:30%; word-break: break-all;">Video</th>
-            {{-- <th scope="col">PIC</th> --}}
-            {{-- <th scope="col">Bahagian/Negeri</th> --}}
-            {{-- <th scope="col">Telefon</th> --}}
-            {{-- <th scope="col">Lagu</th> --}}
-            {{-- <th scope="col">Video</th> --}}
-            {{-- <th scope="col">Tarikh Daftar</th> --}}
-            {{-- <th scope="col"></th> --}}
+            
+            
+            
+            
+            
+            
+            
             </tr>
         </thead>
         <tbody class="bg-white">
-        @foreach($results as $result)
+        <?php $__currentLoopData = $results; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $result): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
         <tr>
             <td class="fw-bold align-top">
-                P{{ sprintf('%02d',$result['id']) }}
+                P<?php echo e(sprintf('%02d',$result['id'])); ?>
+
             </td>
             <td class="align-top">
-                {{-- <p>{{ $result->penyertaan }}</p> --}}
-                <p><span class="fw-bold">NAMA KUMPULAN</span> : {{ $result->nama }}</p>
-                <p><span class="fw-bold">BAHAGIAN/NEGERI</span> : {{ $result->department->name }}</p>
-                <p><span class="fw-bold">TAJUK LAGU</span> : {{ $result->tajuk_lagu }}</p>
+                
+                <p><span class="fw-bold">NAMA KUMPULAN</span> : <?php echo e($result->nama); ?></p>
+                <p><span class="fw-bold">BAHAGIAN/NEGERI</span> : <?php echo e($result->department->name); ?></p>
+                <p><span class="fw-bold">TAJUK LAGU</span> : <?php echo e($result->tajuk_lagu); ?></p>
             </td>
            
             <td>
@@ -77,11 +78,11 @@
                 preload="auto"
                 width="480"
                 height="250"
-                {{-- poster="MY_VIDEO_POSTER.jpg" --}}
+                
                 data-setup="{}"
               >
-                <source src="{{ $result->extra2 }}" type="video/mp4" />
-                {{-- <source src="MY_VIDEO.webm" type="video/webm" /> --}}
+                <source src="<?php echo e($result->extra2); ?>" type="video/mp4" />
+                
                 <p class="vjs-no-js">
                   To view this video please enable JavaScript, and consider upgrading to a
                   web browser that
@@ -96,20 +97,9 @@
 
             </td>
             
-            {{-- <td>
-                <div class="hstack gap-3 fs-15">
-                    <ul class="list-inline hstack gap-2 mb-0">
-                                               
-                        <li class="list-inline-item" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" aria-label="View">
-                            <a href="javascript:void(0);" class="view-item-btn" wire:click="upload('{{ $result->id }}')"><i class="ri-eye-fill align-bottom text-muted"></i></a>
-                        </li>
-                        
-                      
-                    </ul>
-                </div>
-            </td> --}}
+            
         </tr>
-        @endforeach
+        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
         
         
         </tbody>
@@ -141,12 +131,12 @@
         
        
 
-        @section('script')
-            {{-- <script src="{{ URL::asset('assets/libs/list.js/list.js.min.js') }}"></script> --}}
-            {{-- <script src="{{ URL::asset('assets/libs/list.pagination.js/list.pagination.js.min.js') }}"></script> --}}
-            {{-- <script src="{{ URL::asset('assets/js/pages/tasks-list.init.js') }}"></script> --}}
-            {{-- <script src="{{ URL::asset('assets/libs/sweetalert2/sweetalert2.min.js') }}"></script> --}}
-            <script src="{{ URL::asset('/assets/js/app.min.js') }}"></script>
+        <?php $__env->startSection('script'); ?>
+            
+            
+            
+            
+            <script src="<?php echo e(URL::asset('/assets/js/app.min.js')); ?>"></script>
 
             <script>
                 document.addEventListener('DOMContentLoaded', () => {
@@ -168,7 +158,7 @@
 
                 });
             </script>
-        @endsection
+        <?php $__env->stopSection(); ?>
 
     </div>
 
@@ -176,3 +166,4 @@
 
 
     </div>
+<?php /**PATH D:\laragon\www\ksrv2\resources\views/livewire/patriotik/keputusan.blade.php ENDPATH**/ ?>
