@@ -73,13 +73,13 @@
 
                 <video
                 id="my-video"
-                class="video-js"
-                controls
+                class="video-js vjs-default-skin vjs-big-play-centered"
+                controls="true"
                 preload="auto"
-                width="480"
-                height="250"
+                width="560"
+                height="340"
                 
-                data-setup="{}"
+                data-setup='{"playbackRates": [0.25, 0.5, 1, 1.5, 2],"techOrder": ["html5", "other supported tech"]}'
               >
                 <source src="<?php echo e($result->extra2); ?>" type="video/mp4" />
                 
