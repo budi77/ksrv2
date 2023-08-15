@@ -44,7 +44,7 @@
         <thead class="table-dark">
             <tr>
             <th>Kod</th>
-            <th scope="col">Kategori</th>
+            <th scope="col">Maklumat Peserta</th>
             <th scope="col" style="width:30%; word-break: break-all;">Video</th>
             {{-- <th scope="col">PIC</th> --}}
             {{-- <th scope="col">Bahagian/Negeri</th> --}}
