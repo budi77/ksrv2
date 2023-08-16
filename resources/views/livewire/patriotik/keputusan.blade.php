@@ -37,32 +37,79 @@
 
 
 
+<div class="row justify-content-center align-items-center g-2">
+    @foreach($results as $result)
 
-  <div class="row">
-  <div class="table-responsive-md">
+    <div class="col-md-6">
+
+     <video
+                id="vid1"
+                class="video-js vjs-default-skin vjs-big-play-centered"
+                controls="true"
+                preload="auto"
+                {{-- responsive="true" --}}
+                aspectRatio="9:16"
+                
+                width="550"
+                height="300"
+                data-setup='{"playbackRates": [0.25, 0.5, 1, 1.5, 2],"techOrder": ["html5", "other supported tech"]}'
+              >
+                <source src="{{ $result->extra2 }}" type="video/mp4" />
+                <p class="vjs-no-js">
+                  To view this video please enable JavaScript, and consider upgrading to a
+                  web browser that
+                  <a href="https://videojs.com/html5-video-support/" target="_blank"
+                    >supports HTML5 video</a
+                  >
+                </p>
+              </video>
+
+              <ul class="list-group">
+                <li class="list-group-item"><i class="ri-bill-line align-middle me-2"></i> <span class="fw-bold">NAMA KUMPULAN</span> : {{ $result->nama }}</li>
+                <li class="list-group-item"><i class="ri-file-copy-2-line align-middle me-2"></i><span class="fw-bold">BAHAGIAN/NEGERI</span> : {{ $result->department->name }}</li>
+                <li class="list-group-item"><i class="ri-question-answer-line align-middle me-2"></i><span class="fw-bold">TAJUK LAGU</span> : {{ $result->tajuk_lagu }}</li>
+                {{-- <li class="list-group-item"><i class="ri-secure-payment-line align-middle me-2"></i>Check uikings theme and give customer support</li> --}}
+            </ul>
+
+              {{-- <p class="pt-2"><span class="fw-bold">NAMA KUMPULAN</span> : {{ $result->nama }}</p>
+                <p class="pt-0"><span class="fw-bold">BAHAGIAN/NEGERI</span> : {{ $result->department->name }}</p>
+                <p class="pt-0"><span class="fw-bold">TAJUK LAGU</span> : {{ $result->tajuk_lagu }}</p> --}}
+
+
+    
+    
+    </div>
+
+    @endforeach
+    
+</div>
+
+
+
+  <div class="row pt-3">
+
+
+
+
+
+
+
+
+  {{-- <div class="table-responsive-md">
 
 
     <table class="table align-middle table-nowrap mb-0">
         <thead class="table-dark">
             <tr>
-            {{-- <th>Kod</th> --}}
             <th scope="col" style="width:30%; word-break: break-all;">Video</th>
             <th scope="col">Maklumat Kumpulan/Peserta</th>
-            {{-- <th scope="col">PIC</th> --}}
-            {{-- <th scope="col">Bahagian/Negeri</th> --}}
-            {{-- <th scope="col">Telefon</th> --}}
-            {{-- <th scope="col">Lagu</th> --}}
-            {{-- <th scope="col">Video</th> --}}
-            {{-- <th scope="col">Tarikh Daftar</th> --}}
-            {{-- <th scope="col"></th> --}}
+            
             </tr>
         </thead>
         <tbody class="bg-white">
         @foreach($results as $result)
         <tr>
-            {{-- <td class="fw-bold align-top">
-                P{{ sprintf('%02d',$result['id']) }}
-            </td> --}}
+            
             <td class="align-top">
                  <video
                 id="vid1"
@@ -71,15 +118,12 @@
                 preload="auto"
                 responsive="true"
                 aspectRatio="9:16"
-                {{-- fluid="true" --}}
-                {{-- fill="true" --}}
+                
                 width="500"
                 height="300"
-                {{-- poster="MY_VIDEO_POSTER.jpg" --}}
                 data-setup='{"playbackRates": [0.25, 0.5, 1, 1.5, 2],"techOrder": ["html5", "other supported tech"]}'
               >
                 <source src="{{ $result->extra2 }}" type="video/mp4" />
-                {{-- <source src="MY_VIDEO.webm" type="video/webm" /> --}}
                 <p class="vjs-no-js">
                   To view this video please enable JavaScript, and consider upgrading to a
                   web browser that
@@ -103,18 +147,7 @@
 
             </td>
             
-            {{-- <td>
-                <div class="hstack gap-3 fs-15">
-                    <ul class="list-inline hstack gap-2 mb-0">
-                                               
-                        <li class="list-inline-item" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" aria-label="View">
-                            <a href="javascript:void(0);" class="view-item-btn" wire:click="upload('{{ $result->id }}')"><i class="ri-eye-fill align-bottom text-muted"></i></a>
-                        </li>
-                        
-                      
-                    </ul>
-                </div>
-            </td> --}}
+            
         </tr>
         @endforeach
         
@@ -122,7 +155,7 @@
         </tbody>
         </table>
 
-</div>
+</div> --}}
 
         
         

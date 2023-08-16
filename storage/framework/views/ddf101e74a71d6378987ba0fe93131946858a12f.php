@@ -37,47 +37,24 @@
 
 
 
+<div class="row justify-content-center align-items-center g-2">
+    <?php $__currentLoopData = $results; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $result): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
 
-  <div class="row">
-  <div class="table-responsive-md">
+    <div class="col-md-6">
 
-
-    <table class="table align-middle table-nowrap mb-0">
-        <thead class="table-dark">
-            <tr>
-            
-            <th scope="col" style="width:30%; word-break: break-all;">Video</th>
-            <th scope="col">Maklumat Kumpulan/Peserta</th>
-            
-            
-            
-            
-            
-            
-            
-            </tr>
-        </thead>
-        <tbody class="bg-white">
-        <?php $__currentLoopData = $results; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $result): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-        <tr>
-            
-            <td class="align-top">
-                 <video
+     <video
                 id="vid1"
                 class="video-js vjs-default-skin vjs-big-play-centered"
                 controls="true"
                 preload="auto"
-                responsive="true"
+                
                 aspectRatio="9:16"
                 
-                
-                width="500"
+                width="550"
                 height="300"
-                
                 data-setup='{"playbackRates": [0.25, 0.5, 1, 1.5, 2],"techOrder": ["html5", "other supported tech"]}'
               >
                 <source src="<?php echo e($result->extra2); ?>" type="video/mp4" />
-                
                 <p class="vjs-no-js">
                   To view this video please enable JavaScript, and consider upgrading to a
                   web browser that
@@ -87,29 +64,36 @@
                 </p>
               </video>
 
-
-
+              <ul class="list-group">
+                <li class="list-group-item"><i class="ri-bill-line align-middle me-2"></i> <span class="fw-bold">NAMA KUMPULAN</span> : <?php echo e($result->nama); ?></li>
+                <li class="list-group-item"><i class="ri-file-copy-2-line align-middle me-2"></i><span class="fw-bold">BAHAGIAN/NEGERI</span> : <?php echo e($result->department->name); ?></li>
+                <li class="list-group-item"><i class="ri-question-answer-line align-middle me-2"></i><span class="fw-bold">TAJUK LAGU</span> : <?php echo e($result->tajuk_lagu); ?></li>
                 
-            </td>
-           
-            <td class="align-top">
-            <p><span class="fw-bold">NAMA KUMPULAN</span> : <?php echo e($result->nama); ?></p>
-                <p><span class="fw-bold">BAHAGIAN/NEGERI</span> : <?php echo e($result->department->name); ?></p>
-                <p><span class="fw-bold">TAJUK LAGU</span> : <?php echo e($result->tajuk_lagu); ?></p>
+            </ul>
 
-               
+              
 
-            </td>
-            
-            
-        </tr>
-        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-        
-        
-        </tbody>
-        </table>
 
+    
+    
+    </div>
+
+    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+    
 </div>
+
+
+
+  <div class="row pt-3">
+
+
+
+
+
+
+
+
+  
 
         
         
