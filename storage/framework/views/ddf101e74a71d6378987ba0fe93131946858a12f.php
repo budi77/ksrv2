@@ -26,12 +26,12 @@
                                                             </div>
                                                             <div class="flex-grow-1">
                                                                 <h5 class="alert-heading">TAHNIAH !</h5>
-                                                                <p class="mb-0">Berikut adalah senarai pasukan yang layak untuk ke peringkat akhir </p>
+                                                                <p class="mb-0">Berikut adalah senarai 10 pasukan yang telah layak untuk ke peringkat akhir. </p>
                                                             </div>
                                                         </div>
                                                     </div>
                                                     <div class="alert-content">
-                                                        <p class="mb-0"></p>
+                                                        <p class="mb-0">*Susunan video adalah tidak mengikut kedudukan semasa saringan.</p>
                                                     </div>
                                                 </div>
 
@@ -39,13 +39,15 @@
 
 
   <div class="row">
+  <div class="table-responsive-md">
+
 
     <table class="table align-middle table-nowrap mb-0">
         <thead class="table-dark">
             <tr>
-            <th>Kod</th>
-            <th scope="col">Maklumat Peserta</th>
+            
             <th scope="col" style="width:30%; word-break: break-all;">Video</th>
+            <th scope="col">Maklumat Kumpulan/Peserta</th>
             
             
             
@@ -58,26 +60,19 @@
         <tbody class="bg-white">
         <?php $__currentLoopData = $results; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $result): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
         <tr>
-            <td class="fw-bold align-top">
-                P<?php echo e(sprintf('%02d',$result['id'])); ?>
-
-            </td>
+            
             <td class="align-top">
-                
-                <p><span class="fw-bold">NAMA KUMPULAN</span> : <?php echo e($result->nama); ?></p>
-                <p><span class="fw-bold">BAHAGIAN/NEGERI</span> : <?php echo e($result->department->name); ?></p>
-                <p><span class="fw-bold">TAJUK LAGU</span> : <?php echo e($result->tajuk_lagu); ?></p>
-            </td>
-           
-            <td>
-
-                <video
-                id="my-video"
+                 <video
+                id="vid1"
                 class="video-js vjs-default-skin vjs-big-play-centered"
                 controls="true"
                 preload="auto"
-                width="560"
-                height="340"
+                responsive="true"
+                aspectRatio="9:16"
+                
+                
+                width="500"
+                height="300"
                 
                 data-setup='{"playbackRates": [0.25, 0.5, 1, 1.5, 2],"techOrder": ["html5", "other supported tech"]}'
               >
@@ -94,6 +89,15 @@
 
 
 
+                
+            </td>
+           
+            <td class="align-top">
+            <p><span class="fw-bold">NAMA KUMPULAN</span> : <?php echo e($result->nama); ?></p>
+                <p><span class="fw-bold">BAHAGIAN/NEGERI</span> : <?php echo e($result->department->name); ?></p>
+                <p><span class="fw-bold">TAJUK LAGU</span> : <?php echo e($result->tajuk_lagu); ?></p>
+
+               
 
             </td>
             
@@ -105,6 +109,7 @@
         </tbody>
         </table>
 
+</div>
 
         
         
@@ -156,6 +161,12 @@
                     //     modal2.hide();
                     // });
 
+                });
+            </script>
+
+            <script>
+            var player = videojs('vid1', {
+                responsive: true
                 });
             </script>
         <?php $__env->stopSection(); ?>

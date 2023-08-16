@@ -39,15 +39,15 @@
 
 
   <div class="row">
-  <div class="table-responsive">
+  <div class="table-responsive-md">
 
 
     <table class="table align-middle table-nowrap mb-0">
         <thead class="table-dark">
             <tr>
-            <th>Kod</th>
-            <th scope="col">Maklumat Peserta</th>
+            {{-- <th>Kod</th> --}}
             <th scope="col" style="width:30%; word-break: break-all;">Video</th>
+            <th scope="col">Maklumat Kumpulan/Peserta</th>
             {{-- <th scope="col">PIC</th> --}}
             {{-- <th scope="col">Bahagian/Negeri</th> --}}
             {{-- <th scope="col">Telefon</th> --}}
@@ -60,23 +60,19 @@
         <tbody class="bg-white">
         @foreach($results as $result)
         <tr>
-            <td class="fw-bold align-top">
+            {{-- <td class="fw-bold align-top">
                 P{{ sprintf('%02d',$result['id']) }}
-            </td>
+            </td> --}}
             <td class="align-top">
-                {{-- <p>{{ $result->penyertaan }}</p> --}}
-                <p><span class="fw-bold">NAMA KUMPULAN</span> : {{ $result->nama }}</p>
-                <p><span class="fw-bold">BAHAGIAN/NEGERI</span> : {{ $result->department->name }}</p>
-                <p><span class="fw-bold">TAJUK LAGU</span> : {{ $result->tajuk_lagu }}</p>
-            </td>
-           
-            <td>
-
-                <video
-                id="my-video"
+                 <video
+                id="vid1"
                 class="video-js vjs-default-skin vjs-big-play-centered"
                 controls="true"
                 preload="auto"
+                responsive="true"
+                aspectRatio="9:16"
+                {{-- fluid="true" --}}
+                {{-- fill="true" --}}
                 width="500"
                 height="300"
                 {{-- poster="MY_VIDEO_POSTER.jpg" --}}
@@ -95,6 +91,15 @@
 
 
 
+                
+            </td>
+           
+            <td class="align-top">
+            <p><span class="fw-bold">NAMA KUMPULAN</span> : {{ $result->nama }}</p>
+                <p><span class="fw-bold">BAHAGIAN/NEGERI</span> : {{ $result->department->name }}</p>
+                <p><span class="fw-bold">TAJUK LAGU</span> : {{ $result->tajuk_lagu }}</p>
+
+               
 
             </td>
             
@@ -169,6 +174,12 @@
                     //     modal2.hide();
                     // });
 
+                });
+            </script>
+
+            <script>
+            var player = videojs('vid1', {
+                responsive: true
                 });
             </script>
         @endsection
