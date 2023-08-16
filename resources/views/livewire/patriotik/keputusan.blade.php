@@ -26,7 +26,7 @@
                                                             </div>
                                                             <div class="flex-grow-1">
                                                                 <h5 class="alert-heading">TAHNIAH !</h5>
-                                                                <p class="mb-0">Berikut adalah senarai pasukan yang layak untuk ke peringkat akhir </p>
+                                                                <p class="mb-0">Berikut adalah senarai 10 pasukan yang telah layak untuk ke peringkat akhir. </p>
                                                             </div>
                                                         </div>
                                                     </div>
