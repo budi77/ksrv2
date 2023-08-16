@@ -31,7 +31,7 @@
                                                         </div>
                                                     </div>
                                                     <div class="alert-content">
-                                                        <p class="mb-0"></p>
+                                                        <p class="mb-0">*Susunan video adalah tidak mengikut kedudukan semasa saringan.</p>
                                                     </div>
                                                 </div>
 
@@ -39,6 +39,8 @@
 
 
   <div class="row">
+  <div class="table-responsive">
+
 
     <table class="table align-middle table-nowrap mb-0">
         <thead class="table-dark">
@@ -115,6 +117,7 @@
         </tbody>
         </table>
 
+</div>
 
         
         
