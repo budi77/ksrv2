@@ -66,7 +66,7 @@
 
               <ul class="list-group">
                 <li class="list-group-item"><i class="ri-bill-line align-middle me-2"></i> <span class="fw-bold">NAMA KUMPULAN</span> : {{ $result->nama }}</li>
-                <li class="list-group-item"><i class="ri-file-copy-2-line align-middle me-2"></i><span class="fw-bold">BAHAGIAN/NEGERI</span> : {{ $result->department->name }}</li>
+                <li class="list-group-item"><i class=" ri-earth-line align-middle me-2"></i><span class="fw-bold">BAHAGIAN/NEGERI</span> : {{ $result->department->name }}</li>
                 <li class="list-group-item"><i class="ri-mic-line align-middle me-2"></i><span class="fw-bold">TAJUK LAGU</span> : {{ $result->tajuk_lagu }}</li>
                 {{-- <li class="list-group-item"><i class="ri-secure-payment-line align-middle me-2"></i>Check uikings theme and give customer support</li> --}}
             </ul>
