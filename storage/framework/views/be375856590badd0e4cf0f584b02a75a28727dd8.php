@@ -68,15 +68,15 @@
     <?php
 if (! isset($_instance)) {
     $html = \Livewire\Livewire::mount('modals', [])->html();
-} elseif ($_instance->childHasBeenRendered('rQfmTSt')) {
-    $componentId = $_instance->getRenderedChildComponentId('rQfmTSt');
-    $componentTag = $_instance->getRenderedChildComponentTagName('rQfmTSt');
+} elseif ($_instance->childHasBeenRendered('pfzpQwC')) {
+    $componentId = $_instance->getRenderedChildComponentId('pfzpQwC');
+    $componentTag = $_instance->getRenderedChildComponentTagName('pfzpQwC');
     $html = \Livewire\Livewire::dummyMount($componentId, $componentTag);
-    $_instance->preserveRenderedChild('rQfmTSt');
+    $_instance->preserveRenderedChild('pfzpQwC');
 } else {
     $response = \Livewire\Livewire::mount('modals', []);
     $html = $response->html();
-    $_instance->logRenderedChild('rQfmTSt', $response->id(), \Livewire\Livewire::getRootElementTagName($html));
+    $_instance->logRenderedChild('pfzpQwC', $response->id(), \Livewire\Livewire::getRootElementTagName($html));
 }
 echo $html;
 ?>
