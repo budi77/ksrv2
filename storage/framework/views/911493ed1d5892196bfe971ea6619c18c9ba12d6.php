@@ -106,6 +106,11 @@
                         <i class="ri-flag-2-line"></i> <span>Patriotik 2023</span>
                     </a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link menu-link" href="<?php echo e(route('locker')); ?>">
+                        <i class="ri-store-3-line"></i> <span>Loker</span>
+                    </a>
+                </li>
 
                
             </ul>

@@ -54,5 +54,9 @@ Route::post('/update-password/{id}', [App\Http\Controllers\HomeController::class
 
 Route::get('/index', [App\Http\Controllers\HomeController::class, 'index'])->name('index');
 
+//loker
+Route::get('/loker', \App\Http\Livewire\Locker\Index::class)->name('locker');
+
+
 
 });
