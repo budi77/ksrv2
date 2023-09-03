@@ -10,6 +10,7 @@
         "aliqasemzadeh/livewire-bootstrap-modal": "dev-master",
         "arcanedev/log-viewer": "~9.0",
         "barryvdh/laravel-dompdf": "^2.0",
+        "doctrine/dbal": "^3.6",
         "fruitcake/laravel-cors": "^2.0",
         "goldspecdigital/laravel-eloquent-uuid": "9.0",
         "guzzlehttp/guzzle": "^7.0.1",

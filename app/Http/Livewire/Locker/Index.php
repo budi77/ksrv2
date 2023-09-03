@@ -4,13 +4,29 @@ namespace App\Http\Livewire\Locker;
 
 use Livewire\Component;
 use App\Models\Locker;
+use App\Models\Department;
+use App\Models\LockerTenant;
+use Carbon\Carbon;
 
 
 class Index extends Component
 {
+    public $locker_info, $locker_id, $name, $department_id, $period, $start, $end, $fees = 0, $tel_no, $email, $departments, $total_fee;
+    public $locker_no, $gender, $status, $rate;
+
+    public function mount()
+    {
+        $this->departments = Department::orderby('name')->get();
+
+        // dd($this->departments);
+    }
+
+
     public function render()
     {
-        $lockers = Locker::all();
+        $lockers = Locker::with('tenant')->get();
+
+        // dd($lockers);
 
         return view('livewire.locker.index',compact('lockers'))->extends('layouts.master');
     }
@@ -27,6 +43,70 @@ class Index extends Component
                 'rate' => 15
             ]);
         }
+
+    }
+
+    public function add($id)
+    {
+
+        $this->locker_info = Locker::whereId($id)->first();
+
+        // dd($this->locker);
+
+        $this->locker_id = $id;
+
+        $this->dispatchBrowserEvent('show-add');
+
+    }
+
+    public function countFee()
+    {
+        $this->fees = $this->period * 15;
+    }
+
+    public function store()
+    {
+
+        $this->end = Carbon::parse($this->start)->addMonths($this->period);
+        // dd($this->department_id);
+
+        $store = LockerTenant::create([
+
+            'locker_id' => $this->locker_id,
+            'name' => $this->name,
+            'department_id' => $this->department_id,
+            'period' => $this->period,
+            'start' => $this->start,
+            'end' => $this->end,
+            'fees' => $this->fees,
+            'tel_no' => $this->tel_no,
+            'email' => $this->email,
+
+        ]);
+
+        $this->reset();
+
+
+        $this->dispatchBrowserEvent('hide-add');
+
+    }
+
+    public function edit($id)
+    {
+
+        $this->locker_id = $id;
+        
+        $locker = Locker::whereId($id)->first();
+
+        $this->locker_no = $locker->locker_no;
+        $this->gender = $locker->gender;
+        $this->status = $locker->status;
+        $this->rate = $locker->rate;
+
+        // dd($this->locker);
+
+
+        $this->dispatchBrowserEvent('show-edit');
 
     }
 }
