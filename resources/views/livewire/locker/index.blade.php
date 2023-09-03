@@ -20,11 +20,11 @@
         <div class="row">
             <div class="col-xl-12">
                 <div class="card">
-                    <div class="card-header align-items-center d-flex">
+                    {{-- <div class="card-header align-items-center d-flex">
                         <h4 class="card-title mb-0 flex-grow-1">Card Tables</h4>
         
                       
-                    </div><!-- end card header -->
+                    </div><!-- end card header --> --}}
         
                     <div class="card-body">
         
@@ -68,8 +68,8 @@
                                             <td class="table-active text-center">{{ @$locker->tenant->fees }}</td>
                                             <td class="text-end">
                                                 <div class="hstack gap-3 fs-15">
-                                                    <a href="javascript:void(0);" class="link-primary" wire:click="add('{{ $locker->id }}')" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Tooltip on top"><i class="ri-add-box-line"></i></a>
-                                                    <a href="javascript:void(0);" class="link-warning" wire:click="edit('{{ $locker->id }}')"><i class="ri-settings-4-line"></i></a>
+                                                    <a href="javascript:void(0);" class="link-primary" wire:click="add('{{ @$locker->tenant->id }}')" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Tooltip on top"><i class="ri-edit-box-line"></i></a>
+                                                    <a href="javascript:void(0);" class="link-warning" wire:click="edit('{{ @$locker->id }}')"><i class="ri-settings-4-line"></i></a>
                                                     <a href="javascript:void(0);" class="link-danger"><i class="ri-delete-bin-5-line"></i></a>
 
                                                 </div>                                            

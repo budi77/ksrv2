@@ -53,9 +53,10 @@ class Index extends Component
     public function add($id)
     {
 
-        $this->locker_info = Locker::whereId($id)->first();
+        
+        $tenant = LockerTenant::whereId($id)->first();
 
-        $tenant = LockerTenant::where('locker_id', $id)->first();
+        $this->locker_info = Locker::whereId($tenant->locker_id)->first();
 
         $this->locker_id = $id;
 
