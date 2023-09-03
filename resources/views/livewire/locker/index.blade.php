@@ -59,7 +59,7 @@
                                             {{-- <td><a href="#" class="fw-medium">{{ $loop->iteration }}</a></td> --}}
                                             <td>{{ $locker->locker_no . $locker->gender }}</td>
                                             <td>{{ @$locker->gender }}</td>
-                                            <td><span class="badge bg-success">{{ $locker->status }}</span></td>
+                                            <td><span class="badge bg-{{ $locker->status == "OK" ? 'info' : 'danger' }}">{{ $locker->status }}</span></td>
                                             <td>{{ $locker->rate }}</td>
                                             <td class="table-active text-center">{{ @$locker->tenant->name }}</td>
                                             <td class="table-active text-center">{{ @$locker->tenant->period }}</td>
@@ -70,9 +70,7 @@
                                                 <div class="hstack gap-3 fs-15">
                                                     <a href="javascript:void(0);" class="link-primary" wire:click="add('{{ $locker->id }}')" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Tooltip on top"><i class="ri-add-box-line"></i></a>
                                                     <a href="javascript:void(0);" class="link-warning" wire:click="edit('{{ $locker->id }}')"><i class="ri-settings-4-line"></i></a>
-
                                                     <a href="javascript:void(0);" class="link-danger"><i class="ri-delete-bin-5-line"></i></a>
-                                                    <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Tooltip on top">
 
                                                 </div>                                            
                                             </td>
@@ -243,7 +241,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save</button>
+                    <button type="button" class="btn btn-primary" wire:click="update">Kemaskini</button>
                 </div>
             </div>
         </div>

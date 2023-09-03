@@ -7,10 +7,13 @@ use App\Models\Locker;
 use App\Models\Department;
 use App\Models\LockerTenant;
 use Carbon\Carbon;
+use Jantinnerezo\LivewireAlert\LivewireAlert;
 
 
 class Index extends Component
 {
+    use LivewireAlert;
+
     public $locker_info, $locker_id, $name, $department_id, $period, $start, $end, $fees = 0, $tel_no, $email, $departments, $total_fee;
     public $locker_no, $gender, $status, $rate;
 
@@ -88,6 +91,8 @@ class Index extends Component
 
 
         $this->dispatchBrowserEvent('hide-add');
+        $this->alert('success', 'Berjaya!');
+
 
     }
 
@@ -107,6 +112,21 @@ class Index extends Component
 
 
         $this->dispatchBrowserEvent('show-edit');
+
+    }
+
+    public function update()
+    {
+        $update = Locker::find($this->locker_id)->update([
+            'locker_no' => $this->locker_no,
+            'gender' => $this->gender,
+            'status' => $this->status,
+            'rate' => $this->rate
+        ]);
+
+        $this->dispatchBrowserEvent('hide-edit');
+        $this->alert('success', 'Berjaya!');
+
 
     }
 }
