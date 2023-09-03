@@ -14,12 +14,11 @@ class Index extends Component
 {
     use LivewireAlert;
 
-    public $locker_info, $locker_id, $name, $department_id, $period, $start, $end, $fees = 0, $tel_no, $email, $departments, $total_fee;
+    public $locker_info, $locker_id, $name = '', $department_id, $period, $start, $end, $fees = 0, $tel_no, $email, $departments, $total_fee;
     public $locker_no, $gender, $status, $rate;
 
     public function mount()
     {
-        $this->departments = Department::orderby('name')->get();
 
         // dd($this->departments);
     }
@@ -28,6 +27,8 @@ class Index extends Component
     public function render()
     {
         $lockers = Locker::with('tenant')->get();
+        $this->departments = Department::orderby('name')->get();
+
 
         // dd($lockers);
 
@@ -54,9 +55,21 @@ class Index extends Component
 
         $this->locker_info = Locker::whereId($id)->first();
 
-        // dd($this->locker);
+        $tenant = LockerTenant::where('locker_id', $id)->first();
 
         $this->locker_id = $id;
+
+        // dd($tenant->name);
+
+        $this->name = $tenant->name ? $tenant->name : '';
+        $this->tel_no = $tenant->tel_no;
+        $this->email = $tenant->email;
+        $this->department_id = $tenant->department_id;
+        $this->start = $tenant->start;
+        $this->period = $tenant->period;
+        $this->fees = $tenant->fees;
+
+
 
         $this->dispatchBrowserEvent('show-add');
 
@@ -73,7 +86,7 @@ class Index extends Component
         $this->end = Carbon::parse($this->start)->addMonths($this->period);
         // dd($this->department_id);
 
-        $store = LockerTenant::create([
+        $store = LockerTenant::find($this->locker_id)->update([
 
             'locker_id' => $this->locker_id,
             'name' => $this->name,

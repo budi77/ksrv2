@@ -127,7 +127,7 @@
 
                             <option selected>--Pilih--</option>
                             <?php $__currentLoopData = $departments; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                                <option value="<?php echo e($item->id); ?>"><?php echo e($item->name); ?></option>
+                                <option value="<?php echo e($item->id); ?>" <?php if($department_id == $item->id): echo 'selected'; endif; ?>><?php echo e($item->name); ?></option>
 
                             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                         <?php endif; ?>

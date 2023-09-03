@@ -132,7 +132,7 @@
 
                             <option selected>--Pilih--</option>
                             @foreach ($departments as $item)
-                                <option value="{{ $item->id }}">{{ $item->name }}</option>
+                                <option value="{{ $item->id }}" @selected($department_id == $item->id)>{{ $item->name }}</option>
 
                             @endforeach
                         @endif
