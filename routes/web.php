@@ -56,6 +56,7 @@ Route::get('/index', [App\Http\Controllers\HomeController::class, 'index'])->nam
 
 //loker
 Route::get('/loker', \App\Http\Livewire\Locker\Index::class)->name('locker');
+Route::get('/loker/dashboard', \App\Http\Livewire\Locker\Dashboard::class)->name('locker.dashboard');
 
 
 

@@ -9,9 +9,15 @@ class LockerTenant extends Model
 {
     use HasFactory;
 
+    protected $with = 'bahagian';
+
     protected $guarded = [];
 
     
+    public function bahagian()
+    {
+        return $this->belongsTo(Department::class, 'department_id');
 
+    }
 
 }

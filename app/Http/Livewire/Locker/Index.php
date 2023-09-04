@@ -38,7 +38,7 @@ class Index extends Component
     public function generate()
     {
         // for(i=1;)
-        for($i=48;$i<=88;$i++)
+        for($i=48;$i<=81;$i++)
         {
             $locker = Locker::create([
                 'locker_no' => $i,
