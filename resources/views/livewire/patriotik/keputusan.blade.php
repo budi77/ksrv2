@@ -44,17 +44,17 @@
   <div class="row pt-3">
 
 
-  <div class="table-responsive-md">
+  <div class="table-md">
 
 
     <table class="table align-middle  mb-0">
-        <thead class="table-dark">
+        {{-- <thead class="table-dark">
             <tr>
             <th scope="col" style="width:30%; word-break: break-all;">Video</th>
             <th scope="col">Maklumat Kumpulan/Peserta</th>
             
             </tr>
-        </thead>
+        </thead> --}}
         <tbody class="bg-white">
         {{-- @foreach($results as $result) --}}
         <tr>
@@ -81,6 +81,8 @@
                   >
                 </p>
               </video>
+
+              
 
             </td>
            
