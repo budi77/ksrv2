@@ -47,7 +47,7 @@
   <div class="table-responsive-md">
 
 
-    <table class="table align-middle table-nowrap mb-0">
+    <table class="table align-middle  mb-0">
         <thead class="table-dark">
             <tr>
             <th scope="col" style="width:30%; word-break: break-all;">Video</th>
@@ -68,7 +68,7 @@
                 responsive="true"
                 aspectRatio="9:16"
                 
-                width="500"
+                width="400"
                 height="300"
                 data-setup='{"playbackRates": [0.25, 0.5, 1, 1.5, 2],"techOrder": ["html5", "other supported tech"]}'
               >
