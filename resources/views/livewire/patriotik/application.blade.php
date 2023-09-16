@@ -5,7 +5,7 @@
     @slot('title') SENARAI BORANG PENYERTAAN @endslot
     @endcomponent
 
-    <a href="{{ route('patriotik.video') }}" class="btn btn-primary btn-label">
+    <a href="{{ route('patriotik') }}" class="btn btn-primary btn-label">
         <div class="d-flex">
             <div class="flex-shrink-0">
                 <i class="ri-user-smile-line label-icon align-middle fs-16 me-2"></i>
