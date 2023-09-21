@@ -64,8 +64,8 @@
                         </div>
                             <div class="col-6">
                                 <div>
-                                    <p class="text-muted mb-1">Status</p>
-                                    <div class="badge bg-info text-white fs-12">Available</div>
+                                    <p class="text-muted mb-1">Bayaran</p>
+                                    <div class="badge bg-success text-white fs-12">RM<?php echo e(@$locker->tenant->fees ? @$locker->tenant->fees : "0"); ?></div>
                                 </div>
                             </div>
                             <div class="col-6">

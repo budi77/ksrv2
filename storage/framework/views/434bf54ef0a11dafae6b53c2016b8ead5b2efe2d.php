@@ -107,7 +107,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link menu-link" href="<?php echo e(route('locker')); ?>">
+                    <a class="nav-link menu-link" href="<?php echo e(route('locker.dashboard')); ?>">
                         <i class="ri-store-3-line"></i> <span>Loker</span>
                     </a>
                 </li>
