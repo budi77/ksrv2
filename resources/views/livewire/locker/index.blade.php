@@ -15,7 +15,7 @@
 
     <div class="row">
 
-        {{-- <button type="button" class="btn btn-primary" wire:click="generate">Button</button> --}}
+        <button type="button" class="btn btn-primary" wire:click="generate">Button</button>
 
         <div class="row">
             <div class="col-xl-12">

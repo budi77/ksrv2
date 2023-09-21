@@ -38,6 +38,16 @@ class Index extends Component
     public function generate()
     {
         // for(i=1;)
+
+        for($i=1;$i<=47;$i++)
+        {
+            $locker = Locker::create([
+                'locker_no' => $i,
+                'gender' => 'L',
+                'status' => 'OK',
+                'rate' => 15
+            ]);
+        }
         for($i=48;$i<=81;$i++)
         {
             $locker = Locker::create([
