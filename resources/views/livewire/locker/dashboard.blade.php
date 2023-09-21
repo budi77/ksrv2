@@ -69,7 +69,7 @@
                             <div class="col-6">
                                 <div>
                                     <p class="text-muted mb-1">Tarikh tamat</p>
-                                    <h5 class="fs-14">{{ Carbon\Carbon::parse(@$locker->tenant->end)->format('d/m/Y') }}</h5>
+                                    <h5 class="fs-14">{{ @$locker->tenant->end ? Carbon\Carbon::parse(@$locker->tenant->end)->format('d/m/Y') : '-' }}</h5>
                                 </div>
                             </div>
                         </div>
