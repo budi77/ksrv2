@@ -36,9 +36,9 @@
 
                                         <div class="dropdown-menu dropdown-menu-end">
                                             <a class="dropdown-item" href="javascript:void(0);" wire:click="add('{{ @$locker->id }}')" ><i class="ri-eye-fill align-bottom me-2 text-muted"></i> Tempah</a>
-                                            <a class="dropdown-item" href="apps-projects-create"><i class="ri-pencil-fill align-bottom me-2 text-muted"></i> Edit</a>
-                                            <div class="dropdown-divider"></div>
-                                            <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#removeProjectModal"><i class="ri-delete-bin-fill align-bottom me-2 text-muted"></i> Remove</a>
+                                            {{-- <a class="dropdown-item" href="apps-projects-create"><i class="ri-pencil-fill align-bottom me-2 text-muted"></i> Edit</a> --}}
+                                            {{-- <div class="dropdown-divider"></div> --}}
+                                            {{-- <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#removeProjectModal"><i class="ri-delete-bin-fill align-bottom me-2 text-muted"></i> Remove</a> --}}
                                         </div>
                                     </div>
                                 </div>
@@ -69,7 +69,7 @@
                             <div class="col-6">
                                 <div>
                                     <p class="text-muted mb-1">Tarikh tamat</p>
-                                    <h5 class="fs-14">{{ @$locker->tenant->end }}</h5>
+                                    <h5 class="fs-14">{{ Carbon\Carbon::parse(@$locker->tenant->end)->format('d/m/Y') }}</h5>
                                 </div>
                             </div>
                         </div>
