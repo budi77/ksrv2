@@ -25,6 +25,9 @@ Route::get('/patriotik2023/berjaya', \App\Http\Livewire\Patriotik\Success::class
 Route::get('/patriotik2023', \App\Http\Livewire\Patriotik\Keputusan::class)->name('patriotik');
 
 
+Route::get('/angsi2023', \App\Http\Livewire\Angsi\Borang::class)->name('angsi.borang');
+
+
 Route::middleware('auth')->group(function () {
 
     Route::get('/pdf/patriotik2023/{id}', [App\Http\Controllers\PDFController::class, 'patriotik'])->name('pdf.patriotik');
@@ -58,6 +61,8 @@ Route::get('/index', [App\Http\Controllers\HomeController::class, 'index'])->nam
 Route::get('/loker', \App\Http\Livewire\Locker\Index::class)->name('locker');
 Route::get('/loker/dashboard', \App\Http\Livewire\Locker\Dashboard::class)->name('locker.dashboard');
 
+//jelajah angsi 2023
+Route::get('/angsi2023/permohonan', \App\Http\Livewire\Angsi\Permohonan::class)->name('angsi.permohonan');
 
 
 });
