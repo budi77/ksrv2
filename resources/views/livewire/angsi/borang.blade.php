@@ -27,6 +27,15 @@
                             @if($isOpen)
 
                             <div>
+                                @if ($errors->any())
+                                    <div class="alert alert-danger">
+                                        <ul>
+                                            @foreach ($errors->all() as $error)
+                                                <li>{{ $error }}</li>
+                                            @endforeach
+                                        </ul>
+                                    </div>
+                                @endif
 
                                 <div class="mb-3">
                                 <label for="" class="form-label">Nama Penuh :</label>
@@ -137,7 +146,15 @@
                                 {{-- <small id="helpId" class="form-text text-muted">Help text</small> --}}
                                 </div>
                             </div>  
-                            
+
+                            <hr>
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" value="1" id="" wire:model="checked" wire:change="processMark()">
+                              <label class="form-check-label" for="">
+                                SAYA DENGAN INI AKAN BERTANGGUNGJAWAB SEPENUHNYA MENJAGA KESELAMATAN DIRI SAYA SEPANJANG AKTIVITI BERLANGSUNG. SEKIRANYA BERLAKU APA-APA KEJADIAN YANG TIDAK DIINGINI, SAYA AKAN SEGERA MELAPORKAN KEPADA PIHAK URUSETIA. PIHAK URUSETIA TIDAK AKAN BERTANGGUNGJAWAB DI ATAS SEBARANG KEJADIAN YANG TIDAK DIINGINI KEPADA PESERTA.
+                              </label>
+                            </div>
+                           
                             @elseif($isClosed)
 
                             <!-- Warning Alert -->
@@ -152,8 +169,8 @@
 
                             @endif
 
-                            <div class="text-end">
-                                <button type="button" class="btn btn-success bg-gradient waves-effect waves-light" wire:click="store">Hantar</button>
+                            <div class="text-end pt-3">
+                                <button type="button" class="btn btn-success bg-gradient waves-effect waves-light" wire:click="store" {{ $disabled ? 'disabled' : '' }}>Hantar</button>
                             </div>
                             
                             

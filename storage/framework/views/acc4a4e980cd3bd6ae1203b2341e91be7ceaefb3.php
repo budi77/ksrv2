@@ -24,6 +24,15 @@
                             <?php if($isOpen): ?>
 
                             <div>
+                                <?php if($errors->any()): ?>
+                                    <div class="alert alert-danger">
+                                        <ul>
+                                            <?php $__currentLoopData = $errors->all(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $error): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                                <li><?php echo e($error); ?></li>
+                                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                                        </ul>
+                                    </div>
+                                <?php endif; ?>
 
                                 <div class="mb-3">
                                 <label for="" class="form-label">Nama Penuh :</label>
@@ -134,19 +143,31 @@
                                 
                                 </div>
                             </div>  
-                            
-                            <?php else: ?>
+
+                            <hr>
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" value="1" id="" wire:model="checked" wire:change="processMark()">
+                              <label class="form-check-label" for="">
+                                SAYA DENGAN INI AKAN BERTANGGUNGJAWAB SEPENUHNYA MENJAGA KESELAMATAN DIRI SAYA SEPANJANG AKTIVITI BERLANGSUNG. SEKIRANYA BERLAKU APA-APA KEJADIAN YANG TIDAK DIINGINI, SAYA AKAN SEGERA MELAPORKAN KEPADA PIHAK URUSETIA. PIHAK URUSETIA TIDAK AKAN BERTANGGUNGJAWAB DI ATAS SEBARANG KEJADIAN YANG TIDAK DIINGINI KEPADA PESERTA.
+                              </label>
+                            </div>
+                           
+                            <?php elseif($isClosed): ?>
 
                             <!-- Warning Alert -->
                             <div class="alert bg-warning border-warning text-white" role="alert">
                                 <strong>Untuk makluman!</strong> - Pendaftaran telah ditutup!
                             </div>
+
+                            <?php else: ?>
+
+                            
                             
 
                             <?php endif; ?>
 
-                            <div class="text-end">
-                                <button type="button" class="btn btn-success bg-gradient waves-effect waves-light">Hantar</button>
+                            <div class="text-end pt-3">
+                                <button type="button" class="btn btn-success bg-gradient waves-effect waves-light" wire:click="store" <?php echo e($disabled ? 'disabled' : ''); ?>>Hantar</button>
                             </div>
                             
                             
