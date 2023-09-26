@@ -90,11 +90,10 @@ class Borang extends Component
 
         $this->resetExcept('departments');
         
-        $this->alert('success', 'Berjaya!');
+        // $this->alert('success', 'Berjaya!');
 
         $this->isOpen = false;
         $this->isCompleted = true;
-        
 
 
         
