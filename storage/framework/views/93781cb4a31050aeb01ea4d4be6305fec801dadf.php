@@ -1,12 +1,9 @@
 <div>
-    {{-- If your happiness depends on money, you will never be happy with yourself. --}}
+    
     <div class="container">
         <div>
 
-            {{-- <picture>
-                <source srcset="sourceset" type="image/svg+xml">
-                <img src="{{ URL::asset('assets/images/angsi_header.png') }}" class="img-fluid" alt="image desc">
-            </picture> --}}
+            
 
 
         </div>
@@ -16,7 +13,7 @@
             <div class="card">
                 <div class="row g-0">
                     <div class="col-md-6">
-                        <img class="rounded-start img-fluid" src="{{asset('assets/images/angsi.png')}}" alt="Card image">
+                        <img class="rounded-start img-fluid" src="<?php echo e(asset('assets/images/angsi.png')); ?>" alt="Card image">
                     </div>
                     <div class="col-md-6">
                         <div class="card-header">
@@ -24,18 +21,18 @@
                         </div>
                         <div class="card-body">
 
-                            @if($isOpen)
+                            <?php if($isOpen): ?>
 
                             <div>
-                                @if ($errors->any())
+                                <?php if($errors->any()): ?>
                                     <div class="alert alert-danger">
                                         <ul>
-                                            @foreach ($errors->all() as $error)
-                                                <li>{{ $error }}</li>
-                                            @endforeach
+                                            <?php $__currentLoopData = $errors->all(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $error): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                                <li><?php echo e($error); ?></li>
+                                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                                         </ul>
                                     </div>
-                                @endif
+                                <?php endif; ?>
 
                                 <div class="mb-3">
                                 <label for="" class="form-label">Nama Penuh :</label>
@@ -71,9 +68,9 @@
                                     <label for="" class="form-label">Bahagian</label>
                                     <select class="form-select" name="" id="" wire:model="department_id">
                                         <option selected>-- Pilih --</option>
-                                        @foreach($departments as $department)
-                                        <option value="{{ $department->id }}">{{ $department->name }}</option>
-                                        @endforeach
+                                        <?php $__currentLoopData = $departments; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $department): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                        <option value="<?php echo e($department->id); ?>"><?php echo e($department->name); ?></option>
+                                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                                         
                                     </select>
                                 </div>
@@ -149,18 +146,18 @@
                             </div>
 
                               <div class="text-end pt-3">
-                                <button type="button" class="btn btn-success bg-gradient waves-effect waves-light" wire:click="store" {{ $disabled ? 'disabled' : '' }}>Hantar</button>
+                                <button type="button" class="btn btn-success bg-gradient waves-effect waves-light" wire:click="store" <?php echo e($disabled ? 'disabled' : ''); ?>>Hantar</button>
                             </div>
                             
                            
-                            @elseif($isClosed)
+                            <?php elseif($isClosed): ?>
 
                             <!-- Warning Alert -->
                             <div class="alert bg-warning border-warning text-white" role="alert">
                                 <strong>Untuk makluman!</strong> - Pendaftaran telah ditutup!
                             </div>
 
-                            @elseif($isCompleted)
+                            <?php elseif($isCompleted): ?>
 
                             <div class="alert alert-secondary alert-dismissible bg-secondary text-white alert-label-icon fade show" role="alert">
                                 <i class="ri-check-double-line label-icon"></i><strong>Berjaya</strong> - Permohonan telah diterima!
@@ -168,7 +165,7 @@
                             </div>
 
 
-                            @endif
+                            <?php endif; ?>
 
                           
                             
@@ -184,3 +181,4 @@
        
     </div>
 </div>
+<?php /**PATH D:\laragon\www\ksrv2\resources\views/livewire/angsi/borang.blade.php ENDPATH**/ ?>

@@ -13,7 +13,7 @@ class Borang extends Component
     use LivewireAlert;
 
     public $nama, $kp, $tel, $emel, $department_id,$nama_waris, $tel_waris, $pengangkutan, $penyakit, $jenis_penyakit, $departments;
-    public $isOpen = true, $isClosed = false, $isAccepted = false, $kouta = 40;
+    public $isOpen = true, $isClosed = false, $isAccepted = false, $isCompleted = false, $kouta = 40;
     public bool $checked = false;
     public bool $disabled = true;
 
@@ -30,6 +30,19 @@ class Borang extends Component
         'penyakit' => 'required',
         // 'jenis_penyakit' => 'required',
      
+    ];
+
+    protected $messages = [
+        'nama.required' => 'Sila masukkan nama',
+        'kp.required' => 'Sila masukkan No Kad Pengenalan',
+        'tel.required' => 'Sila masukkan No Telefon',
+        'emel.required' => 'Sila masukkan Emel',
+        'department_id.required' => 'Sila masukkan Bahagian',
+        'nama_waris.required' => 'Sila masukkan Nama Waris',
+        'tel_waris.required' => 'Sila masukkan No Kecemasan Untuk Dihubungi',
+        'pengangkutan.required' => 'Sila masukkan Jenis Pengangkutan',
+        'penyakit.required' => 'Sila pilih jika ada penyakit',
+        
     ];
 
     public function render()
@@ -78,6 +91,10 @@ class Borang extends Component
         $this->resetExcept('departments');
         
         $this->alert('success', 'Berjaya!');
+
+        $this->isOpen = false;
+        $this->isCompleted = true;
+        
 
 
         
