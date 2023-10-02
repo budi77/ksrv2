@@ -5,19 +5,19 @@
         <!-- Dark Logo-->
         <a href="index" class="logo logo-dark">
             <span class="logo-sm">
-                <img src="{{ URL::asset('assets/images/logo-sm.png') }}" alt="" height="22">
+                <img src="<?php echo e(URL::asset('assets/images/logo-sm.png')); ?>" alt="" height="22">
             </span>
             <span class="logo-lg">
-                <img src="{{ URL::asset('assets/images/logo-dark.png') }}" alt="" height="17">
+                <img src="<?php echo e(URL::asset('assets/images/logo-dark.png')); ?>" alt="" height="17">
             </span>
         </a>
         <!-- Light Logo-->
         <a href="index" class="logo logo-light">
             <span class="logo-sm">
-                <img src="{{ URL::asset('assets/images/logo-sm.png') }}" alt="" height="22">
+                <img src="<?php echo e(URL::asset('assets/images/logo-sm.png')); ?>" alt="" height="22">
             </span>
             <span class="logo-lg">
-                <img src="{{ URL::asset('assets/images/logo-light.png') }}" alt="" height="17">
+                <img src="<?php echo e(URL::asset('assets/images/logo-light.png')); ?>" alt="" height="17">
             </span>
         </a>
         <button type="button" class="btn btn-sm p-0 fs-20 header-item float-end btn-vertical-sm-hover" id="vertical-hover">
@@ -30,20 +30,19 @@
     <div id="scrollbar">
         <div class="container-fluid">
 
-            {{-- <div id="two-column-menu">
-            </div> --}}
+            
             <ul class="navbar-nav" id="navbar-nav">
-                <li class="menu-title"><span>@lang('translation.menu')</span></li>
+                <li class="menu-title"><span><?php echo app('translator')->get('translation.menu'); ?></span></li>
 
                  <li class="nav-item">
                     <a class="nav-link menu-link" href="/index">
-                        <i class="ri-dashboard-2-line"></i> <span>@lang('translation.dashboards')</span>
+                        <i class="ri-dashboard-2-line"></i> <span><?php echo app('translator')->get('translation.dashboards'); ?></span>
                     </a>
                 </li>
 
 
                 <li class="nav-item">
-                    <a class="nav-link menu-link" href="{{ route('members') }}">
+                    <a class="nav-link menu-link" href="<?php echo e(route('members')); ?>">
                         <i class="ri-team-line"></i> <span>Keahlian</span>
                     </a>
                 </li>
@@ -55,13 +54,13 @@
                     <div class="collapse menu-dropdown" id="sidebarLayouts">
                         <ul class="nav nav-sm flex-column">
                             <li class="nav-item">
-                                <a href="{{ route('fees.departments') }}"  class="nav-link">Ibu Pejabat</a>
+                                <a href="<?php echo e(route('fees.departments')); ?>"  class="nav-link">Ibu Pejabat</a>
                             </li>
                             <li class="nav-item">
-                                <a href="{{ route('fees.federations.show') }}"  class="nav-link">Gabungan</a>
+                                <a href="<?php echo e(route('fees.federations.show')); ?>"  class="nav-link">Gabungan</a>
                             </li>
                             <li class="nav-item">
-                                <a href="{{ route('fees.submission') }}"  class="nav-link">Serahan</a>
+                                <a href="<?php echo e(route('fees.submission')); ?>"  class="nav-link">Serahan</a>
                             </li>
                             
                         </ul>
@@ -74,10 +73,10 @@
                     <div class="collapse menu-dropdown" id="sidebarLayouts">
                         <ul class="nav nav-sm flex-column">
                             <li class="nav-item">
-                                <a href="{{ route('fees.departments') }}"  class="nav-link">Ibu Pejabat</a>
+                                <a href="<?php echo e(route('fees.departments')); ?>"  class="nav-link">Ibu Pejabat</a>
                             </li>
                             <li class="nav-item">
-                                <a href="{{ route('fees.federations.show') }}"  class="nav-link">Gabungan</a>
+                                <a href="<?php echo e(route('fees.federations.show')); ?>"  class="nav-link">Gabungan</a>
                             </li>
                            
                         </ul>
@@ -85,30 +84,30 @@
                 </li> <!-- end Dashboard Menu -->
 
                 <li class="nav-item">
-                    <a class="nav-link menu-link" href="{{ route('settings') }}">
+                    <a class="nav-link menu-link" href="<?php echo e(route('settings')); ?>">
                         <i class=" ri-calendar-todo-fill"></i> <span>Mesyuarat</span>
                     </a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link menu-link" href="{{ route('dokumen') }}">
+                    <a class="nav-link menu-link" href="<?php echo e(route('dokumen')); ?>">
                         <i class=" ri-contacts-book-2-line"></i> <span>Dokumen</span>
                     </a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link menu-link" href="{{ route('settings') }}">
+                    <a class="nav-link menu-link" href="<?php echo e(route('settings')); ?>">
                         <i class="ri-settings-5-line"></i> <span>Tetapan</span>
                     </a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link menu-link" href="{{ route('angsi.permohonan') }}">
+                    <a class="nav-link menu-link" href="<?php echo e(route('angsi.permohonan')); ?>">
                         <i class="ri-flag-2-line"></i> <span>Angsi 2023</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link menu-link" href="{{ route('locker.dashboard') }}">
+                    <a class="nav-link menu-link" href="<?php echo e(route('locker.dashboard')); ?>">
                         <i class="ri-store-3-line"></i> <span>Loker</span>
                     </a>
                 </li>
@@ -123,3 +122,4 @@
 <!-- Left Sidebar End -->
 <!-- Vertical Overlay-->
 <div class="vertical-overlay"></div>
+<?php /**PATH C:\laragon\www\ksrv2\resources\views/layouts/sidebar.blade.php ENDPATH**/ ?>
