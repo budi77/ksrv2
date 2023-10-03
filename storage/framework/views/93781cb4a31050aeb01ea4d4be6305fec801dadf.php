@@ -76,7 +76,9 @@
                                     </select>
                                 </div>
 
-                                <div class="mb-3 w-50">
+                                <div class="row justify-content-center align-items-center g-2 mb-3">
+                                    <div class="col">
+
                                     <label for="" class="form-label">Saiz Baju</label>
                                     <select class="form-select" name="" id="" wire:model="saiz">
                                         <option selected>-- Sila Pilih --</option>
@@ -86,8 +88,24 @@
                                         <option value="XL">XL</option>
                                         <option value="2XL">2XL</option>
                                         <option value="3XL">3XL</option>
+                                        <option value="5XL">5XL</option>
                                     </select>
+                                    
+                                    </div>
+                                    <div class="col">
+                                   
+                                        <div class="align-middle text-start pt-4">
+                                            <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modalId">
+                                            Lihat Carta Saiz
+                                            </button>
+                                        </div>
+                                  
+
+                                    </div>
+                                    
                                 </div>
+
+                               
 
                                 <div class="row">
                                     <div class="col-6">
@@ -198,6 +216,37 @@
             </div>
 
         </div>
+
+        <!-- Modal trigger button -->
+      
+        
+        <!-- Modal Body -->
+        <!-- if you want to close by clicking outside the modal, delete the last endpoint:data-bs-backdrop and data-bs-keyboard -->
+        <div class="modal fade" id="modalId" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalTitleId">Size Chart</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img class="rounded-start img-fluid" src="<?php echo e(asset('assets/images/size.jpg')); ?>" alt="">
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        <!-- Optional: Place to the bottom of scripts -->
+        <script>
+            const myModal = new bootstrap.Modal(document.getElementById('modalId'), options)
+        
+        </script>
 
 
 
