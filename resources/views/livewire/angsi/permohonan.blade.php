@@ -24,8 +24,8 @@
                             <tr>
                                 <th scope="col">#</th>
                                 <th scope="col">Nama</th>
-                                <th scope="col">Tel</th>
-                                <th scope="col">Emel</th>
+                                {{-- <th scope="col">Tel</th> --}}
+                                {{-- <th scope="col">Emel</th> --}}
                                 <th scope="col">Bahagian</th>
                                 <th scope="col">Saiz Baju</th>
                                 <th scope="col">Pengangkutan</th>
@@ -33,6 +33,7 @@
                                 <th scope="col">Jenis Sakit</th>
                                 <th scope="col">Nama Waris</th>
                                 <th scope="col">Tel kecemasan</th>
+                                <th scope="col">Resit</th>
                                 <th scope="col">Tarikh Daftar</th>
                             </tr>
                         </thead>
@@ -40,16 +41,20 @@
                             @foreach($results as $r)
                             <tr class="">
                                 <td scope="row">{{ $loop->iteration }}</td>
-                                <td>{{ @$r->nama }}</td>
-                                <td>{{ @$r->tel }}</td>
-                                <td>{{ @$r->emel }}</td>
+                                <td>
+                                <p>{{ @$r->nama }}</p>
+                                <p>{{ @$r->tel }}</p>
+                                <p>{{ @$r->emel }}</p>
+                                </td>
                                 <td>{{ @$r->department->name }}</td>
-                                <td>{{ @$r->department->saiz }}</td>
+                                <td>{{ @$r->ext1 }}</td>
                                 <td>{{ @$r->pengangkutan }}</td>
                                 <td>{{ @$r->penyakit }}</td>
                                 <td>{{ @$r->sakit }}</td>
                                 <td>{{ @$r->waris }}</td>
                                 <td>{{ @$r->kecemasan }}</td>
+                                <td><a href="{{url('storage/' . $r->ext2)}}" target="_blank">Lihat</a></td>
+
                                 <td>{{ @$r->created_at }}</td>
                             </tr>
                             @endforeach

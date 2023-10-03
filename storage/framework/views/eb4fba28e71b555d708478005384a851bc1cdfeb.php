@@ -24,8 +24,8 @@
                             <tr>
                                 <th scope="col">#</th>
                                 <th scope="col">Nama</th>
-                                <th scope="col">Tel</th>
-                                <th scope="col">Emel</th>
+                                
+                                
                                 <th scope="col">Bahagian</th>
                                 <th scope="col">Saiz Baju</th>
                                 <th scope="col">Pengangkutan</th>
@@ -33,6 +33,7 @@
                                 <th scope="col">Jenis Sakit</th>
                                 <th scope="col">Nama Waris</th>
                                 <th scope="col">Tel kecemasan</th>
+                                <th scope="col">Resit</th>
                                 <th scope="col">Tarikh Daftar</th>
                             </tr>
                         </thead>
@@ -40,16 +41,20 @@
                             <?php $__currentLoopData = $results; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $r): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                             <tr class="">
                                 <td scope="row"><?php echo e($loop->iteration); ?></td>
-                                <td><?php echo e(@$r->nama); ?></td>
-                                <td><?php echo e(@$r->tel); ?></td>
-                                <td><?php echo e(@$r->emel); ?></td>
+                                <td>
+                                <p><?php echo e(@$r->nama); ?></p>
+                                <p><?php echo e(@$r->tel); ?></p>
+                                <p><?php echo e(@$r->emel); ?></p>
+                                </td>
                                 <td><?php echo e(@$r->department->name); ?></td>
-                                <td><?php echo e(@$r->department->saiz); ?></td>
+                                <td><?php echo e(@$r->ext1); ?></td>
                                 <td><?php echo e(@$r->pengangkutan); ?></td>
                                 <td><?php echo e(@$r->penyakit); ?></td>
                                 <td><?php echo e(@$r->sakit); ?></td>
                                 <td><?php echo e(@$r->waris); ?></td>
                                 <td><?php echo e(@$r->kecemasan); ?></td>
+                                <td><a href="<?php echo e(url('storage/' . $r->ext2)); ?>" target="_blank">Lihat</a></td>
+
                                 <td><?php echo e(@$r->created_at); ?></td>
                             </tr>
                             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
