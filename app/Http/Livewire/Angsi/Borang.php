@@ -16,7 +16,7 @@ class Borang extends Component
 
 
     public $nama, $kp, $tel, $emel, $department_id,$nama_waris, $tel_waris, $pengangkutan, $penyakit, $jenis_penyakit, $departments, $saiz, $resit;
-    public $isOpen = true, $isClosed = false, $isAccepted = false, $isCompleted = false, $kouta = 30;
+    public $isOpen = true, $isClosed = false, $isAccepted = false, $isCompleted = false, $kouta = 25;
     public bool $checked = false;
     public bool $disabled = true;
 

@@ -18,10 +18,14 @@
                     <div class="col-md-6">
                         <img class="rounded-start img-fluid" src="{{asset('assets/images/angsi.png')}}" alt="Card image">
                         <img class="rounded-start img-fluid" src="{{asset('assets/images/bankislam.jpg')}}" alt="Card image">
+                        <p></p>
+                        <p></p>
                     </div>
                     <div class="col-md-6">
                         <div class="card-header">
-                            <h5 class="card-title mb-0">BORANG PENDAFTARAN</h5>
+                        <a name="" id="" class="btn btn-secondary" href="{{url('storage/' . 'syarat.pdf')}}" target="_blank" role="button">Syarat & Maklumat Umum Angsi</a>
+                        <a name="" id="" class="btn btn-secondary" href="{{url('storage/' . 'tentatif.pdf')}}" target="_blank" role="button">Tentatif Program Angsi</a>
+                            <h5 class="card-title mb-0 pt-3 ">BORANG PENDAFTARAN</h5>
                         </div>
                         <div class="card-body">
 
