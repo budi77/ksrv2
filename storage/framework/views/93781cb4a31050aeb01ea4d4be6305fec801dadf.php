@@ -14,6 +14,7 @@
                 <div class="row g-0">
                     <div class="col-md-6">
                         <img class="rounded-start img-fluid" src="<?php echo e(asset('assets/images/angsi.png')); ?>" alt="Card image">
+                        <img class="rounded-start img-fluid" src="<?php echo e(asset('assets/images/bankislam.jpg')); ?>" alt="Card image">
                     </div>
                     <div class="col-md-6">
                         <div class="card-header">
@@ -72,6 +73,19 @@
                                         <option value="<?php echo e($department->id); ?>"><?php echo e($department->name); ?></option>
                                         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                                         
+                                    </select>
+                                </div>
+
+                                <div class="mb-3 w-50">
+                                    <label for="" class="form-label">Saiz Baju</label>
+                                    <select class="form-select" name="" id="" wire:model="saiz">
+                                        <option selected>-- Sila Pilih --</option>
+                                        <option value="S">S</option>
+                                        <option value="M">M</option>
+                                        <option value="L">L</option>
+                                        <option value="XL">XL</option>
+                                        <option value="2XL">2XL</option>
+                                        <option value="3XL">3XL</option>
                                     </select>
                                 </div>
 
@@ -135,6 +149,14 @@
                                 <input type="text"
                                     class="form-control" name="" id="" aria-describedby="helpId" placeholder="" wire:model="jenis_penyakit">
                                 </div>
+
+                                <div class="mb-3">
+                                  <label for="" class="form-label">Muatnaik resit pembayaran</label>
+                                  <input type="file" class="form-control" name="" id="" placeholder="" aria-describedby="fileHelpId" wire:model="resit">
+                                  
+                                </div>
+
+                                
                             </div>  
 
                             <hr>
@@ -144,6 +166,7 @@
                                 SAYA DENGAN INI AKAN BERTANGGUNGJAWAB SEPENUHNYA MENJAGA KESELAMATAN DIRI SAYA SEPANJANG AKTIVITI BERLANGSUNG. SEKIRANYA BERLAKU APA-APA KEJADIAN YANG TIDAK DIINGINI, SAYA AKAN SEGERA MELAPORKAN KEPADA PIHAK URUSETIA. PIHAK URUSETIA TIDAK AKAN BERTANGGUNGJAWAB DI ATAS SEBARANG KEJADIAN YANG TIDAK DIINGINI KEPADA PESERTA.
                               </label>
                             </div>
+                            <hr>
 
                               <div class="text-end pt-3">
                                 <button type="button" class="btn btn-success bg-gradient waves-effect waves-light" wire:click="store" <?php echo e($disabled ? 'disabled' : ''); ?>>Hantar</button>

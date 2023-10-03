@@ -6,13 +6,16 @@ use Livewire\Component;
 use App\Models\Department;
 use App\Models\Angsi;
 use Jantinnerezo\LivewireAlert\LivewireAlert;
+use Livewire\WithFileUploads;
 
 
 class Borang extends Component
 {
     use LivewireAlert;
+    use WithFileUploads;
 
-    public $nama, $kp, $tel, $emel, $department_id,$nama_waris, $tel_waris, $pengangkutan, $penyakit, $jenis_penyakit, $departments;
+
+    public $nama, $kp, $tel, $emel, $department_id,$nama_waris, $tel_waris, $pengangkutan, $penyakit, $jenis_penyakit, $departments, $saiz, $resit;
     public $isOpen = true, $isClosed = false, $isAccepted = false, $isCompleted = false, $kouta = 30;
     public bool $checked = false;
     public bool $disabled = true;
@@ -28,6 +31,8 @@ class Borang extends Component
         'tel_waris' => 'required',
         'pengangkutan' => 'required',
         'penyakit' => 'required',
+        'saiz' => 'required',
+        'resit' => 'required',
         // 'jenis_penyakit' => 'required',
      
     ];
@@ -42,7 +47,10 @@ class Borang extends Component
         'tel_waris.required' => 'Sila masukkan No Kecemasan Untuk Dihubungi',
         'pengangkutan.required' => 'Sila masukkan Jenis Pengangkutan',
         'penyakit.required' => 'Sila pilih jika ada penyakit',
-        
+        'saiz.required' => 'Sila pilih saiz baju',
+        'resit.required' => 'Sila muatnaik resit pembayaran',
+        // 'saiz.required' => 'Sila pilih saiz baju',
+
     ];
 
     public function render()
@@ -75,6 +83,11 @@ class Borang extends Component
 
         $this->validate();
 
+        $name = md5($this->resit . microtime()).'.'.$this->resit->extension();
+
+        $this->resit->storeAs('public', $name);
+
+
         Angsi::create([
             'nama' => $this->nama,
             'kp' => $this->kp,
@@ -86,7 +99,11 @@ class Borang extends Component
             'pengangkutan' => $this->pengangkutan,
             'penyakit' => $this->penyakit,
             'sakit' => $this->jenis_penyakit,
+            'ext1' => $this->saiz,
+            'ext2' => $name,
         ]);
+
+
 
         $this->resetExcept('departments');
         

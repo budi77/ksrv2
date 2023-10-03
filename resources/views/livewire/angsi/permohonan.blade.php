@@ -14,7 +14,7 @@
             <div class="card-body">
 
                 <div class="card-header align-items-center d-flex">
-                    <h4 class="card-title mb-2 flex-grow-1">Card Tables</h4>
+                    {{-- <h4 class="card-title mb-2 flex-grow-1">Card Tables</h4> --}}
     
                 </div>
                 
@@ -27,6 +27,7 @@
                                 <th scope="col">Tel</th>
                                 <th scope="col">Emel</th>
                                 <th scope="col">Bahagian</th>
+                                <th scope="col">Saiz Baju</th>
                                 <th scope="col">Pengangkutan</th>
                                 <th scope="col">Penyakit</th>
                                 <th scope="col">Jenis Sakit</th>
@@ -43,6 +44,7 @@
                                 <td>{{ @$r->tel }}</td>
                                 <td>{{ @$r->emel }}</td>
                                 <td>{{ @$r->department->name }}</td>
+                                <td>{{ @$r->department->saiz }}</td>
                                 <td>{{ @$r->pengangkutan }}</td>
                                 <td>{{ @$r->penyakit }}</td>
                                 <td>{{ @$r->sakit }}</td>
