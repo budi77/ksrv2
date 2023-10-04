@@ -48,7 +48,7 @@ class Borang extends Component
         'pengangkutan.required' => 'Sila masukkan Jenis Pengangkutan',
         'penyakit.required' => 'Sila pilih jika ada penyakit',
         'saiz.required' => 'Sila pilih saiz baju',
-        'resit.required' => 'Sila muatnaik resit pembayaran',
+        // 'resit.required' => 'Sila muatnaik resit pembayaran',
         // 'saiz.required' => 'Sila pilih saiz baju',
 
     ];
