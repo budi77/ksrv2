@@ -202,7 +202,7 @@
 
                             <!-- Warning Alert -->
                             <div class="alert bg-warning border-warning text-white" role="alert">
-                                <strong>Untuk makluman!</strong> - Pendaftaran telah ditutup!
+                                <strong>Untuk makluman</strong> - Pendaftaran telah ditutup!
                             </div>
 
                             @elseif($isCompleted)
