@@ -64,6 +64,8 @@ class Borang extends Component
         {
             $this->isOpen = false;
 
+            $this->isClosed = true;
+
         }
 
         // dd($departments);
