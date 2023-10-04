@@ -25,7 +25,8 @@ Route::get('/patriotik2023/berjaya', \App\Http\Livewire\Patriotik\Success::class
 Route::get('/patriotik2023', \App\Http\Livewire\Patriotik\Keputusan::class)->name('patriotik');
 
 
-Route::get('/angsi2023', \App\Http\Livewire\Angsi\Borang::class)->name('angsi.borang');
+Route::get('/angsi2023/daftar', \App\Http\Livewire\Angsi\Borang::class)->name('angsi.borang');
+Route::view('/angsi2023', 'angsi2023')->name('angsi2023');
 
 
 Route::middleware('auth')->group(function () {
