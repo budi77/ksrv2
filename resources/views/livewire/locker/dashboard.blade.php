@@ -24,18 +24,18 @@
                             </div>
                             <div class="flex-shrink-0">
                                 <div class="d-flex gap-1 align-items-center my-n2">
-                                    <button type="button" class="btn avatar-xs p-0 favourite-btn shadow-none active">
+                                    {{-- <button type="button" class="btn avatar-xs p-0 favourite-btn shadow-none active">
                                         <span class="avatar-title bg-transparent fs-15">
                                             <i class="ri-star-fill"></i>
                                         </span>
-                                    </button>
+                                    </button> --}}
                                     <div class="dropdown">
                                         <button class="btn btn-link text-muted p-1 mt-n1 py-0 text-decoration-none fs-15 shadow-none" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-horizontal icon-sm"><circle cx="12" cy="12" r="1"></circle><circle cx="19" cy="12" r="1"></circle><circle cx="5" cy="12" r="1"></circle></svg>
                                         </button>
 
                                         <div class="dropdown-menu dropdown-menu-end">
-                                            <a class="dropdown-item" href="javascript:void(0);" wire:click="add('{{ @$locker->id }}')" ><i class="ri-eye-fill align-bottom me-2 text-muted"></i> Tempah</a>
+                                            <a class="dropdown-item" href="javascript:void(0);" wire:click="add('{{ @$locker->id }}')" ><i class="ri-add-circle-fill align-bottom me-2 text-muted"></i> Tempah</a>
                                             {{-- <a class="dropdown-item" href="apps-projects-create"><i class="ri-pencil-fill align-bottom me-2 text-muted"></i> Edit</a> --}}
                                             {{-- <div class="dropdown-divider"></div> --}}
                                             {{-- <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#removeProjectModal"><i class="ri-delete-bin-fill align-bottom me-2 text-muted"></i> Remove</a> --}}
@@ -183,14 +183,25 @@
                     </div>
 
                     <div class="row">
-                        <div class="col-4">
+                        <div class="col-3">
+                            <div class="mb-3">
+                                <label for="" class="form-label">Keahlian</label>
+                                <select class="form-select" name="" id="" wire:model="membership">
+                                    <option selected>--Pilih--</option>
+                                    <option value="Ahli">Ahli</option>
+                                    <option value="Bukan Ahli">Bukan Ahli</option>
+                                   
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-3">
                             <div class="mb-3">
                               {{-- <label for="" class="form-label">No Telefon</label> --}}
                               <label for="" class="form-label">Tarikh Mula</label>
                                 <x-date-picker id="date" wire:model="start" autocomplete="off" value="" />
                             </div>
                         </div>
-                        <div class="col-4">
+                        <div class="col-3">
                             <div class="mb-3">
                                 <label for="" class="form-label">Tempoh</label>
                                 <select class="form-select" name="" id="" wire:model="period" wire:change="countFee">
@@ -210,7 +221,7 @@
                                 </select>
                             </div>
                         </div>
-                        <div class="col-4">
+                        <div class="col-3">
                             <div class="mb-3">
                               <label for="" class="form-label">Jumlah Yuran (RM)</label>
                               <input type="text"
