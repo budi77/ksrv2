@@ -24,6 +24,7 @@ Route::get('/landing', function () {
 Route::get('/patriotik2023/berjaya', \App\Http\Livewire\Patriotik\Success::class)->name('patriotik.berjaya');
 Route::get('/patriotik2023', \App\Http\Livewire\Patriotik\Keputusan::class)->name('patriotik');
 
+Route::get('/pancing2023', \App\Http\Livewire\Pancing\Borang::class)->name('pancing');
 
 Route::get('/angsi2023/daftar', \App\Http\Livewire\Angsi\Borang::class)->name('angsi.borang');
 Route::view('/angsi2023', 'angsi2023')->name('angsi2023');
