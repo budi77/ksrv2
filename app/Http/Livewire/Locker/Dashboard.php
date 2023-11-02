@@ -15,6 +15,7 @@ class Dashboard extends Component
     use LivewireAlert;
 
     public $locker_info, $locker_id, $name = '', $department_id, $period, $start, $end, $fees = 0, $tel_no, $email, $departments, $total_fee;
+    public $membership, $member = 10, $non_member = 15;
 
     public function render()
     {
@@ -56,6 +57,7 @@ class Dashboard extends Component
             'fees' => $this->fees,
             'tel_no' => $this->tel_no,
             'email' => $this->email,
+            'extra1' => $this->membership,
 
         ]);
 
@@ -70,7 +72,12 @@ class Dashboard extends Component
 
     public function countFee()
     {
-        $this->fees = $this->period * 15;
+        if ($this->membership == 'Ahli'){
+            $this->fees = $this->period * $this->member;
+        }else{
+            $this->fees = $this->period * $this->non_member;
+
+        }
     }
 
 }
