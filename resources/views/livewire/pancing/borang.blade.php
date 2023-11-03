@@ -23,8 +23,8 @@
                     </div>
                     <div class="col-md-6">
                         <div class="card-header">
-                        <a name="" id="" class="btn btn-secondary" href="{{url('storage/' . 'syarat.pdf')}}" target="_blank" role="button">Syarat & Maklumat Umum Angsi</a>
-                        <a name="" id="" class="btn btn-secondary" href="{{url('storage/' . 'tentatif.pdf')}}" target="_blank" role="button">Tentatif Program Angsi</a>
+                        <a name="" id="" class="btn btn-secondary" href="{{url('storage/' . 'syarat.pdf')}}" target="_blank" role="button">Syarat & Maklumat Umum</a>
+                        <a name="" id="" class="btn btn-secondary" href="{{url('storage/' . 'tentatif.pdf')}}" target="_blank" role="button">Tentatif Program</a>
                             <h5 class="card-title mb-0 pt-3 ">BORANG PENDAFTARAN</h5>
                         </div>
                         <div class="card-body">
@@ -206,8 +206,8 @@
                             <hr>
                             <div class="form-check">
                               <input class="form-check-input" type="checkbox" value="1" id="" wire:model="checked" wire:change="processMark()">
-                              <label class="form-check-label" for="">
-                                SAYA DENGAN INI AKAN BERTANGGUNGJAWAB SEPENUHNYA MENJAGA KESELAMATAN DIRI SAYA SEPANJANG AKTIVITI BERLANGSUNG. SEKIRANYA BERLAKU APA-APA KEJADIAN YANG TIDAK DIINGINI, SAYA AKAN SEGERA MELAPORKAN KEPADA PIHAK URUSETIA. PIHAK URUSETIA TIDAK AKAN BERTANGGUNGJAWAB DI ATAS SEBARANG KEJADIAN YANG TIDAK DIINGINI KEPADA PESERTA.
+                              <label class="form-check-label text-uppercase" for="">
+                                Saya dengan ini mengaku tidak akan membabitkan pihak penganjur dan jawatankuasa atas sebarang kejadian yang tidak diingini berlaku terhadap diri, harta benda saya sebelum, semasa dan selepas Pertandingan Memancing ini berlangsung.
                               </label>
                             </div>
                             <hr>
