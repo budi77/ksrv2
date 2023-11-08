@@ -16,7 +16,7 @@
             <div class="card">
                 <div class="row g-0">
                     <div class="col-md-6">
-                        <img class="rounded-start img-fluid" src="{{asset('assets/images/pancing2023.jpg')}}" alt="Card image">
+                        <img class="rounded-start img-fluid" src="{{asset('assets/images/pancing2023.png')}}" alt="Card image">
                         <img class="rounded-start img-fluid" src="{{asset('assets/images/bankislam.jpg')}}" alt="Card image">
                         <p></p>
                         <p></p>

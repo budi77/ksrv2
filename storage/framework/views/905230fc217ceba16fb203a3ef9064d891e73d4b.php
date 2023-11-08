@@ -16,7 +16,7 @@
             <div class="container-fluid">
                 <div class="row justify-content-center">
                     <div class="col-xl-4 text-center">
-                        <h4 class="pt-4 font-danger fw-bold">PENDAFTARAN TELAH DITUTUP!</h4>
+                        <h4 class="font-danger fw-bold">PENDAFTARAN TELAH DITUTUP!</h4>
 
                         <div class="position-relative">
                             <img src="<?php echo e(URL::asset('assets/images/angsi.png')); ?>" alt="" class="img-fluid " />
