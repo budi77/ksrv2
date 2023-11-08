@@ -13,15 +13,15 @@
             <div class="card">
                 <div class="row g-0">
                     <div class="col-md-6">
-                        <img class="rounded-start img-fluid" src="<?php echo e(asset('assets/images/angsi.png')); ?>" alt="Card image">
+                        <img class="rounded-start img-fluid" src="<?php echo e(asset('assets/images/pancing2023.jpg')); ?>" alt="Card image">
                         <img class="rounded-start img-fluid" src="<?php echo e(asset('assets/images/bankislam.jpg')); ?>" alt="Card image">
                         <p></p>
                         <p></p>
                     </div>
                     <div class="col-md-6">
                         <div class="card-header">
-                        <a name="" id="" class="btn btn-secondary" href="<?php echo e(url('storage/' . 'syarat.pdf')); ?>" target="_blank" role="button">Syarat & Maklumat Umum Angsi</a>
-                        <a name="" id="" class="btn btn-secondary" href="<?php echo e(url('storage/' . 'tentatif.pdf')); ?>" target="_blank" role="button">Tentatif Program Angsi</a>
+                        <a name="" id="" class="btn btn-secondary" href="<?php echo e(url('storage/' . 'syarat.pdf')); ?>" target="_blank" role="button">Syarat & Maklumat Umum</a>
+                        <a name="" id="" class="btn btn-secondary" href="<?php echo e(url('storage/' . 'tentatif.pdf')); ?>" target="_blank" role="button">Tentatif Program</a>
                             <h5 class="card-title mb-0 pt-3 ">BORANG PENDAFTARAN</h5>
                         </div>
                         <div class="card-body">
@@ -46,14 +46,23 @@
                                 </div>
 
                                 <div class="row">
-                                    <div class="col-6">
+                                    <div class="col-4">
                                         <div class="mb-3">
                                         <label for="" class="form-label">No KP</label>
                                         <input type="text"
                                             class="form-control" name="" id="" aria-describedby="helpId" placeholder="" wire:model="nokp">
                                         </div>
                                     </div>
-                                    <div class="col-6">
+                                    <div class="col-4">
+                                        <label for="" class="form-label">Jantina</label>
+                                        <select class="form-select" name="" id="" wire:model="jantina">
+                                            <option selected>-- Sila Pilih --</option>
+                                            <option value="Lelaki">Lelaki</option>
+                                            <option value="Perempuan">Perempuan</option>
+                                            
+                                        </select>
+                                    </div>
+                                    <div class="col-4">
                                         <div class="mb-3">
                                         <label for="" class="form-label">No Telefon</label>
                                         <input type="text"
@@ -62,11 +71,7 @@
                                     </div>
                                 </div>
 
-                                <div class="mb-3">
-                                <label for="" class="form-label">Emel</label>
-                                <input type="text"
-                                    class="form-control" name="" id="" aria-describedby="helpId" placeholder="" wire:model="emel">
-                                </div>
+                                
 
 
                                 <div class="mb-3">
@@ -80,20 +85,44 @@
                                     </select>
                                 </div>
 
-                                <div class="row justify-content-center align-items-center g-2 mb-3">
-                                    <div class="col">
 
-                                    <label for="" class="form-label">Ahli KSR</label>
-                                    <select class="form-select" name="" id="" wire:model="ahli">
-                                        <option selected>-- Sila Pilih --</option>
-                                        <option value="YA">YA</option>
-                                        <option value="TIDAK">TIDAK</option>
-                                        
-                                    </select>
-                                    
+                                <div class="row">
+                                    <div class="col-6">
+
+                                        <div class="row justify-content-center align-items-center g-2 mb-3">
+                                            <div class="col">
+        
+                                            <label for="" class="form-label">Ahli KSR</label>
+                                            <select class="form-select" name="" id="" wire:model="ahli">
+                                                <option selected>-- Sila Pilih --</option>
+                                                <option value="YA">YA</option>
+                                                <option value="TIDAK">TIDAK</option>
+                                                
+                                            </select>
+                                            
+                                            </div>
+                                           
+                                        </div>
+
                                     </div>
-                                   
+                                    <div class="col-6">
+
+                                        <label for="" class="form-label">Saiz Baju</label>
+                                        <select class="form-select" name="" id="" wire:model="saiz">
+                                            <option selected>-- Sila Pilih --</option>
+                                            <option value="S">S</option>
+                                            <option value="M">M</option>
+                                            <option value="L">L</option>
+                                            <option value="XL">XL</option>
+                                            <option value="2XL">2XL</option>
+                                            <option value="3XL">3XL</option>
+                                            <option value="5XL">5XL</option>
+                                        </select>
+
+                                    </div>
                                 </div>
+
+                               
 
                                
 
@@ -148,8 +177,8 @@
                             <hr>
                             <div class="form-check">
                               <input class="form-check-input" type="checkbox" value="1" id="" wire:model="checked" wire:change="processMark()">
-                              <label class="form-check-label" for="">
-                                SAYA DENGAN INI AKAN BERTANGGUNGJAWAB SEPENUHNYA MENJAGA KESELAMATAN DIRI SAYA SEPANJANG AKTIVITI BERLANGSUNG. SEKIRANYA BERLAKU APA-APA KEJADIAN YANG TIDAK DIINGINI, SAYA AKAN SEGERA MELAPORKAN KEPADA PIHAK URUSETIA. PIHAK URUSETIA TIDAK AKAN BERTANGGUNGJAWAB DI ATAS SEBARANG KEJADIAN YANG TIDAK DIINGINI KEPADA PESERTA.
+                              <label class="form-check-label text-uppercase" for="">
+                                Saya dengan ini mengaku tidak akan membabitkan pihak penganjur dan jawatankuasa atas sebarang kejadian yang tidak diingini berlaku terhadap diri, harta benda saya sebelum, semasa dan selepas Pertandingan Memancing ini berlangsung.
                               </label>
                             </div>
                             <hr>

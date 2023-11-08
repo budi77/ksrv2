@@ -16,7 +16,7 @@ class Borang extends Component
 
 
     public $nama, $kp, $tel, $emel, $department_id,$nama_waris, $tel_waris, $pengangkutan, $penyakit, $jenis_penyakit, $departments, $saiz, $resit;
-    public $isOpen = true, $isClosed = false, $isAccepted = false, $isCompleted = false, $kouta = 31;
+    public $isOpen = true, $isClosed = false, $isAccepted = false, $isCompleted = false, $kouta = 50;
     public bool $checked = false;
     public bool $disabled = true;
 
@@ -105,8 +105,13 @@ class Borang extends Component
             'ext2' => $name,
         ]);
 
+        $this->alert('success', 'Pendaftaran diterima', [
+            'showConfirmButton' => true,
+            'confirmButtonText' => 'OK',
+            'position' => 'center'
 
-
+        ]);
+        
         $this->resetExcept('departments');
         
         // $this->alert('success', 'Berjaya!');
