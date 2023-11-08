@@ -105,12 +105,6 @@ class Borang extends Component
             'ext2' => $name,
         ]);
 
-        $this->alert('success', 'Pendaftaran diterima', [
-            'showConfirmButton' => true,
-            'confirmButtonText' => 'OK',
-            'position' => 'center'
-
-        ]);
         
         $this->resetExcept('departments');
         

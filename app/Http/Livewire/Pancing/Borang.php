@@ -97,9 +97,19 @@ class Borang extends Component
             
         ]);
 
+        $this->alert('success','Pendaftaran Diterima', [
+            'position' => 'center',
+            'timer' => '5000',
+            'toast' => false,
+            'showConfirmButton' => true,
+            // 'onConfirmed' => '',
+            'confirmButtonText' => 'OK',
+           ]);
+        
 
+        $this->resetExcept('departments');
+        $this->lampiran_bayaran = "";
 
-        $this->resetExcept('bahagian');
         
         // $this->alert('success', 'Berjaya!');
 
