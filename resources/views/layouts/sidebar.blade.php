@@ -103,8 +103,8 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link menu-link" href="{{ route('angsi.permohonan') }}">
-                        <i class="ri-flag-2-line"></i> <span>Angsi 2023</span>
+                    <a class="nav-link menu-link" href="{{ route('pancing.lihat') }}">
+                        <i class="ri-flag-2-line"></i> <span>Pancing 2023</span>
                     </a>
                 </li>
                 <li class="nav-item">
