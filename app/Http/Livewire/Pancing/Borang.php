@@ -104,7 +104,7 @@ class Borang extends Component
             'ahli' => $this->ahli,
             'tarikh_bayaran' => $this->tarikh,
             'jumlah_bayaran' => $this->jumlah_bayaran,
-            'lampiran_bayaran' => $this->name,
+            'lampiran_bayaran' => $name,
             'ext1' => $this->saiz,
             
         ]);
