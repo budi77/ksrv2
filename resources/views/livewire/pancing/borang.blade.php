@@ -41,15 +41,15 @@
                                     class="form-control" name="" id="" aria-describedby="helpId" placeholder="" wire:model="nama">
                                 </div>
 
-                                <div class="row">
-                                    <div class="col-4">
-                                        <div class="mb-3">
+                                 <div class="mb-3">
                                         <label for="" class="form-label">No KP</label>
                                         <input type="text"
                                             class="form-control" name="" id="" aria-describedby="helpId" placeholder="" wire:model="nokp">
-                                        </div>
                                     </div>
-                                    <div class="col-4">
+
+                                <div class="row">
+                                    
+                                    <div class="col-6">
                                         <label for="" class="form-label">Jantina</label>
                                         <select class="form-select" name="" id="" wire:model="jantina">
                                             <option selected>-- Sila Pilih --</option>
@@ -58,7 +58,7 @@
                                             
                                         </select>
                                     </div>
-                                    <div class="col-4">
+                                    <div class="col-6">
                                         <div class="mb-3">
                                         <label for="" class="form-label">No Telefon</label>
                                         <input type="text"
