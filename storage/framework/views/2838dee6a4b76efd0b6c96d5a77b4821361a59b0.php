@@ -13,7 +13,7 @@
             <div class="card">
                 <div class="row g-0">
                     <div class="col-md-6">
-                        <img class="rounded-start img-fluid" src="<?php echo e(asset('assets/images/pancing2023.jpg')); ?>" alt="Card image">
+                        <img class="rounded-start img-fluid" src="<?php echo e(asset('assets/images/pancing2023.png')); ?>" alt="Card image">
                         <img class="rounded-start img-fluid" src="<?php echo e(asset('assets/images/bankislam.jpg')); ?>" alt="Card image">
                         <p></p>
                         <p></p>
@@ -29,15 +29,7 @@
                             
 
                             <div>
-                                <?php if($errors->any()): ?>
-                                    <div class="alert alert-danger">
-                                        <ul>
-                                            <?php $__currentLoopData = $errors->all(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $error): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                                                <li><?php echo e($error); ?></li>
-                                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-                                        </ul>
-                                    </div>
-                                <?php endif; ?>
+                               
 
                                 <div class="mb-3">
                                 <label for="" class="form-label">Nama Penuh :</label>
@@ -86,40 +78,33 @@
                                 </div>
 
 
-                                <div class="row">
-                                    <div class="col-6">
+                               <div class="row justify-content-center align-items-center g-2 mb-3">
+                                    <div class="col">
 
-                                        <div class="row justify-content-center align-items-center g-2 mb-3">
-                                            <div class="col">
-        
-                                            <label for="" class="form-label">Ahli KSR</label>
-                                            <select class="form-select" name="" id="" wire:model="ahli">
-                                                <option selected>-- Sila Pilih --</option>
-                                                <option value="YA">YA</option>
-                                                <option value="TIDAK">TIDAK</option>
-                                                
-                                            </select>
-                                            
-                                            </div>
-                                           
+                                    <label for="" class="form-label">Saiz Baju</label>
+                                    <select class="form-select" name="" id="" wire:model="saiz">
+                                        <option selected>-- Sila Pilih --</option>
+                                        <option value="S">S</option>
+                                        <option value="M">M</option>
+                                        <option value="L">L</option>
+                                        <option value="XL">XL</option>
+                                        <option value="2XL">2XL</option>
+                                        <option value="3XL">3XL</option>
+                                        <option value="5XL">5XL</option>
+                                    </select>
+                                    
+                                    </div>
+                                    <div class="col">
+                                   
+                                        <div class="align-middle text-start pt-4">
+                                            <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modalId">
+                                            Lihat Carta Saiz
+                                            </button>
                                         </div>
+                                  
 
                                     </div>
-                                    <div class="col-6">
-
-                                        <label for="" class="form-label">Saiz Baju</label>
-                                        <select class="form-select" name="" id="" wire:model="saiz">
-                                            <option selected>-- Sila Pilih --</option>
-                                            <option value="S">S</option>
-                                            <option value="M">M</option>
-                                            <option value="L">L</option>
-                                            <option value="XL">XL</option>
-                                            <option value="2XL">2XL</option>
-                                            <option value="3XL">3XL</option>
-                                            <option value="5XL">5XL</option>
-                                        </select>
-
-                                    </div>
+                                    
                                 </div>
 
                                
@@ -157,13 +142,7 @@
                                     </div>
                                 </div>
 
-                                
-                                
-
-
-                                
-
-                                
+                               
 
                                 <div class="mb-3">
                                   <label for="" class="form-label">Muatnaik resit pembayaran</label>
@@ -182,6 +161,16 @@
                               </label>
                             </div>
                             <hr>
+
+                             <?php if($errors->any()): ?>
+                                    <div class="alert alert-danger">
+                                        <ul>
+                                            <?php $__currentLoopData = $errors->all(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $error): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                                <li><?php echo e($error); ?></li>
+                                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                                        </ul>
+                                    </div>
+                                <?php endif; ?>
 
                               <div class="text-end pt-3">
                                 <button type="button" class="btn btn-success bg-gradient waves-effect waves-light" wire:click="store" <?php echo e($disabled ? 'disabled' : ''); ?>>Hantar</button>

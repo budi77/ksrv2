@@ -32,15 +32,7 @@
                             {{-- @if($isOpen) --}}
 
                             <div>
-                                @if ($errors->any())
-                                    <div class="alert alert-danger">
-                                        <ul>
-                                            @foreach ($errors->all() as $error)
-                                                <li>{{ $error }}</li>
-                                            @endforeach
-                                        </ul>
-                                    </div>
-                                @endif
+                               
 
                                 <div class="mb-3">
                                 <label for="" class="form-label">Nama Penuh :</label>
@@ -93,40 +85,33 @@
                                 </div>
 
 
-                                <div class="row">
-                                    <div class="col-6">
+                               <div class="row justify-content-center align-items-center g-2 mb-3">
+                                    <div class="col">
 
-                                        <div class="row justify-content-center align-items-center g-2 mb-3">
-                                            <div class="col">
-        
-                                            <label for="" class="form-label">Ahli KSR</label>
-                                            <select class="form-select" name="" id="" wire:model="ahli">
-                                                <option selected>-- Sila Pilih --</option>
-                                                <option value="YA">YA</option>
-                                                <option value="TIDAK">TIDAK</option>
-                                                
-                                            </select>
-                                            
-                                            </div>
-                                           
+                                    <label for="" class="form-label">Saiz Baju</label>
+                                    <select class="form-select" name="" id="" wire:model="saiz">
+                                        <option selected>-- Sila Pilih --</option>
+                                        <option value="S">S</option>
+                                        <option value="M">M</option>
+                                        <option value="L">L</option>
+                                        <option value="XL">XL</option>
+                                        <option value="2XL">2XL</option>
+                                        <option value="3XL">3XL</option>
+                                        <option value="5XL">5XL</option>
+                                    </select>
+                                    
+                                    </div>
+                                    <div class="col">
+                                   
+                                        <div class="align-middle text-start pt-4">
+                                            <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modalId">
+                                            Lihat Carta Saiz
+                                            </button>
                                         </div>
+                                  
 
                                     </div>
-                                    <div class="col-6">
-
-                                        <label for="" class="form-label">Saiz Baju</label>
-                                        <select class="form-select" name="" id="" wire:model="saiz">
-                                            <option selected>-- Sila Pilih --</option>
-                                            <option value="S">S</option>
-                                            <option value="M">M</option>
-                                            <option value="L">L</option>
-                                            <option value="XL">XL</option>
-                                            <option value="2XL">2XL</option>
-                                            <option value="3XL">3XL</option>
-                                            <option value="5XL">5XL</option>
-                                        </select>
-
-                                    </div>
+                                    
                                 </div>
 
                                
@@ -150,49 +135,7 @@
                                     </div>
                                 </div>
 
-                                
-                                {{-- <div class="mb-3">
-
-                                    <div>
-                                        <label for="" class="form-label">Pengangkutan</label>
-
-                                    </div>
-
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="pengangkutan" id="" value="Kenderaan Sendiri" wire:model="pengangkutan">
-                                        <label class="form-check-label" for="">Kenderaan Sendiri</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="pengangkutan" id="" value="Menaiki Bas SPRM" wire:model="pengangkutan">
-                                        <label class="form-check-label" for="">Menaiki Bas SPRM</label>
-                                    </div>
-
-                                </div> --}}
-
-
-                                {{-- <div class="mb-3">
-
-                                    <div>
-                                        <label for="" class="form-label">Adakah mempunyai sebarang penyakit kronik?</label>
-
-                                    </div>
-
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="penyakit" id="" value="Ya" wire:model="penyakit">
-                                        <label class="form-check-label" for="">Ya</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="penyakit" id="" value="Tidak" wire:model="penyakit">
-                                        <label class="form-check-label" for="">Tidak</label>
-                                    </div>
-
-                                </div> --}}
-
-                                {{-- <div class="mb-3">
-                                <label for="" class="form-label">Jika jawapan di atas adalah YA, sila nyatakan </label>
-                                <input type="text"
-                                    class="form-control" name="" id="" aria-describedby="helpId" placeholder="" wire:model="jenis_penyakit">
-                                </div> --}}
+                               
 
                                 <div class="mb-3">
                                   <label for="" class="form-label">Muatnaik resit pembayaran</label>
@@ -211,6 +154,16 @@
                               </label>
                             </div>
                             <hr>
+
+                             @if ($errors->any())
+                                    <div class="alert alert-danger">
+                                        <ul>
+                                            @foreach ($errors->all() as $error)
+                                                <li>{{ $error }}</li>
+                                            @endforeach
+                                        </ul>
+                                    </div>
+                                @endif
 
                               <div class="text-end pt-3">
                                 <button type="button" class="btn btn-success bg-gradient waves-effect waves-light" wire:click="store" {{ $disabled ? 'disabled' : '' }}>Hantar</button>

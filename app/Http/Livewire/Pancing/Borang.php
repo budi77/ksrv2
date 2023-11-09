@@ -24,7 +24,7 @@ class Borang extends Component
         'no_tel' => 'required',
         'jantina' => 'required',
         'bahagian' => 'required',
-        'ahli' => 'required',
+        // 'ahli' => 'required',
         'tarikh' => 'required',
         'jumlah_bayaran' => 'required',
         'saiz' => 'required',
@@ -33,19 +33,19 @@ class Borang extends Component
     ];
 
     
-    // protected $messages = [
-    //     'nama.required' => 'Sila masukkan nama',
-    //     'kp.required' => 'Sila masukkan No Kad Pengenalan',
-    //     'tel.required' => 'Sila masukkan No Telefon',
-    //     'emel.required' => 'Sila masukkan Emel',
-    //     'department_id.required' => 'Sila masukkan Bahagian',
-    //     'nama_waris.required' => 'Sila masukkan Nama Waris',
-    //     'tel_waris.required' => 'Sila masukkan No Kecemasan Untuk Dihubungi',
-    //     'pengangkutan.required' => 'Sila masukkan Jenis Pengangkutan',
-    //     'penyakit.required' => 'Sila pilih jika ada penyakit',
-    //     'saiz.required' => 'Sila pilih saiz baju',
+    protected $messages = [
+        'nama.required' => 'Sila masukkan nama',
+        'nokp.required' => 'Sila masukkan No Kad Pengenalan',
+        'no_tel.required' => 'Sila masukkan No Telefon',
+        'jantina.required' => 'Sila masukkan Jantina',
+        'bahagian.required' => 'Sila masukkan Bahagian',
+        'tarikh.required' => 'Sila masukkan Tarikh Bayaran',
+        'jumlah_bayaran.required' => 'Sila masukkan Jumlah Bayaran',
+        'pengangkutan.required' => 'Sila masukkan Jenis Pengangkutan',
+        'lampiran.required' => 'Sila muatnaik Lampiran Bayaran',
+        'saiz.required' => 'Sila pilih saiz baju',
        
-    // ];
+    ];
 
     public function render()
     {
