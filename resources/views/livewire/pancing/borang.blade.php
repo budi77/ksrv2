@@ -23,8 +23,8 @@
                     </div>
                     <div class="col-md-6">
                         <div class="card-header">
-                        <a name="" id="" class="btn btn-secondary" href="{{url('storage/' . 'syarat.pdf')}}" target="_blank" role="button">Syarat & Maklumat Umum</a>
-                        <a name="" id="" class="btn btn-secondary" href="{{url('storage/' . 'Peraturan_dan_Syarat_Pertandingan_Memancing_KSR_2023.pdf')}}" target="_blank" role="button">Tentatif Program</a>
+                        <a name="" id="" class="btn btn-secondary" href="{{url('storage/' . 'Peraturan_dan_Syarat_Pertandingan_Memancing_KSR_2023.pdf')}}" target="_blank" role="button">Syarat & Maklumat Umum</a>
+                        <a name="" id="" class="btn btn-secondary" href="{{url('storage/' . 'tentatif_pancing_ksr_2023.pdf')}}" target="_blank" role="button">Tentatif Program</a>
                             <h5 class="card-title mb-0 pt-3 ">BORANG PENDAFTARAN</h5>
                         </div>
                         <div class="card-body">
