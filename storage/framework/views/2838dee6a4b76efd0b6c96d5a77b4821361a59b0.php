@@ -26,7 +26,7 @@
                         </div>
                         <div class="card-body">
 
-                            
+                            <?php if($isOpen): ?>
 
                             <div>
                                
@@ -177,13 +177,16 @@
                             </div>
                             
                            
-                            
+                            <?php elseif($isClosed): ?>
 
                             <!-- Warning Alert -->
-                            
+                            <div class="alert bg-warning border-warning text-white" role="alert">
+                                <strong>Untuk makluman</strong> - Pendaftaran telah ditutup!
+                            </div>
 
+                           
 
-                            
+                            <?php endif; ?>
 
                           
                             

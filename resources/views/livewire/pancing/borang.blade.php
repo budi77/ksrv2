@@ -29,7 +29,7 @@
                         </div>
                         <div class="card-body">
 
-                            {{-- @if($isOpen) --}}
+                            @if($isOpen)
 
                             <div>
                                
@@ -170,22 +170,16 @@
                             </div>
                             
                            
-                            {{-- @elseif($isClosed) --}}
+                            @elseif($isClosed)
 
                             <!-- Warning Alert -->
-                            {{-- <div class="alert bg-warning border-warning text-white" role="alert">
+                            <div class="alert bg-warning border-warning text-white" role="alert">
                                 <strong>Untuk makluman</strong> - Pendaftaran telah ditutup!
                             </div>
 
-                            @elseif($isCompleted)
+                           
 
-                            <div class="alert alert-secondary alert-dismissible bg-secondary text-white alert-label-icon fade show" role="alert">
-                                <i class="ri-check-double-line label-icon"></i><strong>Berjaya</strong> - Permohonan telah diterima!
-                                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="alert" aria-label="Close"></button>
-                            </div> --}}
-
-
-                            {{-- @endif --}}
+                            @endif
 
                           
                             

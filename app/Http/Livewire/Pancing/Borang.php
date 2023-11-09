@@ -15,6 +15,8 @@ class Borang extends Component
     use WithFileUploads;
 
     public $departments, $nama,$nokp, $jantina, $bahagian, $ahli, $no_tel, $tarikh, $jumlah_bayaran, $lampiran, $saiz ;
+    public $isOpen = true, $isClosed = false, $isAccepted = false, $isCompleted = false, $kouta = 50;
+
     public bool $checked = false;
     public bool $disabled = true;
 
@@ -51,6 +53,16 @@ class Borang extends Component
     {
 
         $this->departments = Department::orderby('name')->get();
+
+        $total = Pancing::count();
+
+        if($total >= $this->kouta)
+        {
+            $this->isOpen = false;
+
+            $this->isClosed = true;
+
+        }
 
         return view('livewire.pancing.borang')->extends('layouts.master-without-nav');
     }
