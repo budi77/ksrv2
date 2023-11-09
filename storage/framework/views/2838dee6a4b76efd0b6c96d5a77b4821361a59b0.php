@@ -26,7 +26,8 @@
                         </div>
                         <div class="card-body">
 
-                            <?php if($isOpen): ?>
+                        <?php if($isOpen): ?>
+
 
                             <div>
                                

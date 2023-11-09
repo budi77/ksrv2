@@ -29,7 +29,8 @@
                         </div>
                         <div class="card-body">
 
-                            @if($isOpen)
+                        @if($isOpen)
+
 
                             <div>
                                
