@@ -102,8 +102,8 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link menu-link" href="<?php echo e(route('angsi.permohonan')); ?>">
-                        <i class="ri-flag-2-line"></i> <span>Angsi 2023</span>
+                    <a class="nav-link menu-link" href="<?php echo e(route('pancing.lihat')); ?>">
+                        <i class="ri-flag-2-line"></i> <span>Pancing 2023</span>
                     </a>
                 </li>
                 <li class="nav-item">

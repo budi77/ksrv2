@@ -38,6 +38,9 @@ Route::middleware('auth')->group(function () {
     
     Route::get('/pancing2023/permohonan', \App\Http\Livewire\Pancing\Senarai::class)->name('pancing.lihat');
 
+    Route::get('export/pancing', [App\Http\Controllers\ExportExcelController::class, 'pancing'])->name('export.pancing');
+
+
     Route::get('/yuran/gabungan', \App\Http\Livewire\Fees\Federations\Show::class)->name('fees.federations.show');
 
     Route::get('/dokumen', [App\Http\Controllers\HomeController::class, 'dokumen'])->name('dokumen');

@@ -15,8 +15,14 @@
 
                 <div class="card-header align-items-center d-flex">
                     
-    
+                        <a class="btn btn-primary btn-sm" href="<?php echo e(route('export.pancing')); ?>"><i class="ri-file-excel-2-line mr-3"></i>Export Excel</a>
+
                 </div>
+                <br>
+
+                
+                    
+                
                 
                 <div class="table-responsive table-card">
                     <table class="table align-middle table-nowrap mb-0">
