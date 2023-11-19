@@ -96,7 +96,7 @@
 
   
   <div class="row">
-    <div class="col-4">
+    <div class="col-6">
       <div class="mb-3">
         <label for="" class="form-label">JUMLAH BAYARAN</label>
         <div class="input-group">
@@ -106,7 +106,7 @@
       </div>
       </div>
     </div>
-    <div class="col-8">
+    <div class="col-6">
       <div class="mb-3">
         <label for="" class="form-label">RESIT BAYARAN</label>
         <input type="file" class="form-control @error('resit_bayaran') is-invalid @enderror" name="" id="" placeholder="" aria-describedby="fileHelpId" wire:model="resit_bayaran">
