@@ -15,7 +15,8 @@
 
                 <div class="card-header align-items-center d-flex">
                     {{-- <h4 class="card-title mb-2 flex-grow-1">Card Tables</h4> --}}
-                        <a class="btn btn-primary btn-sm" href="{{ route('export.pancing') }}"><i class="ri-file-excel-2-line mr-3"></i>Export Excel</a>
+                        {{-- <a class="btn btn-primary btn-sm" href="{{ route('export.pancing') }}"><i class="ri-file-excel-2-line mr-3"></i>Export Excel</a> --}}
+                        <button class="btn btn-secondary btn-sm" onClick="window.print()">Cetak Senarai</button>
 
                 </div>
                 <br>
@@ -25,7 +26,7 @@
                 {{-- </div>  --}}
                 
                 <div class="table-responsive table-card">
-                    <table class="table align-middle table-nowrap mb-0">
+                    <table class="table align-middle mb-0">
                         <thead class="table-light">
                             <tr>
                                 <th scope="col">#</th>
