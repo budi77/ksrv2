@@ -116,7 +116,7 @@
 
   <div class="text-center pt-3">
 
-    <button type="button" class="btn btn-primary" wire:click="store">Hantar</button>
+    <button type="button" class="btn btn-success" wire:click="store">Hantar</button>
   </div>
         </div>
     </div>
