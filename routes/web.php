@@ -29,8 +29,12 @@ Route::get('/pancing2023', \App\Http\Livewire\Pancing\Borang::class)->name('panc
 Route::get('/angsi2023/daftar', \App\Http\Livewire\Angsi\Borang::class)->name('angsi.borang');
 Route::view('/angsi2023', 'angsi2023')->name('angsi2023');
 
+Route::get('/ksrarena2023', \App\Http\Livewire\KSRArena\Borang::class)->name('ksrarena');
 
 Route::middleware('auth')->group(function () {
+
+    Route::get('/ksrarena2023/senarai', \App\Http\Livewire\KSRArena\Index::class)->name('ksrarena.index');
+
 
     Route::get('/pdf/patriotik2023/{id}', [App\Http\Controllers\PDFController::class, 'patriotik'])->name('pdf.patriotik');
 
