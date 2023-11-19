@@ -81,13 +81,7 @@ class Borang extends Component
     public function store()
     {
 
-        // $total = Angsi::count();
-
-        // if($total >= $this->kouta)
-        // {
-        //     abort(503);
-        // }
-
+       
         $this->validate();
 
         $name = md5($this->lampiran . microtime()).'.'.$this->lampiran->extension();
@@ -122,11 +116,7 @@ class Borang extends Component
         $this->resetExcept('departments');
         $this->lampiran_bayaran = "";
 
-        
-        // $this->alert('success', 'Berjaya!');
-
-        // $this->isOpen = false;
-        // $this->isCompleted = true;
+       
 
 
         

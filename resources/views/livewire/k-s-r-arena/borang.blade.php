@@ -2,36 +2,49 @@
     {{-- Stop trying to control. --}}
  <div class="container pt-4">
     <div class="card">
-        {{-- <div class="card-header">
-            <h6 class="card-title mb-0 text-center">
-            <p class="fw-bold">KSR ARENA 2023</p>
-KEJOHANAN BOLA TAMPAR & BOLA JARING ANTARA BAHAGIAN
-</h6>
-        </div>         --}}
+
         <div class="card-body">
         <div class="text-center">
         <div class="mx-auto avatar-md mb-3">
                         <img src="https://ksr.sprm.gov.my/assets/images/KSR.png" alt="" class="img-fluid rounded-circle">
             </div>
 <h2 class="card-title mb-1">KSR ARENA 2023</h5>
-<p class="text-muted mb-0">KEJOHANAN BOLA TAMPAR & BOLA JARING ANTARA BAHAGIAN</p>
+<p class=" mb-0">KEJOHANAN SUKAN ANTARA BAHAGIAN & SPRM LEMBAH KLANG</p>
         </div>
 
         <hr>
+
+        <!-- Primary Alert -->
+<div class="alert alert-primary alert-dismissible bg-primary text-white alert-label-icon fade show" role="alert">
+  <i class="ri-alert-line label-icon"></i><strong>PERHATIAN </strong> - Sila baca syarat syarat pertandingan di bawah sebelum membuat pendaftaran.
+  {{-- <button type="button" class="btn-close btn-close-white" data-bs-dismiss="alert" aria-label="Close"></button> --}}
+</div>
+
 <div class="d-flex mt-2">
                         <div class="flex-shrink-0">
-                            <i class="ri-file-text-fill ri-lg text-info"></i>
+                          <i class=" bx bx-basketball bx-sm text-danger"></i>
                         </div>
                         <div class="flex-grow-1 ms-2">
-                            SYARAT SYARAT PERTANDINGAN
+                          <a href="{{ asset('documents/SYARAT_BOLATAMPAR.pdf') }}" target="_blank">SYARAT SYARAT PERTANDINGAN BOLA TAMPAR</a>
+
+                            
                         </div>
                     </div>
+
+                    <div class="d-flex mt-2">
+                      <div class="flex-shrink-0">
+                        <i class=" bx bx-baseball bx-sm text-warning"></i>
+                      </div>
+                      <div class="flex-grow-1 ms-2">
+                        <a href="{{ asset('documents/SYARAT_BOLAJARING.pdf') }}" target="_blank">SYARAT SYARAT PERTANDINGAN BOLA JARING</a>
+                      </div>
+                  </div>
         <div class="d-flex mt-2">
                         <div class="flex-shrink-0">
-                            <i class="ri-file-text-fill ri-lg text-success"></i>
+                          <i class=" bx bx-message-alt-detail bx-sm text-info"></i>
                         </div>
                         <div class="flex-grow-1 ms-2">
-                            TENTATIF PROGRAM
+                          <a href="{{ asset('documents/SYARAT_UMUM_KSRARENA.pdf') }}" target="_blank">SYARAT SYARAT UMUM KSR ARENA</a>
                         </div>
                     </div>
 
@@ -39,7 +52,7 @@ KEJOHANAN BOLA TAMPAR & BOLA JARING ANTARA BAHAGIAN
             
  <div class="mb-3 mt-3">
         <label for="" class="form-label">NAMA BAHAGIAN</label>
-        <select class="form-select" name="" id="" wire:model="department_id">
+        <select class="form-select @error('department_id') is-invalid @enderror" name="" id="" wire:model="department_id">
         <option selected>-- Pilih --</option>
         @foreach($departments as $department)
         <option value="{{ $department->id }}">{{ $department->name }}</option>
@@ -51,14 +64,14 @@ KEJOHANAN BOLA TAMPAR & BOLA JARING ANTARA BAHAGIAN
 <div class="mb-3">
   <label for="" class="form-label">NAMA PENGURUS</label>
   <input type="text"
-    class="form-control" name="" id="" aria-describedby="helpId" placeholder="">
+    class="form-control @error('nama_pengurus') is-invalid @enderror" name="" id="" aria-describedby="helpId" placeholder="" wire:model="nama_pengurus">
   {{-- <small id="helpId" class="form-text text-muted">Help text</small> --}}
 </div>
 
 <div class="mb-3">
   <label for="" class="form-label">NO TELEFON</label>
   <input type="text"
-    class="form-control col-4" name="" id="" aria-describedby="helpId" placeholder="">
+    class="form-control col-4 @error('no_tel') is-invalid @enderror" name="" id="" aria-describedby="helpId" placeholder="" wire:model="no_tel">
   {{-- <small id="helpId" class="form-text text-muted">Help text</small> --}}
 </div>
 
@@ -66,11 +79,11 @@ KEJOHANAN BOLA TAMPAR & BOLA JARING ANTARA BAHAGIAN
 
 <div class="list-group">
     <label class="list-group-item">
-      <input class="form-check-input me-1" type="checkbox" value="">
+      <input class="form-check-input me-1" type="checkbox" value="1" wire:model="volleyball">
       BOLA TAMPAR
     </label>
     <label class="list-group-item">
-      <input class="form-check-input me-1" type="checkbox" value="">
+      <input class="form-check-input me-1" type="checkbox" value="1" wire:model="netball">
       BOLA JARING
     </label>
    
@@ -78,11 +91,33 @@ KEJOHANAN BOLA TAMPAR & BOLA JARING ANTARA BAHAGIAN
 
    <div class="mb-3 pt-3">
           <label for="" class="form-label">BORANG PENYERTAAN</label>
-          <input type="file" class="form-control" name="" id="" placeholder="" aria-describedby="fileHelpId" wire:model="borang_penyertaan">
-                                  {{-- <div id="fileHelpId" class="form-text">Help text</div> --}}
+          <input type="file" class="form-control @error('borang_penyertaan') is-invalid @enderror" name="" id="" placeholder="" aria-describedby="fileHelpId" wire:model="borang_penyertaan">
   </div>
-  
 
+  
+  <div class="row">
+    <div class="col-4">
+      <div class="mb-3">
+        <label for="" class="form-label">JUMLAH BAYARAN</label>
+        <div class="input-group">
+          <span class="input-group-text">RM</span>
+          <input wire:model="jumlah_bayaran" type="text" class="form-control @error('jumlah_bayaran') is-invalid @enderror" aria-label="Amount (to the nearest dollar)" data-np-intersection-state="visible" wfd-id="id43">
+          {{-- <span class="input-group-text">.00</span> --}}
+      </div>
+      </div>
+    </div>
+    <div class="col-8">
+      <div class="mb-3">
+        <label for="" class="form-label">RESIT BAYARAN</label>
+        <input type="file" class="form-control @error('resit_bayaran') is-invalid @enderror" name="" id="" placeholder="" aria-describedby="fileHelpId" wire:model="resit_bayaran">
+</div>
+    </div>
+  </div>
+
+  <div class="text-center pt-3">
+
+    <button type="button" class="btn btn-primary" wire:click="store">Hantar</button>
+  </div>
         </div>
     </div>
  </div>

@@ -18,8 +18,8 @@ return new class extends Migration
             $table->foreignUuid('department_id');
             $table->string('nama_pengurus');
             $table->string('no_tel')->nullable();
-            $table->integer('volleyball')->nullable();
-            $table->integer('netball')->nullable();
+            $table->integer('volleyball')->nullable()->default(0);
+            $table->integer('netball')->nullable()->default(0);
             $table->string('borang_penyertaan')->nullable();
             $table->string('jumlah_bayaran')->nullable();
             $table->string('resit_bayaran')->nullable();
