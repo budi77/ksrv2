@@ -8,8 +8,9 @@
         <div class="mx-auto avatar-md mb-3">
                         <img src="https://ksr.sprm.gov.my/assets/images/KSR.png" alt="" class="img-fluid rounded-circle">
             </div>
-<h2 class="card-title mb-1">KSR ARENA 2023</h5>
-<p class=" mb-0">KEJOHANAN SUKAN ANTARA BAHAGIAN & SPRM LEMBAH KLANG</p>
+<h2 class=" mb-1">KSR ARENA 2023</h2>
+<p class=" mb-0 text-muted fw-bold">KEJOHANAN SUKAN ANTARA BAHAGIAN & SPRM LEMBAH KLANG</p>
+<p class=" mb-0 text-muted">02 DISEMBER 2023, UNIVERSITI TEKNOLOGI MARA KAMPUS DENGKIL</p>
         </div>
 
         <hr>
