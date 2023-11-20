@@ -93,17 +93,7 @@
     </label>
 </div>
 
-{{-- <div class="list-group">
-    <label class="list-group-item">
-      <input class="form-check-input me-1" type="checkbox" value="1" wire:model="volleyball">
-      BOLA TAMPAR
-    </label>
-    <label class="list-group-item">
-      <input class="form-check-input me-1" type="checkbox" value="1" wire:model="netball">
-      BOLA JARING
-    </label>
-   
-  </div> --}}
+
 
    <div class="mb-3 pt-3">
           <label for="" class="form-label">BORANG PENYERTAAN</label>
@@ -124,6 +114,31 @@
       </div>
 
 
+
+
+<!-- Success Alert -->
+<div class="alert alert-warning alert-dismissible alert-additional fade show" role="alert">
+<div class="alert-content">
+        <p class="mb-0">Semua bayaran hendaklah dibuat ke atas akaun berikut:</p>
+    </div>
+    <div class="alert-body">
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        <div class="d-flex">
+            <div class="flex-shrink-0 me-3">
+                <i class="ri-alert-line fs-16 align-middle"></i>
+            </div>
+            <div class="flex-grow-1">
+                {{-- <h5 class="alert-heading"><h5>MAKLUMAT AKAUN</h5> --}}
+                <p class="mb-0">BANK ISLAM</p>
+                <p class="mb-0">TETUAN KELAB SUKAN DAN REKREASI SPRM (KSR)</p>
+                <p class="mb-0">NO AKAUN : 16018010015446</p>
+            </div>
+        </div>
+    </div>
+    {{-- <div class="alert-content">
+        <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
+    </div> --}}
+</div>
 
   
   {{-- <div class="row">

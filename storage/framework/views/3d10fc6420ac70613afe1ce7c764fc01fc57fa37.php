@@ -157,6 +157,29 @@ unset($__errorArgs, $__bag); ?>" name="" id="" placeholder="" aria-describedby="
 
 
 
+
+<!-- Success Alert -->
+<div class="alert alert-warning alert-dismissible alert-additional fade show" role="alert">
+<div class="alert-content">
+        <p class="mb-0">Semua bayaran hendaklah dibuat ke atas akaun berikut:</p>
+    </div>
+    <div class="alert-body">
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        <div class="d-flex">
+            <div class="flex-shrink-0 me-3">
+                <i class="ri-alert-line fs-16 align-middle"></i>
+            </div>
+            <div class="flex-grow-1">
+                
+                <p class="mb-0">BANK ISLAM</p>
+                <p class="mb-0">TETUAN KELAB SUKAN DAN REKREASI SPRM (KSR)</p>
+                <p class="mb-0">NO AKAUN : 16018010015446</p>
+            </div>
+        </div>
+    </div>
+    
+</div>
+
   
   
 
