@@ -95,15 +95,28 @@
           <input type="file" class="form-control @error('borang_penyertaan') is-invalid @enderror" name="" id="" placeholder="" aria-describedby="fileHelpId" wire:model="borang_penyertaan">
   </div>
 
+  <div class="mb-3">
+        <label for="" class="form-label">JUMLAH BAYARAN</label>
+        <div class="input-group">
+          <span class="input-group-text">RM</span>
+          <input wire:model="jumlah_bayaran" type="text" class="form-control  @error('jumlah_bayaran') is-invalid @enderror" aria-label="Amount (to the nearest dollar)" data-np-intersection-state="visible" wfd-id="id43">
+          {{-- <span class="input-group-text">.00</span> --}}
+      </div>
+  </div>
+
+  <div class="mb-3">
+        <label for="" class="form-label">RESIT BAYARAN</label>
+        <input type="file" class="form-control @error('resit_bayaran') is-invalid @enderror" name="" id="" placeholder="" aria-describedby="fileHelpId" wire:model="resit_bayaran">
+      </div>
+
   
-  <div class="row">
+  {{-- <div class="row">
     <div class="col-6">
       <div class="mb-3">
         <label for="" class="form-label">JUMLAH BAYARAN</label>
         <div class="input-group">
           <span class="input-group-text">RM</span>
           <input wire:model="jumlah_bayaran" type="text" class="form-control @error('jumlah_bayaran') is-invalid @enderror" aria-label="Amount (to the nearest dollar)" data-np-intersection-state="visible" wfd-id="id43">
-          {{-- <span class="input-group-text">.00</span> --}}
       </div>
       </div>
     </div>
@@ -111,9 +124,9 @@
       <div class="mb-3">
         <label for="" class="form-label">RESIT BAYARAN</label>
         <input type="file" class="form-control @error('resit_bayaran') is-invalid @enderror" name="" id="" placeholder="" aria-describedby="fileHelpId" wire:model="resit_bayaran">
-</div>
+      </div>
     </div>
-  </div>
+  </div> --}}
 
   <div class="text-center pt-3">
 

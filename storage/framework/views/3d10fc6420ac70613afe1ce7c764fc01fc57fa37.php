@@ -123,14 +123,11 @@ endif;
 unset($__errorArgs, $__bag); ?>" name="" id="" placeholder="" aria-describedby="fileHelpId" wire:model="borang_penyertaan">
   </div>
 
-  
-  <div class="row">
-    <div class="col-6">
-      <div class="mb-3">
+  <div class="mb-3">
         <label for="" class="form-label">JUMLAH BAYARAN</label>
         <div class="input-group">
           <span class="input-group-text">RM</span>
-          <input wire:model="jumlah_bayaran" type="text" class="form-control <?php $__errorArgs = ['jumlah_bayaran'];
+          <input wire:model="jumlah_bayaran" type="text" class="form-control  <?php $__errorArgs = ['jumlah_bayaran'];
 $__bag = $errors->getBag($__errorArgs[1] ?? 'default');
 if ($__bag->has($__errorArgs[0])) :
 if (isset($message)) { $__messageOriginal = $message; }
@@ -140,10 +137,9 @@ endif;
 unset($__errorArgs, $__bag); ?>" aria-label="Amount (to the nearest dollar)" data-np-intersection-state="visible" wfd-id="id43">
           
       </div>
-      </div>
-    </div>
-    <div class="col-6">
-      <div class="mb-3">
+  </div>
+
+  <div class="mb-3">
         <label for="" class="form-label">RESIT BAYARAN</label>
         <input type="file" class="form-control <?php $__errorArgs = ['resit_bayaran'];
 $__bag = $errors->getBag($__errorArgs[1] ?? 'default');
@@ -153,9 +149,10 @@ $message = $__bag->first($__errorArgs[0]); ?> is-invalid <?php unset($message);
 if (isset($__messageOriginal)) { $message = $__messageOriginal; }
 endif;
 unset($__errorArgs, $__bag); ?>" name="" id="" placeholder="" aria-describedby="fileHelpId" wire:model="resit_bayaran">
-</div>
-    </div>
-  </div>
+      </div>
+
+  
+  
 
   <div class="text-center pt-3">
 
