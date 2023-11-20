@@ -99,17 +99,22 @@ unset($__errorArgs, $__bag); ?>" name="" id="" aria-describedby="helpId" placeho
 
   <label for="" class="form-label">ACARA SUKAN</label>
 
-<div class="list-group">
-    <label class="list-group-item">
-      <input class="form-check-input me-1" type="checkbox" value="1" wire:model="volleyball">
-      BOLA TAMPAR
+  
+      <div class="form-check mb-3">
+    <input class="form-check-input" type="radio" name="acara" id="flexRadioDefault1" value="BOLA TAMPAR" wire:model="acara">
+    <label class="form-check-label" for="flexRadioDefault1">
+        BOLA TAMPAR
     </label>
-    <label class="list-group-item">
-      <input class="form-check-input me-1" type="checkbox" value="1" wire:model="netball">
-      BOLA JARING
+</div>
+
+<div class="form-check mb-3">
+    <input class="form-check-input" type="radio" name="acara" id="flexRadioDefault2" value="BOLA JARING" wire:model="acara">
+    <label class="form-check-label" for="flexRadioDefault2">
+        BOLA JARING
     </label>
-   
-  </div>
+</div>
+
+
 
    <div class="mb-3 pt-3">
           <label for="" class="form-label">BORANG PENYERTAAN</label>
@@ -135,7 +140,6 @@ $message = $__bag->first($__errorArgs[0]); ?> is-invalid <?php unset($message);
 if (isset($__messageOriginal)) { $message = $__messageOriginal; }
 endif;
 unset($__errorArgs, $__bag); ?>" aria-label="Amount (to the nearest dollar)" data-np-intersection-state="visible" wfd-id="id43">
-          
       </div>
   </div>
 
@@ -150,6 +154,8 @@ if (isset($__messageOriginal)) { $message = $__messageOriginal; }
 endif;
 unset($__errorArgs, $__bag); ?>" name="" id="" placeholder="" aria-describedby="fileHelpId" wire:model="resit_bayaran">
       </div>
+
+
 
   
   

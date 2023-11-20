@@ -78,7 +78,22 @@
 
   <label for="" class="form-label">ACARA SUKAN</label>
 
-<div class="list-group">
+  
+      <div class="form-check mb-3">
+    <input class="form-check-input" type="radio" name="acara" id="flexRadioDefault1" value="BOLA TAMPAR" wire:model="acara">
+    <label class="form-check-label" for="flexRadioDefault1">
+        BOLA TAMPAR
+    </label>
+</div>
+
+<div class="form-check mb-3">
+    <input class="form-check-input" type="radio" name="acara" id="flexRadioDefault2" value="BOLA JARING" wire:model="acara">
+    <label class="form-check-label" for="flexRadioDefault2">
+        BOLA JARING
+    </label>
+</div>
+
+{{-- <div class="list-group">
     <label class="list-group-item">
       <input class="form-check-input me-1" type="checkbox" value="1" wire:model="volleyball">
       BOLA TAMPAR
@@ -88,7 +103,7 @@
       BOLA JARING
     </label>
    
-  </div>
+  </div> --}}
 
    <div class="mb-3 pt-3">
           <label for="" class="form-label">BORANG PENYERTAAN</label>
@@ -100,7 +115,6 @@
         <div class="input-group">
           <span class="input-group-text">RM</span>
           <input wire:model="jumlah_bayaran" type="text" class="form-control  @error('jumlah_bayaran') is-invalid @enderror" aria-label="Amount (to the nearest dollar)" data-np-intersection-state="visible" wfd-id="id43">
-          {{-- <span class="input-group-text">.00</span> --}}
       </div>
   </div>
 
@@ -108,6 +122,8 @@
         <label for="" class="form-label">RESIT BAYARAN</label>
         <input type="file" class="form-control @error('resit_bayaran') is-invalid @enderror" name="" id="" placeholder="" aria-describedby="fileHelpId" wire:model="resit_bayaran">
       </div>
+
+
 
   
   {{-- <div class="row">

@@ -33,8 +33,8 @@
                                 <th scope="col">Bahagian</th>
                                 <th scope="col">Nama Pengurus</th>
                                 <th scope="col">No Tel</th>
-                                <th scope="col">Bola Tampar</th>
-                                <th scope="col">Bola Jaring</th>
+                                <th scope="col">Acara</th>
+                                {{-- <th scope="col">Bola Jaring</th> --}}
                                 <th scope="col">Borang Penyertaan</th>
                                 <th scope="col">Jumlah Bayaran</th>
                                 <th scope="col">Resit Bayaran</th>
@@ -51,19 +51,19 @@
                                 <td>{{ @$r->nama_pengurus }}</td>
                                 <td>{{ @$r->no_tel }}</td>
                                 <td>
-                                    @if(@$r->volleyball == '1')
-                                    <span class="badge bg-success">YA</span>
+                                    @if(@$r->acara == 'BOLA TAMPAR')
+                                    <span class="badge bg-success">{{ $r->acara }}</span>
                                     @else
-                                    <span class="badge bg-danger">TIDAK</span>
+                                    <span class="badge bg-danger">{{ $r->acara }}</span>
                                     @endif
                                 </td>
-                                <td>
+                                {{-- <td>
                                     @if(@$r->netball == '1')
                                     <span class="badge bg-success">YA</span>
                                     @else
                                     <span class="badge bg-danger">TIDAK</span>
                                     @endif
-                                </td>
+                                </td> --}}
                                 <td><a href="{{url('storage/' . $r->borang_penyertaan)}}" target="_blank">Lihat</a></td>
                             
                                 <td>{{ @$r->jumlah_bayaran }}</td>

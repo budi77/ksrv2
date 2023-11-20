@@ -13,7 +13,7 @@ class Borang extends Component
     use LivewireAlert;
     use WithFileUploads;
 
-    public $departments, $department_id, $nama_pengurus, $no_tel, $volleyball, $netball, $borang_penyertaan, $jumlah_bayaran, $resit_bayaran;
+    public $departments, $acara, $department_id, $nama_pengurus, $no_tel, $volleyball, $netball, $borang_penyertaan, $jumlah_bayaran, $resit_bayaran;
 
     protected $rules = [
         'nama_pengurus' => 'required',
@@ -22,6 +22,7 @@ class Borang extends Component
         'borang_penyertaan' => 'required',
         'jumlah_bayaran' => 'required',
         'resit_bayaran' => 'required',
+        'acara' => 'required',
       
      
     ];
@@ -33,7 +34,7 @@ class Borang extends Component
         'borang_penyertaan.required' => 'Sila masukkan Borang Penyertaan',
         'jumlah_bayaran.required' => 'Sila masukkan Jumlah Bayaran',
         'resit_bayaran.required' => 'Sila masukkan Resit Bayaran',
-        
+        'acara.required' => 'Sila pilih Acara',
 
     ];
 
@@ -62,8 +63,7 @@ class Borang extends Component
             'nama_pengurus' => $this->nama_pengurus,
             'no_tel' => $this->no_tel,
             'department_id' => $this->department_id,
-            'volleyball' => $this->volleyball,
-            'netball' => $this->netball,
+            'ext1' => $this->acara,
             'borang_penyertaan' => $borang_penyertaan,
             'jumlah_bayaran' => $this->jumlah_bayaran,
             'resit_bayaran' => $resit_bayaran,
