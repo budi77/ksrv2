@@ -4,7 +4,7 @@ namespace App\Http\Livewire\KSRArena;
 
 use Livewire\Component;
 use App\Models\Department;
-use App\Models\KSRArena;
+use App\Models\KsrArena;
 use Jantinnerezo\LivewireAlert\LivewireAlert;
 use Livewire\WithFileUploads;
 
@@ -58,7 +58,7 @@ class Borang extends Component
         $this->resit_bayaran->storeAs('public', $resit_bayaran);
 
 
-        KSRArena::create([
+        KsrArena::create([
             'nama_pengurus' => $this->nama_pengurus,
             'no_tel' => $this->no_tel,
             'department_id' => $this->department_id,
