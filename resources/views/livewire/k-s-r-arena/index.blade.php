@@ -52,9 +52,9 @@
                                 <td>{{ @$r->no_tel }}</td>
                                 <td>
                                     @if(@$r->acara == 'BOLA TAMPAR')
-                                    <span class="badge bg-success">{{ $r->acara }}</span>
+                                    <span class="badge bg-success">{{ $r->ext1 }}</span>
                                     @else
-                                    <span class="badge bg-danger">{{ $r->acara }}</span>
+                                    <span class="badge bg-danger">{{ $r->ext1 }}</span>
                                     @endif
                                 </td>
                                 {{-- <td>
