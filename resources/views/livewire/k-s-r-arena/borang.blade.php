@@ -149,13 +149,15 @@
     </div> --}}
 </div>
 
-  @endif
   
 
-  {{-- <div class="text-center pt-3">
+  <div class="text-center pt-3">
 
     <button type="button" class="btn btn-success" wire:click="store">Hantar</button>
-  </div> --}}
+  </div>
+
+    @endif
+
         </div>
     </div>
  </div>
