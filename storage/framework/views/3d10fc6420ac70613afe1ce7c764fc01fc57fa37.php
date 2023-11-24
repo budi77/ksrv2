@@ -189,10 +189,15 @@ unset($__errorArgs, $__bag); ?>" name="" id="" placeholder="" aria-describedby="
     
 </div>
 
-  <?php endif; ?>
   
 
-  
+  <div class="text-center pt-3">
+
+    <button type="button" class="btn btn-success" wire:click="store">Hantar</button>
+  </div>
+
+    <?php endif; ?>
+
         </div>
     </div>
  </div>
