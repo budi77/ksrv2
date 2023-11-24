@@ -13,7 +13,7 @@ class Borang extends Component
     use LivewireAlert;
     use WithFileUploads;
 
-    public $departments, $acara, $department_id, $nama_pengurus, $no_tel, $volleyball, $netball, $borang_penyertaan, $jumlah_bayaran, $resit_bayaran;
+    public $data_id, $departments, $acara, $department_id, $nama_pengurus, $no_tel, $volleyball, $netball, $borang_penyertaan, $jumlah_bayaran, $resit_bayaran;
 
     protected $rules = [
         'nama_pengurus' => 'required',
@@ -38,6 +38,7 @@ class Borang extends Component
 
     ];
 
+  
     public function render()
     {
 
@@ -89,5 +90,9 @@ class Borang extends Component
 
 
     }
+
+
+    
+   
 
 }

@@ -102,8 +102,8 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link menu-link" href="<?php echo e(route('pancing.lihat')); ?>">
-                        <i class="ri-flag-2-line"></i> <span>Pancing 2023</span>
+                    <a class="nav-link menu-link" href="<?php echo e(route('ksrarena.index')); ?>">
+                        <i class="ri-flag-2-line"></i> <span>KSR ARENA 2023</span>
                     </a>
                 </li>
                 <li class="nav-item">

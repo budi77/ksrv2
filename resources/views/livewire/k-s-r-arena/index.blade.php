@@ -39,6 +39,7 @@
                                 <th scope="col">Jumlah Bayaran</th>
                                 <th scope="col">Resit Bayaran</th>
                                 <th scope="col">Tarikh Daftar</th>
+                                {{-- <th scope="col"></th> --}}
                                
                             </tr>
                         </thead>
@@ -71,6 +72,13 @@
                                 <td><a href="{{url('storage/' . $r->resit_bayaran)}}" target="_blank">Lihat</a></td>
 
                                 <td>{{ @$r->created_at }}</td>
+                                {{-- <td>
+                                <li class="list-inline-item" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" aria-label="Remove">
+                                <a class="text-danger "  href="javascript:void(0);" wire:click="delete('{{ $r->id }}')">
+                                    <i class="ri-delete-bin-5-fill fs-16"></i>
+                                </a>
+                    </li>
+                                </td> --}}
                             </tr>
                             @endforeach
                            
