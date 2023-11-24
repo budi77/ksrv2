@@ -51,10 +51,10 @@
                                 <td>{{ @$r->nama_pengurus }}</td>
                                 <td>{{ @$r->no_tel }}</td>
                                 <td>
-                                    @if(@$r->acara == 'BOLA TAMPAR')
+                                    @if(@$r->ext1 == 'BOLA TAMPAR')
                                     <span class="badge bg-success">{{ $r->ext1 }}</span>
                                     @else
-                                    <span class="badge bg-danger">{{ $r->ext1 }}</span>
+                                    <span class="badge bg-warning">{{ $r->ext1 }}</span>
                                     @endif
                                 </td>
                                 {{-- <td>
