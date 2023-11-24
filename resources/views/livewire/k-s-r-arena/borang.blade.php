@@ -8,18 +8,25 @@
         <div class="mx-auto avatar-md mb-3">
                         <img src="https://ksr.sprm.gov.my/assets/images/KSR.png" alt="" class="img-fluid rounded-circle">
             </div>
-<h2 class=" mb-1">KSR ARENA 2023</h2>
-<p class=" mb-0 text-muted fw-bold">KEJOHANAN SUKAN ANTARA BAHAGIAN & SPRM LEMBAH KLANG</p>
-<p class=" mb-0 text-muted">02 DISEMBER 2023, UNIVERSITI TEKNOLOGI MARA KAMPUS DENGKIL</p>
+            <h2 class=" mb-1">KSR ARENA 2023</h2>
+            <p class=" mb-0 text-muted fw-bold">KEJOHANAN SUKAN ANTARA BAHAGIAN & SPRM LEMBAH KLANG</p>
+            <p class=" mb-0 text-muted">02 DISEMBER 2023, UNIVERSITI TEKNOLOGI MARA KAMPUS DENGKIL</p>
         </div>
 
         <hr>
 
+<!-- Danger Alert -->
+<div class="alert alert-danger alert-dismissible bg-danger text-white alert-label-icon fade show" role="alert">
+    <i class="ri-error-warning-line label-icon"></i><strong>PENDAFTARAN TELAH DITUTUP!</strong>
+    {{-- <button type="button" class="btn-close btn-close-white" data-bs-dismiss="alert" aria-label="Close"></button> --}}
+</div>
+
         <!-- Primary Alert -->
 <div class="alert alert-primary alert-dismissible bg-primary text-white alert-label-icon fade show" role="alert">
   <i class="ri-alert-line label-icon"></i><strong>PERHATIAN </strong> - Sila baca syarat syarat pertandingan di bawah sebelum membuat pendaftaran.
-  {{-- <button type="button" class="btn-close btn-close-white" data-bs-dismiss="alert" aria-label="Close"></button> --}}
 </div>
+
+
 
 <div class="d-flex mt-2">
                         <div class="flex-shrink-0">
@@ -159,10 +166,10 @@
     </div>
   </div> --}}
 
-  <div class="text-center pt-3">
+  {{-- <div class="text-center pt-3">
 
     <button type="button" class="btn btn-success" wire:click="store">Hantar</button>
-  </div>
+  </div> --}}
         </div>
     </div>
  </div>
