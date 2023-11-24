@@ -21,6 +21,8 @@
     
 </div>
 
+<?php if($isOpen): ?>
+
         <!-- Primary Alert -->
 <div class="alert alert-primary alert-dismissible bg-primary text-white alert-label-icon fade show" role="alert">
   <i class="ri-alert-line label-icon"></i><strong>PERHATIAN </strong> - Sila baca syarat syarat pertandingan di bawah sebelum membuat pendaftaran.
@@ -187,7 +189,7 @@ unset($__errorArgs, $__bag); ?>" name="" id="" placeholder="" aria-describedby="
     
 </div>
 
-  
+  <?php endif; ?>
   
 
   

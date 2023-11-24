@@ -21,6 +21,8 @@
     {{-- <button type="button" class="btn-close btn-close-white" data-bs-dismiss="alert" aria-label="Close"></button> --}}
 </div>
 
+@if($isOpen)
+
         <!-- Primary Alert -->
 <div class="alert alert-primary alert-dismissible bg-primary text-white alert-label-icon fade show" role="alert">
   <i class="ri-alert-line label-icon"></i><strong>PERHATIAN </strong> - Sila baca syarat syarat pertandingan di bawah sebelum membuat pendaftaran.
@@ -147,24 +149,8 @@
     </div> --}}
 </div>
 
+  @endif
   
-  {{-- <div class="row">
-    <div class="col-6">
-      <div class="mb-3">
-        <label for="" class="form-label">JUMLAH BAYARAN</label>
-        <div class="input-group">
-          <span class="input-group-text">RM</span>
-          <input wire:model="jumlah_bayaran" type="text" class="form-control @error('jumlah_bayaran') is-invalid @enderror" aria-label="Amount (to the nearest dollar)" data-np-intersection-state="visible" wfd-id="id43">
-      </div>
-      </div>
-    </div>
-    <div class="col-6">
-      <div class="mb-3">
-        <label for="" class="form-label">RESIT BAYARAN</label>
-        <input type="file" class="form-control @error('resit_bayaran') is-invalid @enderror" name="" id="" placeholder="" aria-describedby="fileHelpId" wire:model="resit_bayaran">
-      </div>
-    </div>
-  </div> --}}
 
   {{-- <div class="text-center pt-3">
 

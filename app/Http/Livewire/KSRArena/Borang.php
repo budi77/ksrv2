@@ -15,6 +15,8 @@ class Borang extends Component
 
     public $data_id, $departments, $acara, $department_id, $nama_pengurus, $no_tel, $volleyball, $netball, $borang_penyertaan, $jumlah_bayaran, $resit_bayaran;
 
+    public $isOpen = false;
+    
     protected $rules = [
         'nama_pengurus' => 'required',
         'no_tel' => 'required',
