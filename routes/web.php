@@ -34,6 +34,8 @@ Route::get('/ksrarena2023', \App\Http\Livewire\KSRArena\Borang::class)->name('ks
 Route::middleware('auth')->group(function () {
 
     Route::get('/ksrarena2023/senarai', \App\Http\Livewire\KSRArena\Index::class)->name('ksrarena.index');
+    Route::get('/ksrarena2023/pasukan', \App\Http\Livewire\KSRArena\Teams::class)->name('ksrarena.teams');
+    Route::get('/ksrarena2023/kumpulan', \App\Http\Livewire\KSRArena\Groups::class)->name('ksrarena.groups');
 
 
     Route::get('/pdf/patriotik2023/{id}', [App\Http\Controllers\PDFController::class, 'patriotik'])->name('pdf.patriotik');
@@ -57,6 +59,7 @@ Route::middleware('auth')->group(function () {
    
     Route::get('/yuran/serahan', \App\Http\Livewire\Fees\Submission\Index::class)->name('fees.submission');
     Route::get('/yuran/serahan/cipta', \App\Http\Livewire\Fees\Submission\Create::class)->name('fees.create');
+
 
     Route::get('index/{locale}', [App\Http\Controllers\HomeController::class, 'lang']);
 

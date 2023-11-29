@@ -7,7 +7,6 @@
     "require": {
         "php": "^8.0.2",
         "alexusmai/laravel-file-manager": "^3.0",
-        "aliqasemzadeh/livewire-bootstrap-modal": "dev-master",
         "arcanedev/log-viewer": "~9.0",
         "barryvdh/laravel-dompdf": "^2.0",
         "doctrine/dbal": "^3.6",

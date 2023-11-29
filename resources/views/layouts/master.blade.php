@@ -64,7 +64,7 @@
     <!-- END Right Sidebar -->
     @stack('scripts')
     @include('layouts.vendor-scripts')
-    <livewire:modals/>
+    {{-- <livewire:modals/> --}}
     @livewireScripts
     <x-livewire-alert::scripts />
    

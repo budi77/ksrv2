@@ -65,21 +65,7 @@
     <!-- END Right Sidebar -->
     <?php echo $__env->yieldPushContent('scripts'); ?>
     <?php echo $__env->make('layouts.vendor-scripts', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
-    <?php
-if (! isset($_instance)) {
-    $html = \Livewire\Livewire::mount('modals', [])->html();
-} elseif ($_instance->childHasBeenRendered('vwtUFmY')) {
-    $componentId = $_instance->getRenderedChildComponentId('vwtUFmY');
-    $componentTag = $_instance->getRenderedChildComponentTagName('vwtUFmY');
-    $html = \Livewire\Livewire::dummyMount($componentId, $componentTag);
-    $_instance->preserveRenderedChild('vwtUFmY');
-} else {
-    $response = \Livewire\Livewire::mount('modals', []);
-    $html = $response->html();
-    $_instance->logRenderedChild('vwtUFmY', $response->id(), \Livewire\Livewire::getRootElementTagName($html));
-}
-echo $html;
-?>
+    
     <?php echo \Livewire\Livewire::scripts(); ?>
 
     <?php if (isset($component)) { $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4 = $component; } ?>

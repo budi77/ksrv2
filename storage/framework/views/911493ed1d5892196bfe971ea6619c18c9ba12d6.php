@@ -102,10 +102,24 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link menu-link" href="<?php echo e(route('ksrarena.index')); ?>">
-                        <i class="ri-flag-2-line"></i> <span>KSR ARENA 2023</span>
+                    <a class="nav-link menu-link" href="#sidebarLayouts" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarLayouts">
+                        <i class=" ri-pie-chart-line"></i> <span>KSR Arena 2023</span>
                     </a>
-                </li>
+                    <div class="collapse menu-dropdown" id="sidebarLayouts">
+                        <ul class="nav nav-sm flex-column">
+                            <li class="nav-item">
+                                <a href="<?php echo e(route('ksrarena.teams')); ?>"  class="nav-link">Pasukan</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="<?php echo e(route('ksrarena.groups')); ?>"  class="nav-link">Kumpulan</a>
+                            </li>
+                           
+                        </ul>
+                    </div>
+                </li> <!-- end Dashboard Menu -->
+
+
+               
                 <li class="nav-item">
                     <a class="nav-link menu-link" href="<?php echo e(route('locker.dashboard')); ?>">
                         <i class="ri-store-3-line"></i> <span>Loker</span>
