@@ -8,17 +8,27 @@
         <div class="mx-auto avatar-md mb-3">
                         <img src="https://ksr.sprm.gov.my/assets/images/KSR.png" alt="" class="img-fluid rounded-circle">
             </div>
-<h2 class="card-title mb-1">KSR ARENA 2023</h5>
-<p class=" mb-0">KEJOHANAN SUKAN ANTARA BAHAGIAN & SPRM LEMBAH KLANG</p>
+            <h2 class=" mb-1">KSR ARENA 2023</h2>
+            <p class=" mb-0 text-muted fw-bold">KEJOHANAN SUKAN ANTARA BAHAGIAN & SPRM LEMBAH KLANG</p>
+            <p class=" mb-0 text-muted">02 DISEMBER 2023, UNIVERSITI TEKNOLOGI MARA KAMPUS DENGKIL</p>
         </div>
 
         <hr>
 
+<!-- Danger Alert -->
+<div class="alert alert-danger alert-dismissible bg-danger text-white alert-label-icon fade show" role="alert">
+    <i class="ri-error-warning-line label-icon"></i><strong>PENDAFTARAN TELAH DITUTUP!</strong>
+    {{-- <button type="button" class="btn-close btn-close-white" data-bs-dismiss="alert" aria-label="Close"></button> --}}
+</div>
+
+@if($isOpen)
+
         <!-- Primary Alert -->
 <div class="alert alert-primary alert-dismissible bg-primary text-white alert-label-icon fade show" role="alert">
   <i class="ri-alert-line label-icon"></i><strong>PERHATIAN </strong> - Sila baca syarat syarat pertandingan di bawah sebelum membuat pendaftaran.
-  {{-- <button type="button" class="btn-close btn-close-white" data-bs-dismiss="alert" aria-label="Close"></button> --}}
 </div>
+
+
 
 <div class="d-flex mt-2">
                         <div class="flex-shrink-0">
@@ -77,47 +87,77 @@
 
   <label for="" class="form-label">ACARA SUKAN</label>
 
-<div class="list-group">
-    <label class="list-group-item">
-      <input class="form-check-input me-1" type="checkbox" value="1" wire:model="volleyball">
-      BOLA TAMPAR
+  
+      <div class="form-check mb-3">
+    <input class="form-check-input" type="radio" name="acara" id="flexRadioDefault1" value="BOLA TAMPAR" wire:model="acara">
+    <label class="form-check-label" for="flexRadioDefault1">
+        BOLA TAMPAR
     </label>
-    <label class="list-group-item">
-      <input class="form-check-input me-1" type="checkbox" value="1" wire:model="netball">
-      BOLA JARING
+</div>
+
+<div class="form-check mb-3">
+    <input class="form-check-input" type="radio" name="acara" id="flexRadioDefault2" value="BOLA JARING" wire:model="acara">
+    <label class="form-check-label" for="flexRadioDefault2">
+        BOLA JARING
     </label>
-   
-  </div>
+</div>
+
+
 
    <div class="mb-3 pt-3">
           <label for="" class="form-label">BORANG PENYERTAAN</label>
           <input type="file" class="form-control @error('borang_penyertaan') is-invalid @enderror" name="" id="" placeholder="" aria-describedby="fileHelpId" wire:model="borang_penyertaan">
   </div>
 
-  
-  <div class="row">
-    <div class="col-6">
-      <div class="mb-3">
+  <div class="mb-3">
         <label for="" class="form-label">JUMLAH BAYARAN</label>
         <div class="input-group">
           <span class="input-group-text">RM</span>
-          <input wire:model="jumlah_bayaran" type="text" class="form-control @error('jumlah_bayaran') is-invalid @enderror" aria-label="Amount (to the nearest dollar)" data-np-intersection-state="visible" wfd-id="id43">
-          {{-- <span class="input-group-text">.00</span> --}}
+          <input wire:model="jumlah_bayaran" type="text" class="form-control  @error('jumlah_bayaran') is-invalid @enderror" aria-label="Amount (to the nearest dollar)" data-np-intersection-state="visible" wfd-id="id43">
       </div>
-      </div>
-    </div>
-    <div class="col-6">
-      <div class="mb-3">
+  </div>
+
+  <div class="mb-3">
         <label for="" class="form-label">RESIT BAYARAN</label>
         <input type="file" class="form-control @error('resit_bayaran') is-invalid @enderror" name="" id="" placeholder="" aria-describedby="fileHelpId" wire:model="resit_bayaran">
-</div>
+      </div>
+
+
+
+
+<!-- Success Alert -->
+<div class="alert alert-warning alert-dismissible alert-additional fade show" role="alert">
+<div class="alert-content">
+        <p class="mb-0">Semua bayaran hendaklah dibuat ke atas akaun berikut:</p>
     </div>
-  </div>
+    <div class="alert-body">
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        <div class="d-flex">
+            <div class="flex-shrink-0 me-3">
+                <i class="ri-alert-line fs-16 align-middle"></i>
+            </div>
+            <div class="flex-grow-1">
+                {{-- <h5 class="alert-heading"><h5>MAKLUMAT AKAUN</h5> --}}
+                <p class="mb-0">BANK ISLAM</p>
+                <p class="mb-0">TETUAN KELAB SUKAN DAN REKREASI SPRM (KSR)</p>
+                <p class="mb-0">NO AKAUN : 16018010015446</p>
+            </div>
+        </div>
+    </div>
+    {{-- <div class="alert-content">
+        <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
+    </div> --}}
+</div>
+
+  
 
   <div class="text-center pt-3">
 
     <button type="button" class="btn btn-success" wire:click="store">Hantar</button>
   </div>
+
+    @endif
+
         </div>
     </div>
  </div>
