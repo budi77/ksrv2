@@ -31,7 +31,7 @@
                             <th scope="col">GF</th>
                             <th scope="col">GA</th>
                             <th scope="col">GD</th>
-                            <th scope="col">Mata</th>
+                            <th scope="col">P</th>
                         </tr>
                     </thead>
                     <tbody>
