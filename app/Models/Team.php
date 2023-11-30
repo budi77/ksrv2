@@ -59,6 +59,7 @@ class Team extends Model
                     $query2->where('team2_id', $this->attributes['id'])->whereRaw('result1 < result2');
                 });
             })
+            ->where('ext1', 'Kumpulan')
             ->count();
     }
 
@@ -70,6 +71,8 @@ class Team extends Model
                 $query->where('team1_id', $this->attributes['id'])
                     ->orWhere('team2_id', $this->attributes['id']);
             })
+            ->where('ext1', 'Kumpulan')
+
             ->count();
     }
 
@@ -83,6 +86,8 @@ class Team extends Model
                     $query2->where('team2_id', $this->attributes['id'])->whereRaw('result1 > result2');
                 });
             })
+            ->where('ext1', 'Kumpulan')
+
             ->count();
     }
 
@@ -94,6 +99,8 @@ class Team extends Model
                     $query2->where('team1_id', $this->attributes['id']);
                 });
             })
+            ->where('ext1', 'Kumpulan')
+
             ->sum('result1');
     }
     public function getGoalResult2Attribute()
@@ -104,6 +111,8 @@ class Team extends Model
                     $query2->where('team2_id', $this->attributes['id']);
                 });
             })
+            ->where('ext1', 'Kumpulan')
+
             ->sum('result2');
     }
 
@@ -115,6 +124,8 @@ class Team extends Model
                     $query2->where('team1_id', $this->attributes['id']);
                 });
             })
+            ->where('ext1', 'Kumpulan')
+
             ->sum('result2');
     }
     public function getAgainstResult2Attribute()
@@ -125,6 +136,8 @@ class Team extends Model
                     $query2->where('team2_id', $this->attributes['id']);
                 });
             })
+            ->where('ext1', 'Kumpulan')
+
             ->sum('result1');
     }
 

@@ -140,8 +140,8 @@
                                     <td>
                                         <ul class="list-inline hstack gap-2 mb-0">
                                             <li class="list-inline-item" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" title="View">
-                                                <a href="javascript:void(0);" class="text-warning d-inline-block" wire:click="edit('<?php echo e(@$data->id); ?>')">
-                                                    <i class="ri-pencil-fill fs-16"></i>
+                                                <a href="javascript:void(0);" class="text-danger d-inline-block" wire:click="edit('<?php echo e(@$data->id); ?>')">
+                                                    <i class="ri-edit-box-line fs-18"></i>
                                                 </a>
                                             </li>
                                            
@@ -187,8 +187,8 @@
                                     <td>
                                         <ul class="list-inline hstack gap-2 mb-0">
                                             <li class="list-inline-item" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" title="View">
-                                                <a href="javascript:void(0);" class="text-warning d-inline-block" wire:click="edit('<?php echo e(@$data->id); ?>')">
-                                                    <i class="ri-pencil-fill fs-16"></i>
+                                                <a href="javascript:void(0);" class="text-danger d-inline-block" wire:click="edit('<?php echo e(@$data->id); ?>')">
+                                                    <i class="ri-edit-box-line fs-18"></i>
                                                 </a>
                                             </li>
                                            
@@ -234,8 +234,8 @@
                                     <td>
                                         <ul class="list-inline hstack gap-2 mb-0">
                                             <li class="list-inline-item" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" title="View">
-                                                <a href="javascript:void(0);" class="text-warning d-inline-block" wire:click="edit('<?php echo e(@$data->id); ?>')">
-                                                    <i class="ri-pencil-fill fs-16"></i>
+                                                <a href="javascript:void(0);" class="text-danger d-inline-block" wire:click="edit('<?php echo e(@$data->id); ?>')">
+                                                    <i class="ri-edit-box-line fs-18"></i>
                                                 </a>
                                             </li>
                                            
