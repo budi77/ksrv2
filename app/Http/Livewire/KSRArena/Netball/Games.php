@@ -12,14 +12,13 @@ class Games extends Component
 
     public function render()
     {
-        $tables = Team::whereSport('Bola Jaring')->get()->sortByDesc('points');
-
+        $standings = Team::whereSport('Bola Jaring')->get()->sortByDesc('points');
 
         $teams = Team::whereSport('Bola Jaring')->get();
 
         $groups = NetballFixture::whereExt1('Kumpulan')->orderby('match')->get();
 
-        return view('livewire.k-s-r-arena.netball.games', compact(['teams', 'groups', 'tables']))->extends('layouts.master');
+        return view('livewire.k-s-r-arena.netball.games', compact(['teams', 'groups', 'standings']))->extends('layouts.master');
     }
 
     public function store()

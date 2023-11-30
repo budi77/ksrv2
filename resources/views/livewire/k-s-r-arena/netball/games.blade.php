@@ -32,7 +32,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                    @foreach($teams as $key => $data)
+                    @foreach($standings as $key => $data)
                         <tr class="">
                             <td scope="row">{{ $loop->iteration }}</td>
                             <td>{{ $data->name }}</td>

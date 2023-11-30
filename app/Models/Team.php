@@ -18,6 +18,12 @@ class Team extends Model
 
     }
 
+    public function group()
+    {
+        return $this->hasOne(Group::class, 'team_id');
+
+    }
+
     public function setResult1Attribute($input)
     {
         $this->attributes['result1'] = $input ? $input : null;
