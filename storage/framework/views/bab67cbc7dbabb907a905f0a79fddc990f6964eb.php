@@ -81,7 +81,7 @@
                             <td><?php echo e($data->goal); ?></td>
                             <td><?php echo e($data->against); ?></td>
                             <td><?php echo e($data->goaldifference); ?> </td>
-                            <td><?php echo e($data->points); ?></td>
+                            <td><?php echo e($data->volleypoints); ?></td>
                         </tr>
                         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                        
@@ -117,7 +117,7 @@
                             <td><?php echo e($data->goal); ?></td>
                             <td><?php echo e($data->against); ?></td>
                             <td><?php echo e($data->goaldifference); ?> </td>
-                            <td><?php echo e($data->points); ?></td>
+                            <td><?php echo e($data->volleypoints); ?></td>
                         </tr>
                         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                        
@@ -153,7 +153,7 @@
                             <td><?php echo e($data->goal); ?></td>
                             <td><?php echo e($data->against); ?></td>
                             <td><?php echo e($data->goaldifference); ?> </td>
-                            <td><?php echo e($data->points); ?></td>
+                            <td><?php echo e($data->volleypoints); ?></td>
                         </tr>
                         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                        

@@ -81,7 +81,7 @@
                             <td>{{ $data->goal }}</td>
                             <td>{{ $data->against }}</td>
                             <td>{{ $data->goaldifference  }} </td>
-                            <td>{{ $data->points }}</td>
+                            <td>{{ $data->volleypoints }}</td>
                         </tr>
                         @endforeach
                        
@@ -117,7 +117,7 @@
                             <td>{{ $data->goal }}</td>
                             <td>{{ $data->against }}</td>
                             <td>{{ $data->goaldifference  }} </td>
-                            <td>{{ $data->points }}</td>
+                            <td>{{ $data->volleypoints }}</td>
                         </tr>
                         @endforeach
                        
@@ -153,7 +153,7 @@
                             <td>{{ $data->goal }}</td>
                             <td>{{ $data->against }}</td>
                             <td>{{ $data->goaldifference  }} </td>
-                            <td>{{ $data->points }}</td>
+                            <td>{{ $data->volleypoints }}</td>
                         </tr>
                         @endforeach
                        
