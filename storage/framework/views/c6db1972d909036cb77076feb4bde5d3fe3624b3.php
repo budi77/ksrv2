@@ -242,4 +242,4 @@
     </div>
 </div>
 
-<?php /**PATH C:\laragon\www\ksrv2\resources\views/livewire/k-s-r-arena/groups.blade.php ENDPATH**/ ?>
+<?php /**PATH D:\laragon\www\ksrv2\resources\views/livewire/k-s-r-arena/groups.blade.php ENDPATH**/ ?>

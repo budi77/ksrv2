@@ -30,12 +30,14 @@ Route::get('/angsi2023/daftar', \App\Http\Livewire\Angsi\Borang::class)->name('a
 Route::view('/angsi2023', 'angsi2023')->name('angsi2023');
 
 Route::get('/ksrarena2023', \App\Http\Livewire\KSRArena\Borang::class)->name('ksrarena');
+Route::get('/ksrarena2023/bolajaring', \App\Http\Livewire\KSRArena\Netball\Index::class)->name('ksrarena.bolajaring');
 
 Route::middleware('auth')->group(function () {
 
     Route::get('/ksrarena2023/senarai', \App\Http\Livewire\KSRArena\Index::class)->name('ksrarena.index');
     Route::get('/ksrarena2023/pasukan', \App\Http\Livewire\KSRArena\Teams::class)->name('ksrarena.teams');
     Route::get('/ksrarena2023/kumpulan', \App\Http\Livewire\KSRArena\Groups::class)->name('ksrarena.groups');
+    Route::get('/ksrarena2023/bolajaring/perlawanan', \App\Http\Livewire\KSRArena\Netball\Games::class)->name('ksrarena.netball.games');
 
 
     Route::get('/pdf/patriotik2023/{id}', [App\Http\Controllers\PDFController::class, 'patriotik'])->name('pdf.patriotik');

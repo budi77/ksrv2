@@ -124,4 +124,4 @@
 
     </div>
 </div>
-<?php /**PATH C:\laragon\www\ksrv2\resources\views/livewire/k-s-r-arena/teams.blade.php ENDPATH**/ ?>
+<?php /**PATH D:\laragon\www\ksrv2\resources\views/livewire/k-s-r-arena/teams.blade.php ENDPATH**/ ?>

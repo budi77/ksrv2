@@ -19,7 +19,7 @@ return new class extends Migration
             $table->integer('team2_id')->references('id')->on('teams')->nullable();
             $table->integer('result1')->nullable();
             $table->integer('result2')->nullable();
-            $table->string('match')->nullable();
+            $table->integer('match')->nullable();
             $table->string('group')->nullable();
             $table->string('ext1')->nullable();
             $table->string('ext2')->nullable();

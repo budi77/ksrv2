@@ -113,6 +113,9 @@
                             <li class="nav-item">
                                 <a href="<?php echo e(route('ksrarena.groups')); ?>"  class="nav-link">Kumpulan</a>
                             </li>
+                            <li class="nav-item">
+                                <a href="<?php echo e(route('ksrarena.netball.games')); ?>"  class="nav-link">Bola Jaring</a>
+                            </li>
                            
                         </ul>
                     </div>
@@ -136,4 +139,4 @@
 <!-- Left Sidebar End -->
 <!-- Vertical Overlay-->
 <div class="vertical-overlay"></div>
-<?php /**PATH C:\laragon\www\ksrv2\resources\views/layouts/sidebar.blade.php ENDPATH**/ ?>
+<?php /**PATH D:\laragon\www\ksrv2\resources\views/layouts/sidebar.blade.php ENDPATH**/ ?>

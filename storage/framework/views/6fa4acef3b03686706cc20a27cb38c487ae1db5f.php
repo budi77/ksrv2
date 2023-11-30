@@ -15,4 +15,4 @@
 
 <?php echo $__env->yieldContent('script'); ?>
 <?php echo $__env->yieldContent('script-bottom'); ?>
-<?php /**PATH C:\laragon\www\ksrv2\resources\views/layouts/vendor-scripts.blade.php ENDPATH**/ ?>
+<?php /**PATH D:\laragon\www\ksrv2\resources\views/layouts/vendor-scripts.blade.php ENDPATH**/ ?>

@@ -6,4 +6,4 @@
             ) 
         }
     </script>
-<?php endif; ?><?php /**PATH C:\laragon\www\ksrv2\vendor\jantinnerezo\livewire-alert\src/../resources/views/components/flash.blade.php ENDPATH**/ ?>
+<?php endif; ?><?php /**PATH D:\laragon\www\ksrv2\vendor\jantinnerezo\livewire-alert\src/../resources/views/components/flash.blade.php ENDPATH**/ ?>

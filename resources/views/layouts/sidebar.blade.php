@@ -114,6 +114,9 @@
                             <li class="nav-item">
                                 <a href="{{ route('ksrarena.groups') }}"  class="nav-link">Kumpulan</a>
                             </li>
+                            <li class="nav-item">
+                                <a href="{{ route('ksrarena.netball.games') }}"  class="nav-link">Bola Jaring</a>
+                            </li>
                            
                         </ul>
                     </div>

@@ -1,9 +1,9 @@
 <div>
-    @section('title') KSR ARENA @endsection
-    @component('components.breadcrumb')
-    @slot('li_1') Dashboard @endslot
-    @slot('title') KSR ARENA 2023  @endslot
-    @endcomponent
+    <?php $__env->startSection('title'); ?> KSR ARENA <?php $__env->stopSection(); ?>
+    <?php $__env->startComponent('components.breadcrumb'); ?>
+    <?php $__env->slot('li_1'); ?> Dashboard <?php $__env->endSlot(); ?>
+    <?php $__env->slot('title'); ?> KSR ARENA 2023  <?php $__env->endSlot(); ?>
+    <?php echo $__env->renderComponent(); ?>
 
     <div class="row">
 
@@ -27,40 +27,38 @@
                             <th scope="col">Gol</th>
                             <th scope="col">Bolos</th>
                             <th scope="col">GD</th>
-                            {{-- <th scope="col">Kalah</th> --}}
+                            
                             <th scope="col">Mata</th>
                         </tr>
                     </thead>
                     <tbody>
-                    @foreach($teams as $key => $data)
+                    <?php $__currentLoopData = $teams; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $key => $data): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                         <tr class="">
-                            <td scope="row">{{ $loop->iteration }}</td>
-                            <td>{{ $data->name }}</td>
-                            <td>{{ $data->won }}</td>
-                            <td>{{ $data->tied }}</td>
-                            <td>{{ $data->lost }}</td>
-                            <td>{{ $data->goal }}</td>
-                            <td>{{ $data->against }}</td>
-                            <td>{{ $data->goal - $data->against  }} </td>
-                            <td>{{ $data->points }}</td>
+                            <td scope="row"><?php echo e($loop->iteration); ?></td>
+                            <td><?php echo e($data->name); ?></td>
+                            <td><?php echo e($data->won); ?></td>
+                            <td><?php echo e($data->tied); ?></td>
+                            <td><?php echo e($data->lost); ?></td>
+                            <td><?php echo e($data->goal); ?></td>
+                            <td><?php echo e($data->against); ?></td>
+                            <td><?php echo e($data->goal - $data->against); ?> </td>
+                            <td><?php echo e($data->points); ?></td>
                         </tr>
-                        @endforeach
+                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                        
                     </tbody>
                 </table>
             </div>
             
         </div>
-        {{-- <div class="card-footer text-muted">
-            Footer
-        </div> --}}
+        
     </div>
 
         <div class="col-4">
             <div class="card">
-                {{-- <img class="card-img-top" src="holder.js/100x180/" alt="Title"> --}}
+                
                 <div class="card-body">
-                    {{-- <h4 class="card-title">MAKLUMAT KUMPULAN</h4> --}}
+                    
                     <div class="mb-3">
                       <label for="" class="form-label">NO PERLAWANAN</label>
                       <input type="text"
@@ -81,18 +79,18 @@
                         <label for="" class="form-label">PASUKAN 1</label>
                         <select class="form-select" wire:model="team1">
                             <option selected>-- Sila Pilih -</option>
-                            @foreach($teams as $data)
-                            <option value="{{ $data->id }}">{{ $data->name }}</option>
-                           @endforeach
+                            <?php $__currentLoopData = $teams; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $data): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                            <option value="<?php echo e($data->id); ?>"><?php echo e($data->name); ?></option>
+                           <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                         </select>
                     </div>
                     <div class="mb-3">
                         <label for="" class="form-label">PASUKAN 2</label>
                         <select class="form-select" wire:model="team2">
                             <option selected>-- Sila Pilih -</option>
-                            @foreach($teams as $data)
-                            <option value="{{ $data->id }}">{{ $data->name }}</option>
-                           @endforeach
+                            <?php $__currentLoopData = $teams; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $data): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                            <option value="<?php echo e($data->id); ?>"><?php echo e($data->name); ?></option>
+                           <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                         </select>
                     </div>
                     <div class="mb-3">
@@ -131,18 +129,18 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach($groups as $key => $data)
+                                <?php $__currentLoopData = $groups; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $key => $data): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                 <tr class="">
-                                    <td>{{ $data->match }} </td>
-                                    <td>{{ $data->ext1 }} </td>
-                                    <td>{{ @$data->team1->name }}</td>
-                                    <td>{{ @$data->result1 }}</td>
-                                    <td>{{ @$data->result2 }}</td>
-                                    <td>{{ @$data->team2->name }}</td>
+                                    <td><?php echo e($data->match); ?> </td>
+                                    <td><?php echo e($data->ext1); ?> </td>
+                                    <td><?php echo e(@$data->team1->name); ?></td>
+                                    <td><?php echo e(@$data->result1); ?></td>
+                                    <td><?php echo e(@$data->result2); ?></td>
+                                    <td><?php echo e(@$data->team2->name); ?></td>
                                     <td>
                                         <ul class="list-inline hstack gap-2 mb-0">
                                             <li class="list-inline-item" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" title="View">
-                                                <a href="javascript:void(0);" class="text-warning d-inline-block" wire:click="edit('{{ @$data->id }}')">
+                                                <a href="javascript:void(0);" class="text-warning d-inline-block" wire:click="edit('<?php echo e(@$data->id); ?>')">
                                                     <i class="ri-pencil-fill fs-16"></i>
                                                 </a>
                                             </li>
@@ -151,7 +149,7 @@
                                         </ul>
                                     </td>
                                 </tr>
-                                @endforeach
+                                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                                
                             </tbody>
                         </table>
@@ -167,3 +165,4 @@
 </div>
 
 
+<?php /**PATH D:\laragon\www\ksrv2\resources\views/livewire/k-s-r-arena/netball/games.blade.php ENDPATH**/ ?>
