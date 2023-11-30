@@ -1,5 +1,5 @@
 <div>
-    {{-- Stop trying to control. --}}
+    
     <div class="container-fluid pt-4">
         <div class="card">
 
@@ -9,7 +9,7 @@
                                     <img src="https://ksr.sprm.gov.my/assets/images/KSR.png" alt="" class="img-fluid rounded-circle">
                     </div>
                         <h2 class=" mb-1">KSR ARENA 2023</h2>
-                        {{-- <p class=" mb-0 text-muted fw-bold">KEJOHANAN SUKAN ANTARA BAHAGIAN & SPRM LEMBAH KLANG</p> --}}
+                        
                         <p class=" mb-0 text-muted">TAMAN PANCARONA, PRESINT 18, PUTRAJAYA</p>
                 </div>
 
@@ -35,19 +35,19 @@
                         </tr>
                     </thead>
                     <tbody>
-                    @foreach($standings as $key => $data)
+                    <?php $__currentLoopData = $standings; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $key => $data): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                         <tr class="">
-                            <td scope="row">{{ $loop->iteration }}</td>
-                            <td>{{ $data->name }}</td>
-                            <td>{{ $data->won }}</td>
-                            <td>{{ $data->tied }}</td>
-                            <td>{{ $data->lost }}</td>
-                            <td>{{ $data->goal }}</td>
-                            <td>{{ $data->against }}</td>
-                            <td>{{ $data->goal - $data->against  }} </td>
-                            <td>{{ $data->points }}</td>
+                            <td scope="row"><?php echo e($loop->iteration); ?></td>
+                            <td><?php echo e($data->name); ?></td>
+                            <td><?php echo e($data->won); ?></td>
+                            <td><?php echo e($data->tied); ?></td>
+                            <td><?php echo e($data->lost); ?></td>
+                            <td><?php echo e($data->goal); ?></td>
+                            <td><?php echo e($data->against); ?></td>
+                            <td><?php echo e($data->goal - $data->against); ?> </td>
+                            <td><?php echo e($data->points); ?></td>
                         </tr>
-                        @endforeach
+                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                        
                     </tbody>
                 </table>
@@ -66,13 +66,13 @@
                             </tr>
                         </thead>
                         <tbody>
-                        @foreach($groups as $key => $data)
+                        <?php $__currentLoopData = $groups; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $key => $data): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                             <tr class="">
-                                <td scope="row">{{ $data->match }}</td>
-                                <td>{{ $data->team1->name }} vs {{ $data->team2->name }}</td>
-                                <td>{{ $data->result1 }} : {{ $data->result2 }}</td>
+                                <td scope="row"><?php echo e($data->match); ?></td>
+                                <td><?php echo e($data->team1->name); ?> vs <?php echo e($data->team2->name); ?></td>
+                                <td><?php echo e($data->result1); ?> : <?php echo e($data->result2); ?></td>
                             </tr>
-                            @endforeach
+                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                         
                         </tbody>
                     </table>
@@ -92,13 +92,13 @@
                             </tr>
                         </thead>
                         <tbody>
-                        @foreach($semis as $key => $data)
+                        <?php $__currentLoopData = $semis; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $key => $data): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                             <tr class="">
-                                <td scope="row">{{ $data->match }}</td>
-                                <td>{{ $data->team1->name }} vs {{ $data->team2->name }}</td>
-                                <td>{{ $data->result1 }} : {{ $data->result2 }}</td>
+                                <td scope="row"><?php echo e($data->match); ?></td>
+                                <td><?php echo e($data->team1->name); ?> vs <?php echo e($data->team2->name); ?></td>
+                                <td><?php echo e($data->result1); ?> : <?php echo e($data->result2); ?></td>
                             </tr>
-                            @endforeach
+                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                         
                         </tbody>
                     </table>
@@ -117,13 +117,13 @@
                             </tr>
                         </thead>
                         <tbody>
-                        @foreach($final as $key => $data)
+                        <?php $__currentLoopData = $final; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $key => $data): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                             <tr class="">
-                                <td scope="row">{{ $data->match }}</td>
-                                <td>{{ $data->team1->name }} vs {{ $data->team2->name }}</td>
-                                <td>{{ $data->result1 }} : {{ $data->result2 }}</td>
+                                <td scope="row"><?php echo e($data->match); ?></td>
+                                <td><?php echo e($data->team1->name); ?> vs <?php echo e($data->team2->name); ?></td>
+                                <td><?php echo e($data->result1); ?> : <?php echo e($data->result2); ?></td>
                             </tr>
-                            @endforeach
+                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                         
                         </tbody>
                     </table>
@@ -135,3 +135,4 @@
     </div>
 </div>
 
+<?php /**PATH C:\laragon\www\ksrv2\resources\views/livewire/k-s-r-arena/netball/index.blade.php ENDPATH**/ ?>
