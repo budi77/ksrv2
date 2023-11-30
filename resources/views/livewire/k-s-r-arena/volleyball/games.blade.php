@@ -274,6 +274,147 @@
                 </div>
             </div>
 
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">SUKU AKHIR</h4>
+
+                    <div class="table-responsive ">
+                        <table class="table table-sm table-striped">
+                            <thead class="bg-primary text-white">
+                                <tr>
+                                    <th scope="col">No</th>
+                                    <th scope="col">Peringkat</th>
+                                    <th scope="col">Pasukan 1</th>
+                                    <th scope="col">Skor 1</th>
+                                    <th scope="col">Skor 2</th>
+                                    <th scope="col">Pasukan 2</th>
+                                    <th scope="col"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach($quarters as $key => $data)
+                                <tr class="">
+                                    <td>{{ $data->match }} </td>
+                                    <td>{{ $data->ext1 }} </td>
+                                    <td>{{ @$data->team1->name }}</td>
+                                    <td>{{ @$data->result1 }}</td>
+                                    <td>{{ @$data->result2 }}</td>
+                                    <td>{{ @$data->team2->name }}</td>
+                                    <td>
+                                        <ul class="list-inline hstack gap-2 mb-0">
+                                            <li class="list-inline-item" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" title="View">
+                                                <a href="javascript:void(0);" class="text-warning d-inline-block" wire:click="edit('{{ @$data->id }}')">
+                                                    <i class="ri-pencil-fill fs-16"></i>
+                                                </a>
+                                            </li>
+                                           
+                                           
+                                        </ul>
+                                    </td>
+                                </tr>
+                                @endforeach
+                               
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                </div>
+            </div>
+
+                <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">SEPARUH AKHIR</h4>
+
+                    <div class="table-responsive ">
+                        <table class="table table-sm table-striped">
+                            <thead class="bg-primary text-white">
+                                <tr>
+                                    <th scope="col">No</th>
+                                    <th scope="col">Peringkat</th>
+                                    <th scope="col">Pasukan 1</th>
+                                    <th scope="col">Skor 1</th>
+                                    <th scope="col">Skor 2</th>
+                                    <th scope="col">Pasukan 2</th>
+                                    <th scope="col"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach($semis as $key => $data)
+                                <tr class="">
+                                    <td>{{ $data->match }} </td>
+                                    <td>{{ $data->ext1 }} </td>
+                                    <td>{{ @$data->team1->name }}</td>
+                                    <td>{{ @$data->result1 }}</td>
+                                    <td>{{ @$data->result2 }}</td>
+                                    <td>{{ @$data->team2->name }}</td>
+                                    <td>
+                                        <ul class="list-inline hstack gap-2 mb-0">
+                                            <li class="list-inline-item" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" title="View">
+                                                <a href="javascript:void(0);" class="text-warning d-inline-block" wire:click="edit('{{ @$data->id }}')">
+                                                    <i class="ri-pencil-fill fs-16"></i>
+                                                </a>
+                                            </li>
+                                           
+                                           
+                                        </ul>
+                                    </td>
+                                </tr>
+                                @endforeach
+                               
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">AKHIR</h4>
+
+                    <div class="table-responsive ">
+                        <table class="table table-sm table-striped">
+                            <thead class="bg-primary text-white">
+                                <tr>
+                                    <th scope="col">No</th>
+                                    <th scope="col">Peringkat</th>
+                                    <th scope="col">Pasukan 1</th>
+                                    <th scope="col">Skor 1</th>
+                                    <th scope="col">Skor 2</th>
+                                    <th scope="col">Pasukan 2</th>
+                                    <th scope="col"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach($final as $key => $data)
+                                <tr class="">
+                                    <td>{{ $data->match }} </td>
+                                    <td>{{ $data->ext1 }} </td>
+                                    <td>{{ @$data->team1->name }}</td>
+                                    <td>{{ @$data->result1 }}</td>
+                                    <td>{{ @$data->result2 }}</td>
+                                    <td>{{ @$data->team2->name }}</td>
+                                    <td>
+                                        <ul class="list-inline hstack gap-2 mb-0">
+                                            <li class="list-inline-item" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" title="View">
+                                                <a href="javascript:void(0);" class="text-warning d-inline-block" wire:click="edit('{{ @$data->id }}')">
+                                                    <i class="ri-pencil-fill fs-16"></i>
+                                                </a>
+                                            </li>
+                                           
+                                           
+                                        </ul>
+                                    </td>
+                                </tr>
+                                @endforeach
+                               
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                </div>
+            </div>
+
           
         </div>
 

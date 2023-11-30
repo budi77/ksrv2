@@ -18,7 +18,13 @@ class Games extends Component
 
         $groups = NetballFixture::whereExt1('Kumpulan')->whereExt2('Bola Jaring')->orderby('match')->get();
 
-        return view('livewire.k-s-r-arena.netball.games', compact(['teams', 'groups', 'standings']))->extends('layouts.master');
+        
+        $semis = NetballFixture::whereExt1('Separuh Akhir')->whereExt2('Bola Jaring')->orderby('match')->get();
+        
+        $final = NetballFixture::whereExt1('Akhir')->whereExt2('Bola Jaring')->orderby('match')->get();
+
+
+        return view('livewire.k-s-r-arena.netball.games', compact(['teams', 'groups', 'standings','semis','final']))->extends('layouts.master');
     }
 
     public function store()

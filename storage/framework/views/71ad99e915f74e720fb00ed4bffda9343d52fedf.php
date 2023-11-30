@@ -158,6 +158,100 @@
                 </div>
             </div>
 
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">SEPARUH AKHIR</h4>
+
+                    <div class="table-responsive ">
+                        <table class="table table-sm table-striped">
+                            <thead class="bg-primary text-white">
+                                <tr>
+                                    <th scope="col">No</th>
+                                    <th scope="col">Peringkat</th>
+                                    <th scope="col">Pasukan 1</th>
+                                    <th scope="col">Skor 1</th>
+                                    <th scope="col">Skor 2</th>
+                                    <th scope="col">Pasukan 2</th>
+                                    <th scope="col"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php $__currentLoopData = $semis; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $key => $data): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                <tr class="">
+                                    <td><?php echo e($data->match); ?> </td>
+                                    <td><?php echo e($data->ext1); ?> </td>
+                                    <td><?php echo e(@$data->team1->name); ?></td>
+                                    <td><?php echo e(@$data->result1); ?></td>
+                                    <td><?php echo e(@$data->result2); ?></td>
+                                    <td><?php echo e(@$data->team2->name); ?></td>
+                                    <td>
+                                        <ul class="list-inline hstack gap-2 mb-0">
+                                            <li class="list-inline-item" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" title="View">
+                                                <a href="javascript:void(0);" class="text-warning d-inline-block" wire:click="edit('<?php echo e(@$data->id); ?>')">
+                                                    <i class="ri-pencil-fill fs-16"></i>
+                                                </a>
+                                            </li>
+                                           
+                                           
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                               
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">AKHIR</h4>
+
+                    <div class="table-responsive ">
+                        <table class="table table-sm table-striped">
+                            <thead class="bg-primary text-white">
+                                <tr>
+                                    <th scope="col">No</th>
+                                    <th scope="col">Peringkat</th>
+                                    <th scope="col">Pasukan 1</th>
+                                    <th scope="col">Skor 1</th>
+                                    <th scope="col">Skor 2</th>
+                                    <th scope="col">Pasukan 2</th>
+                                    <th scope="col"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php $__currentLoopData = $final; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $key => $data): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                <tr class="">
+                                    <td><?php echo e($data->match); ?> </td>
+                                    <td><?php echo e($data->ext1); ?> </td>
+                                    <td><?php echo e(@$data->team1->name); ?></td>
+                                    <td><?php echo e(@$data->result1); ?></td>
+                                    <td><?php echo e(@$data->result2); ?></td>
+                                    <td><?php echo e(@$data->team2->name); ?></td>
+                                    <td>
+                                        <ul class="list-inline hstack gap-2 mb-0">
+                                            <li class="list-inline-item" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" title="View">
+                                                <a href="javascript:void(0);" class="text-warning d-inline-block" wire:click="edit('<?php echo e(@$data->id); ?>')">
+                                                    <i class="ri-pencil-fill fs-16"></i>
+                                                </a>
+                                            </li>
+                                           
+                                           
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                               
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                </div>
+            </div>
+
           
         </div>
 
