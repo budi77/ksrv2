@@ -7,13 +7,53 @@
 
     <div class="row">
 
-    <div class='fw-bold h3'><i class=" ri-basketball-line"></i> BOLA JARING</div>
+    <div class='fw-bold h3'><i class=" ri-basketball-line"></i> BOLA TAMPAR</div>
 
     <div class="card">
         <div class="card-header fw-bold">
             KEDUDUKAN PASUKAN
         </div>
         <div class="card-body">
+        
+
+        <div class="row">
+            <div class="col-md-6">
+            <h6>KUMPULAN A</h5>
+            <div class="table-responsive">
+                <table class="table table-bordered table-striped text-center">
+                    <thead class="bg-success">
+                        <tr>
+                            <th scope="col">Kedudukan</th>
+                            <th scope="col">Nama Pasukan</th>
+                            <th scope="col">Menang</th>
+                            
+                            <th scope="col">Kalah</th>
+                            <th scope="col">Gol</th>
+                            <th scope="col">Bolos</th>
+                            <th scope="col">GD</th>
+                            <th scope="col">Mata</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    <?php $__currentLoopData = $a; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $key => $data): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                        <tr class="">
+                            <td scope="row"><?php echo e($loop->iteration); ?></td>
+                            <td><?php echo e($data->name); ?></td>
+                            <td><?php echo e($data->won); ?></td>
+                            
+                            <td><?php echo e($data->lost); ?></td>
+                            <td><?php echo e($data->goal); ?></td>
+                            <td><?php echo e($data->against); ?></td>
+                            <td><?php echo e($data->goaldifference); ?> </td>
+                            <td><?php echo e($data->volleypoints); ?></td>
+                        </tr>
+                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                       
+                    </tbody>
+                </table>
+            </div></div>
+            <div class="col-md-6">
+                        <h6>KUMPULAN B</h5>
 
             <div class="table-responsive">
                 <table class="table table-bordered table-striped text-center">
@@ -22,22 +62,21 @@
                             <th scope="col">Kedudukan</th>
                             <th scope="col">Nama Pasukan</th>
                             <th scope="col">Menang</th>
-                            <th scope="col">Seri</th>
+                            
                             <th scope="col">Kalah</th>
                             <th scope="col">Gol</th>
                             <th scope="col">Bolos</th>
                             <th scope="col">GD</th>
-                            
                             <th scope="col">Mata</th>
                         </tr>
                     </thead>
                     <tbody>
-                    <?php $__currentLoopData = $standings; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $key => $data): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                    <?php $__currentLoopData = $b; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $key => $data): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                         <tr class="">
                             <td scope="row"><?php echo e($loop->iteration); ?></td>
                             <td><?php echo e($data->name); ?></td>
                             <td><?php echo e($data->won); ?></td>
-                            <td><?php echo e($data->tied); ?></td>
+                            
                             <td><?php echo e($data->lost); ?></td>
                             <td><?php echo e($data->goal); ?></td>
                             <td><?php echo e($data->against); ?></td>
@@ -48,7 +87,82 @@
                        
                     </tbody>
                 </table>
-            </div>
+            </div></div>
+            <div class="col-md-6">
+                        <h6>KUMPULAN C</h5>
+
+            <div class="table-responsive">
+                <table class="table table-bordered table-striped text-center">
+                    <thead class="bg-success">
+                        <tr>
+                            <th scope="col">Kedudukan</th>
+                            <th scope="col">Nama Pasukan</th>
+                            <th scope="col">Menang</th>
+                            
+                            <th scope="col">Kalah</th>
+                            <th scope="col">Gol</th>
+                            <th scope="col">Bolos</th>
+                            <th scope="col">GD</th>
+                            <th scope="col">Mata</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    <?php $__currentLoopData = $c; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $key => $data): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                        <tr class="">
+                            <td scope="row"><?php echo e($loop->iteration); ?></td>
+                            <td><?php echo e($data->name); ?></td>
+                            <td><?php echo e($data->won); ?></td>
+                            
+                            <td><?php echo e($data->lost); ?></td>
+                            <td><?php echo e($data->goal); ?></td>
+                            <td><?php echo e($data->against); ?></td>
+                            <td><?php echo e($data->goaldifference); ?> </td>
+                            <td><?php echo e($data->points); ?></td>
+                        </tr>
+                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                       
+                    </tbody>
+                </table>
+            </div></div>
+            <div class="col-md-6">
+                        <h6>KUMPULAN D</h5>
+
+            <div class="table-responsive">
+                <table class="table table-bordered table-striped text-center">
+                    <thead class="bg-success">
+                        <tr>
+                            <th scope="col">Kedudukan</th>
+                            <th scope="col">Nama Pasukan</th>
+                            <th scope="col">Menang</th>
+                            
+                            <th scope="col">Kalah</th>
+                            <th scope="col">Gol</th>
+                            <th scope="col">Bolos</th>
+                            <th scope="col">GD</th>
+                            <th scope="col">Mata</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    <?php $__currentLoopData = $d; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $key => $data): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                        <tr class="">
+                            <td scope="row"><?php echo e($loop->iteration); ?></td>
+                            <td><?php echo e($data->name); ?></td>
+                            <td><?php echo e($data->won); ?></td>
+                            
+                            <td><?php echo e($data->lost); ?></td>
+                            <td><?php echo e($data->goal); ?></td>
+                            <td><?php echo e($data->against); ?></td>
+                            <td><?php echo e($data->goaldifference); ?> </td>
+                            <td><?php echo e($data->points); ?></td>
+                        </tr>
+                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                       
+                    </tbody>
+                </table>
+            </div></div>
+        </div>
+
+            
             
         </div>
         
@@ -165,4 +279,5 @@
 </div>
 
 
-<?php /**PATH D:\laragon\www\ksrv2\resources\views/livewire/k-s-r-arena/netball/games.blade.php ENDPATH**/ ?>
+
+<?php /**PATH D:\laragon\www\ksrv2\resources\views/livewire/k-s-r-arena/volleyball/games.blade.php ENDPATH**/ ?>

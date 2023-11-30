@@ -134,6 +134,11 @@ class Team extends Model
         return $this->getWonAttribute() * 3 + $this->getTiedAttribute() * 1;
     }
 
+    public function getVolleyPointsAttribute()
+    {
+        return $this->getWonAttribute() * 2;
+    }
+
     public function getGoalAttribute()
     {
         return $this->getGoalResult1Attribute() + $this->getGoalResult2Attribute() ;

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Livewire\KSRArena\Netball;
+namespace App\Http\Livewire\KSRArena\Volleyball;
 
 use Livewire\Component;
 use App\Models\Team;
@@ -8,17 +8,20 @@ use App\Models\NetballFixture;
 
 class Games extends Component
 {
-    public $data_id, $team1, $team2, $result1, $result2, $match, $stage, $ext1, $sport = 'Bola Jaring';
+    public $data_id, $team1, $team2, $result1, $result2, $match, $stage, $ext1, $sport = 'Bola Tampar';
 
     public function render()
     {
-        $standings = Team::whereSport('Bola Jaring')->get()->sortByDesc('points');
+        $a = Team::whereRelation('group','name','A')->whereSport('Bola Tampar')->get()->sortByDesc('points');
+        $b = Team::whereRelation('group','name','B')->whereSport('Bola Tampar')->get()->sortByDesc('points');
+        $c = Team::whereRelation('group','name','C')->whereSport('Bola Tampar')->get()->sortByDesc('points');
+        $d = Team::whereRelation('group','name','D')->whereSport('Bola Tampar')->get()->sortByDesc('points');
 
-        $teams = Team::whereSport('Bola Jaring')->get();
+        $teams = Team::whereSport('Bola Tampar')->get();
 
-        $groups = NetballFixture::whereExt1('Kumpulan')->whereExt2('Bola Jaring')->orderby('match')->get();
+        $groups = NetballFixture::whereExt1('Kumpulan')->whereExt2('Bola Tampar')->orderby('match')->get();
 
-        return view('livewire.k-s-r-arena.netball.games', compact(['teams', 'groups', 'standings']))->extends('layouts.master');
+        return view('livewire.k-s-r-arena.volleyball.games', compact(['teams', 'groups', 'a','b','c','d']))->extends('layouts.master');
     }
 
     public function store()
@@ -51,4 +54,6 @@ class Games extends Component
         $this->result2 = $data->result2;
         $this->ext1 = $data->ext1;
     }
+
+
 }
