@@ -144,5 +144,10 @@ class Team extends Model
         return $this->getAgainstResult1Attribute() + $this->getAgainstResult2Attribute() ;
     }
 
+    public function getGoalDifferenceAttribute()
+    {
+        return $this->getGoalAttribute() - $this->getAgainstAttribute() ;
+    }
+
 
 }

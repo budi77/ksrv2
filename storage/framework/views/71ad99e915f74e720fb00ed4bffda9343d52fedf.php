@@ -41,7 +41,7 @@
                             <td><?php echo e($data->lost); ?></td>
                             <td><?php echo e($data->goal); ?></td>
                             <td><?php echo e($data->against); ?></td>
-                            <td><?php echo e($data->goal - $data->against); ?> </td>
+                            <td><?php echo e($data->goaldifference); ?> </td>
                             <td><?php echo e($data->points); ?></td>
                         </tr>
                         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
