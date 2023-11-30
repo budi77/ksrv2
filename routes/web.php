@@ -31,6 +31,7 @@ Route::view('/angsi2023', 'angsi2023')->name('angsi2023');
 
 Route::get('/ksrarena2023', \App\Http\Livewire\KSRArena\Borang::class)->name('ksrarena');
 Route::get('/ksrarena2023/bolajaring', \App\Http\Livewire\KSRArena\Netball\Index::class)->name('ksrarena.bolajaring');
+Route::get('/ksrarena2023/bolatampar', \App\Http\Livewire\KSRArena\Volleyball\Index::class)->name('ksrarena.bolatampar');
 
 Route::middleware('auth')->group(function () {
 

@@ -7,7 +7,7 @@
 
     <div class="row">
 
-    <div class='fw-bold h3'><i class=" ri-basketball-line"></i> BOLA TAMPAR</div>
+    <div class='fw-bold h3'><i class=" las la-volleyball-ball"></i> BOLA TAMPAR</div>
 
     <div class="card">
         <div class="card-header fw-bold">

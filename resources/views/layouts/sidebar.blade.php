@@ -117,6 +117,9 @@
                             <li class="nav-item">
                                 <a href="{{ route('ksrarena.netball.games') }}"  class="nav-link">Bola Jaring</a>
                             </li>
+                            <li class="nav-item">
+                                <a href="{{ route('ksrarena.volleyball.games') }}"  class="nav-link">Bola Tampar</a>
+                            </li>
                            
                         </ul>
                     </div>
