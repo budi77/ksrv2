@@ -10,10 +10,10 @@ class Index extends Component
 {
     public function render()
     {
-        $a = Team::whereRelation('group','name','A')->whereSport('Bola Tampar')->get()->sortByDesc('points');
-        $b = Team::whereRelation('group','name','B')->whereSport('Bola Tampar')->get()->sortByDesc('points');
-        $c = Team::whereRelation('group','name','C')->whereSport('Bola Tampar')->get()->sortByDesc('points');
-        $d = Team::whereRelation('group','name','D')->whereSport('Bola Tampar')->get()->sortByDesc('points');
+        $a = Team::whereRelation('group','name','A')->whereSport('Bola Tampar')->get()->sortByDesc('goaldifference')->sortByDesc('points');
+        $b = Team::whereRelation('group','name','B')->whereSport('Bola Tampar')->get()->sortByDesc('goaldifference')->sortByDesc('points');
+        $c = Team::whereRelation('group','name','C')->whereSport('Bola Tampar')->get()->sortByDesc('goaldifference')->sortByDesc('points');
+        $d = Team::whereRelation('group','name','D')->whereSport('Bola Tampar')->get()->sortByDesc('goaldifference')->sortByDesc('points');
 
         $groups = NetballFixture::whereExt1('Kumpulan')->whereExt2('Bola Tampar')->orderby('match')->get();
 

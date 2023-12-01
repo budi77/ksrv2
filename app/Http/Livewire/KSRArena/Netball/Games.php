@@ -12,7 +12,7 @@ class Games extends Component
 
     public function render()
     {
-        $standings = Team::whereSport('Bola Jaring')->get()->sortByDesc('points');
+        $standings = Team::whereSport('Bola Jaring')->get()->sortByDesc('goaldifference')->sortByDesc('points');
 
         $teams = Team::whereSport('Bola Jaring')->get();
 

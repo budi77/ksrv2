@@ -10,7 +10,7 @@ class Index extends Component
 {
     public function render()
     {
-        $standings = Team::whereSport('Bola Jaring')->get()->sortByDesc('points');
+        $standings = Team::whereSport('Bola Jaring')->get()->sortByDesc('goaldifference')->sortByDesc('points');
         // $standings = Team::whereSport('Bola Jaring')->get()->sortByDesc(function ($value) {
         //     return $value['points'].'-'.$value['goaldifference'];
 
