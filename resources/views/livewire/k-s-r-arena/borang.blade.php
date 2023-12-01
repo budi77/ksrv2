@@ -35,8 +35,8 @@
 <!-- Hover added -->
 <div class="list-group">
   <a href="#" class="list-group-item list-group-item-action active">JADUAL PERLAWANAN</a>
-  <a href="http://ksr.sprm.gov.my/storage/documents/KSR Arena/JADUAL PERLAWANAN - bola jaring.pdf" class="list-group-item list-group-item-action">BOLA JARING</a>
-  <a href="http://ksr.sprm.gov.my/storage/documents/KSR Arena/JADUAL_KEJOHANAN_BOLA_TAMPAR_(CAMPURAN)_KSR_2023_-_new_edit_busut[1].pdf" class="list-group-item list-group-item-action">BOLA TAMPAR</a>
+  <a href="http://ksr.sprm.gov.my/storage/documents/KSR Arena/JADUAL PERLAWANAN - bola jaring.pdf" class="list-group-item list-group-item-action"><i class="bx bxs-file-pdf"></i> BOLA JARING</a>
+  <a href="http://ksr.sprm.gov.my/storage/documents/KSR Arena/JADUAL_KEJOHANAN_BOLA_TAMPAR_(CAMPURAN)_KSR_2023_-_new_edit_busut[1].pdf" class="list-group-item list-group-item-action"><i class="bx bxs-file-pdf"></i> BOLA TAMPAR</a>
 </div>
 </div>
 
