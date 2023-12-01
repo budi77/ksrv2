@@ -44,7 +44,7 @@
                             <td>{{ $data->lost }}</td>
                             <td>{{ $data->goal }}</td>
                             <td>{{ $data->against }}</td>
-                            <td>{{ $data->goal - $data->against  }} </td>
+                            <td>{{ $data->goaldifference  }} </td>
                             <td>{{ $data->points }}</td>
                         </tr>
                         @endforeach
