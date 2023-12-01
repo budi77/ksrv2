@@ -23,11 +23,10 @@
                 <table class="table table-bordered table-striped text-center">
                     <thead class="bg-success">
                         <tr>
-                            <th scope="col">#</th>
+                            <th scope="col">K#</th>
                             <th scope="col">Team</th>
                             <th scope="col">W</th>
                             <th scope="col">D</th>
-                            <th scope="col">L</th>
                             <th scope="col">GF</th>
                             <th scope="col">GA</th>
                             <th scope="col">GD</th>
@@ -59,11 +58,10 @@
                 <table class="table table-bordered table-striped text-center">
                     <thead class="bg-success">
                         <tr>
-                           <th scope="col">#</th>
+                           <th scope="col">K#</th>
                             <th scope="col">Team</th>
                             <th scope="col">W</th>
                             <th scope="col">D</th>
-                            <th scope="col">L</th>
                             <th scope="col">GF</th>
                             <th scope="col">GA</th>
                             <th scope="col">GD</th>
@@ -95,11 +93,10 @@
                 <table class="table table-bordered table-striped text-center">
                     <thead class="bg-success">
                         <tr>
-                           <th scope="col">#</th>
+                            <th scope="col">K#</th>
                             <th scope="col">Team</th>
                             <th scope="col">W</th>
                             <th scope="col">D</th>
-                            <th scope="col">L</th>
                             <th scope="col">GF</th>
                             <th scope="col">GA</th>
                             <th scope="col">GD</th>
@@ -131,11 +128,10 @@
                 <table class="table table-bordered table-striped text-center">
                     <thead class="bg-success">
                         <tr>
-                            <th scope="col">#</th>
+                           <th scope="col">K#</th>
                             <th scope="col">Team</th>
                             <th scope="col">W</th>
                             <th scope="col">D</th>
-                            <th scope="col">L</th>
                             <th scope="col">GF</th>
                             <th scope="col">GA</th>
                             <th scope="col">GD</th>
