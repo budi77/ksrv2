@@ -1,4 +1,4 @@
-<div>
+<div wire:poll.visible>
     {{-- Stop trying to control. --}}
     <div class="container-fluid pt-4">
         <div class="card">
