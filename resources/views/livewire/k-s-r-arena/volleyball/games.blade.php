@@ -23,7 +23,7 @@
                 <table class="table table-bordered table-striped text-center">
                     <thead class="bg-success">
                         <tr>
-                            <th scope="col">K#</th>
+                            <th scope="col">#</th>
                             <th scope="col">Team</th>
                             <th scope="col">W</th>
                             <th scope="col">D</th>
@@ -58,7 +58,7 @@
                 <table class="table table-bordered table-striped text-center">
                     <thead class="bg-success">
                         <tr>
-                           <th scope="col">K#</th>
+                           <th scope="col">#</th>
                             <th scope="col">Team</th>
                             <th scope="col">W</th>
                             <th scope="col">D</th>
@@ -93,7 +93,7 @@
                 <table class="table table-bordered table-striped text-center">
                     <thead class="bg-success">
                         <tr>
-                            <th scope="col">K#</th>
+                            <th scope="col">#</th>
                             <th scope="col">Team</th>
                             <th scope="col">W</th>
                             <th scope="col">D</th>
@@ -128,7 +128,7 @@
                 <table class="table table-bordered table-striped text-center">
                     <thead class="bg-success">
                         <tr>
-                           <th scope="col">K#</th>
+                           <th scope="col">#</th>
                             <th scope="col">Team</th>
                             <th scope="col">W</th>
                             <th scope="col">D</th>
