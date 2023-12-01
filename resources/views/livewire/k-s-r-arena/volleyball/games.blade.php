@@ -23,15 +23,15 @@
                 <table class="table table-bordered table-striped text-center">
                     <thead class="bg-success">
                         <tr>
-                            <th scope="col">Kedudukan</th>
-                            <th scope="col">Nama Pasukan</th>
-                            <th scope="col">Menang</th>
-                            {{-- <th scope="col">Seri</th> --}}
-                            <th scope="col">Kalah</th>
-                            <th scope="col">Gol</th>
-                            <th scope="col">Bolos</th>
+                            <th scope="col">#</th>
+                            <th scope="col">Team</th>
+                            <th scope="col">W</th>
+                            <th scope="col">D</th>
+                            <th scope="col">L</th>
+                            <th scope="col">GF</th>
+                            <th scope="col">GA</th>
                             <th scope="col">GD</th>
-                            <th scope="col">Mata</th>
+                            <th scope="col">P</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -59,15 +59,15 @@
                 <table class="table table-bordered table-striped text-center">
                     <thead class="bg-success">
                         <tr>
-                            <th scope="col">Kedudukan</th>
-                            <th scope="col">Nama Pasukan</th>
-                            <th scope="col">Menang</th>
-                            {{-- <th scope="col">Seri</th> --}}
-                            <th scope="col">Kalah</th>
-                            <th scope="col">Gol</th>
-                            <th scope="col">Bolos</th>
+                           <th scope="col">#</th>
+                            <th scope="col">Team</th>
+                            <th scope="col">W</th>
+                            <th scope="col">D</th>
+                            <th scope="col">L</th>
+                            <th scope="col">GF</th>
+                            <th scope="col">GA</th>
                             <th scope="col">GD</th>
-                            <th scope="col">Mata</th>
+                            <th scope="col">P</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -95,15 +95,15 @@
                 <table class="table table-bordered table-striped text-center">
                     <thead class="bg-success">
                         <tr>
-                            <th scope="col">Kedudukan</th>
-                            <th scope="col">Nama Pasukan</th>
-                            <th scope="col">Menang</th>
-                            {{-- <th scope="col">Seri</th> --}}
-                            <th scope="col">Kalah</th>
-                            <th scope="col">Gol</th>
-                            <th scope="col">Bolos</th>
+                           <th scope="col">#</th>
+                            <th scope="col">Team</th>
+                            <th scope="col">W</th>
+                            <th scope="col">D</th>
+                            <th scope="col">L</th>
+                            <th scope="col">GF</th>
+                            <th scope="col">GA</th>
                             <th scope="col">GD</th>
-                            <th scope="col">Mata</th>
+                            <th scope="col">P</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -131,15 +131,15 @@
                 <table class="table table-bordered table-striped text-center">
                     <thead class="bg-success">
                         <tr>
-                            <th scope="col">Kedudukan</th>
-                            <th scope="col">Nama Pasukan</th>
-                            <th scope="col">Menang</th>
-                            {{-- <th scope="col">Seri</th> --}}
-                            <th scope="col">Kalah</th>
-                            <th scope="col">Gol</th>
-                            <th scope="col">Bolos</th>
+                            <th scope="col">#</th>
+                            <th scope="col">Team</th>
+                            <th scope="col">W</th>
+                            <th scope="col">D</th>
+                            <th scope="col">L</th>
+                            <th scope="col">GF</th>
+                            <th scope="col">GA</th>
                             <th scope="col">GD</th>
-                            <th scope="col">Mata</th>
+                            <th scope="col">P</th>
                         </tr>
                     </thead>
                     <tbody>
