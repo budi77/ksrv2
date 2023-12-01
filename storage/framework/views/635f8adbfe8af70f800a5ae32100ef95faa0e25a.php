@@ -1,4 +1,4 @@
-<div>
+<div wire:poll.visible>
     
     <div class="container-fluid pt-4">
         <div class="card">
@@ -21,7 +21,7 @@
 
                 <div class="table-fluid">
                 <table class="table table-bordered table-striped text-center table-sm">
-                    <thead class="bg-success">
+                    <thead class="bg-primary">
                         <tr>
                             <th scope="col"></th>
                             <th scope="col">Team</th>
@@ -52,6 +52,7 @@
                     </tbody>
                 </table>
 
+<hr>
 
                 <div class="text-center">KEPUTUSAN PERLAWANAN</div>
 

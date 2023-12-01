@@ -21,7 +21,7 @@
 
                 <div class="table-fluid">
                 <table class="table table-bordered table-striped text-center table-sm">
-                    <thead class="bg-success">
+                    <thead class="bg-primary">
                         <tr>
                             <th scope="col"></th>
                             <th scope="col">Team</th>
