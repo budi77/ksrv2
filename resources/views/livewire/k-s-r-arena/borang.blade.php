@@ -18,19 +18,29 @@
 
 <div>
 
-                        <p class=" mb-0 text-muted text-center h4">ACARA SUKAN</p>
+<p class=" mb-0 text-muted text-center h4">ACARA SUKAN</p>
 
 
 <div class="d-grid gap-2 pt-3">
  <a class="btn btn-success btn-block waves-effect waves-light " href="/ksrarena2023/bolajaring" role="button"><h3 class="text-white">BOLA JARING</h3></a>
  <br>
- <a class="btn btn-primary btn-block waves-effect waves-light" href="/ksrarena2023/bolatampar" role="button"><h3 class="text-white">BOLA TAMPAR</h3></a>
+ <a class="btn btn-info btn-block waves-effect waves-light" href="/ksrarena2023/bolatampar" role="button"><h3 class="text-white">BOLA TAMPAR</h3></a>
 </div>
 
 
+<br>
+{{-- <p class=" mb-0 text-muted text-center h5">JADUAL PERLAWANAN</p> --}}
+<div>
+<hr>
+<!-- Hover added -->
+<div class="list-group">
+  <a href="#" class="list-group-item list-group-item-action active">JADUAL PERLAWANAN</a>
+  <a href="http://ksr.sprm.gov.my/storage/documents/KSR Arena/JADUAL PERLAWANAN - bola jaring.pdf" class="list-group-item list-group-item-action">BOLA JARING</a>
+  <a href="http://ksr.sprm.gov.my/storage/documents/KSR Arena/JADUAL_KEJOHANAN_BOLA_TAMPAR_(CAMPURAN)_KSR_2023_-_new_edit_busut[1].pdf" class="list-group-item list-group-item-action">BOLA TAMPAR</a>
+</div>
+</div>
 
-<p>
-</p>
+
 </div>
 @if($isOpen)
 
