@@ -12,6 +12,11 @@ class NetballFixture extends Model
 
     protected $guarded = [];
 
+    protected $casts = [
+        'match' => 'integer',
+       
+    ];
+
 
     public function team1()
     {
