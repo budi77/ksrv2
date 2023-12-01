@@ -16,148 +16,156 @@
                 <hr>
                     <div class='fw-bold h3 text-center'> BOLA TAMPAR</div>
 
+                    <div class="row">
+                        <div class="col-md-6">
+                        <h6>KUMPULAN A</h5>
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-striped text-center">
+                                <thead class="bg-success">
+                                    <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">Team</th>
+                                        <th scope="col">W</th>
+                                        <th scope="col">D</th>
+                                        <th scope="col">GF</th>
+                                        <th scope="col">GA</th>
+                                        <th scope="col">GD</th>
+                                        <th scope="col">P</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                @foreach($a as $key => $data)
+                                    <tr class="">
+                                        <td scope="row">{{ $loop->iteration }}</td>
+                                        <td>{{ $data->name }}</td>
+                                        <td>{{ $data->won }}</td>
+                                        {{-- <td>{{ $data->tied }}</td> --}}
+                                        <td>{{ $data->lost }}</td>
+                                        <td>{{ $data->goal }}</td>
+                                        <td>{{ $data->against }}</td>
+                                        <td>{{ $data->goaldifference  }} </td>
+                                        <td>{{ $data->volleypoints }}</td>
+                                    </tr>
+                                    @endforeach
+                                   
+                                </tbody>
+                            </table>
+                        </div></div>
+                        <div class="col-md-6">
+                                    <h6>KUMPULAN B</h5>
+            
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-striped text-center">
+                                <thead class="bg-success">
+                                    <tr>
+                                       <th scope="col">#</th>
+                                        <th scope="col">Team</th>
+                                        <th scope="col">W</th>
+                                        <th scope="col">D</th>
+                                        <th scope="col">GF</th>
+                                        <th scope="col">GA</th>
+                                        <th scope="col">GD</th>
+                                        <th scope="col">P</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                @foreach($b as $key => $data)
+                                    <tr class="">
+                                        <td scope="row">{{ $loop->iteration }}</td>
+                                        <td>{{ $data->name }}</td>
+                                        <td>{{ $data->won }}</td>
+                                        {{-- <td>{{ $data->tied }}</td> --}}
+                                        <td>{{ $data->lost }}</td>
+                                        <td>{{ $data->goal }}</td>
+                                        <td>{{ $data->against }}</td>
+                                        <td>{{ $data->goaldifference  }} </td>
+                                        <td>{{ $data->volleypoints }}</td>
+                                    </tr>
+                                    @endforeach
+                                   
+                                </tbody>
+                            </table>
+                        </div></div>
+                        <div class="col-md-6">
+                                    <h6>KUMPULAN C</h5>
+            
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-striped text-center">
+                                <thead class="bg-success">
+                                    <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">Team</th>
+                                        <th scope="col">W</th>
+                                        <th scope="col">D</th>
+                                        <th scope="col">GF</th>
+                                        <th scope="col">GA</th>
+                                        <th scope="col">GD</th>
+                                        <th scope="col">P</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                @foreach($c as $key => $data)
+                                    <tr class="">
+                                        <td scope="row">{{ $loop->iteration }}</td>
+                                        <td>{{ $data->name }}</td>
+                                        <td>{{ $data->won }}</td>
+                                        {{-- <td>{{ $data->tied }}</td> --}}
+                                        <td>{{ $data->lost }}</td>
+                                        <td>{{ $data->goal }}</td>
+                                        <td>{{ $data->against }}</td>
+                                        <td>{{ $data->goaldifference  }} </td>
+                                        <td>{{ $data->volleypoints }}</td>
+                                    </tr>
+                                    @endforeach
+                                   
+                                </tbody>
+                            </table>
+                        </div></div>
+                        <div class="col-md-6">
+                                    <h6>KUMPULAN D</h5>
+            
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-striped text-center">
+                                <thead class="bg-success">
+                                    <tr>
+                                       <th scope="col">#</th>
+                                        <th scope="col">Team</th>
+                                        <th scope="col">W</th>
+                                        <th scope="col">D</th>
+                                        <th scope="col">GF</th>
+                                        <th scope="col">GA</th>
+                                        <th scope="col">GD</th>
+                                        <th scope="col">P</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                @foreach($d as $key => $data)
+                                    <tr class="">
+                                        <td scope="row">{{ $loop->iteration }}</td>
+                                        <td>{{ $data->name }}</td>
+                                        <td>{{ $data->won }}</td>
+                                        {{-- <td>{{ $data->tied }}</td> --}}
+                                        <td>{{ $data->lost }}</td>
+                                        <td>{{ $data->goal }}</td>
+                                        <td>{{ $data->against }}</td>
+                                        <td>{{ $data->goaldifference  }} </td>
+                                        <td>{{ $data->volleypoints }}</td>
+                                    </tr>
+                                    @endforeach
+                                   
+                                </tbody>
+                            </table>
+                        </div></div>
+                    </div>
 
-                <div class="text-center">KEDUDUKAN KUMPULAN A</div>
 
-                <div class="table-fluid">
-                <table class="table table-bordered table-striped text-center table-sm">
-                    <thead class="bg-success">
-                        <tr>
-                            <th scope="col"></th>
-                            <th scope="col">Team</th>
-                            <th scope="col">W</th>
-                            {{-- <th scope="col">D</th> --}}
-                            <th scope="col">L</th>
-                            <th scope="col">GF</th>
-                            <th scope="col">GA</th>
-                            <th scope="col">GD</th>
-                            <th scope="col">P</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                    @foreach($a as $key => $data)
-                        <tr class="">
-                            <td scope="row">{{ $loop->iteration }}</td>
-                            <td>{{ $data->name }}</td>
-                            <td>{{ $data->won }}</td>
-                            {{-- <td>{{ $data->tied }}</td> --}}
-                            <td>{{ $data->lost }}</td>
-                            <td>{{ $data->goal }}</td>
-                            <td>{{ $data->against }}</td>
-                            <td>{{ $data->goal - $data->against  }} </td>
-                            <td>{{ $data->volleypoints }}</td>
-                        </tr>
-                        @endforeach
-                       
-                    </tbody>
-                </table>
-
-                <div class="text-center">KEDUDUKAN KUMPULAN B</div>
-
-                <div class="table-fluid">
-                <table class="table table-bordered table-striped text-center table-sm">
-                    <thead class="bg-success">
-                        <tr>
-                            <th scope="col"></th>
-                            <th scope="col">Team</th>
-                            <th scope="col">W</th>
-                            {{-- <th scope="col">D</th> --}}
-                            <th scope="col">L</th>
-                            <th scope="col">GF</th>
-                            <th scope="col">GA</th>
-                            <th scope="col">GD</th>
-                            <th scope="col">P</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                    @foreach($b as $key => $data)
-                        <tr class="">
-                            <td scope="row">{{ $loop->iteration }}</td>
-                            <td>{{ $data->name }}</td>
-                            <td>{{ $data->won }}</td>
-                            {{-- <td>{{ $data->tied }}</td> --}}
-                            <td>{{ $data->lost }}</td>
-                            <td>{{ $data->goal }}</td>
-                            <td>{{ $data->against }}</td>
-                            <td>{{ $data->goal - $data->against  }} </td>
-                            <td>{{ $data->volleypoints }}</td>
-                        </tr>
-                        @endforeach
-                       
-                    </tbody>
-                </table>
+       
 
 
-<div class="text-center">KEDUDUKAN KUMPULAN C</div>
-
-                <div class="table-fluid">
-                <table class="table table-bordered table-striped text-center table-sm">
-                    <thead class="bg-success">
-                        <tr>
-                            <th scope="col"></th>
-                            <th scope="col">Team</th>
-                            <th scope="col">W</th>
-                            {{-- <th scope="col">D</th> --}}
-                            <th scope="col">L</th>
-                            <th scope="col">GF</th>
-                            <th scope="col">GA</th>
-                            <th scope="col">GD</th>
-                            <th scope="col">P</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                    @foreach($c as $key => $data)
-                        <tr class="">
-                            <td scope="row">{{ $loop->iteration }}</td>
-                            <td>{{ $data->name }}</td>
-                            <td>{{ $data->won }}</td>
-                            {{-- <td>{{ $data->tied }}</td> --}}
-                            <td>{{ $data->lost }}</td>
-                            <td>{{ $data->goal }}</td>
-                            <td>{{ $data->against }}</td>
-                            <td>{{ $data->goal - $data->against  }} </td>
-                            <td>{{ $data->volleypoints }}</td>
-                        </tr>
-                        @endforeach
-                       
-                    </tbody>
-                </table>
 
 
-<div class="text-center">KEDUDUKAN KUMPULAN D</div>
 
-                <div class="table-fluid">
-                <table class="table table-bordered table-striped text-center table-sm">
-                    <thead class="bg-success">
-                        <tr>
-                            <th scope="col"></th>
-                            <th scope="col">Team</th>
-                            <th scope="col">W</th>
-                            {{-- <th scope="col">D</th> --}}
-                            <th scope="col">L</th>
-                            <th scope="col">GF</th>
-                            <th scope="col">GA</th>
-                            <th scope="col">GD</th>
-                            <th scope="col">P</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                    @foreach($d as $key => $data)
-                        <tr class="">
-                            <td scope="row">{{ $loop->iteration }}</td>
-                            <td>{{ $data->name }}</td>
-                            <td>{{ $data->won }}</td>
-                            {{-- <td>{{ $data->tied }}</td> --}}
-                            <td>{{ $data->lost }}</td>
-                            <td>{{ $data->goal }}</td>
-                            <td>{{ $data->against }}</td>
-                            <td>{{ $data->goal - $data->against  }} </td>
-                            <td>{{ $data->volleypoints }}</td>
-                        </tr>
-                        @endforeach
-                       
-                    </tbody>
-                </table>
+
 
 <hr>
 

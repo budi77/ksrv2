@@ -16,150 +16,158 @@
                 <hr>
                     <div class='fw-bold h3 text-center'> BOLA TAMPAR</div>
 
+                    <div class="row">
+                        <div class="col-md-6">
+                        <h6>KUMPULAN A</h5>
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-striped text-center">
+                                <thead class="bg-success">
+                                    <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">Team</th>
+                                        <th scope="col">W</th>
+                                        <th scope="col">D</th>
+                                        <th scope="col">GF</th>
+                                        <th scope="col">GA</th>
+                                        <th scope="col">GD</th>
+                                        <th scope="col">P</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                <?php $__currentLoopData = $a; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $key => $data): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                    <tr class="">
+                                        <td scope="row"><?php echo e($loop->iteration); ?></td>
+                                        <td><?php echo e($data->name); ?></td>
+                                        <td><?php echo e($data->won); ?></td>
+                                        
+                                        <td><?php echo e($data->lost); ?></td>
+                                        <td><?php echo e($data->goal); ?></td>
+                                        <td><?php echo e($data->against); ?></td>
+                                        <td><?php echo e($data->goaldifference); ?> </td>
+                                        <td><?php echo e($data->volleypoints); ?></td>
+                                    </tr>
+                                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                                   
+                                </tbody>
+                            </table>
+                        </div></div>
+                        <div class="col-md-6">
+                                    <h6>KUMPULAN B</h5>
+            
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-striped text-center">
+                                <thead class="bg-success">
+                                    <tr>
+                                       <th scope="col">#</th>
+                                        <th scope="col">Team</th>
+                                        <th scope="col">W</th>
+                                        <th scope="col">D</th>
+                                        <th scope="col">GF</th>
+                                        <th scope="col">GA</th>
+                                        <th scope="col">GD</th>
+                                        <th scope="col">P</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                <?php $__currentLoopData = $b; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $key => $data): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                    <tr class="">
+                                        <td scope="row"><?php echo e($loop->iteration); ?></td>
+                                        <td><?php echo e($data->name); ?></td>
+                                        <td><?php echo e($data->won); ?></td>
+                                        
+                                        <td><?php echo e($data->lost); ?></td>
+                                        <td><?php echo e($data->goal); ?></td>
+                                        <td><?php echo e($data->against); ?></td>
+                                        <td><?php echo e($data->goaldifference); ?> </td>
+                                        <td><?php echo e($data->volleypoints); ?></td>
+                                    </tr>
+                                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                                   
+                                </tbody>
+                            </table>
+                        </div></div>
+                        <div class="col-md-6">
+                                    <h6>KUMPULAN C</h5>
+            
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-striped text-center">
+                                <thead class="bg-success">
+                                    <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">Team</th>
+                                        <th scope="col">W</th>
+                                        <th scope="col">D</th>
+                                        <th scope="col">GF</th>
+                                        <th scope="col">GA</th>
+                                        <th scope="col">GD</th>
+                                        <th scope="col">P</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                <?php $__currentLoopData = $c; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $key => $data): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                    <tr class="">
+                                        <td scope="row"><?php echo e($loop->iteration); ?></td>
+                                        <td><?php echo e($data->name); ?></td>
+                                        <td><?php echo e($data->won); ?></td>
+                                        
+                                        <td><?php echo e($data->lost); ?></td>
+                                        <td><?php echo e($data->goal); ?></td>
+                                        <td><?php echo e($data->against); ?></td>
+                                        <td><?php echo e($data->goaldifference); ?> </td>
+                                        <td><?php echo e($data->volleypoints); ?></td>
+                                    </tr>
+                                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                                   
+                                </tbody>
+                            </table>
+                        </div></div>
+                        <div class="col-md-6">
+                                    <h6>KUMPULAN D</h5>
+            
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-striped text-center">
+                                <thead class="bg-success">
+                                    <tr>
+                                       <th scope="col">#</th>
+                                        <th scope="col">Team</th>
+                                        <th scope="col">W</th>
+                                        <th scope="col">D</th>
+                                        <th scope="col">GF</th>
+                                        <th scope="col">GA</th>
+                                        <th scope="col">GD</th>
+                                        <th scope="col">P</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                <?php $__currentLoopData = $d; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $key => $data): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                    <tr class="">
+                                        <td scope="row"><?php echo e($loop->iteration); ?></td>
+                                        <td><?php echo e($data->name); ?></td>
+                                        <td><?php echo e($data->won); ?></td>
+                                        
+                                        <td><?php echo e($data->lost); ?></td>
+                                        <td><?php echo e($data->goal); ?></td>
+                                        <td><?php echo e($data->against); ?></td>
+                                        <td><?php echo e($data->goaldifference); ?> </td>
+                                        <td><?php echo e($data->volleypoints); ?></td>
+                                    </tr>
+                                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                                   
+                                </tbody>
+                            </table>
+                        </div></div>
+                    </div>
 
-                <div class="text-center">KEDUDUKAN KUMPULAN A</div>
 
-                <div class="table-fluid">
-                <table class="table table-bordered table-striped text-center table-sm">
-                    <thead class="bg-success">
-                        <tr>
-                            <th scope="col"></th>
-                            <th scope="col">Team</th>
-                            <th scope="col">W</th>
-                            
-                            <th scope="col">L</th>
-                            <th scope="col">GF</th>
-                            <th scope="col">GA</th>
-                            <th scope="col">GD</th>
-                            <th scope="col">P</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                    <?php $__currentLoopData = $a; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $key => $data): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                        <tr class="">
-                            <td scope="row"><?php echo e($loop->iteration); ?></td>
-                            <td><?php echo e($data->name); ?></td>
-                            <td><?php echo e($data->won); ?></td>
-                            
-                            <td><?php echo e($data->lost); ?></td>
-                            <td><?php echo e($data->goal); ?></td>
-                            <td><?php echo e($data->against); ?></td>
-                            <td><?php echo e($data->goal - $data->against); ?> </td>
-                            <td><?php echo e($data->volleypoints); ?></td>
-                        </tr>
-                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-                       
-                    </tbody>
-                </table>
-
-                <div class="text-center">KEDUDUKAN KUMPULAN B</div>
-
-                <div class="table-fluid">
-                <table class="table table-bordered table-striped text-center table-sm">
-                    <thead class="bg-success">
-                        <tr>
-                            <th scope="col"></th>
-                            <th scope="col">Team</th>
-                            <th scope="col">W</th>
-                            
-                            <th scope="col">L</th>
-                            <th scope="col">GF</th>
-                            <th scope="col">GA</th>
-                            <th scope="col">GD</th>
-                            <th scope="col">P</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                    <?php $__currentLoopData = $b; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $key => $data): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                        <tr class="">
-                            <td scope="row"><?php echo e($loop->iteration); ?></td>
-                            <td><?php echo e($data->name); ?></td>
-                            <td><?php echo e($data->won); ?></td>
-                            
-                            <td><?php echo e($data->lost); ?></td>
-                            <td><?php echo e($data->goal); ?></td>
-                            <td><?php echo e($data->against); ?></td>
-                            <td><?php echo e($data->goal - $data->against); ?> </td>
-                            <td><?php echo e($data->volleypoints); ?></td>
-                        </tr>
-                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-                       
-                    </tbody>
-                </table>
+       
 
 
-<div class="text-center">KEDUDUKAN KUMPULAN C</div>
-
-                <div class="table-fluid">
-                <table class="table table-bordered table-striped text-center table-sm">
-                    <thead class="bg-success">
-                        <tr>
-                            <th scope="col"></th>
-                            <th scope="col">Team</th>
-                            <th scope="col">W</th>
-                            
-                            <th scope="col">L</th>
-                            <th scope="col">GF</th>
-                            <th scope="col">GA</th>
-                            <th scope="col">GD</th>
-                            <th scope="col">P</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                    <?php $__currentLoopData = $c; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $key => $data): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                        <tr class="">
-                            <td scope="row"><?php echo e($loop->iteration); ?></td>
-                            <td><?php echo e($data->name); ?></td>
-                            <td><?php echo e($data->won); ?></td>
-                            
-                            <td><?php echo e($data->lost); ?></td>
-                            <td><?php echo e($data->goal); ?></td>
-                            <td><?php echo e($data->against); ?></td>
-                            <td><?php echo e($data->goal - $data->against); ?> </td>
-                            <td><?php echo e($data->volleypoints); ?></td>
-                        </tr>
-                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-                       
-                    </tbody>
-                </table>
 
 
-<div class="text-center">KEDUDUKAN KUMPULAN D</div>
-
-                <div class="table-fluid">
-                <table class="table table-bordered table-striped text-center table-sm">
-                    <thead class="bg-success">
-                        <tr>
-                            <th scope="col"></th>
-                            <th scope="col">Team</th>
-                            <th scope="col">W</th>
-                            
-                            <th scope="col">L</th>
-                            <th scope="col">GF</th>
-                            <th scope="col">GA</th>
-                            <th scope="col">GD</th>
-                            <th scope="col">P</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                    <?php $__currentLoopData = $d; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $key => $data): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                        <tr class="">
-                            <td scope="row"><?php echo e($loop->iteration); ?></td>
-                            <td><?php echo e($data->name); ?></td>
-                            <td><?php echo e($data->won); ?></td>
-                            
-                            <td><?php echo e($data->lost); ?></td>
-                            <td><?php echo e($data->goal); ?></td>
-                            <td><?php echo e($data->against); ?></td>
-                            <td><?php echo e($data->goal - $data->against); ?> </td>
-                            <td><?php echo e($data->volleypoints); ?></td>
-                        </tr>
-                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-                       
-                    </tbody>
-                </table>
 
 
+
+<hr>
 
                 <div class="text-center">KEPUTUSAN PERLAWANAN</div>
 
