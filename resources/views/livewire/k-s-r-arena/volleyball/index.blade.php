@@ -20,7 +20,7 @@
                         <div class="col-md-6">
                         <h6>KUMPULAN A</h5>
                         <div class="table-responsive">
-                            <table class="table table-bordered table-striped text-center">
+                            <table class="table table-bordered table-striped text-center table-sm">
                                 <thead class="bg-success">
                                     <tr>
                                         <th scope="col">#</th>
@@ -55,7 +55,7 @@
                                     <h6>KUMPULAN B</h5>
             
                         <div class="table-responsive">
-                            <table class="table table-bordered table-striped text-center">
+                            <table class="table table-bordered table-striped text-center table-sm">
                                 <thead class="bg-success">
                                     <tr>
                                        <th scope="col">#</th>
@@ -90,7 +90,7 @@
                                     <h6>KUMPULAN C</h5>
             
                         <div class="table-responsive">
-                            <table class="table table-bordered table-striped text-center">
+                            <table class="table table-bordered table-striped text-center table-sm">
                                 <thead class="bg-success">
                                     <tr>
                                         <th scope="col">#</th>
@@ -125,7 +125,7 @@
                                     <h6>KUMPULAN D</h5>
             
                         <div class="table-responsive">
-                            <table class="table table-bordered table-striped text-center">
+                            <table class="table table-bordered table-striped text-center table-sm">
                                 <thead class="bg-success">
                                     <tr>
                                        <th scope="col">#</th>
