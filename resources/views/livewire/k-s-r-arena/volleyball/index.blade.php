@@ -159,7 +159,7 @@
                     </tbody>
                 </table>
 
-
+<hr>
 
                 <div class="text-center">KEPUTUSAN PERLAWANAN</div>
 
