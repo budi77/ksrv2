@@ -20,7 +20,7 @@
                         <div class="col-md-6">
                         <h6>KUMPULAN A</h5>
                         <div class="table-responsive">
-                            <table class="table table-bordered table-striped text-center">
+                            <table class="table table-bordered table-striped text-center table-sm">
                                 <thead class="bg-success">
                                     <tr>
                                         <th scope="col">#</th>
@@ -55,8 +55,8 @@
                                     <h6>KUMPULAN B</h5>
             
                         <div class="table-responsive">
-                            <table class="table table-bordered table-striped text-center">
-                                <thead class="bg-success">
+                            <table class="table table-bordered table-striped text-center table-sm">
+                                <thead class="bg-primary">
                                     <tr>
                                        <th scope="col">#</th>
                                         <th scope="col">Team</th>
@@ -90,8 +90,8 @@
                                     <h6>KUMPULAN C</h5>
             
                         <div class="table-responsive">
-                            <table class="table table-bordered table-striped text-center">
-                                <thead class="bg-success">
+                            <table class="table table-bordered table-striped text-center table-sm">
+                                <thead class="bg-danger">
                                     <tr>
                                         <th scope="col">#</th>
                                         <th scope="col">Team</th>
@@ -125,8 +125,8 @@
                                     <h6>KUMPULAN D</h5>
             
                         <div class="table-responsive">
-                            <table class="table table-bordered table-striped text-center">
-                                <thead class="bg-success">
+                            <table class="table table-bordered table-striped text-center table-sm">
+                                <thead class="bg-warning">
                                     <tr>
                                        <th scope="col">#</th>
                                         <th scope="col">Team</th>

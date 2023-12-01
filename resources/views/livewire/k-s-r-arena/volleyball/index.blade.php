@@ -56,7 +56,7 @@
             
                         <div class="table-responsive">
                             <table class="table table-bordered table-striped text-center table-sm">
-                                <thead class="bg-success">
+                                <thead class="bg-primary">
                                     <tr>
                                        <th scope="col">#</th>
                                         <th scope="col">Team</th>
@@ -91,7 +91,7 @@
             
                         <div class="table-responsive">
                             <table class="table table-bordered table-striped text-center table-sm">
-                                <thead class="bg-success">
+                                <thead class="bg-danger">
                                     <tr>
                                         <th scope="col">#</th>
                                         <th scope="col">Team</th>
@@ -126,7 +126,7 @@
             
                         <div class="table-responsive">
                             <table class="table table-bordered table-striped text-center table-sm">
-                                <thead class="bg-success">
+                                <thead class="bg-warning">
                                     <tr>
                                        <th scope="col">#</th>
                                         <th scope="col">Team</th>
