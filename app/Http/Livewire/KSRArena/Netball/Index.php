@@ -12,7 +12,7 @@ class Index extends Component
     {
         $standings = Team::whereSport('Bola Jaring')->get()->sortByDesc('points');
 
-        $groups = NetballFixture::whereExt1('Kumpulan')->orderby('match')->get();
+        $groups = NetballFixture::whereExt1('Kumpulan')->whereExt2('Bola Jaring')->orderby('match')->get();
         $semis = NetballFixture::whereExt1('Separuh Akhir')->whereExt2('Bola Jaring')->orderby('match')->get();
         
         $final = NetballFixture::whereExt1('Akhir')->whereExt2('Bola Jaring')->orderby('match')->get();
