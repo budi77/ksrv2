@@ -10,8 +10,11 @@ class Index extends Component
 {
     public function render()
     {
-        // $standings = Team::whereSport('Bola Jaring')->get()->sortByDesc('points');
         $standings = Team::whereSport('Bola Jaring')->get()->sortByDesc('points');
+        // $standings = Team::whereSport('Bola Jaring')->get()->sortByDesc(function ($value) {
+        //     return $value['points'].'-'.$value['goaldifference'];
+
+        // });
 
         $groups = NetballFixture::whereExt1('Kumpulan')->whereExt2('Bola Jaring')->orderby('match')->get();
         $semis = NetballFixture::whereExt1('Separuh Akhir')->whereExt2('Bola Jaring')->orderby('match')->get();

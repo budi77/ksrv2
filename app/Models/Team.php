@@ -12,10 +12,10 @@ class Team extends Model
 
     public $with = 'department:id,name';
 
-    protected $casts = [
-        'goaldifference' => 'integer',
-        'points' => 'integer'
-    ];
+    // protected $casts = [
+    //     'goaldifference' => 'integer',
+    //     'points' => 'integer'
+    // ];
 
     public function department()
     {
