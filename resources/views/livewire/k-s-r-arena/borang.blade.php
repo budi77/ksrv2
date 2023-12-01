@@ -10,17 +10,28 @@
             </div>
             <h2 class=" mb-1">KSR ARENA 2023</h2>
             <p class=" mb-0 text-muted fw-bold">KEJOHANAN SUKAN ANTARA BAHAGIAN & SPRM LEMBAH KLANG</p>
-            <p class=" mb-0 text-muted">02 DISEMBER 2023, UNIVERSITI TEKNOLOGI MARA KAMPUS DENGKIL</p>
+            <p class=" mb-0 text-muted">TAMAN PANCARONA, PRESINT 18, PUTRAJAYA</p>
         </div>
 
         <hr>
 
-<!-- Danger Alert -->
-<div class="alert alert-danger alert-dismissible bg-danger text-white alert-label-icon fade show" role="alert">
-    <i class="ri-error-warning-line label-icon"></i><strong>PENDAFTARAN TELAH DITUTUP!</strong>
-    {{-- <button type="button" class="btn-close btn-close-white" data-bs-dismiss="alert" aria-label="Close"></button> --}}
+
+<div>
+
+                        <p class=" mb-0 text-muted text-center h4">ACARA SUKAN</p>
+
+
+<div class="d-grid gap-2 pt-3">
+ <a class="btn btn-success btn-block waves-effect waves-light " href="/ksrarena2023/bolajaring" role="button"><h3 class="text-white">BOLA JARING</h3></a>
+ <br>
+ <a class="btn btn-primary btn-block waves-effect waves-light" href="/ksrarena2023/bolatampar" role="button"><h3 class="text-white">BOLA TAMPAR</h3></a>
 </div>
 
+
+
+<p>
+</p>
+</div>
 @if($isOpen)
 
         <!-- Primary Alert -->
