@@ -241,6 +241,32 @@
                     </tbody>
                 </table>
 
+                <div class="text-center">TEMPAT 3 / 4</div>
+
+                <div class="table-fluid">
+                    <table class="table table-bordered table-striped text-center table-sm">
+                        <thead class="bg-info">
+                            <tr>
+                                <th scope="col"></th>
+                                <th scope="col">Team</th>
+                                <th scope="col">Keputusan</th>
+                            
+                            </tr>
+                        </thead>
+                        <tbody>
+                        <?php $__currentLoopData = $three; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $key => $data): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                            <tr class="">
+                                <td scope="row"><?php echo e($data->match); ?></td>
+                                <td><?php echo e($data->team1->name); ?> vs <?php echo e($data->team2->name); ?></td>
+                                <td><?php echo e($data->result1); ?> : <?php echo e($data->result2); ?></td>
+                            </tr>
+                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                        
+                        </tbody>
+                    </table>
+                </div>
+
+
                 <div class="text-center">AKHIR</div>
 
                 <div class="table-fluid">

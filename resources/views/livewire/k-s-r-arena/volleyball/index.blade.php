@@ -241,6 +241,32 @@
                     </tbody>
                 </table>
 
+                <div class="text-center">TEMPAT 3 / 4</div>
+
+                <div class="table-fluid">
+                    <table class="table table-bordered table-striped text-center table-sm">
+                        <thead class="bg-info">
+                            <tr>
+                                <th scope="col"></th>
+                                <th scope="col">Team</th>
+                                <th scope="col">Keputusan</th>
+                            
+                            </tr>
+                        </thead>
+                        <tbody>
+                        @foreach($three as $key => $data)
+                            <tr class="">
+                                <td scope="row">{{ $data->match }}</td>
+                                <td>{{ $data->team1->name }} vs {{ $data->team2->name }}</td>
+                                <td>{{ $data->result1 }} : {{ $data->result2 }}</td>
+                            </tr>
+                            @endforeach
+                        
+                        </tbody>
+                    </table>
+                </div>
+
+
                 <div class="text-center">AKHIR</div>
 
                 <div class="table-fluid">

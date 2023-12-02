@@ -18,10 +18,11 @@ class Index extends Component
 
         $groups = NetballFixture::whereExt1('Kumpulan')->whereExt2('Bola Jaring')->orderby('match')->get();
         $semis = NetballFixture::whereExt1('Separuh Akhir')->whereExt2('Bola Jaring')->orderby('match')->get();
-        
+        $three = NetballFixture::whereExt1('Tempat 3 / 4')->whereExt2('Bola Jaring')->orderby('match')->get();
+
         $final = NetballFixture::whereExt1('Akhir')->whereExt2('Bola Jaring')->orderby('match')->get();
         // dd($standings);
 
-        return view('livewire.k-s-r-arena.netball.index', compact(['groups', 'standings','semis','final']))->extends('layouts.master-without-nav');
+        return view('livewire.k-s-r-arena.netball.index', compact(['groups', 'standings','semis','final','three']))->extends('layouts.master-without-nav');
     }
 }

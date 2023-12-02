@@ -79,6 +79,7 @@
                                 <option value="Kumpulan">Kumpulan</option>
                                 <option value="Suku Akhir">Suku Akhir</option>
                                 <option value="Separuh Akhir">Separuh Akhir</option>
+                                <option value="Tempat 3 / 4">Tempat 3 / 4</option>
                                 <option value="Akhir">Akhir</option>
                             </select>
                         </div>
@@ -244,6 +245,54 @@
                     
                 </div>
             </div>
+
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">TEMPAT 3 / 4</h4>
+
+                    <div class="table-responsive ">
+                        <table class="table table-sm table-striped">
+                            <thead class="bg-primary text-white">
+                                <tr>
+                                    <th scope="col">No</th>
+                                    <th scope="col">Peringkat</th>
+                                    <th scope="col">Pasukan 1</th>
+                                    <th scope="col">Skor 1</th>
+                                    <th scope="col">Skor 2</th>
+                                    <th scope="col">Pasukan 2</th>
+                                    <th scope="col"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach($three as $key => $data)
+                                <tr class="">
+                                    <td>{{ $data->match }} </td>
+                                    <td>{{ $data->ext1 }} </td>
+                                    <td>{{ @$data->team1->name }}</td>
+                                    <td>{{ @$data->result1 }}</td>
+                                    <td>{{ @$data->result2 }}</td>
+                                    <td>{{ @$data->team2->name }}</td>
+                                    <td>
+                                        <ul class="list-inline hstack gap-2 mb-0">
+                                            <li class="list-inline-item" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" title="View">
+                                                <a href="javascript:void(0);" class="text-danger d-inline-block" wire:click="edit('{{ @$data->id }}')">
+                                                    <i class="ri-edit-box-line fs-18"></i>
+                                                </a>
+                                            </li>
+                                           
+                                           
+                                        </ul>
+                                    </td>
+                                </tr>
+                                @endforeach
+                               
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                </div>
+            </div>
+
 
             <div class="card">
                 <div class="card-body">
