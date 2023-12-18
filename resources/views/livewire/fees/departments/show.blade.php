@@ -208,9 +208,9 @@
                                     <th  scope="col">Nama</th>
                                     {{-- <th  scope="col" class="text-center">No KP</th> --}}
                                     <th  scope="col" class="text-center">Email</th>
+                                    <th  scope="col" class="text-center">Tahun</th>
                                     <th  scope="col" class="text-center">Jumlah Bayaran</th>
                                     <th  scope="col" class="text-center">Baki</th>
-                                    <th  scope="col" class="text-center">Tahun Semasa</th>
                                     <th  scope="col" class="text-end"></th>
                                 </tr>
                             </thead>
@@ -229,12 +229,16 @@
                                         {{ $row->ic_no }}
                                     </td> --}}
                                     <td class="text-center">{{ $row->email }}</td>
+                                    <td class="text-center">
+
+                                        {{  $year }}
+
+
+                                    </td>
                                    
                                     <td class="text-center">
 
                                         {{ @$row->payments_sum_value ?? '0'}}
-
-                                     
 
 
                                     </td>
@@ -257,13 +261,7 @@
                                             {{-- @endif --}}
                                             @endif
                                     </td>
-                                    <td class="text-center">
-
-                                        {{  $year }}
-
-                                       
-
-                                    </td>
+                                    
                                     <td class="text-end text-center">
                                         <ul class="list-inline hstack gap-2 mb-0 text-end">
                                             

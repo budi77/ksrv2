@@ -142,9 +142,9 @@
                                     <th  scope="col">Nama</th>
                                     
                                     <th  scope="col" class="text-center">Email</th>
+                                    <th  scope="col" class="text-center">Tahun</th>
                                     <th  scope="col" class="text-center">Jumlah Bayaran</th>
                                     <th  scope="col" class="text-center">Baki</th>
-                                    <th  scope="col" class="text-center">Tahun Semasa</th>
                                     <th  scope="col" class="text-end"></th>
                                 </tr>
                             </thead>
@@ -163,13 +163,18 @@
                                     </td>
                                     
                                     <td class="text-center"><?php echo e($row->email); ?></td>
+                                    <td class="text-center">
+
+                                        <?php echo e($year); ?>
+
+
+
+                                    </td>
                                    
                                     <td class="text-center">
 
                                         <?php echo e(@$row->payments_sum_value ?? '0'); ?>
 
-
-                                     
 
 
                                     </td>
@@ -195,14 +200,7 @@
                                             
                                             <?php endif; ?>
                                     </td>
-                                    <td class="text-center">
-
-                                        <?php echo e($year); ?>
-
-
-                                       
-
-                                    </td>
+                                    
                                     <td class="text-end text-center">
                                         <ul class="list-inline hstack gap-2 mb-0 text-end">
                                             
