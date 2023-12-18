@@ -11,9 +11,9 @@ use Auth;
 
 class Show extends Component
 {
-    public $department_id, $department_name, $member_total, $paid, $unpaid, $year = [], $sum;
+    public $department_id, $department_name, $member_total, $paid, $unpaid, $year, $sum;
     public $member_id, $payment_date, $payment_year, $value = '24', $mode, $member, $search1, $search2;
-    public $member_list, $search_member, $tot_members, $tot_paid, $tot_unpaid, $tot_sum;
+    public $member_list, $search_member, $tot_members, $tot_paid, $tot_unpaid, $tot_sum, $balance;
 
     public function mount(Department $department)
     {
@@ -24,12 +24,14 @@ class Show extends Component
 
         $this->year =  Carbon::now()->format('Y');
 
+
         // dd($this->department_id);
     }
 
     public function render()
     {
 
+        
         $this->tot_members = Member::where('department_id', $this->department_id)->whereActive('1')->count();
 
         $this->tot_paid = Fee::with('member')->where('year', $this->year )
@@ -40,11 +42,15 @@ class Show extends Component
         ->where('department_id', $this->department_id)
         ->sum('value');
 
-        $results = Member::when($this->search_member, function($query){
+        $results = Member::withSum(['payments' => fn ($q) => $q->where('year', $this->year)] ,'value')->when($this->search_member, function($query){
             $query->where('name', 'LIKE', '%'. $this->search_member . '%')
-                  ->orWhere('ic_no', 'LIKE' , '%'. $this->search_member . '%');
+                  ->orWhere('email', 'LIKE' , '%'. $this->search_member . '%');
         })
-        ->where('department_id', $this->department_id)->whereActive('1')->orderby('name')->get();
+        ->where('department_id', $this->department_id)
+        ->whereActive('1')
+        ->orderby('name')
+        ->get();
+        
 
         // dd($results);
 
@@ -54,6 +60,12 @@ class Show extends Component
     public function edit($id)
     {
         $this->member = Member::find($id);
+
+        // dd($this->member);
+        $this->balance = Fee::where('member_id', $id)->where('year', $this->year)->sum('value');
+
+        // dd($this->balance);
+
 
         $this->dispatchBrowserEvent('show-edit');
 
