@@ -10,72 +10,89 @@
 
     </div>
 
-    <div class="row row-cols-xxl-4 row-cols-lg-4 row-cols-sm-2 row-cols-1">
-        <div class="col">
-            <div class="card">
-                <div class="card-body d-flex">
-                    <div class="flex-grow-1">
-                        <h4><?php echo e($tot_members); ?></h4>
-                        <h6 class="text-muted fs-14 mb-0">Jumlah Ahli</h6>
-                    </div>
-                    <div class="flex-shrink-0 avatar-sm">
-                        <div class="avatar-title bg-soft-primary text-primary fs-22 rounded">
-                            <i class="ri-upload-2-line"></i>
+    <div class="row">
+        <div class="col-xxl-3 col-md-6">
+            <div class="card card-animate">
+                <div class="card-body">
+                    <div class="d-flex mb-3">
+                        <div class="flex-grow-1">
+                            <lord-icon src="https://cdn.lordicon.com/fhtaantg.json" trigger="loop"
+                                colors="primary:#405189,secondary:#0ab39c" style="width:55px;height:55px">
+                            </lord-icon>
                         </div>
+                       
                     </div>
+                    <h3 class="mb-2"><span class="counter-value" data-target="<?php echo e($tot_members); ?>"><?php echo e($tot_members); ?></span></h3>
+                    <h6 class="text-muted mb-0">Jumlah Ahli Aktif</h6>
                 </div>
             </div>
+            <!--end card-->
         </div>
         <!--end col-->
-        <div class="col">
-            <div class="card">
-                <div class="card-body d-flex">
-                    <div class="flex-grow-1">
-                        <h4><?php echo e($tot_paid); ?></h4>
-                        <h6 class="text-muted fs-14 mb-0">Selesai</h6>
-                    </div>
-                    <div class="flex-shrink-0 avatar-sm">
-                        <div class="avatar-title bg-soft-info text-info fs-22 rounded">
-                            <i class="ri-remote-control-line"></i>
+        <div class="col-xxl-3 col-md-6">
+            <div class="card card-animate">
+                <div class="card-body bg-soft-primary">
+                    <div class="d-flex mb-3">
+                        <div class="flex-grow-1">
+                            <lord-icon src="https://cdn.lordicon.com/vaeagfzc.json" trigger="loop"
+                                colors="primary:#405189,secondary:#0ab39c" style="width:55px;height:55px"></lord-icon>
                         </div>
+                       
                     </div>
+                    <h3 class="mb-2"><span class="counter-value" data-target="<?php echo e($tot_paid); ?>"><?php echo e($tot_paid); ?></span></h3>
+                    <h6 class="text-muted mb-0">Selesai Bayar Yuran</h6>
                 </div>
             </div>
+            <!--end card-->
         </div>
         <!--end col-->
-        <div class="col">
-            <div class="card">
-                <div class="card-body d-flex">
-                    <div class="flex-grow-1">
-                        <h4><?php echo e($tot_members - $tot_paid); ?></h4>
-                        <h6 class="text-muted fs-14 mb-0">Belum Bayar</h6>
-                    </div>
-                    <div class="flex-shrink-0 avatar-sm">
-                        <div class="avatar-title bg-soft-primary text-primary fs-22 rounded">
-                            <i class="ri-flashlight-fill"></i>
+        <div class="col-xxl-3 col-md-6">
+            <div class="card card-animate">
+                <div class="card-body bg-soft-warning">
+                    <div class="d-flex mb-3">
+                        <div class="flex-grow-1">
+                            <lord-icon src="https://cdn.lordicon.com/tdrtiskw.json" trigger="loop"
+                                colors="primary:#405189,secondary:#0ab39c" style="width:55px;height:55px">
+                            </lord-icon>
                         </div>
+                       
                     </div>
+                    <h3 class="mb-2"><span class="counter-value" data-target="<?php echo e($tot_members - $tot_paid); ?>"><?php echo e($tot_members - $tot_paid); ?></span></h3>
+                    <h6 class="text-muted mb-0">Belum Bayar Yuran</h6>
                 </div>
             </div>
+            <!--end card-->
         </div>
         <!--end col-->
-        <div class="col">
-            <div class="card">
-                <div class="card-body d-flex">
-                    <div class="flex-grow-1">
-                        <h4>RM<?php echo e($tot_sum); ?></h4>
-                        <h6 class="text-muted fs-14 mb-0">Jumlah Kutipan</h6>
-                    </div>
-                    <div class="flex-shrink-0 avatar-sm">
-                        <div class="avatar-title bg-soft-info text-info fs-22 rounded">
-                            <i class="ri-hand-coin-line"></i>
+        <div class="col-xxl-3 col-md-6">
+            <div class="swiper default-swiper rounded">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="card card-animate">
+                            <div class="card-body bg-soft-info">
+                                <div class="d-flex mb-3">
+                                    <div class="flex-grow-1">
+                                        <lord-icon src="https://cdn.lordicon.com/qhviklyi.json" trigger="loop"
+                                            colors="primary:#405189,secondary:#0ab39c" style="width:55px;height:55px">
+                                        </lord-icon>
+                                    </div>
+                                    
+                                </div>
+                                <h3 class="mb-2">RM<span class="counter-value" data-target="<?php echo e($tot_sum); ?>"><?php echo e($tot_sum); ?></span></h3>
+                                <h6 class="text-muted mb-0">Jumlah Kutipan</h6>
+                            </div>
                         </div>
+                        <!--end card-->
                     </div>
+                   
                 </div>
             </div>
+            <!--end swiper-->
         </div>
-        
+        <!--end col-->
     </div>
+
+    
 
     <div class="row" id="contactList">
         <div class="col-lg-12">
@@ -393,6 +410,10 @@
 
     
     <?php $__env->startSection('script'); ?>
+
+    <script src="<?php echo e(URL::asset('assets/libs/prismjs/prismjs.min.js')); ?>"></script>
+
+    <script src="<?php echo e(URL::asset('/assets/js/app.min.js')); ?>"></script>
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {

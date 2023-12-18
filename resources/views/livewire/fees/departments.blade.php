@@ -6,7 +6,7 @@
     @endcomponent
 
 
-    <div class="row">
+    {{-- <div class="row">
         <div class="col-xxl-3 col-md-6">
             <div class="card card-animate">
                 <div class="card-body">
@@ -72,9 +72,7 @@
                                             colors="primary:#405189,secondary:#0ab39c" style="width:55px;height:55px">
                                         </lord-icon>
                                     </div>
-                                    {{-- <div class="flex-shrink-0">
-                                        <a href="javascript:void(0);" class="fw-semibold">Bitcoin (BTC)</a>
-                                    </div> --}}
+                                  
                                 </div>
                                 <h3 class="mb-2">RM<span class="counter-value" data-target="{{ $tot_sum }}">0</span></h3>
                                 <h6 class="text-muted mb-0">Jumlah Kutipan</h6>
@@ -88,7 +86,7 @@
             <!--end swiper-->
         </div>
         <!--end col-->
-    </div>
+    </div> --}}
     <!--end row-->
 
 
@@ -105,15 +103,15 @@
               
     
                         <div class="table-responsive table-card">
-                            <table class="table table-nowrap mb-0">
-                                <thead class="table-light">
+                            <table class="table table-nowrap mb-0 table-striped">
+                                <thead class="bg-dark text-white">
                                     <tr>
                                         
                                         <th scope="col">#</th>
                                         <th scope="col">Bahagian</th>
                                         <th scope="col" class="text-center">Jumlah Ahli</th>
-                                        <th scope="col" class="text-center"># Ahli Selesai Bayar Yuran Tahun Semasa</th>
-                                        <th scope="col" class="text-center">% bayar</th>
+                                        {{-- <th scope="col" class="text-center"># Ahli Selesai Bayar Yuran Tahun Semasa</th> --}}
+                                        {{-- <th scope="col" class="text-center">% bayar</th> --}}
                                         <th scope="col"></th>   
                                     </tr>
                                 </thead>
@@ -121,14 +119,14 @@
                                     @foreach($results as $row)
                                     <tr>
                                         
-                                        <td><a href="#" class="fw-semibold">{{ $loop->iteration }}</a></td>
+                                        <td>{{ $loop->iteration }}</td>
                                         <td>{{ $row->name }}</td>
                                         <td class="text-center">{{ $row->active_members_count }}</td>
-                                        <td class="text-center">
+                                        {{-- <td class="text-center">
                                             <span class="badge bg-secondary">{{ $row->totalpaidmemberforcurrentyear_count }}
                                             </span>
-                                        </td>
-                                        <td>
+                                        </td> --}}
+                                        {{-- <td>
                                         <div class="progress progress-xl animated-progress">
                                             @if($row->active_members_count != 0)
                                                 @if((($row->totalpaidmemberforcurrentyear_count /  $row->active_members_count) * 100) >= 0 && (($row->totalpaidmemberforcurrentyear_count /  $row->active_members_count) * 100) <= 50 )
@@ -144,9 +142,9 @@
                                                 @endif
                                             @endif
                                         </div>
-                                    </td>
+                                    </td> --}}
                                         <td class="text-end">
-                                            <a class="btn btn-info btn-sm" href="{{ route('fees.departments.show' , $row->id) }}" role="button">Pilih</a>
+                                            <a class="btn btn-primary btn-sm" href="{{ route('fees.departments.show' , $row->id) }}" role="button">Pilih</a>
                                         </td>
                                     </tr>
                                     @endforeach
