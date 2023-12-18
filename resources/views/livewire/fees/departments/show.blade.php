@@ -12,7 +12,7 @@
     <div class="row">
         <div class="col-xxl-3 col-md-6">
             <div class="card card-animate">
-                <div class="card-body">
+                <div class="card-body bg-soft-warning">
                     <div class="d-flex mb-3">
                         <div class="flex-grow-1">
                             <lord-icon src="https://cdn.lordicon.com/fhtaantg.json" trigger="loop"
@@ -47,7 +47,7 @@
         <!--end col-->
         <div class="col-xxl-3 col-md-6">
             <div class="card card-animate">
-                <div class="card-body bg-soft-warning">
+                <div class="card-body bg-soft-danger">
                     <div class="d-flex mb-3">
                         <div class="flex-grow-1">
                             <lord-icon src="https://cdn.lordicon.com/tdrtiskw.json" trigger="loop"
@@ -68,7 +68,7 @@
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <div class="card card-animate">
-                            <div class="card-body bg-soft-info">
+                            <div class="card-body bg-soft-success">
                                 <div class="d-flex mb-3">
                                     <div class="flex-grow-1">
                                         <lord-icon src="https://cdn.lordicon.com/qhviklyi.json" trigger="loop"
