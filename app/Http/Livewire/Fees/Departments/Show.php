@@ -34,11 +34,11 @@ class Show extends Component
         
         $this->tot_members = Member::where('department_id', $this->department_id)->whereActive('1')->count();
 
-        $this->tot_paid = Fee::with('member')->where('year', $this->year )
+        $this->tot_paid = Fee::where('year', $this->year )
         ->where('department_id', $this->department_id)
         ->count();
 
-        $this->tot_sum = Fee::with('member')->where('year', $this->year )
+        $this->tot_sum = Fee::where('year', $this->year )
         ->where('department_id', $this->department_id)
         ->sum('value');
 
