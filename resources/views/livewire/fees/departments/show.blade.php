@@ -201,7 +201,7 @@
                 </div>
                 <div class="card-body">
                     <div class="table-responsive table-card">
-                        <table class="table align-middle table-nowrap table-striped table-bordered" id="customerTable">
+                        <table class="table align-middle table-nowrap table-striped" id="customerTable">
                             <thead class="bg-dark text-white">
                                 <tr>
                                     <th scope="col">#</th>
