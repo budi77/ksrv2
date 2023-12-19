@@ -15,6 +15,8 @@ class Show extends Component
     public $member_id, $payment_date, $payment_year, $value = '24', $mode, $member, $search1, $search2;
     public $member_list, $search_member, $tot_members, $tot_paid, $tot_unpaid, $tot_sum, $balance;
 
+   
+
     public function mount(Department $department)
     {
 
@@ -75,6 +77,7 @@ class Show extends Component
     public function store()
     {
         
+
         $store = Fee::create([
             'member_id' => $this->member->id,
             'department_id' => $this->department_id,
