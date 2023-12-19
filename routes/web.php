@@ -64,6 +64,12 @@ Route::middleware('auth')->group(function () {
     Route::get('/yuran/serahan/cipta', \App\Http\Livewire\Fees\Submission\Create::class)->name('fees.create');
 
 
+    Route::get('/resit', \App\Http\Livewire\Receipt\Index::class)->name('resit');
+    Route::get('/resit/cetak', \App\Http\Livewire\Receipt\Cetak::class)->name('resit.cetak');
+
+
+
+
     Route::get('index/{locale}', [App\Http\Controllers\HomeController::class, 'lang']);
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'root'])->name('root');
