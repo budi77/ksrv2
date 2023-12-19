@@ -262,7 +262,7 @@
                                             @endif
                                     </td>
                                     
-                                    <td class="text-end text-center">
+                                    <td class="d-flex justify-content-end">
                                         <ul class="list-inline hstack gap-2 mb-0 text-end">
                                             
                                             <li class="list-inline-item edit" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" aria-label="Edit">
@@ -358,7 +358,7 @@
                             </div>
                             </div>
                             <div class="flex-shrink-0">
-                            <span class="text-danger">RM{{@$value- $balance}}</span>
+                            <span class="text-danger fw-bold">RM{{@$value- $balance}}</span>
                             </div>
                             </div>
                             </li>

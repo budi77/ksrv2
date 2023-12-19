@@ -57,7 +57,7 @@ class Department extends Model
     public function paymentsFederation()
     {
 
-        return $this->hasMany(FederationFee::class, 'federation_id');
+        return $this->hasMany(FederationFee::class, 'federation_id','id');
 
     }
 

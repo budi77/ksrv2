@@ -79,7 +79,7 @@
     <div class="row" id="contactList">
         <div class="col-lg-12">
             <div class="card">
-                <div class="card-header d-flex align-items-center border-0">
+                <div class="card-header d-flex align-items-center border-0 bg-info">
                     <h5 class="card-title mb-0 flex-grow-1">Rekod Pembayaran</h5>
                  
                 </div>
@@ -91,6 +91,21 @@
                                 <i class="ri-search-line search-icon"></i>
                             </div>
                         </div>
+
+                        <div class="col-xl-4 col-md-6">
+                            <select
+                                class="form-select form-select"
+                                name=""
+                                id=""
+                                wire:model="year"
+                            >
+                                <option selected>-- Pilih Tahun --</option>
+                                <option value="2023" @selected($year == '2023')>2023</option>
+                                <option value="2024" @selected($year == '2024')>2024</option>
+                                <option value="2025" @selected($year == '2025')>2025</option>
+                                <option value="2026" @selected($year == '2026')>2026</option>
+                            </select>
+                        </div>
                         <!--end col-->
                         
                     </div>
@@ -98,13 +113,14 @@
                 </div>
                 <div class="card-body">
                     <div class="table-responsive table-card">
-                        <table class="table align-middle table-nowrap" id="customerTable">
-                            <thead class="table-light text-muted">
+                        <table class="table align-middle table-nowrap table-striped" id="customerTable">
+                            <thead class="table-dark text-white">
                                 <tr>
                                     <th scope="col">#</th>
                                     <th  scope="col" class="text-center">Gabungan</th>
-                                    <th  scope="col" class="text-center">Bayaran Terakhir</th>
-                                    <th  scope="col" class="text-center">Tahun Semasa</th>
+                                    <th  scope="col" class="text-center">Tahun</th>
+                                    <th  scope="col" class="text-center">Jumlah Bayaran</th>
+                                    <th  scope="col" class="text-center">Baki</th>
                                     <th  scope="col" class="text-end"></th>
                                 </tr>
                             </thead>
@@ -119,39 +135,35 @@
                                     <td class="name">
                                         {{ $row->name }}
                                     </td>
+                                    <td class="text-center">
                                     
+                                    {{ $year }}
+
+
+                                    </td>
                                     <td class="text-center">
 
-                                        @if(@$row->latestPaymentFederation->year <> '')
-                                            @if(@$row->latestPaymentFederation->year == $curryear)
-                                            <span
-                                                class="badge text-bg-success text-uppercase"> {{ @$row->latestPaymentFederation->year }}
-                                            </span>
+                                        {{ @$row->payments_federation_sum_value ?? '0'}}
 
+
+                                    </td>
+                                    <td class="text-center">
+                                          @if(@$value - @$row->payments_federation_sum_value == 0)
+                                                <span
+                                                    class="badge text-bg-success text-uppercase"> {{ @$value - @$row->payments_federation_sum_value }}
+                                                </span>
+
+                                            @elseif((@$value - @$row->payments_sum_value) > 0 and (@$value - @$row->payments_federation_sum_value) < @$value)
+                                                <span
+                                                    class="badge text-bg-warning text-uppercase"> {{ @$value - @$row->payments_federation_sum_value }}
+                                                </span>
                                             @else
-                                            <span
-                                            class="badge text-bg-warning text-uppercase"> {{ @$row->latestPaymentFederation->year }}
-                                            </span>
+                                                <span
+                                                    class="badge text-bg-danger text-uppercase"> {{ @$value - @$row->payments_federation_sum_value }}
+                                                </span>
                                             @endif
-                                        @endif
-
-
                                     </td>
-                                    <td class="text-center">
-
-                                        @if(@$row->latestPaymentFederation->year == $curryear)
-                                            <span
-                                                class="badge badge-soft-info text-uppercase"> Paid
-                                            </span>
-
-                                        @else
-                                            <span
-                                            class="badge badge-soft-danger text-uppercase"> Unpaid
-                                            </span>
-                                        @endif
-
-                                    </td>
-                                    <td class="text-end">
+                                    <td class="d-flex justify-content-center">
                                         <ul class="list-inline hstack gap-2 mb-0 text-end">
                                             
                                             <li class="list-inline-item edit" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" aria-label="Edit">
@@ -204,7 +216,7 @@
         <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header bg-soft-info">
-                    <h5 class="modal-title" id="modalTitleId">Maklumat Pembayaran Tahun {{ $curryear }}</h5>
+                    <h5 class="modal-title" id="modalTitleId">Maklumat Pembayaran Tahun {{ $year }}</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -225,7 +237,31 @@
                        
                     </div>
 
-                    <div class="row">
+                    <div class="row pt-2">
+
+                     <div data-simplebar style="max-height: 215px;">
+                            <ul class="list-group">
+                            <li class="list-group-item bg-light">
+                            <div class="d-flex align-items-center">
+                            <div class="flex-grow-1">
+                            <div class="d-flex">
+                                
+                                <div class="flex-shrink-0 ms-2">
+                                    <h6 class="fs-14 mb-0">Baki Tunggakan Tahun Semasa</h6>
+                                    {{-- <small class="text-muted">2 min Ago</small> --}}
+                                </div>
+                            </div>
+                            </div>
+                            <div class="flex-shrink-0">
+                            <span class="text-danger fw-bold">RM{{@$value- $balance}}</span>
+                            </div>
+                            </div>
+                            </li>
+                            
+                           
+                           
+                            </ul>
+                            </div>
                       
                        
                     </div>
