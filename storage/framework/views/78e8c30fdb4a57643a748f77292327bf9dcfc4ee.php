@@ -18,7 +18,6 @@ Invoice Details
                         <div class="d-flex">
                             <div class="flex-grow-1">
                                <img src="<?php echo e(URL::asset('assets/images/KSR.png')); ?>" alt="" height="90">
-                               
                                 <div class="mt-sm-2 mt-2">
                                     <h6 class="text-dark text-uppercase fw-semibold">KELAB SUKAN DAN REKREASI (KSR) SPRM</h6>
                                     <p class="text-muted mb-1" id="address-details">2, Lebuh Wawasan, Presint 7, </p>
@@ -58,7 +57,7 @@ Invoice Details
                                 <h5 class="fs-14 mb-0">YURAN KSR UNTUK BAHAGIAN PENGURUSAN REKOD DAN MAKLUMAT UNTUK BULAN JULAI 2023 SEPERTI PENAMA DIBAWAH</h5>
                             </div>
                             <!--end col-->
-                            
+                           
                             <!--end col-->
                         </div>
                         <!--end row-->
@@ -66,7 +65,7 @@ Invoice Details
                     <!--end card-body-->
                 </div>
                 <!--end col-->
-                
+              
                 <!--end col-->
                 <div class="col-lg-12">
                     <div class="card-body p-4">
@@ -78,7 +77,6 @@ Invoice Details
                                         <th scope="col">Nama</th>
                                         <th scope="col">Bahagian</th>
                                         <th scope="col">Jumlah</th>
-                                        
                                     </tr>
                                 </thead>
                                 <tbody id="products-list">
@@ -88,7 +86,6 @@ Invoice Details
                                             <span class="fw-medium">Budi Hermawan</span>
                                         </td>
                                         <td><p class="text-muted mb-0">BAHAGIAN PENGURUSAN REKOD DAN MAKLUMAT</p></td>
-                                        
                                         <td class="text-end">$239.98</td>
                                     </tr>
                                     <tr>
@@ -97,7 +94,6 @@ Invoice Details
                                             <span class="fw-medium">Budi Hermawan</span>
                                         </td>
                                         <td><p class="text-muted mb-0">BAHAGIAN PENGURUSAN REKOD DAN MAKLUMAT</p></td>
-                                        
                                         <td class="text-end">$239.98</td>
                                     </tr>
                                     <tr>
@@ -106,7 +102,6 @@ Invoice Details
                                             <span class="fw-medium">Budi Hermawan</span>
                                         </td>
                                         <td><p class="text-muted mb-0">BAHAGIAN PENGURUSAN REKOD DAN MAKLUMAT</p></td>
-                                        
                                         <td class="text-end">$239.98</td>
                                     </tr>
                                     <tr>
@@ -115,7 +110,6 @@ Invoice Details
                                             <span class="fw-medium">Budi Hermawan</span>
                                         </td>
                                         <td><p class="text-muted mb-0">BAHAGIAN PENGURUSAN REKOD DAN MAKLUMAT</p></td>
-                                        
                                         <td class="text-end">$239.98</td>
                                     </tr>
                                 </tbody>
@@ -125,10 +119,7 @@ Invoice Details
                         <div class="border-top border-top-dashed mt-2">
                             <table class="table table-borderless table-nowrap align-middle mb-0 ms-auto" style="width:250px">
                                 <tbody>
-                                    
-                                    
-                                    
-                                    
+                                   
                                     <tr class="border-top border-top-dashed fs-15">
                                         <th scope="row">Jumlah Keseluruhan</th>
                                         <th class="text-end">RM550.00</th>
@@ -143,8 +134,6 @@ Invoice Details
                         <div class="mt-3">
                             <h6 class="text-muted text-uppercase fw-semibold mb-3">Maklumat Pembayaran:</h6>
                             <p class="text-muted mb-1">Cara Pembayaran: <span class="fw-medium" id="payment-method">Tunai</span></p>
-                            
-                            
                             
                         </div>
                         <div class="mt-4">
