@@ -31,6 +31,23 @@ class Cipta extends Component
     public function store()
     {
 
+        $store = Receipt::create([
+            'receipt_no' => $this->receipt_no,
+            'payment_date' => $this->payment_date,
+            'receive_from' => $this->receipt_from,
+            'receive_by' => $this->receive_by,
+            'ringgit' => $this->ringgit,
+            'payment_for' => $this->payment_for,
+            'department_id' => $this->department_id,
+            'date_start' => $this->date_start,
+            'date_end' => $this->date_end,
+            'payment_method' => $this->payment_method,
+            'remarks' => $this->remarks,
+        ]);
 
+
+        $this->resetExcept('departments');
+
+        return redirect()->route('resit.cetak', $store->id);
     }
 }
