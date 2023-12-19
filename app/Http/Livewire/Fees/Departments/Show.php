@@ -16,6 +16,17 @@ class Show extends Component
     public $member_list, $search_member, $tot_members, $tot_paid, $tot_unpaid, $tot_sum, $balance;
 
    
+    protected $rules = [
+        'value' => 'required',
+        'mode' => 'required',
+        'payment_date' => 'required',
+    ];
+
+    protected $messages = [
+        'value.required' => 'Sila isi Jumlah',
+        'mode.required' => 'Sila isi Cara Pembayaran',
+        'payment_date.required' => 'Sila isi Tarikh Pembayaran',
+    ];
 
     public function mount(Department $department)
     {
@@ -77,6 +88,7 @@ class Show extends Component
     public function store()
     {
         
+        $this->validate();
 
         $store = Fee::create([
             'member_id' => $this->member->id,

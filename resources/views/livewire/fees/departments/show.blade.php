@@ -368,7 +368,20 @@
                             </ul>
                             </div>
 
+                           
+
                         <div class="col-12 pt-2">
+
+                         @if ($errors->any())
+                                <div class="alert alert-danger">
+                                    <ul>
+                                        @foreach ($errors->all() as $error)
+                                            <li>{{ $error }}</li>
+                                        @endforeach
+                                    </ul>
+                                </div>
+                            @endif
+                            
                             <div class="mb-3">
                                 <label for="" class="form-label">Jumlah</label>
                                 <input type="text"
