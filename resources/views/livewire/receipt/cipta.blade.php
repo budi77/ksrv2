@@ -31,44 +31,17 @@
                                     </div>
                                 </div>
                                 <div>
-                                    {{-- <div>
-                                        <label for="companyAddress">Address</label>
-                                    </div> --}}
-                                    {{-- <div class="mb-2">
-                                        <textarea class="form-control bg-light border-0" id="companyAddress" rows="3" placeholder="Company Address" required></textarea>
-                                        <div class="invalid-feedback">
-                                            Please enter a address
-                                        </div>
-                                    </div> --}}
-                                    {{-- <div>
-                                        <input type="text" class="form-control bg-light border-0" id="companyaddpostalcode" minlength="5" maxlength="6" placeholder="Enter Postal Code" required />
-                                        <div class="invalid-feedback">
-                                            The US zip code must contain 5 digits, Ex. 45678
-                                        </div>
-                                    </div> --}}
+                                    
                                 </div>
                             </div>
                             <!--end col-->
                             <div class="col-lg-4 ms-auto">
                                 <h3><span class="text-dark fw-bold">RESIT RASMI</span>
 
-                                {{-- <div class="mb-2">
-                                    <input type="text" class="form-control bg-light border-0" id="registrationNumber" maxlength="12" placeholder="Legal Registration No" required />
-                                    <div class="invalid-feedback">
-                                        Please enter a registration no, Ex., 012345678912
-                                    </div>
-                                </div> --}}
-                                {{-- <div class="mb-2">
-                                    <input type="email" class="form-control bg-light border-0" id="companyEmail" placeholder="Email Address" required />
-                                    <div class="invalid-feedback">
-                                        Please enter a valid email, Ex., example@gamil.com
-                                    </div>
-                                </div> --}}
+                               
                                 <div class="mb-2">
-                                    <input type="text" class="form-control bg-light border-0" id="companyWebsite" placeholder="No Resit" required />
-                                    <div class="invalid-feedback">
-                                        Please enter a website, Ex., www.example.com
-                                    </div>
+                                    <input type="text" class="form-control bg-light border-0" id="companyWebsite" placeholder="No Resit" wire:model="receipt_no" />
+                                    
                                 </div>
                                 <div>
                                     <x-date-picker id="date" class="form-control bg-light border-0" wire:model="payment_date" autocomplete="off" value="" placeholder="Tarikh" />
@@ -82,12 +55,12 @@
                         <div class="row g-3">
                             <div class="col-lg-6 col-sm-6">
                                 <label for="invoicenoInput">Diterima daripada:</label>
-                                <input type="text" class="form-control bg-light border-0" id="invoicenoInput" placeholder="Diterima daripada"/>
+                                <input type="text" class="form-control bg-light border-0" id="invoicenoInput" placeholder="Diterima daripada" wire:model="receive_from"/>
                             </div>
                            
                             <div class="col-lg-6 col-sm-6">
                                 <label for="invoicenoInput">Diterima Oleh:</label>
-                                <input type="text" class="form-control bg-light border-0" id="invoicenoInput" placeholder="Diterima Oleh"/>
+                                <input type="text" class="form-control bg-light border-0" id="invoicenoInput" placeholder="Diterima Oleh" wire:model="receive_by"/>
                             </div>
                             {{-- <div class="col-lg-3 col-sm-6">
                                 <div>
@@ -107,10 +80,8 @@
                                 </div>
                                 
                                 <div class="mb-2">
-                                    <textarea class="form-control bg-light border-0" id="billingAddress" rows="3" placeholder="" required></textarea>
-                                    {{-- <div class="invalid-feedback">
-                                        Ringgit Malaysia
-                                    </div> --}}
+                                    <textarea class="form-control bg-light border-0"  rows="3" placeholder="" wire:model="ringgit"></textarea>
+                                   
                                 </div>
                                 
                             </div>
@@ -122,7 +93,7 @@
                                         </div>
                                        
                                         <div class="mb-2">
-                                            <textarea class="form-control bg-light border-0" id="shippingAddress" rows="3" placeholder="" required></textarea>
+                                            <textarea class="form-control bg-light border-0"  rows="3" placeholder="" wire:model="payment_for"></textarea>
                                             
                                         </div>
                                         
@@ -138,9 +109,9 @@
                             <div class="row">
                                 <div class="col-4">
                                     <div class="mb-3">
-                                        <label for="" class="form-label">Bahagian</label>
+                                        <label for="" class="form-label ">Bahagian</label>
                                         <select
-                                            class="form-select"
+                                            class="form-select bg-light border-0 "
                                             name=""
                                             id=""
                                             wire:model="department_id"
@@ -233,7 +204,7 @@
                                 <div class="mb-2">
                                     <label for="choices-payment-type" class="form-label text-muted text-uppercase fw-semibold">Cara Pembayaran</label>
                                     <div class="input-light">
-                                        <select class="form-control bg-light border-0" data-choices data-choices-search-false data-choices-removeItem id="choices-payment-type">
+                                        <select class="form-control bg-light border-0" wire:model="payment_method">
                                             <option value="">Payment Method</option>
                                             <option value="Tunai">Tunai</option>
                                             <option value="Bank Transfer">Bank Transfer</option>
@@ -242,14 +213,9 @@
                                     </div>
                                 </div>
                                 <div class="mb-2">
-                                    <input class="form-control bg-light border-0" type="text" id="cardholderName" placeholder="Keterangan">
+                                    <input class="form-control bg-light border-0" type="text" id="cardholderName" placeholder="Keterangan" wire:model="remarks">
                                 </div>
-                                {{-- <div class="mb-2">
-                                    <input class="form-control bg-light border-0" type="text" id="cardNumber" placeholder="xxxx xxxx xxxx xxxx">
-                                </div>
-                                <div>
-                                    <input class="form-control  bg-light border-0" type="text" id="amountTotalPay" placeholder="$0.00" readonly />
-                                </div> --}}
+                                
                             </div>
                             <!--end col-->
                         </div>
@@ -259,7 +225,8 @@
                             <textarea class="form-control alert alert-info" id="exampleFormControlTextarea1" placeholder="Notes" rows="2" required>All accounts are to be paid within 7 days from receipt of invoice. To be paid by cheque or credit card or direct payment online. If account is not paid within 7 days the credits details supplied as confirmation of work undertaken will be charged the agreed quoted fee noted above.</textarea>
                         </div>
                         <div class="hstack gap-2 justify-content-end d-print-none mt-4">
-                            <button type="submit" class="btn btn-success"><i class="ri-printer-line align-bottom me-1"></i> Save</button>
+                            {{-- <button type="submit" class="btn btn-success"><i class="ri-printer-line align-bottom me-1"></i> Save</button> --}}
+                            <a href="javascript:void(0);" class="btn btn-success" wire:click="store()"><i class="ri-download-2-line align-bottom me-1"></i> Save</a>
                             <a href="javascript:void(0);" class="btn btn-primary"><i class="ri-download-2-line align-bottom me-1"></i> Download Invoice</a>
                             <a href="javascript:void(0);" class="btn btn-danger"><i class="ri-send-plane-fill align-bottom me-1"></i> Send Invoice</a>
                         </div>

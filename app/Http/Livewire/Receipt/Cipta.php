@@ -7,6 +7,7 @@ use App\Models\Department;
 use Carbon\Carbon;
 use App\Models\Member;
 use App\Models\Fee;
+use App\Models\Receipt;
 
 class Cipta extends Component
 {
@@ -25,5 +26,11 @@ class Cipta extends Component
         $this->results = Fee::where('department_id', $this->department_id )->whereBetween('payment_date', [$this->date_start, $this->date_end])->get();
         $this->sum = Fee::where('department_id', $this->department_id )->whereBetween('payment_date', [$this->date_start, $this->date_end])->sum('value');
         // dd($this->sum);
+    }
+
+    public function store()
+    {
+
+
     }
 }
