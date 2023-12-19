@@ -384,6 +384,43 @@
                            
                         </div>
 
+                        <div class="col-12">
+
+                         <div class="col-12">
+                            <div class="mb-0">
+                                <label for="" class="form-label">Cara Pembayaran</label>
+                            </div> 
+                           
+                        </div>
+
+                           <div class="form-check form-check-inline">
+                            <input
+                                class="form-check-input"
+                                type="radio"
+                                name="mode"
+                                id=""
+                                value="TUNAI"
+                                wire:model="mode"
+                                
+                            />
+                            <label class="form-check-label" for="">TUNAI</label>
+                           </div>
+                           <div class="form-check form-check-inline">
+                            <input
+                                class="form-check-input"
+                                type="radio"
+                                name="model"
+                                id=""
+                                value="KOSPERA"
+                                wire:model="mode"
+                            />
+                            <label class="form-check-label" for="">KOSPERA</label>
+                           </div>
+                           
+                        </div>
+
+                       
+
                     </div>
 
                    
@@ -422,6 +459,7 @@
                                     <th scope="col">Tahun</th>
                                     <th scope="col">Tarikh Bayaran</th>
                                     <th scope="col">Jumlah Bayaran</th>
+                                    <th scope="col">Cara Bayaran</th>
                                     <th scope="col">Bahagian</th>
                                 </tr>
                             </thead>
@@ -431,6 +469,7 @@
                                     <td scope="row">{{ @$data->year }}</td>
                                     <td>{{  Carbon\Carbon::parse(@$data->payment_date)->format('d/m/Y') }}</td>
                                     <td>{{ @$data->value }}</td>
+                                    <td>{{ @$data->mode }}</td>
                                     <td>{{ @$data->department->name }}</td>
                                 </tr>
                                 @endforeach
