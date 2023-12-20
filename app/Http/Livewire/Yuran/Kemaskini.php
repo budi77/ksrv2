@@ -43,6 +43,7 @@ class Kemaskini extends Component
         $this->payment_date = $q->payment_date;
 
         $this->editmode = true;
+        $this->deletemode = false;
 
     }
 
@@ -55,9 +56,10 @@ class Kemaskini extends Component
             'payment_date' => $this->payment_date
         ]);
 
-        $this->resetExcept();
+        $this->resetExcept('search');
 
         $this->editmode = false;
+        $this->deletemode = false;
 
     }
 
@@ -75,6 +77,8 @@ class Kemaskini extends Component
         $this->payment_date = $q->payment_date;
 
         $this->deletemode = true;
+        $this->editmode = false;
+
     }
 
     public function confirmed()
@@ -82,6 +86,7 @@ class Kemaskini extends Component
         $q = Fee::find($this->data_id)->delete();
         $this->reset();
         $this->deletemode = false;
+        $this->editmode = false;
 
 
 
@@ -91,6 +96,6 @@ class Kemaskini extends Component
     {
     
 
-        $this->reset();
+        $this->resetExcept('search');
     }
 }
