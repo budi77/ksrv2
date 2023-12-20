@@ -4,9 +4,13 @@ namespace App\Http\Livewire\Yuran;
 
 use Livewire\Component;
 use App\Models\Fee;
+use Jantinnerezo\LivewireAlert\LivewireAlert;
+
 
 class Kemaskini extends Component
 {
+
+    use LivewireAlert;
 
     public $fees, $search, $data_id, $member_name, $department, $year, $value, $mode, $payment_date ;
 
@@ -47,5 +51,13 @@ class Kemaskini extends Component
         ]);
 
         $this->resetExcept('fees');
+    }
+
+    public function delete()
+    {
+        $this->alert('question', 'How are you today?', [
+            'showConfirmButton' => true,
+            'confirmButtonText' => 'Good'
+        ]);
     }
 }

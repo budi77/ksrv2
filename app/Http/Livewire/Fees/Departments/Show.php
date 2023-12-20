@@ -60,7 +60,7 @@ class Show extends Component
                   ->orWhere('email', 'LIKE' , '%'. $this->search_member . '%');
         })
         ->where('department_id', $this->department_id)
-        ->whereActive('1')
+        ->where('active','1')
         ->orderby('name')
         ->get();
         

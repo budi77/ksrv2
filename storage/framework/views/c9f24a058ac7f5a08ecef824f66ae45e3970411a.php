@@ -144,6 +144,7 @@
                                     <th  scope="col" class="text-center">Email</th>
                                     <th  scope="col" class="text-center">Tahun</th>
                                     <th  scope="col" class="text-center">Jumlah Bayaran</th>
+                                    
                                     <th  scope="col" class="text-center">Baki</th>
                                     <th  scope="col" class="text-end"></th>
                                 </tr>
@@ -178,6 +179,7 @@
 
 
                                     </td>
+                                    
                                     <td class="text-center">
                                         
                                           <?php if(@$value - @$row->payments_sum_value == 0): ?>

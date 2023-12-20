@@ -60,14 +60,14 @@
                 <div class="mb-3">
                     <label for="" class="form-label">Tarikh Bayaran</label>
                     <?php if (isset($component)) { $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4 = $component; } ?>
-<?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'components.date-picker','data' => ['id' => 'date','class' => 'form-control','wire:model' => 'payment_date','autocomplete' => 'off','value' => '','placeholder' => 'Tarikh Pembayaran']] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? (array) $attributes->getIterator() : [])); ?>
+<?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'components.date-picker','data' => ['id' => 'date','class' => 'form-control','wire:model' => 'payment_date','autocomplete' => 'off','value' => '','placeholder' => '']] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? (array) $attributes->getIterator() : [])); ?>
 <?php $component->withName('date-picker'); ?>
 <?php if ($component->shouldRender()): ?>
 <?php $__env->startComponent($component->resolveView(), $component->data()); ?>
 <?php if (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag && $constructor = (new ReflectionClass(Illuminate\View\AnonymousComponent::class))->getConstructor()): ?>
 <?php $attributes = $attributes->except(collect($constructor->getParameters())->map->getName()->all()); ?>
 <?php endif; ?>
-<?php $component->withAttributes(['id' => 'date','class' => 'form-control','wire:model' => 'payment_date','autocomplete' => 'off','value' => '','placeholder' => 'Tarikh Pembayaran']); ?>
+<?php $component->withAttributes(['id' => 'date','class' => 'form-control','wire:model' => 'payment_date','autocomplete' => 'off','value' => '','placeholder' => '']); ?>
 <?php echo $__env->renderComponent(); ?>
 <?php endif; ?>
 <?php if (isset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4)): ?>
@@ -80,7 +80,7 @@
                 <div class="hstack gap-2 justify-content-end d-print-none mt-4">
                         <a href="javascript:void(0);" class="btn btn-success" wire:click="update()"><i class="ri-save-3-line align-bottom me-1"></i> Simpan</a>
                         <a href="javascript:void(0);" class="btn btn-light"><i class="ri-refresh-line align-bottom me-1"></i> Reset</a>
-                        <a href="javascript:void(0);" class="btn btn-danger"><i class="ri-delete-bin-line align-bottom me-1"></i> Padam</a>
+                        <a href="javascript:void(0);" class="btn btn-danger" wire:click="delete()"><i class="ri-delete-bin-line align-bottom me-1"></i> Padam</a>
                 </div>
                 
                 
