@@ -106,10 +106,10 @@
             <div class="mb-3">
                 <input
                     type="text"
-                    class="form-control form-control-sm col-4"
+                    class="form-control border-0"
                     wire:model="search"
                     aria-describedby="helpId"
-                    placeholder="Carian Nama"
+                    placeholder="Taip di sini untuk carian nama"
                 />
             </div>
             
