@@ -2,10 +2,10 @@
   
 <?php $__env->startComponent('components.breadcrumb'); ?>
 <?php $__env->slot('li_1'); ?>
-invoices
+Resit
 <?php $__env->endSlot(); ?>
 <?php $__env->slot('title'); ?>
-Invoice Details
+Resit
 <?php $__env->endSlot(); ?>
 <?php echo $__env->renderComponent(); ?>
 
@@ -18,7 +18,6 @@ Invoice Details
                         <div class="d-flex">
                             <div class="flex-grow-1">
                                <img src="<?php echo e(URL::asset('assets/images/KSR.png')); ?>" alt="" height="90">
-                               
                                 <div class="mt-sm-2 mt-2">
                                     <h6 class="text-dark text-uppercase fw-semibold">KELAB SUKAN DAN REKREASI (KSR) SPRM</h6>
                                     <p class="text-muted mb-1" id="address-details">2, Lebuh Wawasan, Presint 7, </p>
@@ -30,46 +29,73 @@ Invoice Details
                                     
                                 </h3>
                                 <h6><span class="text-muted fw-normal">No Resit:</span>
-                                    <span id="email">123454/2023</span>
+                                    <span id="email"><?php echo e($data->receipt_no); ?></span>
                                 </h6>
                                 
-                                <h6 class="mb-0"><span class="text-muted fw-normal">Tarikh: </span><span> 19/12/2023</span></h6>
+                                <h6 class="mb-0"><span class="text-muted fw-normal">Tarikh: </span><span> <?php echo e($data->receipt_date); ?></span></h6>
                             </div>
                         </div>
                     </div>
                     <!--end card-header-->
                 </div>
                 <!--end col-->
-                <div class="col-lg-12">
-                    <div class="card-body p-4">
-                        <div class="row g-3">
-                            <div class="col-lg-4 col-6">
-                                <p class="text-muted mb-2 text-uppercase fw-semibold">Diterima daripada:</p>
-                                <h5 class="fs-14 mb-0 text-uppercase">Budi Hermawan</h5>
+
+
+                 <div class="card-body p-4">
+                 
+                        <div class="row g-1">
+                            <div class="col-lg-6 col-sm-6">
+                                <label for="invoicenoInput" class="text-muted text-uppercase fw-semibold">Diterima daripada:</label>
+                                <h5 class="fs-14 mb-0 text-uppercase"><?php echo e($data->receive_from); ?></h5>                            
+                                </div>
+                           
+                            <div class="col-lg-6 col-sm-6">
+                                <label for="invoicenoInput" class="text-muted text-uppercase fw-semibold">Diterima Oleh:</label>
+                                <h5 class="fs-14 mb-0 text-uppercase"><?php echo e($data->receive_by); ?></h5>                            
                             </div>
-                            <!--end col-->
-                            <div class="col-lg-4 col-6">
-                                <p class="text-muted mb-2 text-uppercase fw-semibold">Ringgit Malaysia</p>
-                                <h5 class="fs-14 mb-0">LIMA RATUS LIMA PULUH RINGGIT SAHAJA</h5>
-                            </div>
-                            <!--end col-->
-                            <div class="col-lg-4 col-6">
-                                <p class="text-muted mb-2 text-uppercase fw-semibold">untuk bayaran</p>
-                                <h5 class="fs-14 mb-0">YURAN KSR UNTUK BAHAGIAN PENGURUSAN REKOD DAN MAKLUMAT UNTUK BULAN JULAI 2023 SEPERTI PENAMA DIBAWAH</h5>
-                            </div>
-                            <!--end col-->
-                            
+                           
                             <!--end col-->
                         </div>
                         <!--end row-->
                     </div>
-                    <!--end card-body-->
-                </div>
-                <!--end col-->
-                
+                    <div class="card-body p-4 border-bottom border-bottom-dashed">
+                        <div class="row">
+                            <div class="col-lg-6 col-sm-6">
+                                <div>
+                                    <label for="billingName" class="text-muted text-uppercase fw-semibold">Ringgit Malaysia</label>
+                                </div>
+                                
+                                <div class="mb-2">
+                                <h5 class="fs-14 mb-0 text-uppercase"><?php echo e($data->ringgit); ?></h5>                            
+                                   
+                                </div>
+                                
+                            </div>
+                            <!--end col-->
+                            <div class="col-lg-6 col-sm-6">
+                                <div class="row">
+                                        <div>
+                                            <label for="shippingName" class="text-muted text-uppercase fw-semibold">Untuk Bayaran</label>
+                                        </div>
+                                       
+                                        <div class="mb-2">
+                                        <h5 class="fs-14 mb-0 text-uppercase"><?php echo e($data->payment_for); ?></h5>                            
+                                            
+                                        </div>
+                                        
+                                       
+                                </div>
+                            </div>
+                            <!--end col-->
+                        </div>
+                        <!--end row-->
+              </div>
+              
                 <!--end col-->
                 <div class="col-lg-12">
                     <div class="card-body p-4">
+                        <label for="billingName" class="text-muted text-uppercase fw-semibold">PERIHAL BAYARAN</label>
+
                         <div class="table-responsive">
                             <table class="table table-borderless text-center table-nowrap align-middle mb-0">
                                 <thead>
@@ -78,46 +104,21 @@ Invoice Details
                                         <th scope="col">Nama</th>
                                         <th scope="col">Bahagian</th>
                                         <th scope="col">Jumlah</th>
-                                        
                                     </tr>
                                 </thead>
                                 <tbody id="products-list">
+                                <?php $__currentLoopData = $members; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $key => $member): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                     <tr>
-                                        <th scope="row">01</th>
+                                        <th scope="row"><?php echo e($loop->iteration); ?></th>
                                         <td class="text-start">
-                                            <span class="fw-medium">Budi Hermawan</span>
+                                            <span class="fw-medium"><?php echo e(@$member->member->name); ?></span>
                                         </td>
-                                        <td><p class="text-muted mb-0">BAHAGIAN PENGURUSAN REKOD DAN MAKLUMAT</p></td>
-                                        
-                                        <td class="text-end">$239.98</td>
+                                        <td><p class="text-muted mb-0"><?php echo e(@$member->department->name); ?></p></td>
+                                        <td class="text-end">RM<?php echo e(@$member->value); ?></td>
                                     </tr>
-                                    <tr>
-                                        <th scope="row">02</th>
-                                        <td class="text-start">
-                                            <span class="fw-medium">Budi Hermawan</span>
-                                        </td>
-                                        <td><p class="text-muted mb-0">BAHAGIAN PENGURUSAN REKOD DAN MAKLUMAT</p></td>
-                                        
-                                        <td class="text-end">$239.98</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">03</th>
-                                        <td class="text-start">
-                                            <span class="fw-medium">Budi Hermawan</span>
-                                        </td>
-                                        <td><p class="text-muted mb-0">BAHAGIAN PENGURUSAN REKOD DAN MAKLUMAT</p></td>
-                                        
-                                        <td class="text-end">$239.98</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">04</th>
-                                        <td class="text-start">
-                                            <span class="fw-medium">Budi Hermawan</span>
-                                        </td>
-                                        <td><p class="text-muted mb-0">BAHAGIAN PENGURUSAN REKOD DAN MAKLUMAT</p></td>
-                                        
-                                        <td class="text-end">$239.98</td>
-                                    </tr>
+
+                                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                                    
                                 </tbody>
                             </table>
                             <!--end table-->
@@ -125,13 +126,10 @@ Invoice Details
                         <div class="border-top border-top-dashed mt-2">
                             <table class="table table-borderless table-nowrap align-middle mb-0 ms-auto" style="width:250px">
                                 <tbody>
-                                    
-                                    
-                                    
-                                    
+                                   
                                     <tr class="border-top border-top-dashed fs-15">
                                         <th scope="row">Jumlah Keseluruhan</th>
-                                        <th class="text-end">RM550.00</th>
+                                        <th class="text-end">RM<?php echo e($sum); ?></th>
                                     </tr>
                                 </tbody>
                             </table>
@@ -142,9 +140,8 @@ Invoice Details
                         </div>
                         <div class="mt-3">
                             <h6 class="text-muted text-uppercase fw-semibold mb-3">Maklumat Pembayaran:</h6>
-                            <p class="text-muted mb-1">Cara Pembayaran: <span class="fw-medium" id="payment-method">Tunai</span></p>
-                            
-                            
+                            <p class="text-muted mb-1">Cara Pembayaran: <span class="fw-medium" id="payment-method"><?php echo e($data->payment_method); ?></span></p>
+                            <p class="text-muted mb-1">Catatan: <span class="fw-medium" id="payment-method"><?php echo e($data->remarks); ?></span></p>
                             
                         </div>
                         <div class="mt-4">
@@ -167,7 +164,6 @@ Invoice Details
                     <!--end card-body-->
                 </div>
                 <!--end col-->
-            </div>
             <!--end row-->
         </div>
         <!--end card-->

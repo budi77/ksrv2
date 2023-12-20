@@ -44,7 +44,7 @@
                                     
                                 </div>
                                 <div>
-                                    <x-date-picker id="date" class="form-control bg-light border-0" wire:model="payment_date" autocomplete="off" value="" placeholder="Tarikh" />
+                                    <x-date-picker id="date" class="form-control bg-light border-0" wire:model="receipt_date" autocomplete="off" value="" placeholder="Tarikh" />
 
                                 </div>
                             </div>
@@ -54,25 +54,20 @@
                     <div class="card-body p-4">
                         <div class="row g-3">
                             <div class="col-lg-6 col-sm-6">
-                                <label for="invoicenoInput">Diterima daripada:</label>
+                                <label for="invoicenoInput"  class="text-muted text-uppercase fw-semibold">Diterima daripada:</label>
                                 <input type="text" class="form-control bg-light border-0" id="invoicenoInput" placeholder="Diterima daripada" wire:model="receive_from"/>
                             </div>
                            
                             <div class="col-lg-6 col-sm-6">
-                                <label for="invoicenoInput">Diterima Oleh:</label>
+                                <label for="invoicenoInput"  class="text-muted text-uppercase fw-semibold">Diterima Oleh:</label>
                                 <input type="text" class="form-control bg-light border-0" id="invoicenoInput" placeholder="Diterima Oleh" wire:model="receive_by"/>
                             </div>
-                            {{-- <div class="col-lg-3 col-sm-6">
-                                <div>
-                                    <label for="totalamountInput">Total Amount</label>
-                                    <input type="text" class="form-control bg-light border-0" id="totalamountInput" placeholder="$0.00" readonly />
-                                </div>
-                            </div> --}}
+                           
                             <!--end col-->
                         </div>
                         <!--end row-->
                     </div>
-                    <div class="card-body p-4 border-top border-top-dashed">
+                    <div class="card-body p-4 border-bottom border-bottom-dashed">
                         <div class="row">
                             <div class="col-lg-6 col-sm-6">
                                 <div>

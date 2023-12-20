@@ -33,8 +33,8 @@ class Cipta extends Component
 
         $store = Receipt::create([
             'receipt_no' => $this->receipt_no,
-            'payment_date' => $this->payment_date,
-            'receive_from' => $this->receipt_from,
+            'receipt_date' => $this->receipt_date,
+            'receive_from' => $this->receive_from,
             'receive_by' => $this->receive_by,
             'ringgit' => $this->ringgit,
             'payment_for' => $this->payment_for,

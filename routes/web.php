@@ -65,7 +65,7 @@ Route::middleware('auth')->group(function () {
 
 
     Route::get('/resit', \App\Http\Livewire\Receipt\Index::class)->name('resit');
-    Route::get('/resit/cetak/{id}', \App\Http\Livewire\Receipt\Cetak::class)->name('resit.cetak');
+    Route::get('/resit/cetak/{receipt}', \App\Http\Livewire\Receipt\Cetak::class)->name('resit.cetak');
     Route::get('/resit/cipta', \App\Http\Livewire\Receipt\Cipta::class)->name('resit.cipta');
 
 
