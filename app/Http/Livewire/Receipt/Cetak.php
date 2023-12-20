@@ -17,7 +17,7 @@ class Cetak extends Component
 
         $this->data = $receipt;
         $this->members = Fee::where('department_id', $receipt->department_id )->whereMode('TUNAI')->whereBetween('payment_date', [$receipt->date_start, $receipt->date_end])->get();
-        $this->sum = Fee::where('department_id', $receipt->department_id )->whereBetween('payment_date', [$receipt->date_start, $receipt->date_end])->sum('value');
+        $this->sum = Fee::where('department_id', $receipt->department_id )->whereMode('TUNAI')->whereBetween('payment_date', [$receipt->date_start, $receipt->date_end])->sum('value');
     }
 
     public function render()

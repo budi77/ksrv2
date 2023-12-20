@@ -24,7 +24,7 @@ class Cipta extends Component
     public function getData()
     {
         $this->results = Fee::where('department_id', $this->department_id )->whereMode('TUNAI')->whereBetween('payment_date', [$this->date_start, $this->date_end])->get();
-        $this->sum = Fee::where('department_id', $this->department_id )->whereBetween('payment_date', [$this->date_start, $this->date_end])->sum('value');
+        $this->sum = Fee::where('department_id', $this->department_id )->whereMode('TUNAI')->whereBetween('payment_date', [$this->date_start, $this->date_end])->sum('value');
         // dd($this->sum);
     }
 
