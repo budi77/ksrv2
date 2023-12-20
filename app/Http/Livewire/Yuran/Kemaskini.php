@@ -5,24 +5,28 @@ namespace App\Http\Livewire\Yuran;
 use Livewire\Component;
 use App\Models\Fee;
 use Jantinnerezo\LivewireAlert\LivewireAlert;
+use Livewire\WithPagination;
 
 
 class Kemaskini extends Component
 {
 
     use LivewireAlert;
+    use WithPagination;
+    protected $paginationTheme = 'bootstrap';
 
-    public $fees, $search, $data_id, $member_name, $department, $year, $value, $mode, $payment_date ;
+
+    public $search, $data_id, $member_name, $department, $year, $value, $mode, $payment_date ;
 
     public function render()
     {
-        $this->fees = Fee::with('member')->whereHas('member', function($q) {
+        $fees = Fee::with('member')->whereHas('member', function($q) {
             $q->where('name', 'like', '%'. $this->search . '%' );            
         })
-        ->get();
+        ->paginate(50);
             
         
-        return view('livewire.yuran.kemaskini')->extends('layouts.master');
+        return view('livewire.yuran.kemaskini', compact('fees'))->extends('layouts.master');
     }
 
     public function show($id)
@@ -50,7 +54,7 @@ class Kemaskini extends Component
             'payment_date' => $this->payment_date
         ]);
 
-        $this->resetExcept('fees');
+        $this->resetExcept();
     }
 
     public function delete()
@@ -59,5 +63,12 @@ class Kemaskini extends Component
             'showConfirmButton' => true,
             'confirmButtonText' => 'Good'
         ]);
+    }
+
+    public function clear()
+    {
+    
+
+        $this->resetExcept();
     }
 }

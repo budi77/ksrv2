@@ -65,7 +65,7 @@
                 
                 <div class="hstack gap-2 justify-content-end d-print-none mt-4">
                         <a href="javascript:void(0);" class="btn btn-success" wire:click="update()"><i class="ri-save-3-line align-bottom me-1"></i> Simpan</a>
-                        <a href="javascript:void(0);" class="btn btn-light"><i class="ri-refresh-line align-bottom me-1"></i> Reset</a>
+                        <a href="javascript:void(0);" class="btn btn-light"  wire:click="clear()"><i class="ri-refresh-line align-bottom me-1"></i> Reset</a>
                         <a href="javascript:void(0);" class="btn btn-danger" wire:click="delete()"><i class="ri-delete-bin-line align-bottom me-1"></i> Padam</a>
                 </div>
                 
@@ -119,7 +119,10 @@
                 @endforeach
                     
                 </tbody>
+
+
             </table>
+                    {{ $fees->links() }}
         </div>
                
             </div>
