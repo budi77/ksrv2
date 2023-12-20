@@ -16,9 +16,11 @@
             <div class="card">
                 {{-- <img class="card-img-top" src="holder.js/100x180/" alt="Title" /> --}}
                 <div class="card-body">
-
-                <h6>Nama : {{ @$member_name }}</h6>
-                <h6>Bahagian : {{ @$department }}</h6>
+                <div class="text-center">
+                    <h5 class="fw-semibold">{{ @$member_name }}</h5>
+                    <h5 class="text-muted"> {{ @$department }}</h5>
+                </div>
+                
 
                 <br>
 

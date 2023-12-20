@@ -16,9 +16,11 @@
             <div class="card">
                 
                 <div class="card-body">
-
-                <h6>Nama : <?php echo e(@$member_name); ?></h6>
-                <h6>Bahagian : <?php echo e(@$department); ?></h6>
+                <div class="text-center">
+                    <h5 class="fw-semibold"><?php echo e(@$member_name); ?></h5>
+                    <h5 class="text-muted"> <?php echo e(@$department); ?></h5>
+                </div>
+                
 
                 <br>
 

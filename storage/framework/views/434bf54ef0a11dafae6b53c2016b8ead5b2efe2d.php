@@ -62,6 +62,9 @@
                             <li class="nav-item">
                                 <a href="<?php echo e(route('fees.submission')); ?>"  class="nav-link">Serahan</a>
                             </li>
+                            <li class="nav-item">
+                                <a href="<?php echo e(route('fees.edit')); ?>"  class="nav-link">Kemaskini Yuran</a>
+                            </li>
                             
                         </ul>
                     </div>
