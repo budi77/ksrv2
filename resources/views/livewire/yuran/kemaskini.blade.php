@@ -90,7 +90,7 @@
             >
                 <thead class="table-light">
                     <tr>
-                        <th scope="col">#</th>
+                        {{-- <th scope="col">#</th> --}}
                         <th scope="col">Nama</th>
                         <th scope="col">Bahagian</th>
                         <th scope="col">Tahun</th>
@@ -103,7 +103,7 @@
                 <tbody>
                 @foreach($fees as $key => $data)
                     <tr class="">
-                        <td scope="row">{{ $loop->iteration }}</td>
+                        {{-- <td scope="row">{{ $loop->iteration }}</td> --}}
                         <td>{{ @$data->member->name }}</td>
                         <td>{{ @$data->department->name }}</td>
                         <td>{{ @$data->year }}</td>
