@@ -16,7 +16,7 @@ class Kemaskini extends Component
     protected $paginationTheme = 'bootstrap';
 
 
-    public $search, $data_id, $member_name, $department, $year, $value, $mode, $payment_date ;
+    public $search, $data_id, $member_name, $department, $year, $value, $mode, $payment_date, $editmode = false, $deletemode = false ;
 
     public function render()
     {
@@ -42,6 +42,7 @@ class Kemaskini extends Component
         $this->mode = $q->mode;
         $this->payment_date = $q->payment_date;
 
+        $this->editmode = true;
 
     }
 
@@ -55,20 +56,41 @@ class Kemaskini extends Component
         ]);
 
         $this->resetExcept();
+
+        $this->editmode = false;
+
     }
 
-    public function delete()
+    public function delete($id)
     {
-        $this->alert('question', 'How are you today?', [
-            'showConfirmButton' => true,
-            'confirmButtonText' => 'Good'
-        ]);
+        $this->data_id = $id;
+
+        $q = Fee::find($id);
+
+        $this->member_name = $q->member->name;
+        $this->department = $q->department->name;
+        $this->year = $q->year;
+        $this->value = $q->value;
+        $this->mode = $q->mode;
+        $this->payment_date = $q->payment_date;
+
+        $this->deletemode = true;
+    }
+
+    public function confirmed()
+    {
+        $q = Fee::find($this->data_id)->delete();
+        $this->reset();
+        $this->deletemode = false;
+
+
+
     }
 
     public function clear()
     {
     
 
-        $this->resetExcept();
+        $this->reset();
     }
 }

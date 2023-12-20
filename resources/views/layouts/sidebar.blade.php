@@ -63,6 +63,9 @@
                             <li class="nav-item">
                                 <a href="{{ route('fees.submission') }}"  class="nav-link">Serahan</a>
                             </li>
+                            <li class="nav-item">
+                                <a href="{{ route('fees.edit') }}"  class="nav-link">Kemaskini Yuran</a>
+                            </li>
                             
                         </ul>
                     </div>

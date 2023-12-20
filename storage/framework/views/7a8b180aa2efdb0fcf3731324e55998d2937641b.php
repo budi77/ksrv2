@@ -78,9 +78,15 @@
                 </div>
                 
                 <div class="hstack gap-2 justify-content-end d-print-none mt-4">
+                        <?php if($editmode): ?>
                         <a href="javascript:void(0);" class="btn btn-success" wire:click="update()"><i class="ri-save-3-line align-bottom me-1"></i> Simpan</a>
                         <a href="javascript:void(0);" class="btn btn-light"  wire:click="clear()"><i class="ri-refresh-line align-bottom me-1"></i> Reset</a>
-                        <a href="javascript:void(0);" class="btn btn-danger" wire:click="delete()"><i class="ri-delete-bin-line align-bottom me-1"></i> Padam</a>
+                        <?php endif; ?>
+                        <?php if($deletemode): ?>
+                        <a href="javascript:void(0);" class="btn btn-light"  wire:click="clear()"><i class="ri-refresh-line align-bottom me-1"></i> Reset</a>
+
+                        <a href="javascript:void(0);" class="btn btn-danger" wire:click="confirmed()"><i class="ri-delete-bin-line align-bottom me-1"></i> Padam</a>
+                        <?php endif; ?>
                 </div>
                 
                 
@@ -95,7 +101,16 @@
         <div class="card table-card">
             
             <div class="card-body">
-
+            <div class="mb-3">
+                <input
+                    type="text"
+                    class="form-control form-control-sm col-4"
+                    wire:model="search"
+                    aria-describedby="helpId"
+                    placeholder="Carian Nama"
+                />
+            </div>
+            
             <div
             class="table-responsive"
         >
@@ -104,7 +119,7 @@
             >
                 <thead class="table-light">
                     <tr>
-                        <th scope="col">#</th>
+                        
                         <th scope="col">Nama</th>
                         <th scope="col">Bahagian</th>
                         <th scope="col">Tahun</th>
@@ -117,7 +132,7 @@
                 <tbody>
                 <?php $__currentLoopData = $fees; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $key => $data): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                     <tr class="">
-                        <td scope="row"><?php echo e($loop->iteration); ?></td>
+                        
                         <td><?php echo e(@$data->member->name); ?></td>
                         <td><?php echo e(@$data->department->name); ?></td>
                         <td><?php echo e(@$data->year); ?></td>
@@ -127,6 +142,9 @@
                         <td>
                         <a href="javascript:void(0);" class="text-primary d-inline-block" wire:click="show('<?php echo e($data->id); ?>')">
                             <i class="ri-eye-fill fs-16"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="text-danger d-inline-block" wire:click="delete('<?php echo e($data->id); ?>')">
+                            <i class="ri-delete-bin-line fs-16"></i>
                         </a>
                         </td>
                     </tr>

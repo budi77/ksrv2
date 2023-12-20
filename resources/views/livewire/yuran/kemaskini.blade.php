@@ -64,9 +64,15 @@
                 </div>
                 
                 <div class="hstack gap-2 justify-content-end d-print-none mt-4">
+                        @if($editmode)
                         <a href="javascript:void(0);" class="btn btn-success" wire:click="update()"><i class="ri-save-3-line align-bottom me-1"></i> Simpan</a>
                         <a href="javascript:void(0);" class="btn btn-light"  wire:click="clear()"><i class="ri-refresh-line align-bottom me-1"></i> Reset</a>
-                        <a href="javascript:void(0);" class="btn btn-danger" wire:click="delete()"><i class="ri-delete-bin-line align-bottom me-1"></i> Padam</a>
+                        @endif
+                        @if($deletemode)
+                        <a href="javascript:void(0);" class="btn btn-light"  wire:click="clear()"><i class="ri-refresh-line align-bottom me-1"></i> Reset</a>
+
+                        <a href="javascript:void(0);" class="btn btn-danger" wire:click="confirmed()"><i class="ri-delete-bin-line align-bottom me-1"></i> Padam</a>
+                        @endif
                 </div>
                 
                 
@@ -81,7 +87,16 @@
         <div class="card table-card">
             {{-- <img class="card-img-top" src="holder.js/100x180/" alt="Title" /> --}}
             <div class="card-body">
-
+            <div class="mb-3">
+                <input
+                    type="text"
+                    class="form-control form-control-sm col-4"
+                    wire:model="search"
+                    aria-describedby="helpId"
+                    placeholder="Carian Nama"
+                />
+            </div>
+            
             <div
             class="table-responsive"
         >
@@ -113,6 +128,9 @@
                         <td>
                         <a href="javascript:void(0);" class="text-primary d-inline-block" wire:click="show('{{$data->id}}')">
                             <i class="ri-eye-fill fs-16"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="text-danger d-inline-block" wire:click="delete('{{$data->id}}')">
+                            <i class="ri-delete-bin-line fs-16"></i>
                         </a>
                         </td>
                     </tr>
