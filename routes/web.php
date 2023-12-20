@@ -62,6 +62,7 @@ Route::middleware('auth')->group(function () {
    
     Route::get('/yuran/serahan', \App\Http\Livewire\Fees\Submission\Index::class)->name('fees.submission');
     Route::get('/yuran/serahan/cipta', \App\Http\Livewire\Fees\Submission\Create::class)->name('fees.create');
+    Route::get('/yuran/kemaskini', \App\Http\Livewire\Yuran\Kemaskini::class)->name('fees.edit');
 
 
     Route::get('/resit', \App\Http\Livewire\Receipt\Index::class)->name('resit');
