@@ -1,12 +1,12 @@
 <div>
-    @component('components.breadcrumb')
-    @slot('li_1')
+    <?php $__env->startComponent('components.breadcrumb'); ?>
+    <?php $__env->slot('li_1'); ?>
     Kemaskini Pembayaran
-    @endslot
-    @slot('title')
+    <?php $__env->endSlot(); ?>
+    <?php $__env->slot('title'); ?>
     Kemaskini Pembayaran
-    @endslot
-    @endcomponent
+    <?php $__env->endSlot(); ?>
+    <?php echo $__env->renderComponent(); ?>
 
 
     <div
@@ -14,11 +14,11 @@
     >
         <div class="col-3">
             <div class="card">
-                {{-- <img class="card-img-top" src="holder.js/100x180/" alt="Title" /> --}}
+                
                 <div class="card-body">
                 <div class="text-center">
-                    <h5 class="fw-semibold">{{ @$member_name }}</h5>
-                    <h5 class="text-muted"> {{ @$department }}</h5>
+                    <h5 class="fw-semibold"><?php echo e(@$member_name); ?></h5>
+                    <h5 class="text-muted"> <?php echo e(@$department); ?></h5>
                 </div>
                 
 
@@ -33,7 +33,7 @@
                         aria-describedby="helpId"
                         placeholder=""
                     />
-                    {{-- <small id="helpId" class="form-text text-muted">Help text</small> --}}
+                    
                 </div>
                 <div class="mb-3">
                     <label for="" class="form-label">Jumlah Bayaran</label>
@@ -53,28 +53,42 @@
                         wire:model="mode"
                     >
                         <option selected>-- Pilih --</option>
-                        <option value="TUNAI" @selected($mode == 'TUNAI')>TUNAI</option>
-                        <option value="KOSPERA" @selected($mode == 'KOSPERA')>KOSPERA</option>
+                        <option value="TUNAI" <?php if($mode == 'TUNAI'): echo 'selected'; endif; ?>>TUNAI</option>
+                        <option value="KOSPERA" <?php if($mode == 'KOSPERA'): echo 'selected'; endif; ?>>KOSPERA</option>
                         
                     </select>
                 </div>
 
                 <div class="mb-3">
                     <label for="" class="form-label">Tarikh Bayaran</label>
-                    <x-date-picker id="date" class="form-control" wire:model="payment_date" autocomplete="off" value="" placeholder="" />
+                    <?php if (isset($component)) { $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4 = $component; } ?>
+<?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'components.date-picker','data' => ['id' => 'date','class' => 'form-control','wire:model' => 'payment_date','autocomplete' => 'off','value' => '','placeholder' => '']] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? (array) $attributes->getIterator() : [])); ?>
+<?php $component->withName('date-picker'); ?>
+<?php if ($component->shouldRender()): ?>
+<?php $__env->startComponent($component->resolveView(), $component->data()); ?>
+<?php if (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag && $constructor = (new ReflectionClass(Illuminate\View\AnonymousComponent::class))->getConstructor()): ?>
+<?php $attributes = $attributes->except(collect($constructor->getParameters())->map->getName()->all()); ?>
+<?php endif; ?>
+<?php $component->withAttributes(['id' => 'date','class' => 'form-control','wire:model' => 'payment_date','autocomplete' => 'off','value' => '','placeholder' => '']); ?>
+<?php echo $__env->renderComponent(); ?>
+<?php endif; ?>
+<?php if (isset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4)): ?>
+<?php $component = $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4; ?>
+<?php unset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4); ?>
+<?php endif; ?>
 
                 </div>
                 
                 <div class="hstack gap-2 justify-content-end d-print-none mt-4">
-                        @if($editmode)
+                        <?php if($editmode): ?>
                         <a href="javascript:void(0);" class="btn btn-success" wire:click="update()"><i class="ri-save-3-line align-bottom me-1"></i> Simpan</a>
                         <a href="javascript:void(0);" class="btn btn-light"  wire:click="clear()"><i class="ri-refresh-line align-bottom me-1"></i> Reset</a>
-                        @endif
-                        @if($deletemode)
+                        <?php endif; ?>
+                        <?php if($deletemode): ?>
                         <a href="javascript:void(0);" class="btn btn-light"  wire:click="clear()"><i class="ri-refresh-line align-bottom me-1"></i> Reset</a>
 
                         <a href="javascript:void(0);" class="btn btn-danger" wire:click="confirmed()"><i class="ri-delete-bin-line align-bottom me-1"></i> Padam</a>
-                        @endif
+                        <?php endif; ?>
                 </div>
                 
                 
@@ -87,7 +101,7 @@
         <div class="col-9">
 
         <div class="card table-card">
-            {{-- <img class="card-img-top" src="holder.js/100x180/" alt="Title" /> --}}
+            
             <div class="card-body">
             <div class="mb-3">
                 <input
@@ -107,7 +121,7 @@
             >
                 <thead class="table-light">
                     <tr>
-                        {{-- <th scope="col">#</th> --}}
+                        
                         <th scope="col">Nama</th>
                         <th scope="col">Bahagian</th>
                         <th scope="col">Tahun</th>
@@ -118,31 +132,32 @@
                     </tr>
                 </thead>
                 <tbody>
-                @foreach($fees as $key => $data)
+                <?php $__currentLoopData = $fees; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $key => $data): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                     <tr class="">
-                        {{-- <td scope="row">{{ $loop->iteration }}</td> --}}
-                        <td>{{ @$data->member->name }}</td>
-                        <td>{{ @$data->department->name }}</td>
-                        <td>{{ @$data->year }}</td>
-                        <td>{{ @$data->value }}</td>
-                        <td>{{ @$data->mode }}</td>
-                        <td>{{ @$data->payment_date }}</td>
+                        
+                        <td><?php echo e(@$data->member->name); ?></td>
+                        <td><?php echo e(@$data->department->name); ?></td>
+                        <td><?php echo e(@$data->year); ?></td>
+                        <td><?php echo e(@$data->value); ?></td>
+                        <td><?php echo e(@$data->mode); ?></td>
+                        <td><?php echo e(@$data->payment_date); ?></td>
                         <td>
-                        <a href="javascript:void(0);" class="text-primary d-inline-block" wire:click="show('{{$data->id}}')">
+                        <a href="javascript:void(0);" class="text-primary d-inline-block" wire:click="show('<?php echo e($data->id); ?>')">
                             <i class="ri-eye-fill fs-16"></i>
                         </a>
-                        <a href="javascript:void(0);" class="text-danger d-inline-block" wire:click="delete('{{$data->id}}')">
+                        <a href="javascript:void(0);" class="text-danger d-inline-block" wire:click="delete('<?php echo e($data->id); ?>')">
                             <i class="ri-delete-bin-line fs-16"></i>
                         </a>
                         </td>
                     </tr>
-                @endforeach
+                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                     
                 </tbody>
 
 
             </table>
-                    {{ $fees->links() }}
+                    <?php echo e($fees->links()); ?>
+
         </div>
                
             </div>
@@ -155,3 +170,4 @@
         
     
 </div>
+<?php /**PATH C:\laragon\www\ksrv2\resources\views/livewire/yuran/kemaskini.blade.php ENDPATH**/ ?>

@@ -17,4 +17,9 @@ class Receipt extends Model
 
     }
 
+    public function fees()
+    {
+        return $this->hasMany(Fee::class, 'department_id', 'department_id');
+    }
+
 }

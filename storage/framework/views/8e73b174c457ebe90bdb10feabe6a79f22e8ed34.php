@@ -45,14 +45,14 @@
                                 </div>
                                 <div>
                                     <?php if (isset($component)) { $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4 = $component; } ?>
-<?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'components.date-picker','data' => ['id' => 'date','class' => 'form-control bg-light border-0','wire:model' => 'payment_date','autocomplete' => 'off','value' => '','placeholder' => 'Tarikh']] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? (array) $attributes->getIterator() : [])); ?>
+<?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'components.date-picker','data' => ['id' => 'date','class' => 'form-control bg-light border-0','wire:model' => 'receipt_date','autocomplete' => 'off','value' => '','placeholder' => 'Tarikh']] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? (array) $attributes->getIterator() : [])); ?>
 <?php $component->withName('date-picker'); ?>
 <?php if ($component->shouldRender()): ?>
 <?php $__env->startComponent($component->resolveView(), $component->data()); ?>
 <?php if (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag && $constructor = (new ReflectionClass(Illuminate\View\AnonymousComponent::class))->getConstructor()): ?>
 <?php $attributes = $attributes->except(collect($constructor->getParameters())->map->getName()->all()); ?>
 <?php endif; ?>
-<?php $component->withAttributes(['id' => 'date','class' => 'form-control bg-light border-0','wire:model' => 'payment_date','autocomplete' => 'off','value' => '','placeholder' => 'Tarikh']); ?>
+<?php $component->withAttributes(['id' => 'date','class' => 'form-control bg-light border-0','wire:model' => 'receipt_date','autocomplete' => 'off','value' => '','placeholder' => 'Tarikh']); ?>
 <?php echo $__env->renderComponent(); ?>
 <?php endif; ?>
 <?php if (isset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4)): ?>
@@ -68,20 +68,20 @@
                     <div class="card-body p-4">
                         <div class="row g-3">
                             <div class="col-lg-6 col-sm-6">
-                                <label for="invoicenoInput">Diterima daripada:</label>
+                                <label for="invoicenoInput"  class="text-muted text-uppercase fw-semibold">Diterima daripada:</label>
                                 <input type="text" class="form-control bg-light border-0" id="invoicenoInput" placeholder="Diterima daripada" wire:model="receive_from"/>
                             </div>
                            
                             <div class="col-lg-6 col-sm-6">
-                                <label for="invoicenoInput">Diterima Oleh:</label>
+                                <label for="invoicenoInput"  class="text-muted text-uppercase fw-semibold">Diterima Oleh:</label>
                                 <input type="text" class="form-control bg-light border-0" id="invoicenoInput" placeholder="Diterima Oleh" wire:model="receive_by"/>
                             </div>
-                            
+                           
                             <!--end col-->
                         </div>
                         <!--end row-->
                     </div>
-                    <div class="card-body p-4 border-top border-top-dashed">
+                    <div class="card-body p-4 border-bottom border-bottom-dashed">
                         <div class="row">
                             <div class="col-lg-6 col-sm-6">
                                 <div>

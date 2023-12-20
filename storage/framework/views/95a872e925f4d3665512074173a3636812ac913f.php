@@ -135,7 +135,7 @@
                 </div>
                 <div class="card-body">
                     <div class="table-responsive table-card">
-                        <table class="table align-middle table-nowrap table-striped table-bordered" id="customerTable">
+                        <table class="table align-middle table-nowrap table-striped" id="customerTable">
                             <thead class="bg-dark text-white">
                                 <tr>
                                     <th scope="col">#</th>
@@ -144,6 +144,7 @@
                                     <th  scope="col" class="text-center">Email</th>
                                     <th  scope="col" class="text-center">Tahun</th>
                                     <th  scope="col" class="text-center">Jumlah Bayaran</th>
+                                    
                                     <th  scope="col" class="text-center">Baki</th>
                                     <th  scope="col" class="text-end"></th>
                                 </tr>
@@ -178,6 +179,7 @@
 
 
                                     </td>
+                                    
                                     <td class="text-center">
                                         
                                           <?php if(@$value - @$row->payments_sum_value == 0): ?>
@@ -201,7 +203,7 @@
                                             <?php endif; ?>
                                     </td>
                                     
-                                    <td class="text-end text-center">
+                                    <td class="d-flex justify-content-end">
                                         <ul class="list-inline hstack gap-2 mb-0 text-end">
                                             
                                             <li class="list-inline-item edit" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" aria-label="Edit">
@@ -297,7 +299,7 @@
                             </div>
                             </div>
                             <div class="flex-shrink-0">
-                            <span class="text-danger">RM<?php echo e(@$value- $balance); ?></span>
+                            <span class="text-danger fw-bold">RM<?php echo e(@$value- $balance); ?></span>
                             </div>
                             </div>
                             </li>
@@ -307,7 +309,20 @@
                             </ul>
                             </div>
 
+                           
+
                         <div class="col-12 pt-2">
+
+                         <?php if($errors->any()): ?>
+                                <div class="alert alert-danger">
+                                    <ul>
+                                        <?php $__currentLoopData = $errors->all(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $error): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                            <li><?php echo e($error); ?></li>
+                                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                                    </ul>
+                                </div>
+                            <?php endif; ?>
+                            
                             <div class="mb-3">
                                 <label for="" class="form-label">Jumlah</label>
                                 <input type="text"
@@ -336,6 +351,43 @@
                             </div> 
                            
                         </div>
+
+                        <div class="col-12">
+
+                         <div class="col-12">
+                            <div class="mb-0">
+                                <label for="" class="form-label">Cara Pembayaran</label>
+                            </div> 
+                           
+                        </div>
+
+                           <div class="form-check form-check-inline">
+                            <input
+                                class="form-check-input"
+                                type="radio"
+                                name="mode"
+                                id=""
+                                value="TUNAI"
+                                wire:model="mode"
+                                
+                            />
+                            <label class="form-check-label" for="">TUNAI</label>
+                           </div>
+                           <div class="form-check form-check-inline">
+                            <input
+                                class="form-check-input"
+                                type="radio"
+                                name="model"
+                                id=""
+                                value="KOSPERA"
+                                wire:model="mode"
+                            />
+                            <label class="form-check-label" for="">KOSPERA</label>
+                           </div>
+                           
+                        </div>
+
+                       
 
                     </div>
 
@@ -375,6 +427,7 @@
                                     <th scope="col">Tahun</th>
                                     <th scope="col">Tarikh Bayaran</th>
                                     <th scope="col">Jumlah Bayaran</th>
+                                    <th scope="col">Cara Bayaran</th>
                                     <th scope="col">Bahagian</th>
                                 </tr>
                             </thead>
@@ -384,6 +437,7 @@
                                     <td scope="row"><?php echo e(@$data->year); ?></td>
                                     <td><?php echo e(Carbon\Carbon::parse(@$data->payment_date)->format('d/m/Y')); ?></td>
                                     <td><?php echo e(@$data->value); ?></td>
+                                    <td><?php echo e(@$data->mode); ?></td>
                                     <td><?php echo e(@$data->department->name); ?></td>
                                 </tr>
                                 <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>

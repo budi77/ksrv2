@@ -61,7 +61,7 @@
                                 <a href="{{ route('fees.federations.show') }}"  class="nav-link">Gabungan</a>
                             </li>
                             <li class="nav-item">
-                                <a href="{{ route('fees.submission') }}"  class="nav-link">Serahan</a>
+                                <a href="{{ route('resit') }}"  class="nav-link">Resit Pembayaran</a>
                             </li>
                             <li class="nav-item">
                                 <a href="{{ route('fees.edit') }}"  class="nav-link">Kemaskini Yuran</a>
