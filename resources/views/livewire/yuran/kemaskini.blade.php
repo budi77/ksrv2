@@ -90,13 +90,18 @@
             {{-- <img class="card-img-top" src="holder.js/100x180/" alt="Title" /> --}}
             <div class="card-body">
             <div class="mb-3">
-                <input
+            <div class="search-box">
+            <input
                     type="text"
-                    class="form-control border-0"
+                    class="form-control border-0 search"
                     wire:model="search"
                     aria-describedby="helpId"
                     placeholder="Taip di sini untuk carian nama"
                 />
+                <i class="ri-search-line search-icon"></i>
+
+            </div>
+                
             </div>
             
             <div
