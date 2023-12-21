@@ -45,11 +45,27 @@
             </div>
     </div>
 
-    <div class="col-3">
+    <div class="col-4">
+
+    <?php
+if (! isset($_instance)) {
+    $html = \Livewire\Livewire::mount('dashboard.stat', [])->html();
+} elseif ($_instance->childHasBeenRendered('w52MFWB')) {
+    $componentId = $_instance->getRenderedChildComponentId('w52MFWB');
+    $componentTag = $_instance->getRenderedChildComponentTagName('w52MFWB');
+    $html = \Livewire\Livewire::dummyMount($componentId, $componentTag);
+    $_instance->preserveRenderedChild('w52MFWB');
+} else {
+    $response = \Livewire\Livewire::mount('dashboard.stat', []);
+    $html = $response->html();
+    $_instance->logRenderedChild('w52MFWB', $response->id(), \Livewire\Livewire::getRootElementTagName($html));
+}
+echo $html;
+?>
     
     </div>
     
-    <div class="col-3">
+    <div class="col-2">
     
     </div>
     

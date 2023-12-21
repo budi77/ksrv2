@@ -98,7 +98,7 @@
                                     </div>
                                 </div>
                             </div><!-- end col -->
-                            
+                           
                         </div><!-- end row -->
                     </div><!-- end card body -->
                 </div><!-- end card -->
@@ -116,7 +116,7 @@
                             <div class="flex-shrink-0">
                                 <button class="btn btn-primary add-btn" wire:click="showModal"><i
                                         class="ri-add-line align-bottom me-1"></i> Tambah Ahli</button>
-                                
+                          
                             </div>
                         </div>
                     </div>
@@ -132,7 +132,7 @@
                                 </div>
                                 <!--end col-->
 
-                                
+                              
                                 <!--end col-->
 
                                 <div class="col-xxl-5 col-sm-5">
@@ -171,7 +171,7 @@
                                     </div>
                                 </div>
                                 <!--end col-->
-                                
+                               
                                 <!--end col-->
                             </div>
                             <!--end row-->
@@ -181,12 +181,12 @@
                     <div class="card-body">
                         <div class="table-responsive table-card mb-4">
                             <table class="table align-middle table-nowrap mb-0" id="tasksTable">
-                                <thead class="table bg-info text-white">
+                                <thead class="table bg-dark text-white">
                                     <tr>
                                         
                                         <th>#</th>
                                         <th width="20%">Nama</th>
-                                        <th>No Kad Pengenalan</th>
+                                        
                                         <th>E-Mel</th>
                                         <th>Bahagian</th>
                                         <th>Kospera</th>
@@ -209,9 +209,7 @@
                                                 <?php echo e($result->name); ?>
 
                                         </td>
-                                        <td class="project_name"> 
-                                            <?php echo e($result->ic_no); ?>                                               
-                                        </td>
+                                        
                                         <td>
                                             <?php echo e($result->email); ?>
 
@@ -223,7 +221,7 @@
                                         </td>
                                         <td class="text-info">
                                             <?php if($result->kospera == 1): ?>
-                                            <span class="badge text-bg-warning text-uppercase">Kospera</span>
+                                            <span class="badge rounded-pill bg-secondary">KOSPERA</span>
                                             <?php endif; ?>
                                         </td>
                                         <td class="">
@@ -234,7 +232,7 @@
 
                                             <?php endif; ?>
                                         </td>
-                                        <td>
+                                        <td class="text-end">
                                             <ul class="list-inline hstack gap-2 mb-0">
                                                
                                                 <li class="list-inline-item" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" aria-label="View">

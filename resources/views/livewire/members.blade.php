@@ -115,22 +115,7 @@
                                     </div>
                                 </div>
                             </div><!-- end col -->
-                            {{-- <div class="col col-lg">
-                                <div class="mt-3 mt-lg-0 py-4 px-3">
-                                    <h5 class="text-muted text-uppercase fs-13">Annual Deals <i
-                                            class="ri-arrow-down-circle-line text-danger fs-18 float-end align-middle"></i>
-                                    </h5>
-                                    <div class="d-flex align-items-center">
-                                        <div class="flex-shrink-0">
-                                            <i class="ri-service-line display-6 text-muted"></i>
-                                        </div>
-                                        <div class="flex-grow-1 ms-3">
-                                            <h2 class="mb-0"><span class="counter-value"
-                                                    data-target="2659">0</span></h2>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div><!-- end col --> --}}
+                           
                         </div><!-- end row -->
                     </div><!-- end card body -->
                 </div><!-- end card -->
@@ -148,8 +133,7 @@
                             <div class="flex-shrink-0">
                                 <button class="btn btn-primary add-btn" wire:click="showModal"><i
                                         class="ri-add-line align-bottom me-1"></i> Tambah Ahli</button>
-                                {{-- <button class="btn btn-soft-danger" onClick="deleteMultiple()"><i
-                                        class="ri-delete-bin-2-line"></i></button> --}}
+                          
                             </div>
                         </div>
                     </div>
@@ -165,11 +149,7 @@
                                 </div>
                                 <!--end col-->
 
-                                {{-- <div class="col-xxl-3 col-sm-4">
-                                    <input type="text" class="form-control bg-light border-light" id="demo-datepicker"
-                                        data-provider="flatpickr" data-date-format="d M, Y" data-range-date="true"
-                                        placeholder="Select date range">
-                                </div> --}}
+                              
                                 <!--end col-->
 
                                 <div class="col-xxl-5 col-sm-5">
@@ -208,12 +188,7 @@
                                     </div>
                                 </div>
                                 <!--end col-->
-                                {{-- <div class="col-xxl-1 col-sm-4">
-                                    <button type="button" class="btn btn-info w-100" onclick="SearchData();"> <i
-                                            class="ri-equalizer-fill me-1 align-bottom"></i>
-                                        Filters
-                                    </button>
-                                </div> --}}
+                               
                                 <!--end col-->
                             </div>
                             <!--end row-->
@@ -223,7 +198,7 @@
                     <div class="card-body">
                         <div class="table-responsive table-card mb-4">
                             <table class="table align-middle table-nowrap mb-0" id="tasksTable">
-                                <thead class="table bg-info text-white">
+                                <thead class="table bg-dark text-white">
                                     <tr>
                                         {{-- <th scope="col" style="width: 40px;">
                                             <div class="form-check">
@@ -232,7 +207,7 @@
                                         </th> --}}
                                         <th>#</th>
                                         <th width="20%">Nama</th>
-                                        <th>No Kad Pengenalan</th>
+                                        {{-- <th>No Kad Pengenalan</th> --}}
                                         <th>E-Mel</th>
                                         <th>Bahagian</th>
                                         <th>Kospera</th>
@@ -253,9 +228,9 @@
                                            
                                                 {{  $result->name }}
                                         </td>
-                                        <td class="project_name"> 
+                                        {{-- <td class="project_name"> 
                                             {{  $result->ic_no }}                                               
-                                        </td>
+                                        </td> --}}
                                         <td>
                                             {{ $result->email }}
                                            
@@ -265,7 +240,7 @@
                                         </td>
                                         <td class="text-info">
                                             @if($result->kospera == 1)
-                                            <span class="badge text-bg-warning text-uppercase">Kospera</span>
+                                            <span class="badge rounded-pill bg-secondary">KOSPERA</span>
                                             @endif
                                         </td>
                                         <td class="">
@@ -276,7 +251,7 @@
 
                                             @endif
                                         </td>
-                                        <td>
+                                        <td class="text-end">
                                             <ul class="list-inline hstack gap-2 mb-0">
                                                
                                                 <li class="list-inline-item" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" aria-label="View">

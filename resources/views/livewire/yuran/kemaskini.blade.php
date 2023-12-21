@@ -13,12 +13,12 @@
         class="row justify-content-center align-items-top"
     >
         <div class="col-3">
-            <div class="card">
+            <div class="card bg-info">
                 {{-- <img class="card-img-top" src="holder.js/100x180/" alt="Title" /> --}}
                 <div class="card-body">
                 <div class="text-center">
-                    <h5 class="fw-semibold">{{ @$member_name }}</h5>
-                    <h5 class="text-muted"> {{ @$department }}</h5>
+                    <h6 class="fw-semibold">{{ @$member_name }}</h5>
+                    <h6 class="text-muted"> {{ @$department }}</h5>
                 </div>
                 
 
@@ -85,7 +85,7 @@
         
         </div>
         <div class="col-9">
-
+        
         <div class="card table-card">
             {{-- <img class="card-img-top" src="holder.js/100x180/" alt="Title" /> --}}
             <div class="card-body">
@@ -105,7 +105,7 @@
             <table
                 class="table table-sm table-striped"
             >
-                <thead class="table-light">
+                <thead class="table-dark text-white">
                     <tr>
                         {{-- <th scope="col">#</th> --}}
                         <th scope="col">Nama</th>

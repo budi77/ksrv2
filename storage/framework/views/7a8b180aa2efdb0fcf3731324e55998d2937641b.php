@@ -12,13 +12,13 @@
     <div
         class="row justify-content-center align-items-top"
     >
-        <div class="col-4">
-            <div class="card">
+        <div class="col-3">
+            <div class="card bg-info">
                 
                 <div class="card-body">
                 <div class="text-center">
-                    <h5 class="fw-semibold"><?php echo e(@$member_name); ?></h5>
-                    <h5 class="text-muted"> <?php echo e(@$department); ?></h5>
+                    <h6 class="fw-semibold"><?php echo e(@$member_name); ?></h5>
+                    <h6 class="text-muted"> <?php echo e(@$department); ?></h5>
                 </div>
                 
 
@@ -98,8 +98,8 @@
             </div>
         
         </div>
-        <div class="col-8">
-
+        <div class="col-9">
+        
         <div class="card table-card">
             
             <div class="card-body">
@@ -119,7 +119,7 @@
             <table
                 class="table table-sm table-striped"
             >
-                <thead class="table-light">
+                <thead class="table-dark text-white">
                     <tr>
                         
                         <th scope="col">Nama</th>

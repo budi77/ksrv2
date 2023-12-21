@@ -27,12 +27,12 @@ class Members extends Component
     }
 
     public function getListeners()
-{
+    {
     return [
     	'delete',
       
     ];
-}
+    }
 
     public function render()
     {
@@ -54,7 +54,7 @@ class Members extends Component
         ->when($this->filter_aktif, function($query) {
             return $query->where('active' , $this->filter_aktif);
         })
-        ->orderby('name')->paginate(20);
+        ->orderby('name')->paginate(50);
 
         return view('livewire.members', compact('results'))->extends('layouts.master');
     }

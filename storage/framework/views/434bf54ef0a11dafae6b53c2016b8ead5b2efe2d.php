@@ -60,7 +60,7 @@
                                 <a href="<?php echo e(route('fees.federations.show')); ?>"  class="nav-link">Gabungan</a>
                             </li>
                             <li class="nav-item">
-                                <a href="<?php echo e(route('fees.submission')); ?>"  class="nav-link">Serahan</a>
+                                <a href="<?php echo e(route('resit')); ?>"  class="nav-link">Resit Pembayaran</a>
                             </li>
                             <li class="nav-item">
                                 <a href="<?php echo e(route('fees.edit')); ?>"  class="nav-link">Kemaskini Yuran</a>

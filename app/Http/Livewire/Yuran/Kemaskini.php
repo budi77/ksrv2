@@ -4,16 +4,16 @@ namespace App\Http\Livewire\Yuran;
 
 use Livewire\Component;
 use App\Models\Fee;
-use Jantinnerezo\LivewireAlert\LivewireAlert;
 use Livewire\WithPagination;
+use Jantinnerezo\LivewireAlert\LivewireAlert;
 
 
 class Kemaskini extends Component
 {
 
-    use LivewireAlert;
     use WithPagination;
     protected $paginationTheme = 'bootstrap';
+    use LivewireAlert;
 
 
     public $search, $data_id, $member_name, $department, $year, $value, $mode, $payment_date, $editmode = false, $deletemode = false ;
@@ -57,6 +57,8 @@ class Kemaskini extends Component
         ]);
 
         $this->resetExcept('search');
+
+        $this->alert('success', 'Updated!');
 
         $this->editmode = false;
         $this->deletemode = false;
