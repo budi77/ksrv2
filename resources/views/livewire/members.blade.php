@@ -368,9 +368,9 @@
         </div>
 
         <div wire:ignore.self class="modal fade" id="list" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-xl" role="document">
+            <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-lg" role="document">
                 <div class="modal-content">
-                    <div class="modal-header">
+                    <div class="modal-header bg-light">
                         <h5 class="modal-title" id="modalTitleId">Sejarah Pembayaran</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
@@ -388,11 +388,12 @@
                         @isset($member_list->payments)
     
                         <div class="table-responsive mt-2">
-                            <table class="table">
+                            <table class="table text-center table-sm table-bordered border-1">
                                 <thead class="bg-primary text-white">
                                     <tr>
                                         <th scope="col">Tahun</th>
                                         <th scope="col">Tarikh</th>
+                                        <th scope="col">Jumlah Bayaran</th>
                                         <th scope="col">Bahagian</th>
                                     </tr>
                                 </thead>
@@ -401,6 +402,7 @@
                                     <tr class="">
                                         <td scope="row">{{ @$data->year }}</td>
                                         <td>{{ @$data->payment_date }}</td>
+                                        <td>RM{{ @$data->value }}</td>
                                         <td>{{ @$data->department->name }}</td>
                                     </tr>
                                     @endforeach
