@@ -57,7 +57,8 @@ class Show extends Component
 
         $results = Member::withSum(['payments' => fn ($q) => $q->where('year', $this->year)] ,'value')->when($this->search_member, function($query){
             $query->where('name', 'LIKE', '%'. $this->search_member . '%')
-                  ->orWhere('email', 'LIKE' , '%'. $this->search_member . '%');
+              ->Where('department_id',  $this->department_id )
+              ->orWhere('email', 'LIKE' , '%'. $this->search_member . '%');
         })
         ->where('department_id', $this->department_id)
         ->where('active','1')
