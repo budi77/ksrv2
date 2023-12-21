@@ -12,8 +12,7 @@
                                 {{-- <label for="" class="form-label">City</label> --}}
                                 <select
                                     class="form-select form-select-sm"
-                                    name=""
-                                    id=""
+                                    
                                     wire:model="year"
                                 >
                                     <option selected>-- Pilih --</option>
@@ -24,13 +23,7 @@
                                     <option value="2027">2027</option>
                                 </select>
                             </div>
-                            
-                            {{-- <div class="dropdown-menu dropdown-menu-end">
-                                <a class="dropdown-item" href="#">Today</a>
-                                <a class="dropdown-item" href="#">Last Week</a>
-                                <a class="dropdown-item" href="#">Last Month</a>
-                                <a class="dropdown-item" href="#">Current Year</a>
-                            </div> --}}
+                           
                         </div>
                     </div>
                 </div><!-- end card header -->

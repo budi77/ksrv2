@@ -12,8 +12,7 @@
                                 
                                 <select
                                     class="form-select form-select-sm"
-                                    name=""
-                                    id=""
+                                    
                                     wire:model="year"
                                 >
                                     <option selected>-- Pilih --</option>
@@ -24,8 +23,7 @@
                                     <option value="2027">2027</option>
                                 </select>
                             </div>
-                            
-                            
+                           
                         </div>
                     </div>
                 </div><!-- end card header -->
