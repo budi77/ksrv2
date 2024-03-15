@@ -112,7 +112,7 @@
                             
                         </div>
 
-                        <div class="col-xl-4 col-md-6">
+                        <div class="col-xl-4 col-md-4">
                             <select
                                 class="form-select form-select"
                                 name=""
@@ -126,6 +126,14 @@
                                 <option value="2026" <?php if($year == '2026'): echo 'selected'; endif; ?>>2026</option>
                             </select>
                         </div>
+
+                        <div class="col-xl-4 col-md-2 text-end">
+                            <a href="<?php echo e(route('export.yuran', [$department_id, $year])); ?>" class="text-muted d-inline-block">
+                                <i class="ri-printer-line fs-22"></i>
+                            </a>
+                        </div>
+
+                       
 
                         
                         <!--end col-->
