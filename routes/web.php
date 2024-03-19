@@ -16,8 +16,12 @@ use Illuminate\Support\Facades\Auth;
 Auth::routes(['register' => false]);
 //Language Translation
 
-Route::get('/landing', function () {
+Route::get('/', function () {
     return view('landing');
+});
+
+Route::get('/login', function () {
+    return view('auth/login')->name('login');
 });
 
 // Route::get('/patriotik2023', \App\Http\Livewire\Patriotik\Index::class)->name('patriotik');
@@ -70,25 +74,22 @@ Route::middleware('auth')->group(function () {
     Route::get('/resit/cetak/{receipt}', \App\Http\Livewire\Receipt\Cetak::class)->name('resit.cetak');
     Route::get('/resit/cipta', \App\Http\Livewire\Receipt\Cipta::class)->name('resit.cipta');
 
-
-
-
     Route::get('index/{locale}', [App\Http\Controllers\HomeController::class, 'lang']);
 
-Route::get('/', [App\Http\Controllers\HomeController::class, 'root'])->name('root');
+    // Route::get('/', [App\Http\Controllers\HomeController::class, 'root'])->name('root');
 
-//Update User Details
-Route::post('/update-profile/{id}', [App\Http\Controllers\HomeController::class, 'updateProfile'])->name('updateProfile');
-Route::post('/update-password/{id}', [App\Http\Controllers\HomeController::class, 'updatePassword'])->name('updatePassword');
+    //Update User Details
+    Route::post('/update-profile/{id}', [App\Http\Controllers\HomeController::class, 'updateProfile'])->name('updateProfile');
+    Route::post('/update-password/{id}', [App\Http\Controllers\HomeController::class, 'updatePassword'])->name('updatePassword');
 
-Route::get('/index', [App\Http\Controllers\HomeController::class, 'index'])->name('index');
+    Route::get('/index', [App\Http\Controllers\HomeController::class, 'index'])->name('index');
 
-//loker
-Route::get('/loker', \App\Http\Livewire\Locker\Index::class)->name('locker');
-Route::get('/loker/dashboard', \App\Http\Livewire\Locker\Dashboard::class)->name('locker.dashboard');
+    //loker
+    Route::get('/loker', \App\Http\Livewire\Locker\Index::class)->name('locker');
+    Route::get('/loker/dashboard', \App\Http\Livewire\Locker\Dashboard::class)->name('locker.dashboard');
 
-//jelajah angsi 2023
-Route::get('/angsi2023/permohonan', \App\Http\Livewire\Angsi\Permohonan::class)->name('angsi.permohonan');
+    //jelajah angsi 2023
+    Route::get('/angsi2023/permohonan', \App\Http\Livewire\Angsi\Permohonan::class)->name('angsi.permohonan');
 
 
 });
