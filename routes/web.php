@@ -16,17 +16,19 @@ use Illuminate\Support\Facades\Auth;
 Auth::routes(['register' => false]);
 //Language Translation
 
-Route::get('/', function () {
+Route::get('/landing', function () {
     return view('landing');
 });
 
-Route::get('/login', function () {
-    return view('auth/login')->name('login');
-});
+// Route::get('/login', function () {
+//     return view('auth/login')->name('login');
+// });
 
 // Route::get('/patriotik2023', \App\Http\Livewire\Patriotik\Index::class)->name('patriotik');
 Route::get('/patriotik2023/berjaya', \App\Http\Livewire\Patriotik\Success::class)->name('patriotik.berjaya');
 Route::get('/patriotik2023', \App\Http\Livewire\Patriotik\Keputusan::class)->name('patriotik');
+
+Route::get('/semakanahli', \App\Http\Livewire\Member\Semakan::class)->name('semakanahli');
 
 Route::get('/pancing2023', \App\Http\Livewire\Pancing\Borang::class)->name('pancing');
 
@@ -76,7 +78,7 @@ Route::middleware('auth')->group(function () {
 
     Route::get('index/{locale}', [App\Http\Controllers\HomeController::class, 'lang']);
 
-    // Route::get('/', [App\Http\Controllers\HomeController::class, 'root'])->name('root');
+    Route::get('/', [App\Http\Controllers\HomeController::class, 'root'])->name('root');
 
     //Update User Details
     Route::post('/update-profile/{id}', [App\Http\Controllers\HomeController::class, 'updateProfile'])->name('updateProfile');

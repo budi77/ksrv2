@@ -33,5 +33,5 @@
             <!-- end container -->
         {{-- </div> --}}
         <!-- end auth-page content -->
-    </div>
+</div>
     <!-- end
