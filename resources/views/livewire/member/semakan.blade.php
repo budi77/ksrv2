@@ -51,8 +51,8 @@
                             >
                                 <thead class="table-dark">
                                     <tr>
-                                        <th scope="col">Ahli</th>
-                                        <th scope="col" class="text-end">Tahun 2023</th>
+                                        <th colspan="2" scope="col">Status Pembayaran Yuran Tahun 2023</th>
+                                        {{-- <th scope="col" class="text-end">Tahun 2023</th> --}}
                                        
                                     </tr>
                                 </thead>
