@@ -49,7 +49,7 @@
                             >
                                 <thead class="table-dark">
                                     <tr>
-                                        <th scope="col">Maklumat Ahli</th>
+                                        <th scope="col">Ahli</th>
                                         <th scope="col" class="text-end">Tahun 2023</th>
                                        
                                     </tr>
