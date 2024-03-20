@@ -25,7 +25,7 @@
                             <div class="row g-2" data-np-autofill-form-type="other" data-np-checked="1" data-np-watching="1">
                                 <div class="col">
                                     <div class="position-relative mb-3">
-                                        <input type="text" class="form-control form-control-lg bg-light border-light" placeholder="Sila Taip Nama atau Emel" value="" wire:model="search">
+                                        <input type="text" class="form-control form-control-lg bg-light border-light" placeholder="Sila Taip Nama atau Emel" value="" wire:model.debounce.500ms="search">
                                         {{-- <a class="btn btn-link link-success btn-lg position-absolute end-0 top-0" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample"><i class="ri-mic-fill"></i></a> --}}
                                     </div>
                                 </div>
