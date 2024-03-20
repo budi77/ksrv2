@@ -51,9 +51,9 @@
                                     <?php $__currentLoopData = $results; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $result): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                     <tr class="">
                                         <td scope="row">
-                                            <p class="mb-0 fw-bold"><?php echo e($result->name); ?></p>
-                                            <p class="mb-0"><?php echo e($result->email); ?></p>
-                                            <p class="mb-0"><?php echo e($result->bahagian->name); ?></p>
+                                            <p class="mb-0 fw-bolder"><?php echo e(@$result->name); ?></p>
+                                            <p class="mb-0"><?php echo e(@$result->email); ?></p>
+                                            <p class="mb-0 fw-bold text-muted"><?php echo e(@$result->bahagian->name); ?></p>
                                         </td>
                                         <td class="text-end">
                                             <?php if($result->payment == NULL): ?>

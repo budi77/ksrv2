@@ -53,9 +53,9 @@
                                     @foreach($results as $result)
                                     <tr class="">
                                         <td scope="row">
-                                            <p class="mb-0 fw-bold">{{ @$result->name }}</p>
+                                            <p class="mb-0 fw-bolder">{{ @$result->name }}</p>
                                             <p class="mb-0">{{ @$result->email }}</p>
-                                            <p class="mb-0">{{ @$result->bahagian->name }}</p>
+                                            <p class="mb-0 fw-bold text-muted">{{ @$result->bahagian->name }}</p>
                                         </td>
                                         <td class="text-end">
                                             @if($result->payment == NULL)
