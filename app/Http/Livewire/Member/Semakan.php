@@ -16,10 +16,10 @@ class Semakan extends Component
         if($this->search != "") {
             $results = Member::when($this->search, function($query){
                 $query->where('name', 'LIKE', '%'. $this->search . '%')
-                      ->orWhere('email', 'LIKE' , '%'. $this->search . '%')
-                      ->whereActive(1);
+                      ->orWhere('email', 'LIKE' , '%'. $this->search . '%');
             })
             ->with(['payment' => fn($q) => $q->where('year', '2023')])
+            ->where('active','1')
             ->orderby('name')->get();
         } else {
             $results = [];
