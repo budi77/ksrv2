@@ -28,7 +28,7 @@ Route::get('/landing', function () {
 Route::get('/patriotik2023/berjaya', \App\Http\Livewire\Patriotik\Success::class)->name('patriotik.berjaya');
 Route::get('/patriotik2023', \App\Http\Livewire\Patriotik\Keputusan::class)->name('patriotik');
 
-Route::get('/semakanahli', \App\Http\Livewire\Member\Semakan::class)->name('semakanahli');
+Route::get('/semakan', \App\Http\Livewire\Member\Semakan::class)->name('semakan');
 
 Route::get('/pancing2023', \App\Http\Livewire\Pancing\Borang::class)->name('pancing');
 
