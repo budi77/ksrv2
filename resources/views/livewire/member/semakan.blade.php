@@ -18,7 +18,7 @@
         <div class="row">
             <div class="card">
                 <div class="card-body">
-                    <h6 class="card-title text-center">SEMAKAN YURAN AHLI</h6>
+                    <h6 class="card-title text-center">STATUS PEMBAYARAN YURAN AHLI TAHUN 2023</h6>
 
                     <div class="row justify-content-center mb-4">
                         <div class="col-lg-6">
@@ -51,7 +51,7 @@
                             >
                                 <thead class="table-dark">
                                     <tr>
-                                        <th colspan="2" scope="col">Status Pembayaran Yuran Tahun 2023</th>
+                                        <th colspan="2" scope="col">Maklumat Pembayaran</th>
                                         {{-- <th scope="col" class="text-end">Tahun 2023</th> --}}
                                        
                                     </tr>
@@ -66,9 +66,9 @@
                                         </td>
                                         <td class="text-end">
                                             @if($result->payment == NULL)
-                                            <span class="badge bg-danger">BELUM</span>
+                                            <span class="badge bg-danger">TIDAK</span>
                                             @else
-                                            <span class="badge bg-success">SELESAI</span>
+                                            <span class="badge bg-success">BAYAR</span>
                                             @endif
                                         </td>
                                        
