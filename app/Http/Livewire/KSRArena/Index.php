@@ -43,7 +43,7 @@ class Index extends Component
         //     'confirmButtonColor' => '#ff0000'
         // ]);
         
-        // $this->confirm('Are you sure do want to delete?', [
+        // $this->confirm('Are you sure do want to delete?', [p
         //     'confirmButtonText' => 'Ya',
         //     'cancelButtonText' => 'Batal',
 

@@ -1,20 +1,21 @@
 <?php
 
-namespace App\Http\Livewire\Member;
+namespace App\Http\Livewire\Meeting;
 
 use Livewire\Component;
 use App\Models\Department;
 use App\Models\Member;
-use Illuminate\Support\Facades\Cache;
+use App\Models\Meeting;
+// use Jantinnerezo\LivewireAlert\LivewireAlert;
 
-
-class Semakan extends Component
+class Register extends Component
 {
+    // use LivewireAlert;
+
     public $search;
 
     public function render()
     {
-
         if($this->search != "") {
             // $seconds = 60;
             // $results = Cache::remember('results', $seconds, function () {
@@ -36,10 +37,22 @@ class Semakan extends Component
         } else {
             $results = [];
         }
-      
-
-        return view('livewire.member.semakan',compact('results'))->extends('layouts.master-without-nav');
+        return view('livewire.meeting.register',compact('results'));
     }
 
-   
+    public function register($id)
+    {
+        $save = Meeting::firstOrCreate([
+            'member_id' => $id,
+        ]);
+
+        // $this->alert('success', 'Pendaftaran Berjaya!');
+
+        session()->flash('message', 'Pendaftaran Berjaya!');
+
+
+
+        $this->reset();
+
+    }
 }
