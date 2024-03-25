@@ -28,7 +28,7 @@ class Show extends Component
 
         $this->tot_members = Department::whereExtra('Gabungan')->count();
 
-        $this->tot_paid = FederationFee::where('year', $this->year )->groupBy('federation_id')->count();
+        $this->tot_paid = FederationFee::where('year', $this->year )->get()->groupBy('federation_id')->count();
 
         $this->tot_sum = FederationFee::where('year', $this->year )->sum('value');
 
