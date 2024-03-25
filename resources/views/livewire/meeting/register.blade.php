@@ -69,10 +69,10 @@
                                         <td class="text-end">
 
                                         @if($result->payment <> NULL)
-                                             <a href="javascript:void(0);" wire:click="register('{{ $result->id }}')" class="btn btn-primary btn-label btn-sm">
+                                             <a href="javascript:void(0);" wire:click="register('{{ $result->id }}')" class="btn btn-warning btn-label btn-sm">
                                                         <div class="d-flex">
                                                             <div class="flex-shrink-0">
-                                                                <i class="ri-check-double-line label-icon align-middle fs-16 me-2"></i>
+                                                                <i class="ri-user-add-fill label-icon align-middle fs-16 me-2"></i>
                                                             </div>
                                                             <div class="flex-grow-1">
                                                                 Daftar
