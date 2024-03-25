@@ -10,7 +10,7 @@
 
     
   <div class="flex-shrink-0 pb-2">
-                                            <a href="javascript:void(0)" class="btn btn-secondary btn-sm" wire:click="generatePDF"><i class="ri-download-2-fill align-middle me-1"></i> Muat Turun Kehadiran</a>
+                                            <a href="{{ route('pdf.generatePDF') }}" class="btn btn-secondary btn-sm" ><i class="ri-download-2-fill align-middle me-1"></i> Muat Turun Kehadiran</a>
                             </div>
 
 

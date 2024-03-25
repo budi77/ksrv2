@@ -2,26 +2,29 @@
 <html>
 <head>
     <title>MESYUARAT AGUNG KSR 2024</title>
-    {{-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> --}}
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
-    <h1>SENARAI KEHADIRAN MESYUARAT AGUNG KSR</h1>
+<div class="text-center">
+   <h5>SENARAI KEHADIRAN MESYUARAT AGUNG KSR</h5>
     <p>26 MAC 2024</p>
     <p>AUDITORIUM SPRM</p>
+</div>
+ 
   
     <table class="table table-bordered">
         <tr>
-            <th>#</th>
-            <th>Nama</th>
-            <th>Bahagian</th>
-            <th>Tarikh/Masa Daftar</th>
+            <th><small>#</small></th>
+            <th><small>Nama</small></th>
+            <th><small>Bahagian</small></th>
+            <th><small>Tarikh/Masa</small></th>
         </tr>
         @foreach($results as $row)
         <tr class="">
-                    <td scope="row">{{ $loop->iteration }}</td>
-                    <td>{{ @$row->member->name }}</td>
-                    <td>{{ @$row->member->bahagian->name }}</td>
-                    <td>{{ @$row->created_at }}</td>
+                    <td scope="row"><small>{{ $loop->iteration }}</small></td>
+                    <td><small>{{ @$row->member->name }}</small></td>
+                    <td><small>{{ @$row->member->bahagian->name }}</small></td>
+                    <td><small>{{ @$row->created_at }}</small></td>
                 </tr>
         @endforeach
     </table>
