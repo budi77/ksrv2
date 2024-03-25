@@ -26,7 +26,7 @@ class PDFController extends Controller
     {
 
         // dd('test');
-        $results = Meeting::with('member')->orderby('created_at', 'DESC')->get();
+        $results = Meeting::with('member')->orderby('created_at', 'ASC')->get();
 
         $data = [
             'results' => $results
