@@ -34,17 +34,17 @@
             <th><small>#</small></th>
             <th><small>Nama</small></th>
             <th><small>Bahagian</small></th>
-            {{-- <th><small>Tarikh/Masa</small></th> --}}
+            
         </tr>
-        @foreach($results as $row)
+        <?php $__currentLoopData = $results; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $row): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
         <tr class="">
-                    <td scope="row"><small>{{ $loop->iteration }}</small></td>
-                    <td><small>{{ @$row->member->name }}</small></td>
-                    <td><small>{{ @$row->member->bahagian->name }}</small></td>
-                    {{-- <td><small>{{ @$row->created_at }}</small></td> --}}
+                    <td scope="row"><small><?php echo e($loop->iteration); ?></small></td>
+                    <td><small><?php echo e(@$row->member->name); ?></small></td>
+                    <td><small><?php echo e(@$row->member->bahagian->name); ?></small></td>
+                    
                 </tr>
-        @endforeach
+        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
     </table>
   
 </body>
-</html>
+</html><?php /**PATH C:\laragon\www\ksrv2\resources\views/pdf/meeting.blade.php ENDPATH**/ ?>
