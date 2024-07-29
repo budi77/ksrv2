@@ -25,19 +25,19 @@ Route::get('/landing', function () {
 // });
 
 // Route::get('/patriotik2023', \App\Http\Livewire\Patriotik\Index::class)->name('patriotik');
-Route::get('/patriotik2023/berjaya', \App\Http\Livewire\Patriotik\Success::class)->name('patriotik.berjaya');
-Route::get('/patriotik2023', \App\Http\Livewire\Patriotik\Keputusan::class)->name('patriotik');
+//Route::get('/patriotik2023/berjaya', \App\Http\Livewire\Patriotik\Success::class)->name('patriotik.berjaya');
+//Route::get('/patriotik2023', \App\Http\Livewire\Patriotik\Keputusan::class)->name('patriotik');
 
-Route::get('/semakan', \App\Http\Livewire\Member\Semakan::class)->name('semakan');
+//Route::get('/semakan', \App\Http\Livewire\Member\Semakan::class)->name('semakan');
 
-Route::get('/pancing2023', \App\Http\Livewire\Pancing\Borang::class)->name('pancing');
+//Route::get('/pancing2023', \App\Http\Livewire\Pancing\Borang::class)->name('pancing');
 
-Route::get('/angsi2023/daftar', \App\Http\Livewire\Angsi\Borang::class)->name('angsi.borang');
-Route::view('/angsi2023', 'angsi2023')->name('angsi2023');
+//Route::get('/angsi2023/daftar', \App\Http\Livewire\Angsi\Borang::class)->name('angsi.borang');
+//Route::view('/angsi2023', 'angsi2023')->name('angsi2023');
 
-Route::get('/ksrarena2023', \App\Http\Livewire\KSRArena\Borang::class)->name('ksrarena');
-Route::get('/ksrarena2023/bolajaring', \App\Http\Livewire\KSRArena\Netball\Index::class)->name('ksrarena.bolajaring');
-Route::get('/ksrarena2023/bolatampar', \App\Http\Livewire\KSRArena\Volleyball\Index::class)->name('ksrarena.bolatampar');
+//Route::get('/ksrarena2023', \App\Http\Livewire\KSRArena\Borang::class)->name('ksrarena');
+//Route::get('/ksrarena2023/bolajaring', \App\Http\Livewire\KSRArena\Netball\Index::class)->name('ksrarena.bolajaring');
+//Route::get('/ksrarena2023/bolatampar', \App\Http\Livewire\KSRArena\Volleyball\Index::class)->name('ksrarena.bolatampar');
 
 Route::middleware('auth')->group(function () {
 
