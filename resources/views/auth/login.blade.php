@@ -67,7 +67,7 @@
                                                 <input type="password"
                                                     class="form-control pe-5 @error('password') is-invalid @enderror"
                                                     name="password" placeholder="" id="password-input"
-                                                    value="">
+                                                    value="" autocomplete="off">
                                                 <button
                                                     class="btn btn-link position-absolute end-0 top-0 text-decoration-none text-muted"
                                                     type="button" id="password-addon"><i
