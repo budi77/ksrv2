@@ -48,6 +48,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/ksrarena2023/bolatampar/perlawanan', \App\Http\Livewire\KSRArena\Volleyball\Games::class)->name('ksrarena.volleyball.games');
     
     Route::get('/ksrgames24/parameter', \App\Http\Livewire\KsrGames24\Parameter::class)->name('ksrgames24.parameter');
+    Route::get('/ksrgames24/fixtures', \App\Http\Livewire\KsrGames24\Fixtures::class)->name('ksrgames24.fixtures');
 
 
     Route::get('/mesyuarat', \App\Http\Livewire\Meeting\Index::class)->name('mesyuarat');

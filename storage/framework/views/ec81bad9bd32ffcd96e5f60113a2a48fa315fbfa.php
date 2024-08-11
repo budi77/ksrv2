@@ -15,19 +15,19 @@
                                         <li class="nav-item" role="presentation">
                                             <a class="nav-link active" data-bs-toggle="tab" href="#arrow-overview" role="tab" aria-selected="true">
                                                 <span class="d-block d-sm-none"><i class="mdi mdi-home-variant"></i></span>
-                                                <span class="d-none d-sm-block">Acara Sukan</span>
+                                                <span class="d-none d-sm-block">BOLA SEPAK</span>
                                             </a>
                                         </li>
                                         <li class="nav-item" role="presentation">
                                             <a class="nav-link" data-bs-toggle="tab" href="#arrow-profile" role="tab" aria-selected="false" tabindex="-1">
                                                 <span class="d-block d-sm-none"><i class="mdi mdi-account"></i></span>
-                                                <span class="d-none d-sm-block">Kontigen</span>
+                                                <span class="d-none d-sm-block">BOLA JARING</span>
                                             </a>
                                         </li>
                                         <li class="nav-item" role="presentation">
                                             <a class="nav-link" data-bs-toggle="tab" href="#arrow-contact" role="tab" aria-selected="false" tabindex="-1">
                                                 <span class="d-block d-sm-none"><i class="mdi mdi-email"></i></span>
-                                                <span class="d-none d-sm-block">Kumpulan</span>
+                                                <span class="d-none d-sm-block">BADMINTON</span>
                                             </a>
                                         </li>
                                     </ul>
@@ -37,15 +37,15 @@
                                         <?php
 if (! isset($_instance)) {
     $html = \Livewire\Livewire::mount('ksr-games24.sports', [])->html();
-} elseif ($_instance->childHasBeenRendered('l3014318435-0')) {
-    $componentId = $_instance->getRenderedChildComponentId('l3014318435-0');
-    $componentTag = $_instance->getRenderedChildComponentTagName('l3014318435-0');
+} elseif ($_instance->childHasBeenRendered('l4061111595-0')) {
+    $componentId = $_instance->getRenderedChildComponentId('l4061111595-0');
+    $componentTag = $_instance->getRenderedChildComponentTagName('l4061111595-0');
     $html = \Livewire\Livewire::dummyMount($componentId, $componentTag);
-    $_instance->preserveRenderedChild('l3014318435-0');
+    $_instance->preserveRenderedChild('l4061111595-0');
 } else {
     $response = \Livewire\Livewire::mount('ksr-games24.sports', []);
     $html = $response->html();
-    $_instance->logRenderedChild('l3014318435-0', $response->id(), \Livewire\Livewire::getRootElementTagName($html));
+    $_instance->logRenderedChild('l4061111595-0', $response->id(), \Livewire\Livewire::getRootElementTagName($html));
 }
 echo $html;
 ?> 
@@ -55,15 +55,15 @@ echo $html;
                                         <?php
 if (! isset($_instance)) {
     $html = \Livewire\Livewire::mount('ksr-games24.contigent', [])->html();
-} elseif ($_instance->childHasBeenRendered('l3014318435-1')) {
-    $componentId = $_instance->getRenderedChildComponentId('l3014318435-1');
-    $componentTag = $_instance->getRenderedChildComponentTagName('l3014318435-1');
+} elseif ($_instance->childHasBeenRendered('l4061111595-1')) {
+    $componentId = $_instance->getRenderedChildComponentId('l4061111595-1');
+    $componentTag = $_instance->getRenderedChildComponentTagName('l4061111595-1');
     $html = \Livewire\Livewire::dummyMount($componentId, $componentTag);
-    $_instance->preserveRenderedChild('l3014318435-1');
+    $_instance->preserveRenderedChild('l4061111595-1');
 } else {
     $response = \Livewire\Livewire::mount('ksr-games24.contigent', []);
     $html = $response->html();
-    $_instance->logRenderedChild('l3014318435-1', $response->id(), \Livewire\Livewire::getRootElementTagName($html));
+    $_instance->logRenderedChild('l4061111595-1', $response->id(), \Livewire\Livewire::getRootElementTagName($html));
 }
 echo $html;
 ?> 
@@ -72,16 +72,16 @@ echo $html;
                                         <div class="tab-pane" id="arrow-contact" role="tabpanel">
                                         <?php
 if (! isset($_instance)) {
-    $html = \Livewire\Livewire::mount('ksr-games24.grouping', [])->html();
-} elseif ($_instance->childHasBeenRendered('l3014318435-2')) {
-    $componentId = $_instance->getRenderedChildComponentId('l3014318435-2');
-    $componentTag = $_instance->getRenderedChildComponentTagName('l3014318435-2');
+    $html = \Livewire\Livewire::mount('ksr-games24.badminton.games', [])->html();
+} elseif ($_instance->childHasBeenRendered('l4061111595-2')) {
+    $componentId = $_instance->getRenderedChildComponentId('l4061111595-2');
+    $componentTag = $_instance->getRenderedChildComponentTagName('l4061111595-2');
     $html = \Livewire\Livewire::dummyMount($componentId, $componentTag);
-    $_instance->preserveRenderedChild('l3014318435-2');
+    $_instance->preserveRenderedChild('l4061111595-2');
 } else {
-    $response = \Livewire\Livewire::mount('ksr-games24.grouping', []);
+    $response = \Livewire\Livewire::mount('ksr-games24.badminton.games', []);
     $html = $response->html();
-    $_instance->logRenderedChild('l3014318435-2', $response->id(), \Livewire\Livewire::getRootElementTagName($html));
+    $_instance->logRenderedChild('l4061111595-2', $response->id(), \Livewire\Livewire::getRootElementTagName($html));
 }
 echo $html;
 ?> 
@@ -97,4 +97,4 @@ echo $html;
 
 
 </div>
-<?php /**PATH C:\laragon\www\ksrv2\resources\views/livewire/ksr-games24/parameter.blade.php ENDPATH**/ ?>
+<?php /**PATH C:\laragon\www\ksrv2\resources\views/livewire/ksr-games24/fixtures.blade.php ENDPATH**/ ?>

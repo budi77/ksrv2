@@ -15,19 +15,19 @@
                                         <li class="nav-item" role="presentation">
                                             <a class="nav-link active" data-bs-toggle="tab" href="#arrow-overview" role="tab" aria-selected="true">
                                                 <span class="d-block d-sm-none"><i class="mdi mdi-home-variant"></i></span>
-                                                <span class="d-none d-sm-block">Acara Sukan</span>
+                                                <span class="d-none d-sm-block">BOLA SEPAK</span>
                                             </a>
                                         </li>
                                         <li class="nav-item" role="presentation">
                                             <a class="nav-link" data-bs-toggle="tab" href="#arrow-profile" role="tab" aria-selected="false" tabindex="-1">
                                                 <span class="d-block d-sm-none"><i class="mdi mdi-account"></i></span>
-                                                <span class="d-none d-sm-block">Kontigen</span>
+                                                <span class="d-none d-sm-block">BOLA JARING</span>
                                             </a>
                                         </li>
                                         <li class="nav-item" role="presentation">
                                             <a class="nav-link" data-bs-toggle="tab" href="#arrow-contact" role="tab" aria-selected="false" tabindex="-1">
                                                 <span class="d-block d-sm-none"><i class="mdi mdi-email"></i></span>
-                                                <span class="d-none d-sm-block">Kumpulan</span>
+                                                <span class="d-none d-sm-block">BADMINTON</span>
                                             </a>
                                         </li>
                                     </ul>
@@ -42,7 +42,7 @@
 
                                         </div>
                                         <div class="tab-pane" id="arrow-contact" role="tabpanel">
-                                        <livewire:ksr-games24.grouping /> 
+                                        <livewire:ksr-games24.badminton.games /> 
 
                                         </div>
                                     </div>
