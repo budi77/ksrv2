@@ -106,7 +106,7 @@
 
                 <li class="nav-item">
                     <a class="nav-link menu-link" href="#sidebarLayouts" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarLayouts">
-                        <i class=" ri-pie-chart-line"></i> <span>KSR Arena 2023</span>
+                        <i class=" ri-pie-chart-line"></i> <span>KSRArena</span>
                     </a>
                     <div class="collapse menu-dropdown" id="sidebarLayouts">
                         <ul class="nav nav-sm flex-column">

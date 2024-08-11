@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Auth;
 |
 */
 
-Auth::routes(['register' => false]);
+Auth::routes(['register' => true]);
 //Language Translation
 
 Route::get('/landing', function () {
@@ -47,6 +47,9 @@ Route::middleware('auth')->group(function () {
     Route::get('/ksrarena2023/bolajaring/perlawanan', \App\Http\Livewire\KSRArena\Netball\Games::class)->name('ksrarena.netball.games');
     Route::get('/ksrarena2023/bolatampar/perlawanan', \App\Http\Livewire\KSRArena\Volleyball\Games::class)->name('ksrarena.volleyball.games');
     
+    Route::get('/ksrgames24/parameter', \App\Http\Livewire\KsrGames24\Parameter::class)->name('ksrgames24.parameter');
+
+
     Route::get('/mesyuarat', \App\Http\Livewire\Meeting\Index::class)->name('mesyuarat');
 
     Route::get('/pdf/patriotik2023/{id}', [App\Http\Controllers\PDFController::class, 'patriotik'])->name('pdf.patriotik');
