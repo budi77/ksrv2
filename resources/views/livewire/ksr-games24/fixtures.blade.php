@@ -34,7 +34,7 @@
                                     <!-- Tab panes -->
                                     <div class="tab-content text-muted">
                                         <div class="tab-pane active" id="arrow-overview" role="tabpanel">
-                                        <livewire:ksr-games24.sports /> 
+                                        <livewire:ksr-games24.badminton.games /> 
 
                                         </div>
                                         <div class="tab-pane" id="arrow-profile" role="tabpanel">

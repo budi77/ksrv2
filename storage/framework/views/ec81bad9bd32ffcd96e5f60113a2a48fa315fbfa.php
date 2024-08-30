@@ -36,14 +36,14 @@
                                         <div class="tab-pane active" id="arrow-overview" role="tabpanel">
                                         <?php
 if (! isset($_instance)) {
-    $html = \Livewire\Livewire::mount('ksr-games24.sports', [])->html();
+    $html = \Livewire\Livewire::mount('ksr-games24.badminton.games', [])->html();
 } elseif ($_instance->childHasBeenRendered('l4061111595-0')) {
     $componentId = $_instance->getRenderedChildComponentId('l4061111595-0');
     $componentTag = $_instance->getRenderedChildComponentTagName('l4061111595-0');
     $html = \Livewire\Livewire::dummyMount($componentId, $componentTag);
     $_instance->preserveRenderedChild('l4061111595-0');
 } else {
-    $response = \Livewire\Livewire::mount('ksr-games24.sports', []);
+    $response = \Livewire\Livewire::mount('ksr-games24.badminton.games', []);
     $html = $response->html();
     $_instance->logRenderedChild('l4061111595-0', $response->id(), \Livewire\Livewire::getRootElementTagName($html));
 }

@@ -169,8 +169,9 @@
         <div class="col-4">
 <div class="card bg-info">
             <div class="card-header bg-info">
-                            <h6 class="card-title mb-0 ">MAKLUMAT PERLAWANAN</h6>
-            </div>                <div class="card-body">
+                    <h6 class="card-title mb-0 ">MAKLUMAT PERLAWANAN</h6>
+            </div>                
+            <div class="card-body">
 
                 <div class="row">
 
