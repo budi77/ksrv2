@@ -21,6 +21,8 @@ class Fixture extends Model
         return $this->belongsTo(Sport::class, 'sport_id');
     }
 
+  
+
     public function group()
 {
     return $this->hasOne(Grouping::class, 'contigent_id');
@@ -58,6 +60,7 @@ public function getWonAttribute()
             });
         })
         ->where('stage', 'Kumpulan')
+        ->where('group', $this->attributes['group'])
         ->count();
 }
 

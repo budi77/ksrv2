@@ -2,20 +2,20 @@
 
     <div class="row">
         <div class="col-4">
-            <div class="card card-dark">
+            <div class="card card-light">
                 <div class="card-body">
-                    <h4 class="card-title">MAKLUMAT KONTIGEN</h4>
+                    <h4 class="card-title text-dark">MAKLUMAT KONTIGEN</h4>
                     <div class="row">
                         <div class="col-6">
                             <div class="mb-3">
-                            <label for="" class="form-label">Kumpulan</label>
+                            <label for="" class="form-label text-dark">Kumpulan</label>
                             <input type="text"
                                 class="form-control" name="" id="" aria-describedby="helpId" placeholder="" wire:model="name">
                             </div>
                         </div>
                         <div class="col-6">
                                 <div class="mb-3">
-                            <label for="" class="form-label">Order</label>
+                            <label for="" class="form-label text-dark">Order</label>
                             <input type="text"
                                 class="form-control" name="" id="" aria-describedby="helpId" placeholder="" wire:model="order">
                             </div>
@@ -26,7 +26,7 @@
                     <!-- {{ $sports }} -->
 
                     <div class="mb-3">
-                        <label for="" class="form-label">Sukan</label>
+                        <label for="" class="form-label text-dark">Sukan</label>
                         <select
                             class="form-select"
                             wire:model="sport_id"
@@ -39,7 +39,7 @@
                     </div>
 
                     <div class="mb-3">
-                        <label for="" class="form-label">Kontigen</label>
+                        <label for="" class="form-label text-dark">Kontigen</label>
                         <select
                             class="form-select"
                             wire:model="contigent_id"
@@ -70,7 +70,7 @@
                     
                    
                    
-                    <button type="button" class="btn btn-info btn-block" wire:click="store">Hantar</button>
+                    <button type="button" class="btn btn-primary btn-block" wire:click="store">Hantar</button>
                 </div>
 
             </div>
@@ -81,7 +81,7 @@
                     <h4 class="card-title">SENARAI KUMPULAN MENGIKUT SUKAN</h4>
                     <div class="table-responsive ">
                         <table class="table table-sm table-striped">
-                            <thead class="bg-primary text-white">
+                            <thead class="bg-dark text-white">
                                 <tr>
                                     <th scope="col">Sukan</th>
                                     <th scope="col">Kumpulan</th>

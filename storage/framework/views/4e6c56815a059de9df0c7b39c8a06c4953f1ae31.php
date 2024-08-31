@@ -81,7 +81,7 @@ if (isset($__messageOriginal)) { $message = $__messageOriginal; }
 endif;
 unset($__errorArgs, $__bag); ?>"
                                                     name="password" placeholder="" id="password-input"
-                                                    value="">
+                                                    value="" autocomplete="off">
                                                 <button
                                                     class="btn btn-link position-absolute end-0 top-0 text-decoration-none text-muted"
                                                     type="button" id="password-addon"><i
@@ -101,12 +101,7 @@ unset($__errorArgs, $__bag); ?>
                                             </div>
                                         </div>
 
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value=""
-                                                id="auth-remember-check">
-                                            <label class="form-check-label" for="auth-remember-check">Remember me</label>
-                                        </div>
-
+                                        
                                         <div class="mt-4">
                                             <button class="btn btn-success w-100" type="submit">Log Masuk</button>
                                         </div>

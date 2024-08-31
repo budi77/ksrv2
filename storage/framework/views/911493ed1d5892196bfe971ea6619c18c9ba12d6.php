@@ -104,7 +104,7 @@
                     </a>
                 </li>
 
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                     <a class="nav-link menu-link" href="#sidebarLayouts" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarLayouts">
                         <i class=" ri-pie-chart-line"></i> <span>KSRArena</span>
                     </a>
@@ -122,6 +122,24 @@
                             <li class="nav-item">
                                 <a href="<?php echo e(route('ksrarena.volleyball.games')); ?>"  class="nav-link">Bola Tampar</a>
                             </li>
+                           
+                        </ul>
+                    </div>
+                </li> -->
+
+                <li class="nav-item">
+                    <a class="nav-link menu-link" href="#sidebarLayouts" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarLayouts">
+                        <i class=" ri-pie-chart-line"></i> <span>KSRGames24</span>
+                    </a>
+                    <div class="collapse menu-dropdown" id="sidebarLayouts">
+                        <ul class="nav nav-sm flex-column">
+                            <li class="nav-item">
+                                <a href="<?php echo e(route('ksrgames24.parameter')); ?>"  class="nav-link">Parameters</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="<?php echo e(route('ksrgames24.fixtures')); ?>"  class="nav-link">Fixtures</a>
+                            </li>
+                            
                            
                         </ul>
                     </div>

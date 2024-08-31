@@ -1,23 +1,24 @@
 <?php
 
-namespace App\Http\Livewire\KsrGames24\Badminton;
+namespace App\Http\Livewire\KsrGames24\BolaTamparLelaki;
 
 use Livewire\Component;
 use App\Models\Contigent;
 use App\Models\Fixture;
 use App\Models\Grouping;
 use App\Models\Sport;
- 
+
 class Games extends Component
 {
     public $data_id, $contigent1, $contigent2, $result1, $result2, $match, $stage, $order,$court;
     public $contigent,$mdate, $mtime;
 
+
     public function mount()
     {
 
         $this->contigents = Contigent::orderby('name')->get();
-        $this->sport_id = Sport::select('id')->whereName('BADMINTON')->first();
+        $this->sport_id = Sport::select('id')->whereName('BOLA TAMPAR LELAKI')->first();
 
     }
     
@@ -36,8 +37,8 @@ class Games extends Component
         
 
         $fixtures = Fixture::where('sport_id', $this->sport_id->id)->orderby('order')->get();
-        
-        return view('livewire.ksr-games24.badminton.games', compact('a','b','fixtures'));
+
+        return view('livewire.ksr-games24.bola-tampar-lelaki.games', compact('a','b','fixtures'));
     }
 
     public function store()

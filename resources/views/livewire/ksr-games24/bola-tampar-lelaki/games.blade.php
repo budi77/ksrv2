@@ -2,7 +2,7 @@
 
 <div class="row">
 
-<div class='fw-bold h3 text-primary'> BADMINTON</div>
+<div class='fw-bold h3 text-primary'> BOLA TAMPAR LELAKI</div>
 <hr>
 <div class="row">
     <h4><i class="las la-table"></i> KEDUDUKAN PASUKAN</h4>
@@ -28,12 +28,12 @@
                         <tr class="">
                             <td scope="row">{{ $loop->iteration }}</td>
                             <td>{{ $data->name }}</td>
-                            <td>{{ $data->bdwon }}</td>
-                            <td>{{ $data->bdlost }}</td>
-                            <td>{{ $data->bdgoal }}</td>
-                            <td>{{ $data->bdagainst }}</td>
-                            <td>{{ $data->bdgoaldifference  }} </td>
-                            <td>{{ $data->bdpoints }}</td>
+                            <td>{{ $data->btlwon }}</td>
+                            <td>{{ $data->btllost }}</td>
+                            <td>{{ $data->btlgoal }}</td>
+                            <td>{{ $data->btlagainst }}</td>
+                            <td>{{ $data->btlgoaldifference  }} </td>
+                            <td>{{ $data->btlpoints }}</td>
                         </tr>
                         @endforeach
                        
@@ -66,12 +66,12 @@
                         <tr class="">
                             <td scope="row">{{ $loop->iteration }}</td>
                             <td>{{ $data->name }}</td>
-                            <td>{{ $data->bdwon }}</td>
-                            <td>{{ $data->bdlost }}</td>
-                            <td>{{ $data->bdgoal }}</td>
-                            <td>{{ $data->bdagainst }}</td>
-                            <td>{{ $data->bdgoaldifference  }} </td>
-                            <td>{{ $data->bdpoints }}</td>
+                            <td>{{ $data->btlwon }}</td>
+                            <td>{{ $data->btllost }}</td>
+                            <td>{{ $data->btlgoal }}</td>
+                            <td>{{ $data->btlagainst }}</td>
+                            <td>{{ $data->btlgoaldifference  }} </td>
+                            <td>{{ $data->btlpoints }}</td>
                         </tr>
                         @endforeach
                        
@@ -320,3 +320,4 @@
 
 
 </div>
+

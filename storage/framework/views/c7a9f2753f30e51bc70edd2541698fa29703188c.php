@@ -2,34 +2,34 @@
 
     <div class="row">
         <div class="col-4">
-            <div class="card">
+            <div class="card card-light">
                 
                 <div class="card-body">
-                    <h4 class="card-title">MAKLUMAT ACARA SUKAN</h4>
+                    <h4 class="card-title text-dark">MAKLUMAT ACARA SUKAN</h4>
                     <div class="mb-3">
-                      <label for="" class="form-label">Nama</label>
+                      <label for="" class="form-label text-dark">Nama</label>
                       <input type="text"
                         class="form-control" name="" id="" aria-describedby="helpId" placeholder="" wire:model="name">
                     </div>
                     <div class="mb-3">
-                      <label for="" class="form-label">Venue</label>
+                      <label for="" class="form-label text-dark">Venue</label>
                       <input type="text"
                         class="form-control" name="" id="" aria-describedby="helpId" placeholder="" wire:model="venue">
                     </div>
                     <div class="mb-3">
-                      <label for="" class="form-label">Icon</label>
+                      <label for="" class="form-label text-dark">Icon</label>
                       <input type="text"
                         class="form-control" name="" id="" aria-describedby="helpId" placeholder="" wire:model="icon">
                     </div>
                     <div class="mb-3">
-                      <label for="" class="form-label">PIC 1</label>
+                      <label for="" class="form-label text-dark">PIC 1</label>
                       <input type="text"
                         class="form-control" name="" id="" aria-describedby="helpId" placeholder="" wire:model="pic1">
                     </div>
                     
                    
                    
-                    <button type="button" class="btn btn-info" wire:click="store">Hantar</button>
+                    <button type="button" class="btn btn-primary" wire:click="store">Hantar</button>
                 </div>
 
             </div>
@@ -40,7 +40,7 @@
                     <h4 class="card-title">SUKAN</h4>
                     <div class="table-responsive ">
                         <table class="table table-sm table-striped">
-                            <thead class="bg-primary text-white">
+                            <thead class="bg-dark text-white">
                                 <tr>
                                     <th scope="col">Nama Sukan</th>
                                     <th scope="col">Venue</th>

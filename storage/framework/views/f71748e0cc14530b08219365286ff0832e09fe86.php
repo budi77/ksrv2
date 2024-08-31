@@ -2,22 +2,22 @@
 
     <div class="row">
         <div class="col-4">
-            <div class="card">
+            <div class="card card-light">
                 
                 <div class="card-body">
-                    <h4 class="card-title">MAKLUMAT KONTIGEN</h4>
+                    <h4 class="card-title text-dark">MAKLUMAT KONTIGEN</h4>
                     <div class="mb-3">
-                      <label for="" class="form-label">Nama</label>
+                      <label for="" class="form-label text-dark">Nama</label>
                       <input type="text"
                         class="form-control" name="" id="" aria-describedby="helpId" placeholder="" wire:model="name">
                     </div>
                     <div class="mb-3">
-                      <label for="" class="form-label">Kod</label>
+                      <label for="" class="form-label text-dark">Kod</label>
                       <input type="text"
                         class="form-control" name="" id="" aria-describedby="helpId" placeholder="" wire:model="code">
                     </div>
                     <div class="mb-3">
-                      <label for="" class="form-label">Ahli</label>
+                      <label for="" class="form-label text-dark">Ahli</label>
                       <input type="text"
                         class="form-control" name="" id="" aria-describedby="helpId" placeholder="" wire:model="members">
                     </div>
@@ -25,7 +25,7 @@
                       <!-- <label for="" class="form-label">VIP</label> -->
                       <div class="form-check">
                         <input class="form-check-input" type="checkbox" value="1" id="" wire:model="vip"/>
-                        <label class="form-check-label" for=""> VIP </label>
+                        <label class="form-check-label text-dark" for=""> VIP </label>
                       </div>
                      
                       
@@ -34,7 +34,7 @@
                     
                    
                    
-                    <button type="button" class="btn btn-info" wire:click="store">Hantar</button>
+                    <button type="button" class="btn btn-primary" wire:click="store">Hantar</button>
                 </div>
 
             </div>
@@ -45,7 +45,7 @@
                     <h4 class="card-title">SENARAI KONTIGEN</h4>
                     <div class="table-responsive ">
                         <table class="table table-sm table-striped">
-                            <thead class="bg-primary text-white">
+                            <thead class="bg-dark text-white">
                                 <tr>
                                     <th scope="col">Nama</th>
                                     <th scope="col">Kod</th>

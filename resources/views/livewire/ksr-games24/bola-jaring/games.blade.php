@@ -2,7 +2,7 @@
 
 <div class="row">
 
-<div class='fw-bold h3 text-primary'> BADMINTON</div>
+<div class='fw-bold h3 text-primary'> BOLA JARING</div>
 <hr>
 <div class="row">
     <h4><i class="las la-table"></i> KEDUDUKAN PASUKAN</h4>
@@ -16,6 +16,7 @@
                             <th scope="col" class="bg-secondary bg-gradient">#</th>
                             <th scope="col" class="bg-secondary bg-gradient">Team</th>
                             <th scope="col" class="bg-secondary bg-gradient">W</th>
+                            <th scope="col" class="bg-secondary bg-gradient">D</th>
                             <th scope="col" class="bg-secondary bg-gradient">L</th>
                             <th scope="col" class="bg-secondary bg-gradient">GF</th>
                             <th scope="col" class="bg-secondary bg-gradient">GA</th>
@@ -28,12 +29,13 @@
                         <tr class="">
                             <td scope="row">{{ $loop->iteration }}</td>
                             <td>{{ $data->name }}</td>
-                            <td>{{ $data->bdwon }}</td>
-                            <td>{{ $data->bdlost }}</td>
-                            <td>{{ $data->bdgoal }}</td>
-                            <td>{{ $data->bdagainst }}</td>
-                            <td>{{ $data->bdgoaldifference  }} </td>
-                            <td>{{ $data->bdpoints }}</td>
+                            <td>{{ $data->bjwon }}</td>
+                            <td>{{ $data->bjtied }}</td>
+                            <td>{{ $data->bjlost }}</td>
+                            <td>{{ $data->bjgoal }}</td>
+                            <td>{{ $data->bjagainst }}</td>
+                            <td>{{ $data->bjgoaldifference  }} </td>
+                            <td>{{ $data->bjpoints }}</td>
                         </tr>
                         @endforeach
                        
@@ -54,6 +56,7 @@
                             <th scope="col" class="bg-warning bg-gradient">#</th>
                             <th scope="col" class="bg-warning bg-gradient">Team</th>
                             <th scope="col" class="bg-warning bg-gradient">W</th>
+                            <th scope="col" class="bg-warning bg-gradient">D</th>
                             <th scope="col" class="bg-warning bg-gradient">L</th>
                             <th scope="col" class="bg-warning bg-gradient">GF</th>
                             <th scope="col" class="bg-warning bg-gradient">GA</th>
@@ -66,12 +69,13 @@
                         <tr class="">
                             <td scope="row">{{ $loop->iteration }}</td>
                             <td>{{ $data->name }}</td>
-                            <td>{{ $data->bdwon }}</td>
-                            <td>{{ $data->bdlost }}</td>
-                            <td>{{ $data->bdgoal }}</td>
-                            <td>{{ $data->bdagainst }}</td>
-                            <td>{{ $data->bdgoaldifference  }} </td>
-                            <td>{{ $data->bdpoints }}</td>
+                            <td>{{ $data->bjwon }}</td>
+                            <td>{{ $data->bjtied }}</td>
+                            <td>{{ $data->bjlost }}</td>
+                            <td>{{ $data->bjgoal }}</td>
+                            <td>{{ $data->bjagainst }}</td>
+                            <td>{{ $data->bjgoaldifference  }} </td>
+                            <td>{{ $data->bjpoints }}</td>
                         </tr>
                         @endforeach
                        
@@ -320,3 +324,5 @@
 
 
 </div>
+
+

@@ -13,36 +13,74 @@
                                     <!-- <p class="text-muted">Use <code>arrow-navtabs </code>class to create arrow nav tabs.</p> -->
                                     <ul class="nav nav-pills arrow-navtabs nav-success bg-light mb-3" role="tablist">
                                         <li class="nav-item" role="presentation">
-                                            <a class="nav-link active" data-bs-toggle="tab" href="#arrow-overview" role="tab" aria-selected="true">
+                                            <a class="nav-link active" data-bs-toggle="tab" href="#bolasepak" role="tab" aria-selected="true">
                                                 <span class="d-block d-sm-none"><i class="mdi mdi-home-variant"></i></span>
                                                 <span class="d-none d-sm-block">BOLA SEPAK</span>
                                             </a>
                                         </li>
                                         <li class="nav-item" role="presentation">
-                                            <a class="nav-link" data-bs-toggle="tab" href="#arrow-profile" role="tab" aria-selected="false" tabindex="-1">
+                                            <a class="nav-link" data-bs-toggle="tab" href="#bola-jaring" role="tab" aria-selected="false" tabindex="-1">
                                                 <span class="d-block d-sm-none"><i class="mdi mdi-account"></i></span>
                                                 <span class="d-none d-sm-block">BOLA JARING</span>
                                             </a>
                                         </li>
                                         <li class="nav-item" role="presentation">
-                                            <a class="nav-link" data-bs-toggle="tab" href="#arrow-contact" role="tab" aria-selected="false" tabindex="-1">
+                                            <a class="nav-link" data-bs-toggle="tab" href="#badminton" role="tab" aria-selected="false" tabindex="-1">
                                                 <span class="d-block d-sm-none"><i class="mdi mdi-email"></i></span>
                                                 <span class="d-none d-sm-block">BADMINTON</span>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                            <a class="nav-link" data-bs-toggle="tab" href="#bola-tampar-lelaki" role="tab" aria-selected="false" tabindex="-1">
+                                                <span class="d-block d-sm-none"><i class="mdi mdi-email"></i></span>
+                                                <span class="d-none d-sm-block">BOLA TAMPAR LELAKI</span>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                            <a class="nav-link" data-bs-toggle="tab" href="#bola-tampar-wanita" role="tab" aria-selected="false" tabindex="-1">
+                                                <span class="d-block d-sm-none"><i class="mdi mdi-email"></i></span>
+                                                <span class="d-none d-sm-block">BOLA TAMPAR WANITA</span>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                            <a class="nav-link" data-bs-toggle="tab" href="#ping-pong" role="tab" aria-selected="false" tabindex="-1">
+                                                <span class="d-block d-sm-none"><i class="mdi mdi-email"></i></span>
+                                                <span class="d-none d-sm-block">PING PONG</span>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                            <a class="nav-link" data-bs-toggle="tab" href="#badminton" role="tab" aria-selected="false" tabindex="-1">
+                                                <span class="d-block d-sm-none"><i class="mdi mdi-email"></i></span>
+                                                <span class="d-none d-sm-block">SEPAK TAKRAW</span>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                            <a class="nav-link" data-bs-toggle="tab" href="#badminton" role="tab" aria-selected="false" tabindex="-1">
+                                                <span class="d-block d-sm-none"><i class="mdi mdi-email"></i></span>
+                                                <span class="d-none d-sm-block">FUTSAL</span>
                                             </a>
                                         </li>
                                     </ul>
                                     <!-- Tab panes -->
                                     <div class="tab-content text-muted">
-                                        <div class="tab-pane active" id="arrow-overview" role="tabpanel">
+                                        <div class="tab-pane active" id="bolasepak" role="tabpanel">
+                                        <livewire:ksr-games24.bola-sepak.games /> 
+
+                                        </div>
+                                        <div class="tab-pane" id="bola-jaring" role="tabpanel">
+                                        <livewire:ksr-games24.bola-jaring.games /> 
+
+                                        </div>
+                                        <div class="tab-pane" id="badminton" role="tabpanel">
                                         <livewire:ksr-games24.badminton.games /> 
 
                                         </div>
-                                        <div class="tab-pane" id="arrow-profile" role="tabpanel">
-                                        <livewire:ksr-games24.contigent /> 
+                                        <div class="tab-pane" id="bola-tampar-lelaki" role="tabpanel">
+                                        <livewire:ksr-games24.bola-tampar-lelaki.games /> 
 
                                         </div>
-                                        <div class="tab-pane" id="arrow-contact" role="tabpanel">
-                                        <livewire:ksr-games24.badminton.games /> 
+                                        <div class="tab-pane" id="bola-tampar-wanita" role="tabpanel">
+                                        <livewire:ksr-games24.bola-tampar-wanita.games /> 
 
                                         </div>
                                     </div>

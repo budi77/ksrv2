@@ -1,13 +1,13 @@
 <?php
 
-namespace App\Http\Livewire\KsrGames24\Badminton;
+namespace App\Http\Livewire\KsrGames24\BolaJaring;
 
 use Livewire\Component;
 use App\Models\Contigent;
 use App\Models\Fixture;
 use App\Models\Grouping;
 use App\Models\Sport;
- 
+
 class Games extends Component
 {
     public $data_id, $contigent1, $contigent2, $result1, $result2, $match, $stage, $order,$court;
@@ -17,31 +17,30 @@ class Games extends Component
     {
 
         $this->contigents = Contigent::orderby('name')->get();
-        $this->sport_id = Sport::select('id')->whereName('BADMINTON')->first();
+        $this->sport_id = Sport::select('id')->whereName('BOLA JARING')->first();
 
     }
-    
+
     public function render()
     {
 
         $id = $this->sport_id->id;
-
-        // $a = Contigent::whereRelation('grp','sport_id', $id)->get()->sortByDesc('goaldifference')->sortByDesc('points');
         $a = Contigent::whereHas('grp', function($q) use($id) {
              $q->where('name', 'A')->where('sport_id', $id);
          })->get()->sortByDesc('goaldifference')->sortByDesc('points');
         $b = Contigent::whereHas('grp', function($q) use($id) {
              $q->where('name', 'B')->where('sport_id', $id);
          })->get()->sortByDesc('goaldifference')->sortByDesc('points');
-        
+         
+         $fixtures = Fixture::where('sport_id', $id)->orderby('order')->get();
 
-        $fixtures = Fixture::where('sport_id', $this->sport_id->id)->orderby('order')->get();
-        
-        return view('livewire.ksr-games24.badminton.games', compact('a','b','fixtures'));
+        return view('livewire.ksr-games24.bola-jaring.games', compact('a','b','fixtures'));
     }
 
     public function store()
     {
+
+        
         $store = Fixture::updateOrCreate(['id' => $this->data_id], 
         [
             'contigent1_id' => $this->contigent1,
@@ -60,13 +59,14 @@ class Games extends Component
 
     }
 
+    
+    
     public function edit($id)
     {
         $this->data_id = $id;
 
         $data = Fixture::find($id);
 
-        // dd($data);
         $this->mtime = $data->ext1;
         $this->mdate = $data->ext2;
         $this->contigent1 = $data->contigent1_id;
@@ -77,4 +77,5 @@ class Games extends Component
         $this->court = $data->court;
         $this->stage = $data->stage;
     }
+
 }
