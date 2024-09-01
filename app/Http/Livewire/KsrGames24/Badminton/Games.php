@@ -20,13 +20,12 @@ class Games extends Component
         $this->sport_id = Sport::select('id')->whereName('BADMINTON')->first();
 
     }
-    
+
     public function render()
     {
 
         $id = $this->sport_id->id;
 
-        // $a = Contigent::whereRelation('grp','sport_id', $id)->get()->sortByDesc('goaldifference')->sortByDesc('points');
         $a = Contigent::whereHas('grp', function($q) use($id) {
              $q->where('name', 'A')->where('sport_id', $id);
          })->get()->sortByDesc('goaldifference')->sortByDesc('points');

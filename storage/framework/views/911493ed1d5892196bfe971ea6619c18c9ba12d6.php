@@ -139,6 +139,9 @@
                             <li class="nav-item">
                                 <a href="<?php echo e(route('ksrgames24.fixtures')); ?>"  class="nav-link">Fixtures</a>
                             </li>
+                            <li class="nav-item">
+                                <a href="<?php echo e(route('ksrgames24.standings')); ?>"  class="nav-link">Standings</a>
+                            </li>
                             
                            
                         </ul>

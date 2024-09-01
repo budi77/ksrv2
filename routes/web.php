@@ -35,9 +35,13 @@ Route::get('/landing', function () {
 //Route::get('/angsi2023/daftar', \App\Http\Livewire\Angsi\Borang::class)->name('angsi.borang');
 //Route::view('/angsi2023', 'angsi2023')->name('angsi2023');
 
-//Route::get('/ksrarena2023', \App\Http\Livewire\KSRArena\Borang::class)->name('ksrarena');
-//Route::get('/ksrarena2023/bolajaring', \App\Http\Livewire\KSRArena\Netball\Index::class)->name('ksrarena.bolajaring');
-//Route::get('/ksrarena2023/bolatampar', \App\Http\Livewire\KSRArena\Volleyball\Index::class)->name('ksrarena.bolatampar');
+Route::get('/ksrgames24', \App\Http\Livewire\KsrGames24\Portal\Index::class)->name('ksrgames24');
+Route::get('/ksrgames24/program', \App\Http\Livewire\KsrGames24\Portal\Program::class)->name('ksrgames24.program');
+Route::get('/ksrgames24/program/bs', \App\Http\Livewire\KsrGames24\Portal\Bs::class)->name('ksrgames24.bs');
+Route::get('/ksrgames24/program/ranking', \App\Http\Livewire\KsrGames24\Portal\Rangking::class)->name('ksrgames24.rangking');
+// Route::get('/ksrarena2023', \App\Http\Livewire\KSRArena\Borang::class)->name('ksrarena');
+// Route::get('/ksrarena2023/bolajaring', \App\Http\Livewire\KSRArena\Netball\Index::class)->name('ksrarena.bolajaring');
+// Route::get('/ksrarena2023/bolatampar', \App\Http\Livewire\KSRArena\Volleyball\Index::class)->name('ksrarena.bolatampar');
 
 Route::middleware('auth')->group(function () {
 
@@ -49,6 +53,7 @@ Route::middleware('auth')->group(function () {
     
     Route::get('/ksrgames24/parameter', \App\Http\Livewire\KsrGames24\Parameter::class)->name('ksrgames24.parameter');
     Route::get('/ksrgames24/fixtures', \App\Http\Livewire\KsrGames24\Fixtures::class)->name('ksrgames24.fixtures');
+    Route::get('/ksrgames24/standings', \App\Http\Livewire\KsrGames24\Standings::class)->name('ksrgames24.standings');
 
 
     Route::get('/mesyuarat', \App\Http\Livewire\Meeting\Index::class)->name('mesyuarat');

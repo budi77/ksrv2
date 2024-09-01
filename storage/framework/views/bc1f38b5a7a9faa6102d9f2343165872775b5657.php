@@ -24,18 +24,18 @@
                         </tr>
                     </thead>
                     <tbody>
-                    @foreach($a as $key => $data)
+                    <?php $__currentLoopData = $a; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $key => $data): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                         <tr class="">
-                            <td scope="row">{{ $loop->iteration }}</td>
-                            <td>{{ $data->name }}</td>
-                            <td>{{ $data->ppwon }}</td>
-                            <td>{{ $data->pplost }}</td>
-                            <td>{{ $data->ppgoal }}</td>
-                            <td>{{ $data->ppagainst }}</td>
-                            <td>{{ $data->ppgoaldifference  }} </td>
-                            <td>{{ $data->pppoints }}</td>
+                            <td scope="row"><?php echo e($loop->iteration); ?></td>
+                            <td><?php echo e($data->name); ?></td>
+                            <td><?php echo e($data->ppwon); ?></td>
+                            <td><?php echo e($data->pplost); ?></td>
+                            <td><?php echo e($data->ppgoal); ?></td>
+                            <td><?php echo e($data->ppagainst); ?></td>
+                            <td><?php echo e($data->ppgoaldifference); ?> </td>
+                            <td><?php echo e($data->pppoints); ?></td>
                         </tr>
-                        @endforeach
+                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                        
                     </tbody>
                 </table>
@@ -62,18 +62,18 @@
                         </tr>
                     </thead>
                     <tbody>
-                    @foreach($b as $key => $data)
+                    <?php $__currentLoopData = $b; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $key => $data): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                         <tr class="">
-                            <td scope="row">{{ $loop->iteration }}</td>
-                            <td>{{ $data->name }}</td>
-                            <td>{{ $data->ppwon }}</td>
-                            <td>{{ $data->pplost }}</td>
-                            <td>{{ $data->ppgoal }}</td>
-                            <td>{{ $data->ppagainst }}</td>
-                            <td>{{ $data->ppgoaldifference  }} </td>
-                            <td>{{ $data->pppoints }}</td>
+                            <td scope="row"><?php echo e($loop->iteration); ?></td>
+                            <td><?php echo e($data->name); ?></td>
+                            <td><?php echo e($data->ppwon); ?></td>
+                            <td><?php echo e($data->pplost); ?></td>
+                            <td><?php echo e($data->ppgoal); ?></td>
+                            <td><?php echo e($data->ppagainst); ?></td>
+                            <td><?php echo e($data->ppgoaldifference); ?> </td>
+                            <td><?php echo e($data->pppoints); ?></td>
                         </tr>
-                        @endforeach
+                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                        
                     </tbody>
                 </table>
@@ -187,9 +187,9 @@
                         wire:model="contigent1"
                     >
                         <option selected>-- Pilih --</option>
-                        @foreach($contigents as $data)
-                        <option value="{{$data->id}}">{{$data->name}}</option>
-                        @endforeach
+                        <?php $__currentLoopData = $contigents; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $data): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                        <option value="<?php echo e($data->id); ?>"><?php echo e($data->name); ?></option>
+                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                     </select>
                 </div>
 
@@ -223,9 +223,9 @@
                         wire:model="contigent2"
                     >
                         <option selected>-- Pilih --</option>
-                        @foreach($contigents as $data)
-                        <option value="{{$data->id}}">{{$data->name}}</option>
-                        @endforeach
+                        <?php $__currentLoopData = $contigents; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $data): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                        <option value="<?php echo e($data->id); ?>"><?php echo e($data->name); ?></option>
+                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                     </select>
                 </div>
 
@@ -282,21 +282,21 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach($fixtures as $fixture)
+                <?php $__currentLoopData = $fixtures; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $fixture): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                 <tr class="text-center">
-                    <td scope="row">{{ $fixture->order }}</td>
-                    <td>{{ $fixture->stage }}</td>
-                    <td>{{ $fixture->ext2 }}</td>
-                    <td>{{ $fixture->ext1 }}</td>
-                    <td>{{ $fixture->court }}</td>
-                    <td>{{ $fixture->contigent1->name }}</td>
-                    <td>{{ $fixture->result1 }}</td>
-                    <td>{{ $fixture->contigent2->name }}</td>
-                    <td>{{ $fixture->result2 }}</td>
+                    <td scope="row"><?php echo e($fixture->order); ?></td>
+                    <td><?php echo e($fixture->stage); ?></td>
+                    <td><?php echo e($fixture->ext2); ?></td>
+                    <td><?php echo e($fixture->ext1); ?></td>
+                    <td><?php echo e($fixture->court); ?></td>
+                    <td><?php echo e($fixture->contigent1->name); ?></td>
+                    <td><?php echo e($fixture->result1); ?></td>
+                    <td><?php echo e($fixture->contigent2->name); ?></td>
+                    <td><?php echo e($fixture->result2); ?></td>
                     <td>
                     <ul class="list-inline hstack gap-2 mb-0">
                                             <li class="list-inline-item" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" title="View">
-                                                <a href="javascript:void(0);" class="text-warning d-inline-block" wire:click="edit('{{ $fixture->id }}')">
+                                                <a href="javascript:void(0);" class="text-warning d-inline-block" wire:click="edit('<?php echo e($fixture->id); ?>')">
                                                     <i class="ri-pencil-fill fs-16"></i>
                                                 </a>
                                             </li>
@@ -305,7 +305,7 @@
                                         </ul>
                     </td>
                 </tr>
-                @endforeach
+                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                
             </tbody>
         </table>
@@ -321,3 +321,4 @@
 
 </div>
 
+<?php /**PATH C:\laragon\www\ksrv2\resources\views/livewire/ksr-games24/ping-pong/games.blade.php ENDPATH**/ ?>

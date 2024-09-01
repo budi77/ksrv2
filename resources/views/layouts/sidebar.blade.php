@@ -140,6 +140,9 @@
                             <li class="nav-item">
                                 <a href="{{ route('ksrgames24.fixtures') }}"  class="nav-link">Fixtures</a>
                             </li>
+                            <li class="nav-item">
+                                <a href="{{ route('ksrgames24.standings') }}"  class="nav-link">Standings</a>
+                            </li>
                             
                            
                         </ul>

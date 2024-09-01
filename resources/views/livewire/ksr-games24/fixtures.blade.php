@@ -49,15 +49,27 @@
                                             </a>
                                         </li>
                                         <li class="nav-item" role="presentation">
-                                            <a class="nav-link" data-bs-toggle="tab" href="#badminton" role="tab" aria-selected="false" tabindex="-1">
+                                            <a class="nav-link" data-bs-toggle="tab" href="#sepak-takraw" role="tab" aria-selected="false" tabindex="-1">
                                                 <span class="d-block d-sm-none"><i class="mdi mdi-email"></i></span>
                                                 <span class="d-none d-sm-block">SEPAK TAKRAW</span>
                                             </a>
                                         </li>
                                         <li class="nav-item" role="presentation">
-                                            <a class="nav-link" data-bs-toggle="tab" href="#badminton" role="tab" aria-selected="false" tabindex="-1">
+                                            <a class="nav-link" data-bs-toggle="tab" href="#futsal" role="tab" aria-selected="false" tabindex="-1">
                                                 <span class="d-block d-sm-none"><i class="mdi mdi-email"></i></span>
                                                 <span class="d-none d-sm-block">FUTSAL</span>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                            <a class="nav-link" data-bs-toggle="tab" href="#karom" role="tab" aria-selected="false" tabindex="-1">
+                                                <span class="d-block d-sm-none"><i class="mdi mdi-email"></i></span>
+                                                <span class="d-none d-sm-block">KAROM</span>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                            <a class="nav-link" data-bs-toggle="tab" href="#balapan" role="tab" aria-selected="false" tabindex="-1">
+                                                <span class="d-block d-sm-none"><i class="mdi mdi-email"></i></span>
+                                                <span class="d-none d-sm-block">BALAPAN</span>
                                             </a>
                                         </li>
                                     </ul>
@@ -81,6 +93,18 @@
                                         </div>
                                         <div class="tab-pane" id="bola-tampar-wanita" role="tabpanel">
                                         <livewire:ksr-games24.bola-tampar-wanita.games /> 
+
+                                        </div>
+                                        <div class="tab-pane" id="ping-pong" role="tabpanel">
+                                        <livewire:ksr-games24.ping-pong.games /> 
+
+                                        </div>
+                                        <div class="tab-pane" id="sepak-takraw" role="tabpanel">
+                                        <livewire:ksr-games24.sepak-takraw.games /> 
+
+                                        </div>
+                                        <div class="tab-pane" id="futsal" role="tabpanel">
+                                        <livewire:ksr-games24.futsal.games /> 
 
                                         </div>
                                     </div>

@@ -49,15 +49,27 @@
                                             </a>
                                         </li>
                                         <li class="nav-item" role="presentation">
-                                            <a class="nav-link" data-bs-toggle="tab" href="#badminton" role="tab" aria-selected="false" tabindex="-1">
+                                            <a class="nav-link" data-bs-toggle="tab" href="#sepak-takraw" role="tab" aria-selected="false" tabindex="-1">
                                                 <span class="d-block d-sm-none"><i class="mdi mdi-email"></i></span>
                                                 <span class="d-none d-sm-block">SEPAK TAKRAW</span>
                                             </a>
                                         </li>
                                         <li class="nav-item" role="presentation">
-                                            <a class="nav-link" data-bs-toggle="tab" href="#badminton" role="tab" aria-selected="false" tabindex="-1">
+                                            <a class="nav-link" data-bs-toggle="tab" href="#futsal" role="tab" aria-selected="false" tabindex="-1">
                                                 <span class="d-block d-sm-none"><i class="mdi mdi-email"></i></span>
                                                 <span class="d-none d-sm-block">FUTSAL</span>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                            <a class="nav-link" data-bs-toggle="tab" href="#karom" role="tab" aria-selected="false" tabindex="-1">
+                                                <span class="d-block d-sm-none"><i class="mdi mdi-email"></i></span>
+                                                <span class="d-none d-sm-block">KAROM</span>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                            <a class="nav-link" data-bs-toggle="tab" href="#balapan" role="tab" aria-selected="false" tabindex="-1">
+                                                <span class="d-block d-sm-none"><i class="mdi mdi-email"></i></span>
+                                                <span class="d-none d-sm-block">BALAPAN</span>
                                             </a>
                                         </li>
                                     </ul>
@@ -148,6 +160,60 @@ if (! isset($_instance)) {
     $response = \Livewire\Livewire::mount('ksr-games24.bola-tampar-wanita.games', []);
     $html = $response->html();
     $_instance->logRenderedChild('l4061111595-4', $response->id(), \Livewire\Livewire::getRootElementTagName($html));
+}
+echo $html;
+?> 
+
+                                        </div>
+                                        <div class="tab-pane" id="ping-pong" role="tabpanel">
+                                        <?php
+if (! isset($_instance)) {
+    $html = \Livewire\Livewire::mount('ksr-games24.ping-pong.games', [])->html();
+} elseif ($_instance->childHasBeenRendered('l4061111595-5')) {
+    $componentId = $_instance->getRenderedChildComponentId('l4061111595-5');
+    $componentTag = $_instance->getRenderedChildComponentTagName('l4061111595-5');
+    $html = \Livewire\Livewire::dummyMount($componentId, $componentTag);
+    $_instance->preserveRenderedChild('l4061111595-5');
+} else {
+    $response = \Livewire\Livewire::mount('ksr-games24.ping-pong.games', []);
+    $html = $response->html();
+    $_instance->logRenderedChild('l4061111595-5', $response->id(), \Livewire\Livewire::getRootElementTagName($html));
+}
+echo $html;
+?> 
+
+                                        </div>
+                                        <div class="tab-pane" id="sepak-takraw" role="tabpanel">
+                                        <?php
+if (! isset($_instance)) {
+    $html = \Livewire\Livewire::mount('ksr-games24.sepak-takraw.games', [])->html();
+} elseif ($_instance->childHasBeenRendered('l4061111595-6')) {
+    $componentId = $_instance->getRenderedChildComponentId('l4061111595-6');
+    $componentTag = $_instance->getRenderedChildComponentTagName('l4061111595-6');
+    $html = \Livewire\Livewire::dummyMount($componentId, $componentTag);
+    $_instance->preserveRenderedChild('l4061111595-6');
+} else {
+    $response = \Livewire\Livewire::mount('ksr-games24.sepak-takraw.games', []);
+    $html = $response->html();
+    $_instance->logRenderedChild('l4061111595-6', $response->id(), \Livewire\Livewire::getRootElementTagName($html));
+}
+echo $html;
+?> 
+
+                                        </div>
+                                        <div class="tab-pane" id="futsal" role="tabpanel">
+                                        <?php
+if (! isset($_instance)) {
+    $html = \Livewire\Livewire::mount('ksr-games24.futsal.games', [])->html();
+} elseif ($_instance->childHasBeenRendered('l4061111595-7')) {
+    $componentId = $_instance->getRenderedChildComponentId('l4061111595-7');
+    $componentTag = $_instance->getRenderedChildComponentTagName('l4061111595-7');
+    $html = \Livewire\Livewire::dummyMount($componentId, $componentTag);
+    $_instance->preserveRenderedChild('l4061111595-7');
+} else {
+    $response = \Livewire\Livewire::mount('ksr-games24.futsal.games', []);
+    $html = $response->html();
+    $_instance->logRenderedChild('l4061111595-7', $response->id(), \Livewire\Livewire::getRootElementTagName($html));
 }
 echo $html;
 ?> 
