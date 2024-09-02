@@ -107,6 +107,10 @@
                                         <livewire:ksr-games24.futsal.games /> 
 
                                         </div>
+                                        <div class="tab-pane" id="balapan" role="tabpanel">
+                                        <livewire:ksr-games24.balapan.games /> 
+
+                                        </div>
                                     </div>
                                 </div><!-- end card-body -->
                             </div>

@@ -7,7 +7,7 @@ use App\Models\Contigent as Kontigen;
 
 class Contigent extends Component
 {
-    public $results, $name, $code, $members, $data_id, $vip = 0;
+    public $results, $name, $code, $members, $data_id, $vip = 0, $color;
     public function render()
     {
         $this->results = Kontigen::orderby('name')->get();
@@ -22,9 +22,26 @@ class Contigent extends Component
             'name' => $this->name,
             'code' => $this->code,
             'ext1' => $this->members,
-            'vip' => $this->vip
+            'vip' => $this->vip,
+            'ext2' => $this->color,
         ]);
 
         $this->resetExcept('results');
+    }
+
+    
+    public function edit($id)
+    {
+        $this->data_id = $id;
+
+        $data = Kontigen::find($id);
+
+        // dd($data);
+        $this->name = $data->name;
+        $this->code = $data->code;
+        $this->members = $data->cext1;
+        $this->vip = $data->vip;
+        $this->color = $data->ext2;
+      
     }
 }

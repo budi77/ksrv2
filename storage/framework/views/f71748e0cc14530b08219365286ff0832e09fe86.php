@@ -22,6 +22,11 @@
                         class="form-control" name="" id="" aria-describedby="helpId" placeholder="" wire:model="members">
                     </div>
                     <div class="mb-3">
+                      <label for="" class="form-label text-dark">Warna</label>
+                      <input type="text"
+                        class="form-control" name="" id="" aria-describedby="helpId" placeholder="" wire:model="color">
+                    </div>
+                    <div class="mb-3">
                       <!-- <label for="" class="form-label">VIP</label> -->
                       <div class="form-check">
                         <input class="form-check-input" type="checkbox" value="1" id="" wire:model="vip"/>
@@ -51,6 +56,7 @@
                                     <th scope="col">Kod</th>
                                     <th scope="col">Ahli</th>
                                     <th scope="col">VIP</th>
+                                    <th scope="col">Warna</th>
                                     <th scope="col"></th>
                                 </tr>
                             </thead>
@@ -61,6 +67,7 @@
                                     <td><?php echo e(@$data->code); ?></td>
                                     <td><?php echo e(@$data->ext1); ?></td>
                                     <td><?php echo e(@$data->vip); ?></td>
+                                    <td><?php echo e(@$data->ext2); ?></td>
                                     <td>
                                         <ul class="list-inline hstack gap-2 mb-0">
                                             <li class="list-inline-item" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" title="View">

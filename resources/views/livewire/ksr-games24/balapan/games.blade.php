@@ -1,11 +1,14 @@
 <div>
-    <div class="container">
-    <div class="row pt-2">
+   
+<div class="row">
+    <div class='fw-bold h3 text-primary'> BALAPAN</div>
+    <hr>
 
-<h4>STANDING</h4>
+
+    <h4>STANDING</h4>
 
 <div class="table-responsive">
-        <table class="table table-warning table-bordered table-striped text-center">
+        <table class="table table-primary table-bordered table-striped text-center">
             <thead class="">
                 <tr class="bg-secondary ">
                     <th scope="col" class="bg-warning bg-gradient">#</th>
@@ -14,7 +17,7 @@
                     <th scope="col" class="bg-warning bg-gradient">P</th>
                     <th scope="col" class="bg-warning bg-gradient">G</th>
                     <th scope="col" class="bg-warning bg-gradient">4</th>
-                    <th scope="col" class="bg-warning bg-gradient">P</th>
+                    <!-- <th scope="col" class="bg-warning bg-gradient">P</th> -->
                 
                 </tr>
             </thead>
@@ -23,11 +26,11 @@
                 <tr class="">
                     <td scope="row">{{ $loop->iteration }}</td>
                     <td>{{ $data->name }}</td>
-                    <td>{{ $data->first }}</td>
-                    <td>{{ $data->second }}</td>
-                    <td>{{ $data->third }}</td>
-                    <td>{{ $data->forth }}</td>
-                    <td>{{ $data->standingpoints }}</td>
+                    <td>{{ $data->blfirst }}</td>
+                    <td>{{ $data->blsecond }}</td>
+                    <td>{{ $data->blthird }}</td>
+                    <td>{{ $data->blforth }}</td>
+                    <!-- <td>{{ $data->standingpoints }}</td> -->
               
                 </tr>
                 @endforeach
@@ -36,15 +39,10 @@
         </table>
 </div>
 
+
 </div>
 
-
-
-
-
-
-
-    <div class="row">
+<div class="row">
 
 @foreach($sports as $sport)
     <div class="col-6">
@@ -64,7 +62,7 @@
     </thead>
     <tbody>
         @forelse($results as $d)
-        @if($d->sport->name == $sport->name)
+        <!-- @if($d->sport->name == $sport->name) -->
         <tr class="text-center">
             <!-- <td>{{ $loop->iteration}}</td> -->
             <!-- <td>{{ @$d->sport->name}}</td> -->
@@ -77,7 +75,7 @@
             
             
         </tr>
-        @endif
+        <!-- @endif -->
         @empty<td>No data</td>
         @endforelse
        
@@ -89,11 +87,6 @@
 
     
 </div>
-
-
-</div>
-
-
 
 
 </div>

@@ -219,6 +219,24 @@ echo $html;
 ?> 
 
                                         </div>
+                                        <div class="tab-pane" id="balapan" role="tabpanel">
+                                        <?php
+if (! isset($_instance)) {
+    $html = \Livewire\Livewire::mount('ksr-games24.balapan.games', [])->html();
+} elseif ($_instance->childHasBeenRendered('l4061111595-8')) {
+    $componentId = $_instance->getRenderedChildComponentId('l4061111595-8');
+    $componentTag = $_instance->getRenderedChildComponentTagName('l4061111595-8');
+    $html = \Livewire\Livewire::dummyMount($componentId, $componentTag);
+    $_instance->preserveRenderedChild('l4061111595-8');
+} else {
+    $response = \Livewire\Livewire::mount('ksr-games24.balapan.games', []);
+    $html = $response->html();
+    $_instance->logRenderedChild('l4061111595-8', $response->id(), \Livewire\Livewire::getRootElementTagName($html));
+}
+echo $html;
+?> 
+
+                                        </div>
                                     </div>
                                 </div><!-- end card-body -->
                             </div>

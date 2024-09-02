@@ -13,7 +13,7 @@ class Rangking extends Component
 
     public function render()
     {
-        $standings = Contigent::whereVip(0)->get()->sortByDesc('forth')->sortByDesc('third')->sortByDesc('second')->sortByDesc('first');
+        $standings = Contigent::whereVip(0)->get()->sortByDesc('forth')->sortByDesc('third')->sortByDesc('second')->sortByDesc('first')->sortByDesc('StandingPoints');
         $this->results = Standing::orderby('sport_id', 'DESC')->orderby('rank')->get();
         $this->sports = Sport::all();
 
