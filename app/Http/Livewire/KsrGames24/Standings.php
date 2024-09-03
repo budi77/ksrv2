@@ -43,7 +43,7 @@ class Standings extends Component
             'rank' => $this->rank,
             'points' => 0,
             'ext1' => "-",
-            'et2' => "-",
+            'ext2' => "-",
         ]);
 
         $this->dispatchBrowserEvent('close-modal');
