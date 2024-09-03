@@ -41,6 +41,7 @@ class Standings extends Component
             'contigent_id' => $this->contigent_id,
             'sport_id' => $this->sport_id,
             'rank' => $this->rank,
+            'points' => $this->points = 0,
         ]);
 
         $this->dispatchBrowserEvent('close-modal');
@@ -73,6 +74,7 @@ class Standings extends Component
         $this->contigent_id = $data->contigent_id;
         $this->sport_id = $data->sport_id;
         $this->rank = $data->rank;
+        
 
         $this->teams = Contigent::orderby('name')->get();
 
