@@ -182,7 +182,7 @@
                     </td>
                 </tr>
                 @endif
-                @empty<td>No data</td>
+                @empty<tr>No data</tr>
                 @endforelse
                
             </tbody>
