@@ -41,7 +41,9 @@ class Standings extends Component
             'contigent_id' => $this->contigent_id,
             'sport_id' => $this->sport_id,
             'rank' => $this->rank,
-            'points' => $this->points = 0,
+            'points' => 0,
+            'ext1' => "-",
+            'et2' => "-",
         ]);
 
         $this->dispatchBrowserEvent('close-modal');
