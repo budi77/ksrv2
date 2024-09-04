@@ -26,12 +26,12 @@
                     <thead class="">
                         <tr class="bg-secondary ">
                             <th scope="col" class="bg-warning bg-gradient">#</th>
-                            <th scope="col" class="bg-warning bg-gradient">Team</th>
-                            <th scope="col" class="bg-warning bg-gradient">1</th>
-                            <th scope="col" class="bg-warning bg-gradient">2</th>
-                            <th scope="col" class="bg-warning bg-gradient">3</th>
-                            <th scope="col" class="bg-warning bg-gradient">4</th>
-                            <th scope="col" class="bg-warning bg-gradient">P</th>
+                            <th scope="col" class="bg-warning bg-gradient">PASUKAN</th>
+                            <th scope="col" class="bg-warning bg-gradient">EMAS</th>
+                            <th scope="col" class="bg-warning bg-gradient">PERAK</th>
+                            <th scope="col" class="bg-warning bg-gradient">GANGSA</th>
+                            <th scope="col" class="bg-warning bg-gradient">KE-EMPAT</th>
+                            <th scope="col" class="bg-warning bg-gradient">MATA</th>
                         
                         </tr>
                     </thead>
@@ -93,6 +93,10 @@
                                 <option value="2">2</option>
                                 <option value="3">3</option>
                                 <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
                         </select>
                 </div>
 
@@ -182,7 +186,7 @@
                     </td>
                 </tr>
                 <?php endif; ?>
-                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); if ($__empty_1): ?><td>No data</td>
+                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); if ($__empty_1): ?><tr>No data</tr>
                 <?php endif; ?>
                
             </tbody>

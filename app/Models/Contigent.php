@@ -74,25 +74,25 @@ public function getStandingPointsAttribute()
 public function getBlFirstAttribute()
 {
     return Standing::where('contigent_id', $this->attributes['id'])->whereRank(1)
-        ->whereIn('sport_id', ['14'.'15','16','17','18'])
+        ->whereIn('sport_id', ['14','15','16','17','18'])
         ->count();
 }
 public function getBlSecondAttribute()
 {
     return Standing::where('contigent_id', $this->attributes['id'])->whereRank(2)
-        ->whereIn('sport_id', ['14'.'15','16','17','18'])
+        ->whereIn('sport_id', ['14','15','16','17','18'])
         ->count();
 }
 public function getBlThirdAttribute()
 {
     return Standing::where('contigent_id', $this->attributes['id'])->whereRank(3)
-        ->whereIn('sport_id', ['14'.'15','16','17','18'])
+        ->whereIn('sport_id', ['14','15','16','17','18'])
         ->count();
 }
 public function getBlForthAttribute()
 {
     return Standing::where('contigent_id', $this->attributes['id'])->whereRank(4)
-        ->whereIn('sport_id', ['14'.'15','16','17','18'])
+        ->whereIn('sport_id', ['14','15','16','17','18'])
         ->count();
 }
 

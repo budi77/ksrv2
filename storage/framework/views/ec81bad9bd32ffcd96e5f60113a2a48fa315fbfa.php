@@ -72,6 +72,12 @@
                                                 <span class="d-none d-sm-block">BALAPAN</span>
                                             </a>
                                         </li>
+                                        <li class="nav-item" role="presentation">
+                                            <a class="nav-link" data-bs-toggle="tab" href="#bowling" role="tab" aria-selected="false" tabindex="-1">
+                                                <span class="d-block d-sm-none"><i class="mdi mdi-email"></i></span>
+                                                <span class="d-none d-sm-block">BOWLING</span>
+                                            </a>
+                                        </li>
                                     </ul>
                                     <!-- Tab panes -->
                                     <div class="tab-content text-muted">
@@ -232,6 +238,24 @@ if (! isset($_instance)) {
     $response = \Livewire\Livewire::mount('ksr-games24.balapan.games', []);
     $html = $response->html();
     $_instance->logRenderedChild('l4061111595-8', $response->id(), \Livewire\Livewire::getRootElementTagName($html));
+}
+echo $html;
+?> 
+
+                                        </div>
+                                        <div class="tab-pane" id="bowling" role="tabpanel">
+                                        <?php
+if (! isset($_instance)) {
+    $html = \Livewire\Livewire::mount('ksr-games24.bowling.games', [])->html();
+} elseif ($_instance->childHasBeenRendered('l4061111595-9')) {
+    $componentId = $_instance->getRenderedChildComponentId('l4061111595-9');
+    $componentTag = $_instance->getRenderedChildComponentTagName('l4061111595-9');
+    $html = \Livewire\Livewire::dummyMount($componentId, $componentTag);
+    $_instance->preserveRenderedChild('l4061111595-9');
+} else {
+    $response = \Livewire\Livewire::mount('ksr-games24.bowling.games', []);
+    $html = $response->html();
+    $_instance->logRenderedChild('l4061111595-9', $response->id(), \Livewire\Livewire::getRootElementTagName($html));
 }
 echo $html;
 ?> 

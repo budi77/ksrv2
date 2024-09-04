@@ -72,6 +72,12 @@
                                                 <span class="d-none d-sm-block">BALAPAN</span>
                                             </a>
                                         </li>
+                                        <li class="nav-item" role="presentation">
+                                            <a class="nav-link" data-bs-toggle="tab" href="#bowling" role="tab" aria-selected="false" tabindex="-1">
+                                                <span class="d-block d-sm-none"><i class="mdi mdi-email"></i></span>
+                                                <span class="d-none d-sm-block">BOWLING</span>
+                                            </a>
+                                        </li>
                                     </ul>
                                     <!-- Tab panes -->
                                     <div class="tab-content text-muted">
@@ -109,6 +115,10 @@
                                         </div>
                                         <div class="tab-pane" id="balapan" role="tabpanel">
                                         <livewire:ksr-games24.balapan.games /> 
+
+                                        </div>
+                                        <div class="tab-pane" id="bowling" role="tabpanel">
+                                        <livewire:ksr-games24.bowling.games /> 
 
                                         </div>
                                     </div>
