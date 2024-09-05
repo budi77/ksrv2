@@ -2,7 +2,8 @@
 
 <div class="container">
 
-<div class='fw-bold h3 text-primary'> BOLA SEPAK</div>
+<div class='fw-bold h3 ff-secondary text-center pt-2 cfs-22'> BOLA SEPAK</div>
+<div class='fw-bold h ff-secondary text-center '> {{ @$sport_id->venue }}</div>
 <hr>
 <div class="row">
     <h5><i class="las la-table"></i> KEDUDUKAN PASUKAN</h5>
@@ -28,7 +29,7 @@
                     @foreach($a as $key => $data)
                         <tr class="">
                             <td scope="row">{{ $loop->iteration }}</td>
-                            <td>{{ $data->name }}</td>
+                            <td>{{ $data->code }}</td>
                             <td>{{ $data->bswon }}</td>
                             <td>{{ $data->bstied }}</td>
                             <td>{{ $data->bslost }}</td>
@@ -68,7 +69,7 @@
                     @foreach($b as $key => $data)
                         <tr class="">
                             <td scope="row">{{ $loop->iteration }}</td>
-                            <td>{{ $data->name }}</td>
+                            <td>{{ $data->code}}</td>
                             <td>{{ $data->bswon }}</td>
                             <td>{{ $data->bstied }}</td>
                             <td>{{ $data->bslost }}</td>
@@ -84,8 +85,12 @@
             </div>
     </div>
 
+    <div class="text-center">
 
-    <h5><i class="las la-table"></i> JADUAL & KEPUTUSAN PERLAWANAN</h5>
+        <h5><i class="las la-calendar"></i> JADUAL & KEPUTUSAN PERLAWANAN</h5>
+    </div>
+
+<h6 class="text-primary"><i class="las las la-calendar-check"></i> PERINGKAT KUMPULAN</h6>
 
 <div
     class="table-responsive"
@@ -102,25 +107,27 @@
                 <th scope="col">glg</th>
                 <th scope="col">Team1</th>
                 <th scope="col">Result1</th>
-                <th scope="col">Team2</th>
                 <th scope="col">Result2</th>
+                <th scope="col">Team2</th>
                
             </tr>
         </thead>
         <tbody>
             @foreach($fixtures as $fixture)
-            <tr class="text-center">
-                <td scope="row">{{ $fixture->order }}</td>
-                <!-- <td>{{ $fixture->stage }}</td> -->
-                <td>{{ $fixture->ext2 }}</td>
-                <td>{{ $fixture->ext1 }}</td>
-                <td>{{ $fixture->court }}</td>
-                <td>{{ $fixture->contigent1->name }}</td>
-                <td>{{ $fixture->result1 }}</td>
-                <td>{{ $fixture->contigent2->name }}</td>
-                <td>{{ $fixture->result2 }}</td>
-                
-            </tr>
+            @if($fixture->stage == 'Kumpulan')
+                <tr class="text-center">
+                    <td scope="row">{{ $fixture->order }}</td>
+                    <!-- <td>{{ $fixture->stage }}</td> -->
+                    <td>{{ $fixture->ext2 }}</td>
+                    <td>{{ $fixture->ext1 }}</td>
+                    <td>{{ $fixture->court }}</td>
+                    <td>{{ $fixture->contigent1->code }}</td>
+                    <td>{{ $fixture->result1 }}</td>
+                    <td>{{ $fixture->result2 }}</td>
+                    <td>{{ $fixture->contigent2->code }}</td>
+                    
+                </tr>
+            @endif
             @endforeach
            
         </tbody>
@@ -129,11 +136,144 @@
 
 
 
+<h6 class="text-primary"><i class="las las la-calendar-check"></i> PERINGKAT SEPARUH AKHIR</h6>
+
+<div
+    class="table-responsive"
+>
+    <table
+        class="table table-sm table-bordered table-striped"
+    >
+        <thead>
+            <tr class="table-dark text-center">
+                <th scope="col">#</th>
+                <!-- <th scope="col">Peringkat</th> -->
+                <th scope="col">Tarikh</th>
+                <th scope="col">Jam</th>
+                <th scope="col">glg</th>
+                <th scope="col">Team1</th>
+                <th scope="col">Result1</th>
+                <th scope="col">Result2</th>
+                <th scope="col">Team2</th>
+               
+            </tr>
+        </thead>
+        <tbody>
+            @foreach($fixtures as $fixture)
+            @if($fixture->stage == 'Separuh Akhir')
+                <tr class="text-center">
+                    <td scope="row">{{ $fixture->order }}</td>
+                    <!-- <td>{{ $fixture->stage }}</td> -->
+                    <td>{{ $fixture->ext2 }}</td>
+                    <td>{{ $fixture->ext1 }}</td>
+                    <td>{{ $fixture->court }}</td>
+                    <td>{{ $fixture->contigent1->code }}</td>
+                    <td>{{ $fixture->result1 }}</td>
+                    <td>{{ $fixture->result2 }}</td>
+                    <td>{{ $fixture->contigent2->code }}</td>
+                    
+                </tr>
+            @endif
+            @endforeach
+           
+        </tbody>
+    </table>
+</div>
+
+
+<h6 class="text-primary"><i class="las las la-calendar-check"></i> PENENTUAN 3/4</h6>
+
+<div
+    class="table-responsive"
+>
+    <table
+        class="table table-sm table-bordered table-striped"
+    >
+        <thead>
+            <tr class="table-dark text-center">
+                <th scope="col">#</th>
+                <!-- <th scope="col">Peringkat</th> -->
+                <th scope="col">Tarikh</th>
+                <th scope="col">Jam</th>
+                <th scope="col">glg</th>
+                <th scope="col">Team1</th>
+                <th scope="col">Result1</th>
+                <th scope="col">Result2</th>
+                <th scope="col">Team2</th>
+               
+            </tr>
+        </thead>
+        <tbody>
+            @foreach($fixtures as $fixture)
+            @if($fixture->stage == 'Tempat 3 / 4')
+                <tr class="text-center">
+                    <td scope="row">{{ $fixture->order }}</td>
+                    <!-- <td>{{ $fixture->stage }}</td> -->
+                    <td>{{ $fixture->ext2 }}</td>
+                    <td>{{ $fixture->ext1 }}</td>
+                    <td>{{ $fixture->court }}</td>
+                    <td>{{ $fixture->contigent1->code }}</td>
+                    <td>{{ $fixture->result1 }}</td>
+                    <td>{{ $fixture->result2 }}</td>
+                    <td>{{ $fixture->contigent2->code }}</td>
+                    
+                </tr>
+            @endif
+            @endforeach
+           
+        </tbody>
+    </table>
+</div>
+
+
+<h6 class="text-primary"><i class="las las la-calendar-check"></i> AKHIR</h6>
+
+<div
+    class="table-responsive"
+>
+    <table
+        class="table table-sm table-bordered table-striped"
+    >
+        <thead>
+            <tr class="table-dark text-center">
+                <th scope="col">#</th>
+                <!-- <th scope="col">Peringkat</th> -->
+                <th scope="col">Tarikh</th>
+                <th scope="col">Jam</th>
+                <th scope="col">glg</th>
+                <th scope="col">Team1</th>
+                <th scope="col">Result1</th>
+                <th scope="col">Result2</th>
+                <th scope="col">Team2</th>
+               
+            </tr>
+        </thead>
+        <tbody>
+            @foreach($fixtures as $fixture)
+            @if($fixture->stage == 'Akhir')
+                <tr class="text-center">
+                    <td scope="row">{{ $fixture->order }}</td>
+                    <!-- <td>{{ $fixture->stage }}</td> -->
+                    <td>{{ $fixture->ext2 }}</td>
+                    <td>{{ $fixture->ext1 }}</td>
+                    <td>{{ $fixture->court }}</td>
+                    <td>{{ $fixture->contigent1->code }}</td>
+                    <td>{{ $fixture->result1 }}</td>
+                    <td>{{ $fixture->result2 }}</td>
+                    <td>{{ $fixture->contigent2->code }}</td>
+                    
+                </tr>
+            @endif
+            @endforeach
+           
+        </tbody>
+    </table>
 </div>
 
 
 
 
+</div>
 
 </div>
 </div>

@@ -2,19 +2,20 @@
     <div class="container">
     <div class="row pt-2">
 
-<h4>STANDING</h4>
+<div class="h5 text-center pt-2"><i class="las la-medal"></i> KEDUDUKAN PINGAT</div>
+<hr class="border-dashed">
 
 <div class="table-responsive">
         <table class="table table-warning table-bordered table-striped text-center">
             <thead class="">
                 <tr class="bg-secondary ">
                     <th scope="col" class="bg-warning bg-gradient">#</th>
-                    <th scope="col" class="bg-warning bg-gradient">Team</th>
+                    <th scope="col" class="bg-warning bg-gradient text-start">PASUKAN</th>
                     <th scope="col" class="bg-warning bg-gradient">E</th>
                     <th scope="col" class="bg-warning bg-gradient">P</th>
                     <th scope="col" class="bg-warning bg-gradient">G</th>
                     <th scope="col" class="bg-warning bg-gradient">4</th>
-                    <th scope="col" class="bg-warning bg-gradient">P</th>
+                    <th scope="col" class="bg-warning bg-gradient">MATA</th>
                 
                 </tr>
             </thead>
@@ -22,7 +23,7 @@
             <?php $__currentLoopData = $standings; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $key => $data): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                 <tr class="">
                     <td scope="row"><?php echo e($loop->iteration); ?></td>
-                    <td><?php echo e($data->name); ?></td>
+                    <td class="text-start"><?php echo e($data->code); ?></td>
                     <td><?php echo e($data->first); ?></td>
                     <td><?php echo e($data->second); ?></td>
                     <td><?php echo e($data->third); ?></td>
@@ -34,12 +35,7 @@
                
             </tbody>
         </table>
-    </div>
-
-
-
-
-
+</div>
 
 </div>
 
@@ -47,9 +43,10 @@
 
 
 
+<div class="h5 text-center pt-2">KEPUTUSAN AKHIR</div>
 
-
-    <div class="row">
+<hr class="border-dashed">
+<div class="row">
 
 <?php $__currentLoopData = $sports; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $sport): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
     <div class="col-6">

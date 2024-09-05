@@ -10,12 +10,15 @@ use App\Models\Sport;
 
 class Bs extends Component
 {
-    public $data_id,  $match, $stage, $order,$court;
+    public $data_id,  $match, $stage, $order,$court, $sport_id;
    
     public function render()
     {
-        $sport_id = Sport::select('id')->whereName('BOLA SEPAK')->first();
-        $id = $sport_id->id;
+        $this->sport_id = Sport::select('id','name','venue')->whereName('BOLA SEPAK')->first();
+
+        // dd($this->sport_id);
+
+        $id = $this->sport_id->id;
         $a = Contigent::whereHas('grp', function($q) use($id) {
              $q->where('name', 'A')->where('sport_id', $id);
          })->get()->sortByDesc('goaldifference')->sortByDesc('points');

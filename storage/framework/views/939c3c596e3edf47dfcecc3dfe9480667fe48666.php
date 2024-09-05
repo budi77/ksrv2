@@ -14,8 +14,18 @@
         <!-- Buttons Grid -->
     <div class="d-grid gap-2 pt-2" >
 
-    <a class="btn btn-primary" href="<?php echo e(route('ksrgames24.rangking')); ?>" role="button">KEDUDUKAN</a>
+    <a class="btn btn-success" href="<?php echo e(route('ksrgames24.rangking')); ?>" role="button">KEDUDUKAN</a>
     <a class="btn btn-primary" href="<?php echo e(route('ksrgames24.bs')); ?>" role="button">BOLA SEPAK</a>
+    <a class="btn btn-primary" href="<?php echo e(route('ksrgames24.bs')); ?>" role="button">BADMINTON</a>
+    <a class="btn btn-primary" href="<?php echo e(route('ksrgames24.bs')); ?>" role="button">BOLA JARING</a>
+    <a class="btn btn-primary" href="<?php echo e(route('ksrgames24.bs')); ?>" role="button">BOLA TAMPAR LELAKI</a>
+    <a class="btn btn-primary" href="<?php echo e(route('ksrgames24.bs')); ?>" role="button">BOLA TAMPAR WANITA</a>
+    <a class="btn btn-primary" href="<?php echo e(route('ksrgames24.bs')); ?>" role="button">PING PONG</a>
+    <a class="btn btn-primary" href="<?php echo e(route('ksrgames24.bs')); ?>" role="button">FUTSAL</a>
+    <a class="btn btn-primary" href="<?php echo e(route('ksrgames24.bs')); ?>" role="button">BALAPAN</a>
+    <a class="btn btn-primary" href="<?php echo e(route('ksrgames24.bs')); ?>" role="button">TARIK TALI</a>
+    <a class="btn btn-primary" href="<?php echo e(route('ksrgames24.bs')); ?>" role="button">BOWLING</a>
+    <a class="btn btn-primary" href="<?php echo e(route('ksrgames24.bs')); ?>" role="button">MENEMBAK</a>
         <!-- <button class="btn btn-primary" type="button">PROGRAM</button> -->
         
     </div>
