@@ -7,7 +7,7 @@
 <div class="row">
     <div class="text-center">
 
-        <img src="http://ksrv2.test/assets/images/KSR.png" alt="" class="rounded avatar-xl" >
+        <img src="{{ URL::asset('assets/images/KSR.png') }}" alt="" class="rounded avatar-xl" >
     </div>
 
 <div class="text-center h4 pt-4">KSR GAMES 2024</div>
