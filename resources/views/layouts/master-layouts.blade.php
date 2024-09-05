@@ -11,6 +11,8 @@
     <link rel="shortcut icon" href="{{ URL::asset('assets/images/favicon.ico')}}">
     @include('layouts.head-css')
     @livewireStyles
+    @stack('styles')
+
 
 </head>
 <body>
@@ -44,6 +46,10 @@
     @include('layouts.vendor-scripts')
     @livewireScripts
     <x-livewire-alert::scripts />
+    @stack('scripts')
+
+    
+
 </body>
 
 </html>
