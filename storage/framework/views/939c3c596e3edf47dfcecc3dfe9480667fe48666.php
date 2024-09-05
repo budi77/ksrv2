@@ -16,7 +16,7 @@
 
     <a class="btn btn-success bg-gradient bg-animation" href="<?php echo e(route('ksrgames24.rangking')); ?>" role="button">KEDUDUKAN</a>
     <a class="btn btn-primary bg-gradient bg-animation" href="<?php echo e(route('ksrgames24.bs')); ?>" role="button">BOLA SEPAK</a>
-    <a class="btn btn-primary bg-gradient bg-animation" href="<?php echo e(route('ksrgames24.bs')); ?>" role="button">BADMINTON</a>
+    <a class="btn btn-primary bg-gradient bg-animation" href="<?php echo e(route('ksrgames24.bd')); ?>" role="button">BADMINTON</a>
     <a class="btn btn-primary bg-gradient bg-animation" href="<?php echo e(route('ksrgames24.bs')); ?>" role="button">BOLA JARING</a>
     <a class="btn btn-primary bg-gradient bg-animation" href="<?php echo e(route('ksrgames24.bs')); ?>" role="button">BOLA TAMPAR LELAKI</a>
     <a class="btn btn-primary bg-gradient bg-animation" href="<?php echo e(route('ksrgames24.bs')); ?>" role="button">BOLA TAMPAR WANITA</a>
