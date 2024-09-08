@@ -39,6 +39,9 @@ Route::get('/ksrgames24', \App\Http\Livewire\KsrGames24\Portal\Index::class)->na
 Route::get('/ksrgames24/program', \App\Http\Livewire\KsrGames24\Portal\Program::class)->name('ksrgames24.program');
 Route::get('/ksrgames24/program/bs', \App\Http\Livewire\KsrGames24\Portal\Bs::class)->name('ksrgames24.bs');
 Route::get('/ksrgames24/program/bd', \App\Http\Livewire\KsrGames24\Portal\Bd::class)->name('ksrgames24.bd');
+Route::get('/ksrgames24/program/bl', \App\Http\Livewire\KsrGames24\Portal\Bl::class)->name('ksrgames24.bl');
+Route::get('/ksrgames24/program/tt', \App\Http\Livewire\KsrGames24\Portal\Tt::class)->name('ksrgames24.tt');
+Route::get('/ksrgames24/program/mk', \App\Http\Livewire\KsrGames24\Portal\Mk::class)->name('ksrgames24.mk');
 Route::get('/ksrgames24/program/ranking', \App\Http\Livewire\KsrGames24\Portal\Rangking::class)->name('ksrgames24.rangking');
 // Route::get('/ksrarena2023', \App\Http\Livewire\KSRArena\Borang::class)->name('ksrarena');
 // Route::get('/ksrarena2023/bolajaring', \App\Http\Livewire\KSRArena\Netball\Index::class)->name('ksrarena.bolajaring');

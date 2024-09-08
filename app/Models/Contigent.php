@@ -864,7 +864,7 @@ public function getPpGoalDifferenceAttribute()
 // end ping pong
 
 
-// BOLA FUTSAL
+// FUTSAL
 
 public function getFsWonAttribute()
 {

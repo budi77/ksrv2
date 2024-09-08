@@ -22,10 +22,10 @@
     <a class="btn btn-primary bg-gradient bg-animation" href="<?php echo e(route('ksrgames24.bs')); ?>" role="button">BOLA TAMPAR WANITA</a>
     <a class="btn btn-primary bg-gradient bg-animation" href="<?php echo e(route('ksrgames24.bs')); ?>" role="button">PING PONG</a>
     <a class="btn btn-primary bg-gradient bg-animation" href="<?php echo e(route('ksrgames24.bs')); ?>" role="button">FUTSAL</a>
-    <a class="btn btn-primary bg-gradient bg-animation" href="<?php echo e(route('ksrgames24.bs')); ?>" role="button">BALAPAN</a>
-    <a class="btn btn-primary bg-gradient bg-animation" href="<?php echo e(route('ksrgames24.bs')); ?>" role="button">TARIK TALI</a>
+    <a class="btn btn-primary bg-gradient bg-animation" href="<?php echo e(route('ksrgames24.bl')); ?>" role="button">BALAPAN</a>
+    <a class="btn btn-primary bg-gradient bg-animation" href="<?php echo e(route('ksrgames24.tt')); ?>" role="button">TARIK TALI L & W</a>
     <a class="btn btn-primary bg-gradient bg-animation" href="<?php echo e(route('ksrgames24.bs')); ?>" role="button">BOWLING</a>
-    <a class="btn btn-primary bg-gradient bg-animation" href="<?php echo e(route('ksrgames24.bs')); ?>" role="button">MENEMBAK</a>
+    <a class="btn btn-primary bg-gradient bg-animation" href="<?php echo e(route('ksrgames24.mk')); ?>" role="button">MENEMBAK</a>
         <!-- <button class="btn btn-primary" type="button">PROGRAM</button> -->
 
         <!-- <div class="row">
