@@ -71,7 +71,8 @@
             </div>
             <div class="modal-body">
             <div class="text-center">
-                <iframe marginheight="0" marginwidth="0" scrolling="no"  src="https://www.e-solat.gov.my/portalassets/www2/roxy.php?kod=SGR01&lang=BM&url=http:/www.islam.gov.my" width=500 height=600 frameborder=0></iframe>
+            <iframe marginheight="0" marginwidth="0" scrolling="no"  src="https://www.e-solat.gov.my/portalassets/www2/sadie.php?kod=SGR01&lang=BM&url=http:/www.islam.gov.my" width=480 height=360 frameborder=0></iframe>
+                <!-- <iframe marginheight="0" marginwidth="0" scrolling="no"  src="https://www.e-solat.gov.my/portalassets/www2/roxy.php?kod=SGR01&lang=BM&url=http:/www.islam.gov.my" width=500 height=600 frameborder=0></iframe> -->
 
             </div>
 
