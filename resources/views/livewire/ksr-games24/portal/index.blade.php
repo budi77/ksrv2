@@ -174,67 +174,98 @@
                             <tr class="">
                                 <td scope="row">5</td>
                                 <td>PPs NUR HIDAYAHTUL AYU BINTI ABDUL RAHMAN</td>
-                                <td>017-4038868</td>
+                                <td>
+                                <a href="tel:017-4038868">017-4038868</a>
+                                  
+                                </td>
                             </tr>
                             <tr class="">
                                 <td scope="row">6</td>
                                 <td>PsK SITI ZAHARAH BINTI HJ ALIAS</td>
-                                <td>013-3405637</td>
+                                <td>
+                                <a href="tel:013-3405637">013-3405637</a>
+
+                                </td>
                             </tr>
                             <tr class="">
                                 <td scope="row">7</td>
                                 <td>Ps SITI AZYYATI BINTI AB. AZIZ</td>
-                                <td>012-9339113</td>
+                                <td>
+                                <a href="tel: 012-9339113"> 012-9339113</a>
+
+                                </td>
                             </tr>
                             <tr class="">
                                 <td scope="row">8</td>
                                 <td>Ps OMAR MOKHTAR BIN JAHARI</td>
-                                <td>017-2611004</td>
+                                <td>
+                                <a href="tel: 017-2611004">  017-2611004</a>
+
+                               
+                                </td>
                             </tr>
                             <tr class="">
                                 <td scope="row">9</td>
                                 <td>KPKPs KAMSIAH BINTI AHMAD</td>
-                                <td>014-6888004</td>
+                                <td>
+                                    <a href="tel:012-6888004">012-6888004</a>
+                                </td>
                             </tr>
                             <tr class="">
                                 <td scope="row">10</td>
                                 <td>PKPs NUR ‘AZIM BIN AFNI</td>
-                                <td>012-6146864</td>
+                                <td>
+                                    <a href="tel:012-6146864">012-6146864</a>
+                                </td>
                             </tr>
                             <tr class="">
                                 <td scope="row">11</td>
                                 <td>PKPs AZRI BIN MOHAMED</td>
-                                <td>013-4707069</td>
+                                <td>
+                                    <a href="tel:013-4707069">013-4707069</a>
+                                </td>
                             </tr>
                             <tr class="">
                                 <td scope="row">12</td>
                                 <td>PKPs ROAZFANIZA BINTI ROSLIM</td>
-                                <td>019-4980898</td>
+                                <td>
+                                    <a href="tel:019-4980898">019-4980898</a>
+                                </td>
                             </tr>
                             <tr class="">
                                 <td scope="row">13</td>
                                 <td>EN. SYAMAIZA BIN MOHD NAWI</td>
-                                <td>011-17928186</td>
+                                <td>
+                                    <a href="tel:011-17928186">011-17928186</a>
+                                </td>
                             </tr>
                             <tr class="">
                                 <td scope="row">14</td>
                                 <td>PsK HARUSSANI BIN HAMZAH</td>
-                                <td>012-4844521</td>
+                                <td>
+                                    <a href="tel:012-4844521">012-4844521</a>
+                                </td>
                             </tr>
                             <tr class="">
                                 <td scope="row">15</td>
                                 <td>Ps BALQIS HAFIZAH BINTI IDRIS</td>
-                                <td>019-9467202</td>
+                                <td>
+                                    <a href="tel:019-9467202">019-9467202</a>
+                                </td>
                             </tr>
                             <tr class="">
                                 <td scope="row">16</td>
                                 <td>Ps MOHD NAZRI BIN ISMAIL</td>
-                                <td>019-6672263</td>
+                                <td>
+                                    <a href="tel:019-6672263">019-6672263</a>
+                                </td>
                             </tr>
                             <tr class="">
                                 <td scope="row">17</td>
                                 <td>KPKPs HOSSEN BIN ABDUL RAHIM</td>
-                                <td>019-8182284</td>
+                                <td>
+                                    <a href="tel:019-8182284">019-8182284</a>
+                                </td>
                             </tr>
                         </tbody>
                     </table>
