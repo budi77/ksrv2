@@ -9,7 +9,7 @@
         </div>
 
     <div class="text-center h4 pt-4">MACC GAMES 2024</div>
-    <p class="text-center h4 text-muted">UITM SHAH ALAM</p>
+    <!-- <p class="text-center h4 text-muted">UITM SHAH ALAM</p> -->
 
         <!-- Buttons Grid -->
     <div class="d-grid gap-2 pt-2 pb-2" >
