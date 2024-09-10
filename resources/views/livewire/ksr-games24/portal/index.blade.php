@@ -10,7 +10,7 @@
         <img src="{{ URL::asset('assets/images/KSR.png') }}" alt="" class="rounded avatar-xl" >
     </div>
 
-<div class="text-center h4 pt-4">KSR GAMES 2024</div>
+<div class="text-center h4 pt-4">MACC GAMES 2024</div>
 <!-- <p class="text-center h4 text-muted">PROGRAM</p> -->
 
 
