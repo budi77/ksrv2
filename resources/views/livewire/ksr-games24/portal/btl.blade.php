@@ -102,8 +102,8 @@
                 <th scope="col"><i class="las la-clock"></i></th>
                 <th scope="col">glg</th>
                 <th scope="col">Team1</th>
-                <th scope="col">Result1</th>
-                <th scope="col">Result2</th>
+                <th scope="col" colspan="2">Keputusan</th>
+                <!-- <th scope="col">Result2</th> -->
                 <th scope="col">Team2</th>
                
             </tr>
@@ -148,8 +148,8 @@
                 <th scope="col"><i class="las la-clock"></i></th>
                 <th scope="col">glg</th>
                 <th scope="col">Team1</th>
-                <th scope="col">Result1</th>
-                <th scope="col">Result2</th>
+                <th scope="col" colspan="2">Keputusan</th>
+                <!-- <th scope="col">Result2</th> -->
                 <th scope="col">Team2</th>
                
             </tr>
@@ -193,8 +193,8 @@
                 <th scope="col"><i class="las la-clock"></i></th>
                 <th scope="col">glg</th>
                 <th scope="col">Team1</th>
-                <th scope="col">Result1</th>
-                <th scope="col">Result2</th>
+                <th scope="col" colspan="2">Keputusan</th>
+                <!-- <th scope="col">Result2</th> -->
                 <th scope="col">Team2</th>
                
             </tr>
@@ -238,8 +238,8 @@
                 <th scope="col"><i class="las la-clock"></i></th>
                 <th scope="col">glg</th>
                 <th scope="col">Team1</th>
-                <th scope="col">Result1</th>
-                <th scope="col">Result2</th>
+                <th scope="col" colspan="2">Keputusan</th>
+                <!-- <th scope="col">Result2</th> -->
                 <th scope="col">Team2</th>
                
             </tr>

@@ -28,4 +28,19 @@ class Sports extends Component
         $this->resetExcept('results');
     }
 
+        
+    public function edit($id)
+    {
+        $this->data_id = $id;
+
+        $data = Sport::find($id);
+
+        // dd($data);
+        $this->name = $data->name;
+        $this->venue = $data->venue;
+        $this->icon = $data->icon;
+        $this->pic1 = $data->ext1;
+      
+    }
+
 }
