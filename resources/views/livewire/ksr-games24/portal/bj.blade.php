@@ -102,8 +102,8 @@
             <tr class="table-dark text-center">
                 <th scope="col">#</th>
                 <!-- <th scope="col">Peringkat</th> -->
-                <th scope="col">Tarikh</th>
-                <th scope="col">Jam</th>
+                <th scope="col"><i class="las la-calendar-day"></i></th>
+                <th scope="col"><i class="las la-clock"></i></th>
                 <th scope="col">glg</th>
                 <th scope="col">Team1</th>
                 <th scope="col">Result1</th>
@@ -148,8 +148,8 @@
             <tr class="table-dark text-center">
                 <th scope="col">#</th>
                 <!-- <th scope="col">Peringkat</th> -->
-                <th scope="col">Tarikh</th>
-                <th scope="col">Jam</th>
+                <th scope="col"><i class="las la-calendar-day"></i></th>
+                <th scope="col"><i class="las la-clock"></i></th>
                 <th scope="col">glg</th>
                 <th scope="col">Team1</th>
                 <th scope="col">Result1</th>
@@ -193,8 +193,8 @@
             <tr class="table-dark text-center">
                 <th scope="col">#</th>
                 <!-- <th scope="col">Peringkat</th> -->
-                <th scope="col">Tarikh</th>
-                <th scope="col">Jam</th>
+                <th scope="col"><i class="las la-calendar-day"></i></th>
+                <th scope="col"><i class="las la-clock"></i></th>
                 <th scope="col">glg</th>
                 <th scope="col">Team1</th>
                 <th scope="col">Result1</th>
@@ -238,8 +238,8 @@
             <tr class="table-dark text-center">
                 <th scope="col">#</th>
                 <!-- <th scope="col">Peringkat</th> -->
-                <th scope="col">Tarikh</th>
-                <th scope="col">Jam</th>
+                <th scope="col"><i class="las la-calendar-day"></i></th>
+                <th scope="col"><i class="las la-clock"></i></th>
                 <th scope="col">glg</th>
                 <th scope="col">Team1</th>
                 <th scope="col">Result1</th>
