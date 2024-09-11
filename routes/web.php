@@ -42,6 +42,7 @@ Route::get('/maccgames24/program/bd', \App\Http\Livewire\KsrGames24\Portal\Bd::c
 Route::get('/maccgames24/program/bl', \App\Http\Livewire\KsrGames24\Portal\Bl::class)->name('ksrgames24.bl');
 Route::get('/maccgames24/program/tt', \App\Http\Livewire\KsrGames24\Portal\Tt::class)->name('ksrgames24.tt');
 Route::get('/maccgames24/program/mk', \App\Http\Livewire\KsrGames24\Portal\Mk::class)->name('ksrgames24.mk');
+Route::get('/maccgames24/program/bj', \App\Http\Livewire\KsrGames24\Portal\Bj::class)->name('ksrgames24.bj');
 Route::get('/maccgames24/program/btl', \App\Http\Livewire\KsrGames24\Portal\Btl::class)->name('ksrgames24.btl');
 Route::get('/maccgames24/program/btw', \App\Http\Livewire\KsrGames24\Portal\Btw::class)->name('ksrgames24.btw');
 Route::get('/maccgames24/program/ranking', \App\Http\Livewire\KsrGames24\Portal\Rangking::class)->name('ksrgames24.rangking');
