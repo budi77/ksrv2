@@ -22,9 +22,9 @@
             <tbody>
                 @foreach($results as $r)
                 <tr class="">
-                    <td scope="row">{{ $r->rank }}</td>
-                    <td>{{ $r->contigent->name }}</td>
-                    <td>{{ $r->points }}</td>
+                    <td scope="row">{{ @$r->rank }}</td>
+                    <td>{{ @$r->contigent->name }}</td>
+                    <td>{{ @$r->points }}</td>
                     <td></td>
                 </tr>
                 @endforeach
