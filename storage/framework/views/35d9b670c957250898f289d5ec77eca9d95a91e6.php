@@ -17,9 +17,9 @@
     <!-- Buttons Grid -->
 <div class="d-grid gap-2 pt-2" >
     <button class="btn btn-warning bg-gradient btn-lg" type="button">ATURCARA MAJLIS</button>
-    <a class="btn btn-primary bg-gradient btn-lg" href="<?php echo e(route('ksrgames24.program')); ?>" role="button">PROGRAM</a>
     <!-- <a class="btn btn-primary" href="<?php echo e(route('ksrgames24.program')); ?>" role="button">PROGRAM</a> -->
-    <a class="btn btn-danger bg-gradient btn-lg" href="<?php echo e(route('ksrgames24.program')); ?>" role="button">SYARAT-SYARAT</a>
+    <a class="btn btn-primary bg-gradient btn-lg" href="<?php echo e(route('ksrgames24.program')); ?>" role="button">PROGRAM</a>
+    <a class="btn btn-danger bg-gradient btn-lg" href="<?php echo e(URL::asset('documents/maccgames24/JADUAL_SYARAT_AM_MACCGAMES24.pdf')); ?>" role="button">JADUAL & SYARAT AM</a>
     <a class="btn btn-info bg-gradient btn-lg" data-bs-toggle="modal" data-bs-target="#contact" role="button">SENARAI UNTUK DIHUBUNGI</a>
     <a class="btn btn-warning bg-gradient btn-lg"   data-bs-toggle="modal" data-bs-target="#solat" role="button">WAKTU SOLAT</a>
 
