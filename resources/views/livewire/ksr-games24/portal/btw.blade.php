@@ -45,21 +45,21 @@
 
     </div>
    
-    <div class="col-6 pt-2">
+    <div class="col pt-2">
 
     <h6>KUMPULAN B</h5>
             <div class="table-responsive">
-                <table class="table table-warning table-bordered table-striped text-center">
+                <table class="table table-info table-bordered table-striped text-center">
                     <thead >
                         <tr>
-                            <th scope="col" class="bg-warning bg-gradient">#</th>
-                            <th scope="col" class="bg-warning bg-gradient">Team</th>
-                            <th scope="col" class="bg-warning bg-gradient">W</th>
-                            <th scope="col" class="bg-warning bg-gradient">L</th>
-                            <th scope="col" class="bg-warning bg-gradient">GF</th>
-                            <th scope="col" class="bg-warning bg-gradient">GA</th>
-                            <th scope="col" class="bg-warning bg-gradient">GD</th>
-                            <th scope="col" class="bg-warning bg-gradient">P</th>
+                            <th scope="col" class="bg-info bg-gradient">#</th>
+                            <th scope="col" class="bg-info bg-gradient">Team</th>
+                            <th scope="col" class="bg-info bg-gradient">W</th>
+                            <th scope="col" class="bg-info bg-gradient">L</th>
+                            <th scope="col" class="bg-info bg-gradient">GF</th>
+                            <th scope="col" class="bg-info bg-gradient">GA</th>
+                            <th scope="col" class="bg-info bg-gradient">GD</th>
+                            <th scope="col" class="bg-info bg-gradient">P</th>
                         </tr>
                     </thead>
                     <tbody>

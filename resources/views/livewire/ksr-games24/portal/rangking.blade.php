@@ -6,16 +6,16 @@
 <hr class="border-dashed">
 
 <div class="table-responsive">
-        <table class="table table-warning table-bordered table-striped text-center">
+        <table class="table table-primary table-bordered table-striped text-center">
             <thead class="">
                 <tr class="bg-secondary ">
-                    <th scope="col" class="bg-warning bg-gradient">#</th>
-                    <th scope="col" class="bg-warning bg-gradient text-start">PASUKAN</th>
-                    <th scope="col" class="bg-warning bg-gradient">E</th>
-                    <th scope="col" class="bg-warning bg-gradient">P</th>
-                    <th scope="col" class="bg-warning bg-gradient">G</th>
-                    <th scope="col" class="bg-warning bg-gradient">4</th>
-                    <th scope="col" class="bg-warning bg-gradient">MATA</th>
+                    <th scope="col" class="bg-primary bg-gradient">#</th>
+                    <th scope="col" class="bg-primary bg-gradient text-start">PASUKAN</th>
+                    <th scope="col" class="bg-primary bg-gradient">E</th>
+                    <th scope="col" class="bg-primary bg-gradient">P</th>
+                    <th scope="col" class="bg-primary bg-gradient">G</th>
+                    <th scope="col" class="bg-primary bg-gradient">4</th>
+                    <th scope="col" class="bg-primary bg-gradient">MATA</th>
                 
                 </tr>
             </thead>

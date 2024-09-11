@@ -22,9 +22,9 @@
             <tbody>
                 <?php $__currentLoopData = $results; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $r): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                 <tr class="">
-                    <td scope="row"><?php echo e($r->rank); ?></td>
-                    <td><?php echo e($r->contigent->name); ?></td>
-                    <td><?php echo e($r->points); ?></td>
+                    <td scope="row"><?php echo e(@$r->rank); ?></td>
+                    <td><?php echo e(@$r->contigent->name); ?></td>
+                    <td><?php echo e(@$r->points); ?></td>
                     <td></td>
                 </tr>
                 <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>

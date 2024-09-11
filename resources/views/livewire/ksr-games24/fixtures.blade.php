@@ -121,6 +121,10 @@
                                         <livewire:ksr-games24.bowling.games /> 
 
                                         </div>
+                                        <div class="tab-pane" id="karom" role="tabpanel">
+                                        <livewire:ksr-games24.karom.games /> 
+
+                                        </div>
                                     </div>
                                 </div><!-- end card-body -->
                             </div>

@@ -1115,6 +1115,129 @@ public function getStGoalDifferenceAttribute()
 
 
 
+// Karom
+
+public function getKrWonAttribute()
+{
+    return Fixture::whereNotNull('result1')
+        ->where(function($query) {
+            $query->where(function($query2) {
+                $query2->where('contigent1_id', $this->attributes['id'])->whereRaw('result1 > result2');
+            })->orWhere(function($query2) {
+                $query2->where('contigent2_id', $this->attributes['id'])->whereRaw('result1 < result2');
+            });
+        })
+        ->where('stage', 'Kumpulan')
+        ->where('sport_id', 8)
+        ->count();
+}
+
+public function getKrTiedAttribute()
+{
+    return Fixture::whereNotNull('result1')
+        ->whereRaw('result1 = result2')
+        ->where(function($query) {
+            $query->where('contigent1_id', $this->attributes['id'])
+                ->orWhere('contigent2_id', $this->attributes['id']);
+        })
+        ->where('stage', 'Kumpulan')
+        ->where('sport_id', 8)
+        ->count();
+}
+
+public function getKrLostAttribute()
+{
+    return Fixture::whereNotNull('result1')
+        ->where(function($query) {
+            $query->where(function($query2) {
+                $query2->where('contigent1_id', $this->attributes['id'])->whereRaw('result1 < result2');
+            })->orWhere(function($query2) {
+                $query2->where('contigent2_id', $this->attributes['id'])->whereRaw('result1 > result2');
+            });
+        })
+        ->where('stage', 'Kumpulan')
+        ->where('sport_id', 8)
+        ->count();
+}
+
+
+public function getKrGoalResult1Attribute()
+{
+    return Fixture::whereNotNull('result1')
+        ->where(function($query) {
+            $query->where(function($query2) {
+                $query2->where('contigent1_id', $this->attributes['id']);
+            });
+        })
+        ->where('stage', 'Kumpulan')
+        ->where('sport_id', 8)
+        ->sum('result1');
+}
+
+
+public function getKrGoalResult2Attribute()
+{
+    return Fixture::whereNotNull('result1')
+        ->where(function($query) {
+            $query->where(function($query2) {
+                $query2->where('contigent2_id', $this->attributes['id']);
+            });
+        })
+        ->where('stage', 'Kumpulan')
+        ->where('sport_id', 8)
+        ->sum('result2');
+}
+
+public function getKrAgainstResult1Attribute()
+{
+    return Fixture::whereNotNull('result1')
+        ->where(function($query) {
+            $query->where(function($query2) {
+                $query2->where('contigent1_id', $this->attributes['id']);
+            });
+        })
+        ->where('stage', 'Kumpulan')
+        ->where('sport_id', 8)
+        ->sum('result2');
+}
+
+public function getKrAgainstResult2Attribute()
+{
+    return Fixture::whereNotNull('result1')
+        ->where(function($query) {
+            $query->where(function($query2) {
+                $query2->where('contigent2_id', $this->attributes['id']);
+            });
+        })
+        ->where('stage', 'Kumpulan')
+        ->where('sport_id', 8)
+        ->sum('result1');
+}
+
+public function getKrPointsAttribute()
+{
+    return $this->getKrWonAttribute() * 3;
+}
+
+
+
+public function getKrGoalAttribute()
+{
+    return $this->getKrGoalResult1Attribute() + $this->getKrGoalResult2Attribute() ;
+}
+
+public function getKrAgainstAttribute()
+{
+    return $this->getKrAgainstResult1Attribute() + $this->getKrAgainstResult2Attribute() ;
+}
+
+public function getKrGoalDifferenceAttribute()
+{
+    return $this->getKrGoalAttribute() - $this->getKrAgainstAttribute() ;
+}
+
+// end karom
+
 
 
 public function getWonAttribute()

@@ -37,4 +37,19 @@ class Grouping extends Component
 
         $this->resetExcept('results','sports','contigents','sport_id');
     }
+
+    public function edit($id)
+    {
+        $this->data_id = $id;
+
+        $data = Kumpulan::find($id);
+
+        // dd($data);
+        $this->name = $data->name;
+        $this->order = $data->order;
+        $this->contigent_id = $data->contigent_id;
+        $this->sport_id = $data->sport_id;
+      
+    }
+
 }
