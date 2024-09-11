@@ -15,6 +15,12 @@
         <?php echo \Livewire\Livewire::styles(); ?>
 
 
+        <style>
+            body {
+            background-color: #fce5cd;
+            }
+        </style>
+
   </head>
 
     <?php echo $__env->yieldContent('body'); ?>

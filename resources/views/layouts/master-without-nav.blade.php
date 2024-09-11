@@ -14,6 +14,12 @@
         @include('layouts.head-css')
         @livewireStyles
 
+        <style>
+            body {
+            background-color: #fce5cd;
+            }
+        </style>
+
   </head>
 
     @yield('body')
