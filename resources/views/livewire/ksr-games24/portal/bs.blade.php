@@ -112,7 +112,7 @@
                
             </tr>
         </thead>
-        <tbody>
+        <tbody class="bg-white">
             @foreach($fixtures as $fixture)
             @if($fixture->stage == 'Kumpulan')
                 <tr class="text-center">
@@ -158,7 +158,7 @@
                
             </tr>
         </thead>
-        <tbody>
+        <tbody class="bg-white">
             @foreach($fixtures as $fixture)
             @if($fixture->stage == 'Separuh Akhir')
                 <tr class="text-center">
@@ -193,17 +193,17 @@
             <tr class="table-dark text-center">
                 <th scope="col">#</th>
                 <!-- <th scope="col">Peringkat</th> -->
-                <th scope="col">Tarikh</th>
-                <th scope="col">Jam</th>
+                <th scope="col"><i class="las la-calendar-day"></i></th>
+                <th scope="col"><i class="las la-clock"></i></th>
                 <th scope="col">glg</th>
                 <th scope="col">Team1</th>
-                <th scope="col">Result1</th>
-                <th scope="col">Result2</th>
+                <th scope="col" colspan="2">Keputusan</th>
+                <!-- <th scope="col">Result2</th> -->
                 <th scope="col">Team2</th>
                
             </tr>
         </thead>
-        <tbody>
+        <tbody class="bg-white">
             @foreach($fixtures as $fixture)
             @if($fixture->stage == 'Tempat 3 / 4')
                 <tr class="text-center">
@@ -248,7 +248,7 @@
                
             </tr>
         </thead>
-        <tbody>
+        <tbody class="bg-white">
             @foreach($fixtures as $fixture)
             @if($fixture->stage == 'Akhir')
                 <tr class="text-center">

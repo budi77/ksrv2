@@ -108,7 +108,7 @@
                
             </tr>
         </thead>
-        <tbody>
+        <tbody class="bg-white">
             @foreach($fixtures as $fixture)
             @if($fixture->stage == 'Kumpulan')
                 <tr class="text-center">
@@ -154,7 +154,7 @@
                
             </tr>
         </thead>
-        <tbody>
+        <tbody class="bg-white">
             @foreach($fixtures as $fixture)
             @if($fixture->stage == 'Separuh Akhir')
                 <tr class="text-center">

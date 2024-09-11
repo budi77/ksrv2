@@ -57,7 +57,7 @@
             <th scope="col">Kontigen</th>
         </tr>
     </thead>
-    <tbody>
+    <tbody class="bg-white">
         @forelse($results as $d)
         @if($d->sport->name == $sport->name)
         <tr class="text-center">
