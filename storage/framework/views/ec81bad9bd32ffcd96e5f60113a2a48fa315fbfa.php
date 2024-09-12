@@ -78,6 +78,18 @@
                                                 <span class="d-none d-sm-block">BOWLING</span>
                                             </a>
                                         </li>
+                                        <li class="nav-item" role="presentation">
+                                            <a class="nav-link" data-bs-toggle="tab" href="#tariktalilelaki" role="tab" aria-selected="false" tabindex="-1">
+                                                <span class="d-block d-sm-none"><i class="mdi mdi-email"></i></span>
+                                                <span class="d-none d-sm-block">TARIK TALI (L)</span>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                            <a class="nav-link" data-bs-toggle="tab" href="#tariktaliwanita" role="tab" aria-selected="false" tabindex="-1">
+                                                <span class="d-block d-sm-none"><i class="mdi mdi-email"></i></span>
+                                                <span class="d-none d-sm-block">TARIK TALI (W)</span>
+                                            </a>
+                                        </li>
                                     </ul>
                                     <!-- Tab panes -->
                                     <div class="tab-content text-muted">
@@ -274,6 +286,42 @@ if (! isset($_instance)) {
     $response = \Livewire\Livewire::mount('ksr-games24.karom.games', []);
     $html = $response->html();
     $_instance->logRenderedChild('l4061111595-10', $response->id(), \Livewire\Livewire::getRootElementTagName($html));
+}
+echo $html;
+?> 
+
+                                        </div>
+                                        <div class="tab-pane" id="tariktalilelaki" role="tabpanel">
+                                        <?php
+if (! isset($_instance)) {
+    $html = \Livewire\Livewire::mount('ksr-games24.tarik-tali-lelaki.games', [])->html();
+} elseif ($_instance->childHasBeenRendered('l4061111595-11')) {
+    $componentId = $_instance->getRenderedChildComponentId('l4061111595-11');
+    $componentTag = $_instance->getRenderedChildComponentTagName('l4061111595-11');
+    $html = \Livewire\Livewire::dummyMount($componentId, $componentTag);
+    $_instance->preserveRenderedChild('l4061111595-11');
+} else {
+    $response = \Livewire\Livewire::mount('ksr-games24.tarik-tali-lelaki.games', []);
+    $html = $response->html();
+    $_instance->logRenderedChild('l4061111595-11', $response->id(), \Livewire\Livewire::getRootElementTagName($html));
+}
+echo $html;
+?> 
+
+                                        </div>
+                                        <div class="tab-pane" id="tariktaliwanita" role="tabpanel">
+                                        <?php
+if (! isset($_instance)) {
+    $html = \Livewire\Livewire::mount('ksr-games24.tarik-tali-wanita.games', [])->html();
+} elseif ($_instance->childHasBeenRendered('l4061111595-12')) {
+    $componentId = $_instance->getRenderedChildComponentId('l4061111595-12');
+    $componentTag = $_instance->getRenderedChildComponentTagName('l4061111595-12');
+    $html = \Livewire\Livewire::dummyMount($componentId, $componentTag);
+    $_instance->preserveRenderedChild('l4061111595-12');
+} else {
+    $response = \Livewire\Livewire::mount('ksr-games24.tarik-tali-wanita.games', []);
+    $html = $response->html();
+    $_instance->logRenderedChild('l4061111595-12', $response->id(), \Livewire\Livewire::getRootElementTagName($html));
 }
 echo $html;
 ?> 

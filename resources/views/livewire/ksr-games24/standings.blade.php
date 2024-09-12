@@ -138,8 +138,7 @@
         >
             <thead>
                 <tr class="table-dark text-center">
-                    <!-- <th scope="col">#</th> -->
-                    <!-- <th scope="col">Sukan</th> -->
+                    
                     <th scope="col" width="4%">Rank</th>
                     <th scope="col">Kontigen</th>
                     <th scope="col"></th>
@@ -149,8 +148,7 @@
                 @forelse($results as $d)
                 @if($d->sport->name == $sport->name)
                 <tr class="text-center">
-                    <!-- <td>{{ $loop->iteration}}</td> -->
-                    <!-- <td>{{ @$d->sport->name}}</td> -->
+                    
                     <td>
                         <a href="javascript:void(0);" wire:click="update_rank('{{ $d->id }}')">{{ @$d->rank }}</a>
                         
@@ -198,48 +196,7 @@
             
         </div>
 
-        <!-- <div
-        class="table-responsive"
-    >
-        <table
-            class="table table-sm table-bordered table-striped"
-        >
-            <thead>
-                <tr class="table-dark text-center">
-                    <th scope="col">#</th>
-                    <th scope="col">Sukan</th>
-                    <th scope="col">Rank</th>
-                    <th scope="col">Kontigen</th>
-                    <th scope="col"></th>
-                </tr>
-            </thead>
-            <tbody>
-                @forelse($results as $d)
-                <tr class="text-center">
-                    <td>{{ $loop->iteration}}</td>
-                    <td>{{ @$d->sport->name}}</td>
-                    <td>{{ @$d->rank }}</td>
-                    <td>{{ @$d->contigent->name}}</td>
-                    
-                    <td>
-                    <ul class="list-inline hstack gap-2 mb-0">
-                                            <li class="list-inline-item" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" title="View">
-                                                <a href="javascript:void(0);" class="text-warning d-inline-block" wire:click="edit('{{ $d->id }}')">
-                                                    <i class="ri-pencil-fill fs-16"></i>
-                                                </a>
-                                            </li>
-                                           
-                                           
-                                        </ul>
-                    </td>
-                </tr>
-                @empty<td>No data</td>
-                @endforelse
-               
-            </tbody>
-        </table>
-    </div> -->
-
+       
 
 
         </div>

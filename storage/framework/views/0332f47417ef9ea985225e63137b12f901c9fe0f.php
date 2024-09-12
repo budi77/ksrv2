@@ -74,7 +74,7 @@
 
   <!-- Top Navigation Menu -->
     <div class="topnav">
-    <a href="#home" class="active">MACC GAMES 24</a>
+    <a href="/maccgames24" class="active">MACC GAMES 24</a>
     <div id="myLinks">
         <a href="#news">Aturcara</a>
         <a href="#contact">Program</a>

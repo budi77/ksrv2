@@ -78,6 +78,18 @@
                                                 <span class="d-none d-sm-block">BOWLING</span>
                                             </a>
                                         </li>
+                                        <li class="nav-item" role="presentation">
+                                            <a class="nav-link" data-bs-toggle="tab" href="#tariktalilelaki" role="tab" aria-selected="false" tabindex="-1">
+                                                <span class="d-block d-sm-none"><i class="mdi mdi-email"></i></span>
+                                                <span class="d-none d-sm-block">TARIK TALI (L)</span>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                            <a class="nav-link" data-bs-toggle="tab" href="#tariktaliwanita" role="tab" aria-selected="false" tabindex="-1">
+                                                <span class="d-block d-sm-none"><i class="mdi mdi-email"></i></span>
+                                                <span class="d-none d-sm-block">TARIK TALI (W)</span>
+                                            </a>
+                                        </li>
                                     </ul>
                                     <!-- Tab panes -->
                                     <div class="tab-content text-muted">
@@ -123,6 +135,14 @@
                                         </div>
                                         <div class="tab-pane" id="karom" role="tabpanel">
                                         <livewire:ksr-games24.karom.games /> 
+
+                                        </div>
+                                        <div class="tab-pane" id="tariktalilelaki" role="tabpanel">
+                                        <livewire:ksr-games24.tarik-tali-lelaki.games /> 
+
+                                        </div>
+                                        <div class="tab-pane" id="tariktaliwanita" role="tabpanel">
+                                        <livewire:ksr-games24.tarik-tali-wanita.games /> 
 
                                         </div>
                                     </div>
