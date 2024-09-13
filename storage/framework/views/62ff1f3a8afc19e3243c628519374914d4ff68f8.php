@@ -30,13 +30,13 @@
                         <tr class="">
                             <td scope="row"><?php echo e($loop->iteration); ?></td>
                             <td><?php echo e($data->code); ?></td>
-                            <td><?php echo e($data->bswon); ?></td>
-                            <td><?php echo e($data->bstied); ?></td>
-                            <td><?php echo e($data->bslost); ?></td>
-                            <td><?php echo e($data->bsgoal); ?></td>
-                            <td><?php echo e($data->bsagainst); ?></td>
-                            <td><?php echo e($data->bsgoaldifference); ?> </td>
-                            <td><?php echo e($data->bspoints); ?></td>
+                            <td><?php echo e($data->bjwon); ?></td>
+                            <td><?php echo e($data->bjtied); ?></td>
+                            <td><?php echo e($data->bjlost); ?></td>
+                            <td><?php echo e($data->bjgoal); ?></td>
+                            <td><?php echo e($data->bjagainst); ?></td>
+                            <td><?php echo e($data->bjgoaldifference); ?> </td>
+                            <td><?php echo e($data->bjpoints); ?></td>
                         </tr>
                         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                        
@@ -49,20 +49,20 @@
    
     <div class="col pt-2">
 
-    <h6>KUMPULAN B</h5>
+    <h6>KUMPULAN B</h6>
             <div class="table-responsive">
-                <table class="table table-warning table-bordered table-striped text-center">
+                <table class="table table-info table-bordered table-striped text-center">
                     <thead >
                         <tr>
-                            <th scope="col" class="bg-warning bg-gradient">#</th>
-                            <th scope="col" class="bg-warning bg-gradient">Team</th>
-                            <th scope="col" class="bg-warning bg-gradient">W</th>
-                            <th scope="col" class="bg-warning bg-gradient">D</th>
-                            <th scope="col" class="bg-warning bg-gradient">L</th>
-                            <th scope="col" class="bg-warning bg-gradient">GF</th>
-                            <th scope="col" class="bg-warning bg-gradient">GA</th>
-                            <th scope="col" class="bg-warning bg-gradient">GD</th>
-                            <th scope="col" class="bg-warning bg-gradient">P</th>
+                            <th scope="col" class="bg-info bg-gradient">#</th>
+                            <th scope="col" class="bg-info bg-gradient">Team</th>
+                            <th scope="col" class="bg-info bg-gradient">W</th>
+                            <th scope="col" class="bg-info bg-gradient">D</th>
+                            <th scope="col" class="bg-info bg-gradient">L</th>
+                            <th scope="col" class="bg-info bg-gradient">GF</th>
+                            <th scope="col" class="bg-info bg-gradient">GA</th>
+                            <th scope="col" class="bg-info bg-gradient">GD</th>
+                            <th scope="col" class="bg-info bg-gradient">P</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -70,13 +70,13 @@
                         <tr class="">
                             <td scope="row"><?php echo e($loop->iteration); ?></td>
                             <td><?php echo e($data->code); ?></td>
-                            <td><?php echo e($data->bswon); ?></td>
-                            <td><?php echo e($data->bstied); ?></td>
-                            <td><?php echo e($data->bslost); ?></td>
-                            <td><?php echo e($data->bsgoal); ?></td>
-                            <td><?php echo e($data->bsagainst); ?></td>
-                            <td><?php echo e($data->bsgoaldifference); ?> </td>
-                            <td><?php echo e($data->bspoints); ?></td>
+                            <td><?php echo e($data->bjwon); ?></td>
+                            <td><?php echo e($data->bjtied); ?></td>
+                            <td><?php echo e($data->bjlost); ?></td>
+                            <td><?php echo e($data->bjgoal); ?></td>
+                            <td><?php echo e($data->bjagainst); ?></td>
+                            <td><?php echo e($data->bjgoaldifference); ?> </td>
+                            <td><?php echo e($data->bjpoints); ?></td>
                         </tr>
                         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                        
@@ -102,17 +102,17 @@
             <tr class="table-dark text-center">
                 <th scope="col">#</th>
                 <!-- <th scope="col">Peringkat</th> -->
-                <th scope="col">Tarikh</th>
-                <th scope="col">Jam</th>
+                <th scope="col"><i class="las la-calendar-day"></i></th>
+                <th scope="col"><i class="las la-clock"></i></th>
                 <th scope="col">glg</th>
                 <th scope="col">Team1</th>
-                <th scope="col">Result1</th>
-                <th scope="col">Result2</th>
+                <th scope="col" colspan="2">Keputusan</th>
+                <!-- <th scope="col">Result2</th> -->
                 <th scope="col">Team2</th>
                
             </tr>
         </thead>
-        <tbody>
+        <tbody class="bg-white">
             <?php $__currentLoopData = $fixtures; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $fixture): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
             <?php if($fixture->stage == 'Kumpulan'): ?>
                 <tr class="text-center">
@@ -148,17 +148,17 @@
             <tr class="table-dark text-center">
                 <th scope="col">#</th>
                 <!-- <th scope="col">Peringkat</th> -->
-                <th scope="col">Tarikh</th>
-                <th scope="col">Jam</th>
+                <th scope="col"><i class="las la-calendar-day"></i></th>
+                <th scope="col"><i class="las la-clock"></i></th>
                 <th scope="col">glg</th>
                 <th scope="col">Team1</th>
-                <th scope="col">Result1</th>
-                <th scope="col">Result2</th>
+                <th scope="col" colspan="2">Keputusan</th>
+                <!-- <th scope="col">Result2</th> -->
                 <th scope="col">Team2</th>
                
             </tr>
         </thead>
-        <tbody>
+        <tbody class="bg-white">
             <?php $__currentLoopData = $fixtures; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $fixture): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
             <?php if($fixture->stage == 'Separuh Akhir'): ?>
                 <tr class="text-center">
@@ -193,12 +193,12 @@
             <tr class="table-dark text-center">
                 <th scope="col">#</th>
                 <!-- <th scope="col">Peringkat</th> -->
-                <th scope="col">Tarikh</th>
-                <th scope="col">Jam</th>
+                <th scope="col"><i class="las la-calendar-day"></i></th>
+                <th scope="col"><i class="las la-clock"></i></th>
                 <th scope="col">glg</th>
                 <th scope="col">Team1</th>
-                <th scope="col">Result1</th>
-                <th scope="col">Result2</th>
+                <th scope="col" colspan="2">Keputusan</th>
+                <!-- <th scope="col">Result2</th> -->
                 <th scope="col">Team2</th>
                
             </tr>
@@ -238,12 +238,12 @@
             <tr class="table-dark text-center">
                 <th scope="col">#</th>
                 <!-- <th scope="col">Peringkat</th> -->
-                <th scope="col">Tarikh</th>
-                <th scope="col">Jam</th>
+                <th scope="col"><i class="las la-calendar-day"></i></th>
+                <th scope="col"><i class="las la-clock"></i></th>
                 <th scope="col">glg</th>
                 <th scope="col">Team1</th>
-                <th scope="col">Result1</th>
-                <th scope="col">Result2</th>
+                <th scope="col" colspan="2">Keputusan</th>
+                <!-- <th scope="col">Result2</th> -->
                 <th scope="col">Team2</th>
                
             </tr>

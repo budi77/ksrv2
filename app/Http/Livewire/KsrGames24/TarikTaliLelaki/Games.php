@@ -38,6 +38,7 @@ class Games extends Component
     {
 
         
+
         $store = Fixture::updateOrCreate(['id' => $this->data_id], 
         [
             'contigent1_id' => $this->contigent1,

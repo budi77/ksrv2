@@ -11,7 +11,7 @@
     <div class="col-12 pt-2">
     <h6>KUMPULAN A</h5>
             <div class="table-responsive">
-                <table class="table table-secondary table-bordered table-striped text-center">
+                <table class="table table-secondary table-sm table-bordered table-striped text-center">
                     <thead class="bg-secondary ">
                         <tr class="bg-secondary ">
                             <th scope="col" class="bg-secondary bg-gradient">#</th>

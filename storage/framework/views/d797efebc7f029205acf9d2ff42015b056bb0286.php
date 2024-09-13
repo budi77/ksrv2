@@ -109,6 +109,8 @@
                                 <option value="Separuh Akhir">Separuh Akhir</option>
                                 <option value="Tempat 3 / 4">Tempat ke 3 / 4</option>
                                 <option value="Akhir">Akhir</option>
+                                <option value="VIP">VIP</option>
+
                             </select>
             </div>
 
@@ -158,6 +160,7 @@
                             <option value="27/9">27/9</option>
                             <option value="28/9">28/9</option>
                             <option value="29/9">29/9</option>
+                            <option value="30/9">30/9</option>
                         </select>
                     </div>
                     

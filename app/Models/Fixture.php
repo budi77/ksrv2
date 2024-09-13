@@ -11,6 +11,11 @@ class Fixture extends Model
 
     protected $guarded = [];
 
+    protected $casts = [
+        'result1' => 'integer',
+        'result2' => 'integer',
+    ];
+
     public function contigent()
     {
         return $this->belongsTo(Contigent::class, 'contigent_id');
@@ -31,12 +36,12 @@ class Fixture extends Model
 
 public function setResult1Attribute($input)
 {
-    $this->attributes['result1'] = $input ? $input : null;
+    $this->attributes['result1'] = $input ? $input : 0;
 }
 
 public function setResult2Attribute($input)
 {
-    $this->attributes['result2'] = $input ? $input : null;
+    $this->attributes['result2'] = $input ? $input : 0;
 }
 
 public function contigent1()

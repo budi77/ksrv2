@@ -968,8 +968,6 @@ public function getFsPointsAttribute()
     return $this->getFsWonAttribute() * 3;
 }
 
-
-
 public function getFsGoalAttribute()
 {
     return $this->getFsGoalResult1Attribute() + $this->getFsGoalResult2Attribute() ;

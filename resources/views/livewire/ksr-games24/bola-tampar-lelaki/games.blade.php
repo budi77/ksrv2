@@ -105,6 +105,8 @@
                                 <option value="Separuh Akhir">Separuh Akhir</option>
                                 <option value="Tempat 3 / 4">Tempat ke 3 / 4</option>
                                 <option value="Akhir">Akhir</option>
+                                <option value="VIP">VIP</option>
+
                             </select>
             </div>
 

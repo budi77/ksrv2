@@ -31,7 +31,7 @@
 
             .topnav {
             overflow: hidden;
-            background-color: #f1c40f;
+            background-color: black;
             position: relative;
             }
 
@@ -75,9 +75,21 @@
     <div class="topnav">
     <a href="/maccgames24" class="active">MACC GAMES 24</a>
     <div id="myLinks">
-        <a href="#news">Aturcara</a>
-        <a href="#contact">Program</a>
-        <a href="#about">Syarat Syarat</a>
+        
+        <a href=/maccgames24>Home</a>
+        <a href=/maccgames24/program>Program</a>
+        <a href=/maccgames24/program><i class="las la-volleyball-ball"></i> Bola Sepak</a>
+        <a href=/maccgames24/program><i class="las la-volleyball-ball"></i> Badminton</a>
+        <a href=/maccgames24/program><i class="las la-volleyball-ball"></i> Bola Jaring</a>
+        <a href=/maccgames24/program><i class="las la-volleyball-ball"></i> Bola Tampar Lelaki</a>
+        <a href=/maccgames24/program><i class="las la-volleyball-ball"></i> Bola Wanita</a>
+        <a href=/maccgames24/program><i class="las la-volleyball-ball"></i> Ping Pong</a>
+        <a href=/maccgames24/program><i class="las la-volleyball-ball"></i> Futsal</a>
+        <a href=/maccgames24/program><i class="las la-volleyball-ball"></i> Balapan</a>
+        <a href=/maccgames24/program><i class="las la-volleyball-ball"></i> Tarik Tali Lelaki</a>
+        <a href=/maccgames24/program><i class="las la-volleyball-ball"></i> Tarik Tali Wanita</a>
+        <a href=/maccgames24/program><i class="las la-volleyball-ball"></i> Bowling</a>
+        <a href=/maccgames24/program><i class="las la-volleyball-ball"></i> Menembak</a>
     </div>
     <a href="javascript:void(0);" class="icon" onclick="myFunction()">
         <i class="fa fa-bars"></i>

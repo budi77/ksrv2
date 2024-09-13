@@ -8,7 +8,7 @@
     <h4>STANDING</h4>
 
 <div class="table-responsive">
-        <table class="table table-primary table-bordered table-striped text-center">
+        <table class="table table-primary table-sm table-bordered table-striped text-center">
             <thead class="">
                 <tr class="bg-secondary ">
                     <th scope="col" class="bg-warning bg-gradient">#</th>

@@ -28,12 +28,12 @@ class Games extends Component
         $id = $this->sport_id->id;
         $a = Contigent::whereHas('grp', function($q) use($id) {
              $q->where('name', 'A')->where('sport_id', $id);
-         })->get()->sortByDesc('goaldifference')->sortByDesc('points');
+         })->get()->sortByDesc('bsgoaldifference')->sortByDesc('bspoints');
         $b = Contigent::whereHas('grp', function($q) use($id) {
              $q->where('name', 'B')->where('sport_id', $id);
-         })->get()->sortByDesc('goaldifference')->sortByDesc('points');
+         })->get()->sortByDesc('bsgoaldifference')->sortByDesc('bspoints');
          
-         $fixtures = Fixture::where('sport_id', $id)->orderby('order')->get();
+        $fixtures = Fixture::where('sport_id', $id)->orderby('order')->get();
 
         return view('livewire.ksr-games24.bola-sepak.games', compact('a','b','fixtures'));
     }

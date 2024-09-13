@@ -3,15 +3,15 @@
 <div class="row">
     <div class='fw-bold h3 text-primary'> BOWLING</div>
     <hr>
-    <h4><i class="las la-table"></i> KEDUDUKAN PASUKAN</h4>
+    <h6><i class="las la-table"></i> KEPUTUSAN</h6>
 
     <div class="row">
         <div class="col-4">
 
        <div class="card card-light">
-            <div class="card-header bg-light">
+            <!-- <div class="card-header bg-light">
                 <h6 class="card-title mb-0 ">KEPUTUSAN</h6>
-            </div>
+            </div> -->
         <div class="card-body">
 
         <div class="mb-3">
@@ -71,27 +71,33 @@
         class="table-responsive"
     >
         <table
-            class="table table-bordered"
+            class="table table-bordered table-sm table-striped p-2"
         >
             <thead>
-                <tr class="bg-info">
+                <tr class="bg-dark text-white">
                     <th scope="col" width="5%">RANK</th>
                     <th scope="col">TEAM</th>
                     <th scope="col" class="text-center">POINTS</th>
-                    <th scope="col"></th>
+                    <th scope="col" width="5%"></th>
                 </tr>
             </thead>
             <tbody>
                 @foreach($results as $r)
                 <tr class="">
-                    <td scope="row">{{ @$r->rank }}</td>
+                    <td scope="row" class="text-center">{{ @$r->rank }}</td>
                     <td>{{ @$r->contigent->name }}</td>
                     <td class="text-center">{{ @$r->points }}</td>
                     <td class="text-center">
                     <ul class="list-inline hstack gap-1 mb-0 text-end">
                     <li class="list-inline-item" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" title="Update Rank">
-                        <a href="javascript:void(0);" class="text-success d-inline-block" wire:click="edit('{{ $r->id }}')">
+                        <a href="javascript:void(0);" class="text-secondary d-inline-block" wire:click="edit('{{ $r->id }}')">
                             <i class="ri-edit-box-line fs-18"></i>
+                        </a>
+                                                
+                    </li>
+                    <li class="list-inline-item" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" title="Update Rank">
+                        <a href="javascript:void(0);" class="text-danger d-inline-block" wire:click="delete('{{ $r->id }}')">
+                        <i class="ri-delete-bin-line fs-18"></i>
                         </a>
                                                 
                     </li>
