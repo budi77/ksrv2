@@ -79,18 +79,18 @@
         
         <a href=/maccgames24>Home</a>
         <a href=/maccgames24/program>Program</a>
-        <a href=/maccgames24/program><i class="las la-volleyball-ball"></i> Bola Sepak</a>
-        <a href=/maccgames24/program><i class="las la-volleyball-ball"></i> Badminton</a>
-        <a href=/maccgames24/program><i class="las la-volleyball-ball"></i> Bola Jaring</a>
-        <a href=/maccgames24/program><i class="las la-volleyball-ball"></i> Bola Tampar Lelaki</a>
-        <a href=/maccgames24/program><i class="las la-volleyball-ball"></i> Bola Wanita</a>
-        <a href=/maccgames24/program><i class="las la-volleyball-ball"></i> Ping Pong</a>
-        <a href=/maccgames24/program><i class="las la-volleyball-ball"></i> Futsal</a>
-        <a href=/maccgames24/program><i class="las la-volleyball-ball"></i> Balapan</a>
-        <a href=/maccgames24/program><i class="las la-volleyball-ball"></i> Tarik Tali Lelaki</a>
-        <a href=/maccgames24/program><i class="las la-volleyball-ball"></i> Tarik Tali Wanita</a>
-        <a href=/maccgames24/program><i class="las la-volleyball-ball"></i> Bowling</a>
-        <a href=/maccgames24/program><i class="las la-volleyball-ball"></i> Menembak</a>
+        <a href=/maccgames24/program/bs><i class="las la-volleyball-ball"></i> Bola Sepak</a>
+        <a href=/maccgames24/program/bd><i class="las la-volleyball-ball"></i> Badminton</a>
+        <a href=/maccgames24/program/bj><i class="las la-volleyball-ball"></i> Bola Jaring</a>
+        <a href=/maccgames24/program/btl><i class="las la-volleyball-ball"></i> Bola Tampar Lelaki</a>
+        <a href=/maccgames24/program/btw><i class="las la-volleyball-ball"></i> Bola Tampar Wanita</a>
+        <a href=/maccgames24/program/pp><i class="las la-volleyball-ball"></i> Ping Pong</a>
+        <a href=/maccgames24/program/fs><i class="las la-volleyball-ball"></i> Futsal</a>
+        <a href=/maccgames24/program/bl><i class="las la-volleyball-ball"></i> Balapan</a>
+        <a href=/maccgames24/program/tt><i class="las la-volleyball-ball"></i> Tarik Tali Lelaki</a>
+        <a href=/maccgames24/program/tt><i class="las la-volleyball-ball"></i> Tarik Tali Wanita</a>
+        <a href=/maccgames24/program/bw><i class="las la-volleyball-ball"></i> Bowling</a>
+        <a href=/maccgames24/program/mk><i class="las la-volleyball-ball"></i> Menembak</a>
     </div>
     <a href="javascript:void(0);" class="icon" onclick="myFunction()">
         <i class="fa fa-bars"></i>

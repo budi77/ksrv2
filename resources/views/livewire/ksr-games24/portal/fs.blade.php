@@ -2,8 +2,8 @@
 
 <div class="container">
 
-<div class='fw-bold h3 ff-secondary text-center pt-2 cfs-22'> BOLA TAMPAR LELAKI</div>
-<div class='fw-bold h ff-secondary text-center '> <?php echo e(@$sport_id->venue); ?></div>
+<div class='fw-bold h3 ff-secondary text-center pt-2 cfs-22'> FUTSAL</div>
+<div class='fw-bold h ff-secondary text-center '> {{ @$sport_id->venue }}</div>
 <hr>
 <div class="row">
     <h5><i class="las la-table"></i> KEDUDUKAN PASUKAN</h5>
@@ -17,6 +17,7 @@
                             <th scope="col" class="bg-secondary bg-gradient">#</th>
                             <th scope="col" class="bg-secondary bg-gradient">Team</th>
                             <th scope="col" class="bg-secondary bg-gradient">W</th>
+                            <th scope="col" class="bg-secondary bg-gradient">D</th>
                             <th scope="col" class="bg-secondary bg-gradient">L</th>
                             <th scope="col" class="bg-secondary bg-gradient">GF</th>
                             <th scope="col" class="bg-secondary bg-gradient">GA</th>
@@ -25,18 +26,19 @@
                         </tr>
                     </thead>
                     <tbody>
-                    <?php $__currentLoopData = $a; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $key => $data): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                    @foreach($a as $key => $data)
                         <tr class="">
-                            <td scope="row"><?php echo e($loop->iteration); ?></td>
-                            <td><?php echo e($data->name); ?></td>
-                            <td><?php echo e($data->btlwon); ?></td>
-                            <td><?php echo e($data->btllost); ?></td>
-                            <td><?php echo e($data->btlgoal); ?></td>
-                            <td><?php echo e($data->btlagainst); ?></td>
-                            <td><?php echo e($data->btlgoaldifference); ?> </td>
-                            <td><?php echo e($data->btlpoints); ?></td>
+                            <td scope="row">{{ $loop->iteration }}</td>
+                            <td>{{ $data->code }}</td>
+                            <td>{{ $data->fswon }}</td>
+                            <td>{{ $data->fstied }}</td>
+                            <td>{{ $data->fslost }}</td>
+                            <td>{{ $data->fsgoal }}</td>
+                            <td>{{ $data->fsagainst }}</td>
+                            <td>{{ $data->fsgoaldifference  }} </td>
+                            <td>{{ $data->fspoints }}</td>
                         </tr>
-                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                        @endforeach
                        
                     </tbody>
                 </table>
@@ -47,7 +49,7 @@
    
     <div class="col pt-2">
 
-    <h6>KUMPULAN B</h5>
+    <h6>KUMPULAN B</h6>
             <div class="table-responsive">
                 <table class="table table-info table-bordered table-striped text-center">
                     <thead >
@@ -55,6 +57,7 @@
                             <th scope="col" class="bg-info bg-gradient">#</th>
                             <th scope="col" class="bg-info bg-gradient">Team</th>
                             <th scope="col" class="bg-info bg-gradient">W</th>
+                            <th scope="col" class="bg-info bg-gradient">D</th>
                             <th scope="col" class="bg-info bg-gradient">L</th>
                             <th scope="col" class="bg-info bg-gradient">GF</th>
                             <th scope="col" class="bg-info bg-gradient">GA</th>
@@ -63,18 +66,19 @@
                         </tr>
                     </thead>
                     <tbody>
-                    <?php $__currentLoopData = $b; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $key => $data): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                    @foreach($b as $key => $data)
                         <tr class="">
-                            <td scope="row"><?php echo e($loop->iteration); ?></td>
-                            <td><?php echo e($data->name); ?></td>
-                            <td><?php echo e($data->btlwon); ?></td>
-                            <td><?php echo e($data->btllost); ?></td>
-                            <td><?php echo e($data->btlgoal); ?></td>
-                            <td><?php echo e($data->btlagainst); ?></td>
-                            <td><?php echo e($data->btlgoaldifference); ?> </td>
-                            <td><?php echo e($data->btlpoints); ?></td>
+                            <td scope="row">{{ $loop->iteration }}</td>
+                            <td>{{ $data->code}}</td>
+                            <td>{{ $data->fswon }}</td>
+                            <td>{{ $data->fstied }}</td>
+                            <td>{{ $data->fslost }}</td>
+                            <td>{{ $data->fsgoal }}</td>
+                            <td>{{ $data->fsagainst }}</td>
+                            <td>{{ $data->fsgoaldifference  }} </td>
+                            <td>{{ $data->fspoints }}</td>
                         </tr>
-                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                        @endforeach
                        
                     </tbody>
                 </table>
@@ -109,22 +113,22 @@
             </tr>
         </thead>
         <tbody class="bg-white">
-            <?php $__currentLoopData = $fixtures; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $fixture): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-            <?php if($fixture->stage == 'Kumpulan'): ?>
+            @foreach($fixtures as $fixture)
+            @if($fixture->stage == 'Kumpulan')
                 <tr class="text-center">
-                    <td scope="row"><?php echo e($fixture->order); ?></td>
-                    <!-- <td><?php echo e($fixture->stage); ?></td> -->
-                    <td><?php echo e($fixture->ext2); ?></td>
-                    <td><?php echo e($fixture->ext1); ?></td>
-                    <td><?php echo e($fixture->court); ?></td>
-                    <td><?php echo e($fixture->contigent1->code); ?></td>
-                    <td><?php echo e($fixture->result1); ?></td>
-                    <td><?php echo e($fixture->result2); ?></td>
-                    <td><?php echo e($fixture->contigent2->code); ?></td>
+                    <td scope="row">{{ $fixture->order }}</td>
+                    <!-- <td>{{ $fixture->stage }}</td> -->
+                    <td>{{ $fixture->ext2 }}</td>
+                    <td>{{ $fixture->ext1 }}</td>
+                    <td>{{ $fixture->court }}</td>
+                    <td>{{ $fixture->contigent1->code }}</td>
+                    <td>{{ $fixture->result1 }}</td>
+                    <td>{{ $fixture->result2 }}</td>
+                    <td>{{ $fixture->contigent2->code }}</td>
                     
                 </tr>
-            <?php endif; ?>
-            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+            @endif
+            @endforeach
            
         </tbody>
     </table>
@@ -155,22 +159,22 @@
             </tr>
         </thead>
         <tbody class="bg-white">
-            <?php $__currentLoopData = $fixtures; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $fixture): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-            <?php if($fixture->stage == 'Separuh Akhir'): ?>
+            @foreach($fixtures as $fixture)
+            @if($fixture->stage == 'Separuh Akhir')
                 <tr class="text-center">
-                    <td scope="row"><?php echo e($fixture->order); ?></td>
-                    <!-- <td><?php echo e($fixture->stage); ?></td> -->
-                    <td><?php echo e($fixture->ext2); ?></td>
-                    <td><?php echo e($fixture->ext1); ?></td>
-                    <td><?php echo e($fixture->court); ?></td>
-                    <td><?php echo e($fixture->contigent1->code); ?></td>
-                    <td><?php echo e($fixture->result1); ?></td>
-                    <td><?php echo e($fixture->result2); ?></td>
-                    <td><?php echo e($fixture->contigent2->code); ?></td>
+                    <td scope="row">{{ $fixture->order }}</td>
+                    <!-- <td>{{ $fixture->stage }}</td> -->
+                    <td>{{ $fixture->ext2 }}</td>
+                    <td>{{ $fixture->ext1 }}</td>
+                    <td>{{ $fixture->court }}</td>
+                    <td>{{ $fixture->contigent1->code }}</td>
+                    <td>{{ $fixture->result1 }}</td>
+                    <td>{{ $fixture->result2 }}</td>
+                    <td>{{ $fixture->contigent2->code }}</td>
                     
                 </tr>
-            <?php endif; ?>
-            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+            @endif
+            @endforeach
            
         </tbody>
     </table>
@@ -200,22 +204,22 @@
             </tr>
         </thead>
         <tbody class="bg-white">
-            <?php $__currentLoopData = $fixtures; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $fixture): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-            <?php if($fixture->stage == 'Tempat 3 / 4'): ?>
+            @foreach($fixtures as $fixture)
+            @if($fixture->stage == 'Tempat 3 / 4')
                 <tr class="text-center">
-                    <td scope="row"><?php echo e($fixture->order); ?></td>
-                    <!-- <td><?php echo e($fixture->stage); ?></td> -->
-                    <td><?php echo e($fixture->ext2); ?></td>
-                    <td><?php echo e($fixture->ext1); ?></td>
-                    <td><?php echo e($fixture->court); ?></td>
-                    <td><?php echo e($fixture->contigent1->code); ?></td>
-                    <td><?php echo e($fixture->result1); ?></td>
-                    <td><?php echo e($fixture->result2); ?></td>
-                    <td><?php echo e($fixture->contigent2->code); ?></td>
+                    <td scope="row">{{ $fixture->order }}</td>
+                    <!-- <td>{{ $fixture->stage }}</td> -->
+                    <td>{{ $fixture->ext2 }}</td>
+                    <td>{{ $fixture->ext1 }}</td>
+                    <td>{{ $fixture->court }}</td>
+                    <td>{{ $fixture->contigent1->code }}</td>
+                    <td>{{ $fixture->result1 }}</td>
+                    <td>{{ $fixture->result2 }}</td>
+                    <td>{{ $fixture->contigent2->code }}</td>
                     
                 </tr>
-            <?php endif; ?>
-            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+            @endif
+            @endforeach
            
         </tbody>
     </table>
@@ -245,22 +249,22 @@
             </tr>
         </thead>
         <tbody class="bg-white">
-            <?php $__currentLoopData = $fixtures; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $fixture): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-            <?php if($fixture->stage == 'Akhir'): ?>
+            @foreach($fixtures as $fixture)
+            @if($fixture->stage == 'Akhir')
                 <tr class="text-center">
-                    <td scope="row"><?php echo e($fixture->order); ?></td>
-                    <!-- <td><?php echo e($fixture->stage); ?></td> -->
-                    <td><?php echo e($fixture->ext2); ?></td>
-                    <td><?php echo e($fixture->ext1); ?></td>
-                    <td><?php echo e($fixture->court); ?></td>
-                    <td><?php echo e($fixture->contigent1->code); ?></td>
-                    <td><?php echo e($fixture->result1); ?></td>
-                    <td><?php echo e($fixture->result2); ?></td>
-                    <td><?php echo e($fixture->contigent2->code); ?></td>
+                    <td scope="row">{{ $fixture->order }}</td>
+                    <!-- <td>{{ $fixture->stage }}</td> -->
+                    <td>{{ $fixture->ext2 }}</td>
+                    <td>{{ $fixture->ext1 }}</td>
+                    <td>{{ $fixture->court }}</td>
+                    <td>{{ $fixture->contigent1->code }}</td>
+                    <td>{{ $fixture->result1 }}</td>
+                    <td>{{ $fixture->result2 }}</td>
+                    <td>{{ $fixture->contigent2->code }}</td>
                     
                 </tr>
-            <?php endif; ?>
-            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+            @endif
+            @endforeach
            
         </tbody>
     </table>
@@ -274,5 +278,3 @@
 </div>
 </div>
 
-
-<?php /**PATH C:\laragon\www\ksrv2\resources\views/livewire/ksr-games24/portal/btl.blade.php ENDPATH**/ ?>

@@ -2,14 +2,14 @@
 
 <div class="container">
 
-<div class='fw-bold h3 ff-secondary text-center pt-2 cfs-22'> BOLA TAMPAR LELAKI</div>
+<div class='fw-bold h3 ff-secondary text-center pt-2 cfs-22'> PING PONG</div>
 <div class='fw-bold h ff-secondary text-center '> <?php echo e(@$sport_id->venue); ?></div>
 <hr>
 <div class="row">
     <h5><i class="las la-table"></i> KEDUDUKAN PASUKAN</h5>
 
     <div class="col pt-2">
-    <h6>KUMPULAN A</h5>
+        <h6>KUMPULAN A</h6>
             <div class="table-responsive">
                 <table class="table table-secondary table-bordered table-striped text-center">
                     <thead class="bg-secondary ">
@@ -29,28 +29,26 @@
                         <tr class="">
                             <td scope="row"><?php echo e($loop->iteration); ?></td>
                             <td><?php echo e($data->name); ?></td>
-                            <td><?php echo e($data->btlwon); ?></td>
-                            <td><?php echo e($data->btllost); ?></td>
-                            <td><?php echo e($data->btlgoal); ?></td>
-                            <td><?php echo e($data->btlagainst); ?></td>
-                            <td><?php echo e($data->btlgoaldifference); ?> </td>
-                            <td><?php echo e($data->btlpoints); ?></td>
+                            <td><?php echo e($data->ppwon); ?></td>
+                            <td><?php echo e($data->pplost); ?></td>
+                            <td><?php echo e($data->ppgoal); ?></td>
+                            <td><?php echo e($data->ppagainst); ?></td>
+                            <td><?php echo e($data->ppgoaldifference); ?> </td>
+                            <td><?php echo e($data->pppoints); ?></td>
                         </tr>
                         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                        
                     </tbody>
                 </table>
             </div>
-
-
     </div>
    
     <div class="col pt-2">
 
-    <h6>KUMPULAN B</h5>
+        <h6>KUMPULAN B</h6>
             <div class="table-responsive">
                 <table class="table table-info table-bordered table-striped text-center">
-                    <thead >
+                    <thead>
                         <tr>
                             <th scope="col" class="bg-info bg-gradient">#</th>
                             <th scope="col" class="bg-info bg-gradient">Team</th>
@@ -67,12 +65,12 @@
                         <tr class="">
                             <td scope="row"><?php echo e($loop->iteration); ?></td>
                             <td><?php echo e($data->name); ?></td>
-                            <td><?php echo e($data->btlwon); ?></td>
-                            <td><?php echo e($data->btllost); ?></td>
-                            <td><?php echo e($data->btlgoal); ?></td>
-                            <td><?php echo e($data->btlagainst); ?></td>
-                            <td><?php echo e($data->btlgoaldifference); ?> </td>
-                            <td><?php echo e($data->btlpoints); ?></td>
+                            <td><?php echo e($data->ppwon); ?></td>
+                            <td><?php echo e($data->pplost); ?></td>
+                            <td><?php echo e($data->ppgoal); ?></td>
+                            <td><?php echo e($data->ppagainst); ?></td>
+                            <td><?php echo e($data->ppgoaldifference); ?> </td>
+                            <td><?php echo e($data->pppoints); ?></td>
                         </tr>
                         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                        
@@ -98,8 +96,8 @@
             <tr class="table-dark text-center">
                 <th scope="col">#</th>
                 <!-- <th scope="col">Peringkat</th> -->
-                <th scope="col"><i class="las la-calendar-day"></i></th>
-                <th scope="col"><i class="las la-clock"></i></th>
+                <th scope="col">Tarikh</th>
+                <th scope="col">Jam</th>
                 <th scope="col">glg</th>
                 <th scope="col">Team1</th>
                 <th scope="col" colspan="2">Keputusan</th>
@@ -199,7 +197,7 @@
                
             </tr>
         </thead>
-        <tbody class="bg-white">
+        <tbody>
             <?php $__currentLoopData = $fixtures; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $fixture): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
             <?php if($fixture->stage == 'Tempat 3 / 4'): ?>
                 <tr class="text-center">
@@ -244,7 +242,7 @@
                
             </tr>
         </thead>
-        <tbody class="bg-white">
+        <tbody>
             <?php $__currentLoopData = $fixtures; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $fixture): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
             <?php if($fixture->stage == 'Akhir'): ?>
                 <tr class="text-center">
@@ -275,4 +273,4 @@
 </div>
 
 
-<?php /**PATH C:\laragon\www\ksrv2\resources\views/livewire/ksr-games24/portal/btl.blade.php ENDPATH**/ ?>
+<?php /**PATH C:\laragon\www\ksrv2\resources\views/livewire/ksr-games24/portal/pp.blade.php ENDPATH**/ ?>

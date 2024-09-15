@@ -1,7 +1,7 @@
 <div>
     <div class="container">
 
-        <div class='fw-bold h3 ff-secondary text-center pt-2 cfs-22'> MENEMBAK</div>
+        <div class='fw-bold h3 ff-secondary text-center pt-2 cfs-22'> BOWLING</div>
         <div class='fw-bold h ff-secondary text-center '> {{ @$sport_id->venue }}</div>
         <hr>
 
@@ -10,10 +10,10 @@
 
 
 
-@foreach($sports as $sport)
-    <div class="col-12>
+@foreach($sports->take(4) as $sport)
+    <div class="col-12">
     
-    <div class="text-center h6">{{ $sport->name }}</div>
+    <!-- <div class="text-center h6">{{ $sport->name }}</div> -->
 
     <table
     class="table table-sm  table-striped"
@@ -27,7 +27,6 @@
     </thead>
     <tbody class="bg-white">
         @forelse($results as $d)
-        @if($d->sport->name == $sport->name)
         <tr class="text-center">
            
             <td>
@@ -39,7 +38,6 @@
             
             
         </tr>
-        @endif
         @empty<td>No data</td>
         @endforelse
        

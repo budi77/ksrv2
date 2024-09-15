@@ -138,8 +138,7 @@
         >
             <thead>
                 <tr class="table-dark text-center">
-                    <!-- <th scope="col">#</th> -->
-                    <!-- <th scope="col">Sukan</th> -->
+                    
                     <th scope="col" width="4%">Rank</th>
                     <th scope="col">Kontigen</th>
                     <th scope="col"></th>
@@ -149,8 +148,7 @@
                 <?php $__empty_1 = true; $__currentLoopData = $results; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $d): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); $__empty_1 = false; ?>
                 <?php if($d->sport->name == $sport->name): ?>
                 <tr class="text-center">
-                    <!-- <td><?php echo e($loop->iteration); ?></td> -->
-                    <!-- <td><?php echo e(@$d->sport->name); ?></td> -->
+                    
                     <td>
                         <a href="javascript:void(0);" wire:click="update_rank('<?php echo e($d->id); ?>')"><?php echo e(@$d->rank); ?></a>
                         
@@ -198,48 +196,7 @@
             
         </div>
 
-        <!-- <div
-        class="table-responsive"
-    >
-        <table
-            class="table table-sm table-bordered table-striped"
-        >
-            <thead>
-                <tr class="table-dark text-center">
-                    <th scope="col">#</th>
-                    <th scope="col">Sukan</th>
-                    <th scope="col">Rank</th>
-                    <th scope="col">Kontigen</th>
-                    <th scope="col"></th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php $__empty_1 = true; $__currentLoopData = $results; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $d): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); $__empty_1 = false; ?>
-                <tr class="text-center">
-                    <td><?php echo e($loop->iteration); ?></td>
-                    <td><?php echo e(@$d->sport->name); ?></td>
-                    <td><?php echo e(@$d->rank); ?></td>
-                    <td><?php echo e(@$d->contigent->name); ?></td>
-                    
-                    <td>
-                    <ul class="list-inline hstack gap-2 mb-0">
-                                            <li class="list-inline-item" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" title="View">
-                                                <a href="javascript:void(0);" class="text-warning d-inline-block" wire:click="edit('<?php echo e($d->id); ?>')">
-                                                    <i class="ri-pencil-fill fs-16"></i>
-                                                </a>
-                                            </li>
-                                           
-                                           
-                                        </ul>
-                    </td>
-                </tr>
-                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); if ($__empty_1): ?><td>No data</td>
-                <?php endif; ?>
-               
-            </tbody>
-        </table>
-    </div> -->
-
+       
 
 
         </div>

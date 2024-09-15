@@ -294,9 +294,9 @@
                     <td><?php echo e($fixture->ext2); ?></td>
                     <td><?php echo e($fixture->ext1); ?></td>
                     <td><?php echo e($fixture->court); ?></td>
-                    <td><?php echo e($fixture->contigent1->name); ?></td>
+                    <td><?php echo e(@$fixture->contigent1->name); ?></td>
                     <td><?php echo e($fixture->result1); ?></td>
-                    <td><?php echo e($fixture->contigent2->name); ?></td>
+                    <td><?php echo e(@$fixture->contigent2->name); ?></td>
                     <td><?php echo e($fixture->result2); ?></td>
                     <td>
                     <ul class="list-inline hstack gap-2 mb-0">

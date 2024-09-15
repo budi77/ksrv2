@@ -294,9 +294,9 @@
                     <td>{{ $fixture->ext2 }}</td>
                     <td>{{ $fixture->ext1 }}</td>
                     <td>{{ $fixture->court }}</td>
-                    <td>{{ $fixture->contigent1->name }}</td>
+                    <td>{{ @$fixture->contigent1->name }}</td>
                     <td>{{ $fixture->result1 }}</td>
-                    <td>{{ $fixture->contigent2->name }}</td>
+                    <td>{{ @$fixture->contigent2->name }}</td>
                     <td>{{ $fixture->result2 }}</td>
                     <td>
                     <ul class="list-inline hstack gap-2 mb-0">

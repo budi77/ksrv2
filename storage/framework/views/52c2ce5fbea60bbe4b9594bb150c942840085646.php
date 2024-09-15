@@ -2,7 +2,7 @@
 
 <div class="container">
 
-<div class='fw-bold h3 ff-secondary text-center pt-2 cfs-22'> BOLA TAMPAR LELAKI</div>
+<div class='fw-bold h3 ff-secondary text-center pt-2 cfs-22'> FUTSAL</div>
 <div class='fw-bold h ff-secondary text-center '> <?php echo e(@$sport_id->venue); ?></div>
 <hr>
 <div class="row">
@@ -17,6 +17,7 @@
                             <th scope="col" class="bg-secondary bg-gradient">#</th>
                             <th scope="col" class="bg-secondary bg-gradient">Team</th>
                             <th scope="col" class="bg-secondary bg-gradient">W</th>
+                            <th scope="col" class="bg-secondary bg-gradient">D</th>
                             <th scope="col" class="bg-secondary bg-gradient">L</th>
                             <th scope="col" class="bg-secondary bg-gradient">GF</th>
                             <th scope="col" class="bg-secondary bg-gradient">GA</th>
@@ -28,13 +29,14 @@
                     <?php $__currentLoopData = $a; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $key => $data): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                         <tr class="">
                             <td scope="row"><?php echo e($loop->iteration); ?></td>
-                            <td><?php echo e($data->name); ?></td>
-                            <td><?php echo e($data->btlwon); ?></td>
-                            <td><?php echo e($data->btllost); ?></td>
-                            <td><?php echo e($data->btlgoal); ?></td>
-                            <td><?php echo e($data->btlagainst); ?></td>
-                            <td><?php echo e($data->btlgoaldifference); ?> </td>
-                            <td><?php echo e($data->btlpoints); ?></td>
+                            <td><?php echo e($data->code); ?></td>
+                            <td><?php echo e($data->fswon); ?></td>
+                            <td><?php echo e($data->fstied); ?></td>
+                            <td><?php echo e($data->fslost); ?></td>
+                            <td><?php echo e($data->fsgoal); ?></td>
+                            <td><?php echo e($data->fsagainst); ?></td>
+                            <td><?php echo e($data->fsgoaldifference); ?> </td>
+                            <td><?php echo e($data->fspoints); ?></td>
                         </tr>
                         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                        
@@ -47,7 +49,7 @@
    
     <div class="col pt-2">
 
-    <h6>KUMPULAN B</h5>
+    <h6>KUMPULAN B</h6>
             <div class="table-responsive">
                 <table class="table table-info table-bordered table-striped text-center">
                     <thead >
@@ -55,6 +57,7 @@
                             <th scope="col" class="bg-info bg-gradient">#</th>
                             <th scope="col" class="bg-info bg-gradient">Team</th>
                             <th scope="col" class="bg-info bg-gradient">W</th>
+                            <th scope="col" class="bg-info bg-gradient">D</th>
                             <th scope="col" class="bg-info bg-gradient">L</th>
                             <th scope="col" class="bg-info bg-gradient">GF</th>
                             <th scope="col" class="bg-info bg-gradient">GA</th>
@@ -66,13 +69,14 @@
                     <?php $__currentLoopData = $b; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $key => $data): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                         <tr class="">
                             <td scope="row"><?php echo e($loop->iteration); ?></td>
-                            <td><?php echo e($data->name); ?></td>
-                            <td><?php echo e($data->btlwon); ?></td>
-                            <td><?php echo e($data->btllost); ?></td>
-                            <td><?php echo e($data->btlgoal); ?></td>
-                            <td><?php echo e($data->btlagainst); ?></td>
-                            <td><?php echo e($data->btlgoaldifference); ?> </td>
-                            <td><?php echo e($data->btlpoints); ?></td>
+                            <td><?php echo e($data->code); ?></td>
+                            <td><?php echo e($data->fswon); ?></td>
+                            <td><?php echo e($data->fstied); ?></td>
+                            <td><?php echo e($data->fslost); ?></td>
+                            <td><?php echo e($data->fsgoal); ?></td>
+                            <td><?php echo e($data->fsagainst); ?></td>
+                            <td><?php echo e($data->fsgoaldifference); ?> </td>
+                            <td><?php echo e($data->fspoints); ?></td>
                         </tr>
                         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                        
@@ -274,5 +278,4 @@
 </div>
 </div>
 
-
-<?php /**PATH C:\laragon\www\ksrv2\resources\views/livewire/ksr-games24/portal/btl.blade.php ENDPATH**/ ?>
+<?php /**PATH C:\laragon\www\ksrv2\resources\views/livewire/ksr-games24/portal/fs.blade.php ENDPATH**/ ?>

@@ -1,7 +1,7 @@
 <div>
     <div class="container">
 
-        <div class='fw-bold h3 ff-secondary text-center pt-2 cfs-22'> MENEMBAK</div>
+        <div class='fw-bold h3 ff-secondary text-center pt-2 cfs-22'> BOWLING</div>
         <div class='fw-bold h ff-secondary text-center '> <?php echo e(@$sport_id->venue); ?></div>
         <hr>
 
@@ -10,10 +10,10 @@
 
 
 
-<?php $__currentLoopData = $sports; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $sport): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-    <div class="col-12>
+<?php $__currentLoopData = $sports->take(4); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $sport): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+    <div class="col-12">
     
-    <div class="text-center h6"><?php echo e($sport->name); ?></div>
+    <!-- <div class="text-center h6"><?php echo e($sport->name); ?></div> -->
 
     <table
     class="table table-sm  table-striped"
@@ -27,7 +27,6 @@
     </thead>
     <tbody class="bg-white">
         <?php $__empty_1 = true; $__currentLoopData = $results; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $d): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); $__empty_1 = false; ?>
-        <?php if($d->sport->name == $sport->name): ?>
         <tr class="text-center">
            
             <td>
@@ -40,7 +39,6 @@
             
             
         </tr>
-        <?php endif; ?>
         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); if ($__empty_1): ?><td>No data</td>
         <?php endif; ?>
        
@@ -55,4 +53,4 @@
     </div>
 </div>
 
-<?php /**PATH C:\laragon\www\ksrv2\resources\views/livewire/ksr-games24/portal/mk.blade.php ENDPATH**/ ?>
+<?php /**PATH C:\laragon\www\ksrv2\resources\views/livewire/ksr-games24/portal/bw.blade.php ENDPATH**/ ?>

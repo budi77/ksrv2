@@ -57,7 +57,7 @@
             <th scope="col">Kontigen</th>
         </tr>
     </thead>
-    <tbody>
+    <tbody class="bg-white">
         <?php $__empty_1 = true; $__currentLoopData = $results; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $d): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); $__empty_1 = false; ?>
         <?php if($d->sport->name == $sport->name): ?>
         <tr class="text-center">
