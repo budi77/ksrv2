@@ -67,7 +67,7 @@
     <tbody>
         <?php $__empty_1 = true; $__currentLoopData = $results; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $d): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); $__empty_1 = false; ?>
         <?php if($d->sport->name == $sport->name): ?>
-        <tr class="text-center">
+        <tr class="text-center bg-white">
             <!-- <td><?php echo e($loop->iteration); ?></td> -->
             <!-- <td><?php echo e(@$d->sport->name); ?></td> -->
             <td>
@@ -81,7 +81,7 @@
             
         </tr>
         <?php endif; ?>
-        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); if ($__empty_1): ?><td>No data</td>
+        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); if ($__empty_1): ?><td></td>
         <?php endif; ?>
        
     </tbody>

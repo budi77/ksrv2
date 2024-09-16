@@ -67,7 +67,7 @@
     <tbody>
         @forelse($results as $d)
         @if($d->sport->name == $sport->name)
-        <tr class="text-center">
+        <tr class="text-center bg-white">
             <!-- <td>{{ $loop->iteration}}</td> -->
             <!-- <td>{{ @$d->sport->name}}</td> -->
             <td>
@@ -80,7 +80,7 @@
             
         </tr>
         @endif
-        @empty<td>No data</td>
+        @empty<td></td>
         @endforelse
        
     </tbody>
