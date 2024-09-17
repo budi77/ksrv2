@@ -43,7 +43,7 @@
 
 
 
-<div class="h5 text-center pt-2">KEPUTUSAN AKHIR</div>
+<div class="h6 text-center pt-2">KEPUTUSAN AKHIR MENGIKUT ACARA</div>
 
 <hr class="border-dashed">
 <div class="row">
