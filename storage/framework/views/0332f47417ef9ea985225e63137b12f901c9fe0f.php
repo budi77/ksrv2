@@ -85,6 +85,7 @@
         <a href=/maccgames24/program/bj><i class="las la-volleyball-ball"></i> Bola Jaring</a>
         <a href=/maccgames24/program/btl><i class="las la-volleyball-ball"></i> Bola Tampar Lelaki</a>
         <a href=/maccgames24/program/btw><i class="las la-volleyball-ball"></i> Bola Tampar Wanita</a>
+        <a href=/maccgames24/program/kr><i class="las la-volleyball-ball"></i> Karom</a>
         <a href=/maccgames24/program/st><i class="las la-volleyball-ball"></i> Sepak Takraw</a>
         <a href=/maccgames24/program/pp><i class="las la-volleyball-ball"></i> Ping Pong</a>
         <a href=/maccgames24/program/fs><i class="las la-volleyball-ball"></i> Futsal</a>

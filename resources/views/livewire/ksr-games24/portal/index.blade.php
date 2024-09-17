@@ -5,12 +5,12 @@
 <div class="container">
 
 <div class="row">
-    <div class="text-center">
+    <div class="text-center pt-2">
 
         <img src="{{ URL::asset('assets/images/KSR.png') }}" alt="" class="rounded avatar-lg" >
     </div>
 
-<div class="text-center h4 pt-6">MACC GAMES 2024</div>
+<div class="text-center h4 pt-6">PROGRAM PENGUKUHAN JATI DIRI SPRM 2024</div>
 <!-- <p class="text-center h4 text-muted">PROGRAM</p> -->
 
 
