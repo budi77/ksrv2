@@ -4,7 +4,7 @@
 
 <div class='fw-bold h3 ff-secondary text-center pt-2 cfs-22'> BOLA JARING</div>
 <div class='fw-bold h ff-secondary text-center '> {{ @$sport_id->venue }}</div>
-<a href="https://maps.app.goo.gl/cqAHUkgPH7Naxysj9">VENUE</a>
+<div class="text-center"><a href="https://maps.app.goo.gl/cqAHUkgPH7Naxysj9"><i class="las la-map-marker-alt"></i> Google Maps</a></div>
 <hr>
 <div class="row">
     <h5><i class="las la-table"></i> KEDUDUKAN PASUKAN</h5>
