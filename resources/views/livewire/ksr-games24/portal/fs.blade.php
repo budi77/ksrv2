@@ -4,6 +4,8 @@
 
 <div class='fw-bold h3 ff-secondary text-center pt-2 cfs-22'> FUTSAL</div>
 <div class='fw-bold h ff-secondary text-center '> {{ @$sport_id->venue }}</div>
+<div class="text-center h5"><a href="https://maps.app.goo.gl/89HY4d29suWvx2op9"><i class="las la-map-marker-alt"></i> Google Maps</a></div>
+
 <hr>
 <div class="row">
     <h5><i class="las la-table"></i> KEDUDUKAN PASUKAN</h5>
@@ -38,7 +40,7 @@
                             <td>{{ $data->fsgoaldifference  }} </td>
                             <td>{{ $data->fspoints }}</td>
                         </tr>
-                        @endforeach
+                    @endforeach
                        
                     </tbody>
                 </table>

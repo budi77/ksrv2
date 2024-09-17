@@ -3,6 +3,8 @@
 
         <div class='fw-bold h3 ff-secondary text-center pt-2 cfs-22'> TARIK TALI LELAKI & WANITA</div>
         <div class='fw-bold h ff-secondary text-center '> {{ @$sport_id->venue }}</div>
+        <div class="text-center h5"><a href="https://maps.app.goo.gl/nnWwiVou4MkpiKEv9"><i class="las la-map-marker-alt"></i> Google Maps</a></div>
+
         <hr>
 
 <div class="row">
