@@ -48,6 +48,8 @@ Route::get('/maccgames24/program/btw', \App\Http\Livewire\KsrGames24\Portal\Btw:
 Route::get('/maccgames24/program/pp', \App\Http\Livewire\KsrGames24\Portal\Pp::class)->name('ksrgames24.pp');
 Route::get('/maccgames24/program/fs', \App\Http\Livewire\KsrGames24\Portal\Fs::class)->name('ksrgames24.fs');
 Route::get('/maccgames24/program/bw', \App\Http\Livewire\KsrGames24\Portal\Bw::class)->name('ksrgames24.bw');
+Route::get('/maccgames24/program/st', \App\Http\Livewire\KsrGames24\Portal\St::class)->name('ksrgames24.st');
+Route::get('/maccgames24/program/kr', \App\Http\Livewire\KsrGames24\Portal\Kr::class)->name('ksrgames24.kr');
 Route::get('/maccgames24/program/ranking', \App\Http\Livewire\KsrGames24\Portal\Rangking::class)->name('ksrgames24.rangking');
 // Route::get('/ksrarena2023', \App\Http\Livewire\KSRArena\Borang::class)->name('ksrarena');
 // Route::get('/ksrarena2023/bolajaring', \App\Http\Livewire\KSRArena\Netball\Index::class)->name('ksrarena.bolajaring');

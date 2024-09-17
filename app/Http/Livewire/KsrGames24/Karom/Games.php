@@ -29,10 +29,10 @@ class Games extends Component
 
         $a = Contigent::whereHas('grp', function($q) use($id) {
              $q->where('name', 'A')->where('sport_id', $id);
-         })->get()->sortByDesc('goaldifference')->sortByDesc('points');
+         })->get()->sortByDesc('krgoaldifference')->sortByDesc('krpoints');
         $b = Contigent::whereHas('grp', function($q) use($id) {
              $q->where('name', 'B')->where('sport_id', $id);
-         })->get()->sortByDesc('goaldifference')->sortByDesc('points');
+         })->get()->sortByDesc('krgoaldifference')->sortByDesc('krpoints');
 
          $fixtures = Fixture::where('sport_id', $this->sport_id->id)->orderby('order')->get();
 
