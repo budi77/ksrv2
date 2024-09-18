@@ -32,7 +32,8 @@ class Grouping extends Component
             'name' => $this->name,
             'order' => $this->order,
             'contigent_id' => $this->contigent_id,
-            'sport_id' => $this->sport_id
+            'sport_id' => $this->sport_id,
+            'ext1' => $this->name . $this->order
         ]);
 
         $this->resetExcept('results','sports','contigents','sport_id');

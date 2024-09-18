@@ -2,90 +2,15 @@
 
 <div class="container">
 
-<div class='fw-bold h3 ff-secondary text-center pt-2 cfs-22'> BOLA SEPAK</div>
+<div class='fw-bold h3 ff-secondary text-center pt-2 cfs-22'> TARI TALI WANITA</div>
 <div class='fw-bold h ff-secondary text-center '> {{ @$sport_id->venue }}</div>
-<div class="text-center h5"><a href="https://maps.app.goo.gl/bHw2FJbEzsiBA5xUA"><i class="las la-map-marker-alt"></i> Google Maps</a></div>
+<div class="text-center h5"><a href="https://maps.app.goo.gl/YzGbdMz6GeJQRg2A6"><i class="las la-map-marker-alt"></i> Google Maps</a></div>
 
 <hr>
 <div class="row">
-    <h5><i class="las la-table"></i> KEDUDUKAN PASUKAN</h5>
 
-    <div class="col pt-2">
-    <h6>KUMPULAN A</h5>
-            <div class="table-responsive">
-                <table class="table table-secondary table-bordered table-striped text-center">
-                    <thead class="bg-secondary ">
-                        <tr class="bg-secondary ">
-                            <th scope="col" class="bg-secondary bg-gradient">#</th>
-                            <th scope="col" class="bg-secondary bg-gradient">Team</th>
-                            <th scope="col" class="bg-secondary bg-gradient">W</th>
-                            <th scope="col" class="bg-secondary bg-gradient">D</th>
-                            <th scope="col" class="bg-secondary bg-gradient">L</th>
-                            <th scope="col" class="bg-secondary bg-gradient">GF</th>
-                            <th scope="col" class="bg-secondary bg-gradient">GA</th>
-                            <th scope="col" class="bg-secondary bg-gradient">GD</th>
-                            <th scope="col" class="bg-secondary bg-gradient">P</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                    @foreach($a as $key => $data)
-                        <tr class="">
-                            <td scope="row">{{ $data->ext1}}</td>
-                            <td>{{ $data->code }}</td>
-                            <td>{{ $data->bswon }}</td>
-                            <td>{{ $data->bstied }}</td>
-                            <td>{{ $data->bslost }}</td>
-                            <td>{{ $data->bsgoal }}</td>
-                            <td>{{ $data->bsagainst }}</td>
-                            <td>{{ $data->bsgoaldifference  }} </td>
-                            <td>{{ $data->bspoints }}</td>
-                        </tr>
-                        @endforeach
-                       
-                    </tbody>
-                </table>
-            </div>
-
-
-    </div>
    
-    <div class="col pt-2">
 
-    <h6>KUMPULAN B</h6>
-            <div class="table-responsive">
-                <table class="table table-info table-bordered table-striped text-center">
-                    <thead >
-                        <tr>
-                            <th scope="col" class="bg-info bg-gradient">#</th>
-                            <th scope="col" class="bg-info bg-gradient">Team</th>
-                            <th scope="col" class="bg-info bg-gradient">W</th>
-                            <th scope="col" class="bg-info bg-gradient">D</th>
-                            <th scope="col" class="bg-info bg-gradient">L</th>
-                            <th scope="col" class="bg-info bg-gradient">GF</th>
-                            <th scope="col" class="bg-info bg-gradient">GA</th>
-                            <th scope="col" class="bg-info bg-gradient">GD</th>
-                            <th scope="col" class="bg-info bg-gradient">P</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                    @foreach($b as $key => $data)
-                        <tr class="">
-                            <td scope="row">{{ $loop->iteration }}</td>
-                            <td>{{ $data->code}}</td>
-                            <td>{{ $data->bswon }}</td>
-                            <td>{{ $data->bstied }}</td>
-                            <td>{{ $data->bslost }}</td>
-                            <td>{{ $data->bsgoal }}</td>
-                            <td>{{ $data->bsagainst }}</td>
-                            <td>{{ $data->bsgoaldifference  }} </td>
-                            <td>{{ $data->bspoints }}</td>
-                        </tr>
-                        @endforeach
-                       
-                    </tbody>
-                </table>
-            </div>
-    </div>
 
     <div class="text-center">
 
@@ -279,3 +204,7 @@
 
 </div>
 </div>
+
+
+
+

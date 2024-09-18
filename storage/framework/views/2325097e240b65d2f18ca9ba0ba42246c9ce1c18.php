@@ -84,6 +84,7 @@
                             <thead class="bg-dark text-white">
                                 <tr>
                                     <th scope="col">Sukan</th>
+                                    <th scope="col">Kod</th>
                                     <th scope="col">Kumpulan</th>
                                     <th scope="col">Kedudukan</th>
                                     <th scope="col">Nama Pasukan</th>
@@ -94,8 +95,9 @@
                                 <?php $__empty_1 = true; $__currentLoopData = @$results; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $key => $data): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); $__empty_1 = false; ?>
                                 <tr class="">
                                     <td><?php echo e(@$data->sport->name); ?></td>
-                                    <td><?php echo e($data->name); ?></td>
-                                    <td><?php echo e($data->order); ?></td>
+                                    <td><?php echo e(@$data->ext1); ?></td>
+                                    <td><?php echo e(@$data->name); ?></td>
+                                    <td><?php echo e(@$data->order); ?></td>
                                     <td><?php echo e(@$data->contigent->code); ?></td>
                                     <td>
                                         <ul class="list-inline hstack gap-2 mb-0">

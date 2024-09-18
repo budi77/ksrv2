@@ -84,6 +84,7 @@
                             <thead class="bg-dark text-white">
                                 <tr>
                                     <th scope="col">Sukan</th>
+                                    <th scope="col">Kod</th>
                                     <th scope="col">Kumpulan</th>
                                     <th scope="col">Kedudukan</th>
                                     <th scope="col">Nama Pasukan</th>
@@ -94,8 +95,9 @@
                                 @forelse(@$results as $key => $data)
                                 <tr class="">
                                     <td>{{ @$data->sport->name }}</td>
-                                    <td>{{ $data->name }}</td>
-                                    <td>{{ $data->order }}</td>
+                                    <td>{{ @$data->ext1 }}</td>
+                                    <td>{{ @$data->name }}</td>
+                                    <td>{{ @$data->order }}</td>
                                     <td>{{ @$data->contigent->code }}</td>
                                     <td>
                                         <ul class="list-inline hstack gap-2 mb-0">

@@ -14,11 +14,12 @@ class Bs extends Component
    
     public function render()
     {
-        $this->sport_id = Sport::select('id','name','venue')->whereName('BOLA SEPAK')->first();
+        $this->sport_id = Sport::select('id','name','venue')->whereName('TARIK TALI')->first();
 
         // dd($this->sport_id);
 
         $id = $this->sport_id->id;
+
         $a = Contigent::whereHas('grp', function($q) use($id) {
              $q->where('name', 'A')->where('sport_id', $id);
          })->get()->sortByDesc('bsgoaldifference')->sortByDesc('bspoints');
