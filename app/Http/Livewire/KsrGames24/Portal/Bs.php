@@ -14,7 +14,7 @@ class Bs extends Component
    
     public function render()
     {
-        $this->sport_id = Sport::select('id','name','venue')->whereName('TARIK TALI')->first();
+        $this->sport_id = Sport::select('id','name','venue')->whereName('BOLA SEPAK')->first();
 
         // dd($this->sport_id);
 
