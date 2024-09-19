@@ -78,7 +78,7 @@
     <div id="myLinks">
         
         <a href=/maccgames24>Home</a>
-        <a href=/maccgames24/program>Program</a>
+        <a href=/maccgames24/program>Program Pengukuhan Jati Diri</a>
         <a href=/maccgames24/program/ranking>Kedudukan Pingat</a>
         <a href=/maccgames24/program/bs><i class="las la-volleyball-ball"></i> Bola Sepak</a>
         <a href=/maccgames24/program/bd><i class="las la-volleyball-ball"></i> Badminton</a>
@@ -90,8 +90,8 @@
         <a href=/maccgames24/program/pp><i class="las la-volleyball-ball"></i> Ping Pong</a>
         <a href=/maccgames24/program/fs><i class="las la-volleyball-ball"></i> Futsal</a>
         <a href=/maccgames24/program/bl><i class="las la-volleyball-ball"></i> Balapan</a>
-        <a href=/maccgames24/program/tt><i class="las la-volleyball-ball"></i> Tarik Tali (L)</a>
-        <a href=/maccgames24/program/tt><i class="las la-volleyball-ball"></i> Tarik Tali (W)</a>
+        <a href=/maccgames24/program/ttl><i class="las la-volleyball-ball"></i> Tarik Tali (L)</a>
+        <a href=/maccgames24/program/ttw><i class="las la-volleyball-ball"></i> Tarik Tali (W)</a>
         <a href=/maccgames24/program/bw><i class="las la-volleyball-ball"></i> Bowling</a>
         <a href=/maccgames24/program/mk><i class="las la-volleyball-ball"></i> Menembak</a>
     </div>

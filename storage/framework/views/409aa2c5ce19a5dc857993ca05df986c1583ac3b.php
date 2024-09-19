@@ -4,6 +4,8 @@
 
 <div class='fw-bold h3 ff-secondary text-center pt-2 cfs-22'> BOLA SEPAK</div>
 <div class='fw-bold h ff-secondary text-center '> <?php echo e(@$sport_id->venue); ?></div>
+<div class="text-center h5"><a href="https://maps.app.goo.gl/bHw2FJbEzsiBA5xUA"><i class="las la-map-marker-alt"></i> Google Maps</a></div>
+
 <hr>
 <div class="row">
     <h5><i class="las la-table"></i> KEDUDUKAN PASUKAN</h5>
@@ -28,7 +30,7 @@
                     <tbody>
                     <?php $__currentLoopData = $a; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $key => $data): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                         <tr class="">
-                            <td scope="row"><?php echo e($loop->iteration); ?></td>
+                            <td scope="row"><?php echo e($data->ext1); ?></td>
                             <td><?php echo e($data->code); ?></td>
                             <td><?php echo e($data->bswon); ?></td>
                             <td><?php echo e($data->bstied); ?></td>

@@ -77,7 +77,7 @@
     <div id="myLinks">
         
         <a href=/maccgames24>Home</a>
-        <a href=/maccgames24/program>Program</a>
+        <a href=/maccgames24/program>Program Pengukuhan Jati Diri</a>
         <a href=/maccgames24/program/ranking>Kedudukan Pingat</a>
         <a href=/maccgames24/program/bs><i class="las la-volleyball-ball"></i> Bola Sepak</a>
         <a href=/maccgames24/program/bd><i class="las la-volleyball-ball"></i> Badminton</a>
