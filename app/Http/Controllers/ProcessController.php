@@ -10,7 +10,7 @@ use Symfony\Component\Process\Process;
 class ProcessController extends Controller
 {
     public function gitpull() {
-        $process = new Process(['git pull']);
+        $process = new Process(['git', 'pull']);
         $process->run();
 
         // executes after the command finishes
