@@ -21,4 +21,17 @@ class ProcessController extends Controller
 
         echo $process->getOutput();
       }
+
+    public function optimize() {
+        $process = new Process(['php', '/var/www/html/ksrv2', 'optimize']);
+        $process->setWorkingDirectory('/var/www/html/ksrv2');
+        $process->run();
+
+        // executes after the command finishes
+        if (!$process->isSuccessful()) {
+            throw new ProcessFailedException($process);
+        }
+
+        echo $process->getOutput();
+      }
 }
