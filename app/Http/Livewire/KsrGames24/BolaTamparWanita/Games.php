@@ -11,7 +11,7 @@ use App\Models\Sport;
 class Games extends Component
 {
 
-    public $data_id, $contigent1, $contigent2, $result1, $result2, $match, $stage, $order,$court;
+    public $data_id, $contigent1, $contigent2, $result1, $result2, $match, $stage, $order,$court = 2;
     public $contigent,$mdate, $mtime;
 
 
