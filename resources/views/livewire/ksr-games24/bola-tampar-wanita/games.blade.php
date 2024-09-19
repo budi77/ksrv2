@@ -101,7 +101,6 @@
                             <select class="form-select" wire:model="stage">
                                 <option selected>--Sila Pilih--</option>
                                 <option value="Kumpulan">Kumpulan</option>
-                                <option value="Suku Akhir">Suku Akhir</option>
                                 <option value="Separuh Akhir">Separuh Akhir</option>
                                 <option value="Tempat 3 / 4">Tempat ke 3 / 4</option>
                                 <option value="Akhir">Akhir</option>
