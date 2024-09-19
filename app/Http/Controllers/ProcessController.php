@@ -11,6 +11,7 @@ class ProcessController extends Controller
 {
     public function gitpull() {
         $process = new Process(['git', 'pull']);
+        $process->setWorkingDirectory('/var/www/html/ksrv2');
         $process->run();
 
         // executes after the command finishes
