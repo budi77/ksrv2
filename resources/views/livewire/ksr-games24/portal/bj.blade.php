@@ -119,13 +119,13 @@
                 <tr class="text-center">
                     <td scope="row">{{ $fixture->order }}</td>
                     <!-- <td>{{ $fixture->stage }}</td> -->
-                    <td>{{ $fixture->ext2 }}</td>
-                    <td>{{ $fixture->ext1 }}</td>
-                    <td>{{ $fixture->court }}</td>
-                    <td>{{ $fixture->contigent1->code }}</td>
-                    <td>{{ $fixture->result1 }}</td>
-                    <td>{{ $fixture->result2 }}</td>
-                    <td>{{ $fixture->contigent2->code }}</td>
+                    <td>{{ @$fixture->ext2 }}</td>
+                    <td>{{ @$fixture->ext1 }}</td>
+                    <td>{{ @$fixture->court }}</td>
+                    <td>{{ @$fixture->contigent1->code }}</td>
+                    <td>{{ @$fixture->result1 }}</td>
+                    <td>{{ @$fixture->result2 }}</td>
+                    <td>{{ @$fixture->contigent2->code }}</td>
                     
                 </tr>
             @endif
@@ -165,13 +165,13 @@
                 <tr class="text-center">
                     <td scope="row">{{ $fixture->order }}</td>
                     <!-- <td>{{ $fixture->stage }}</td> -->
-                    <td>{{ $fixture->ext2 }}</td>
-                    <td>{{ $fixture->ext1 }}</td>
-                    <td>{{ $fixture->court }}</td>
-                    <td>{{ $fixture->contigent1->code }}</td>
-                    <td>{{ $fixture->result1 }}</td>
-                    <td>{{ $fixture->result2 }}</td>
-                    <td>{{ $fixture->contigent2->code }}</td>
+                    <td>{{ @$fixture->ext2 }}</td>
+                    <td>{{ @$fixture->ext1 }}</td>
+                    <td>{{ @$fixture->court }}</td>
+                    <td>{{ @$fixture->contigent1->code }}</td>
+                    <td>{{ @$fixture->result1 }}</td>
+                    <td>{{ @$fixture->result2 }}</td>
+                    <td>{{ @$fixture->contigent2->code }}</td>
                     
                 </tr>
             @endif
@@ -210,13 +210,13 @@
                 <tr class="text-center">
                     <td scope="row">{{ $fixture->order }}</td>
                     <!-- <td>{{ $fixture->stage }}</td> -->
-                    <td>{{ $fixture->ext2 }}</td>
-                    <td>{{ $fixture->ext1 }}</td>
-                    <td>{{ $fixture->court }}</td>
-                    <td>{{ $fixture->contigent1->code }}</td>
-                    <td>{{ $fixture->result1 }}</td>
-                    <td>{{ $fixture->result2 }}</td>
-                    <td>{{ $fixture->contigent2->code }}</td>
+                    <td>{{ @$fixture->ext2 }}</td>
+                    <td>{{ @$fixture->ext1 }}</td>
+                    <td>{{ @$fixture->court }}</td>
+                    <td>{{ @$fixture->contigent1->code }}</td>
+                    <td>{{ @$fixture->result1 }}</td>
+                    <td>{{ @$fixture->result2 }}</td>
+                    <td>{{ @$fixture->contigent2->code }}</td>
                     
                 </tr>
             @endif
@@ -255,13 +255,13 @@
                 <tr class="text-center">
                     <td scope="row">{{ $fixture->order }}</td>
                     <!-- <td>{{ $fixture->stage }}</td> -->
-                    <td>{{ $fixture->ext2 }}</td>
-                    <td>{{ $fixture->ext1 }}</td>
-                    <td>{{ $fixture->court }}</td>
-                    <td>{{ $fixture->contigent1->code }}</td>
-                    <td>{{ $fixture->result1 }}</td>
-                    <td>{{ $fixture->result2 }}</td>
-                    <td>{{ $fixture->contigent2->code }}</td>
+                    <td>{{ @$fixture->ext2 }}</td>
+                    <td>{{ @$fixture->ext1 }}</td>
+                    <td>{{ @$fixture->court }}</td>
+                    <td>{{ @$fixture->contigent1->code }}</td>
+                    <td>{{ @$fixture->result1 }}</td>
+                    <td>{{ @$fixture->result2 }}</td>
+                    <td>{{ @$fixture->contigent2->code }}</td>
                     
                 </tr>
             @endif
