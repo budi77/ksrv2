@@ -131,6 +131,7 @@
                             class="form-control"
                             name=""
                             id=""
+                            value="2"
                             aria-describedby="helpId"
                             placeholder=""
                             wire:model="court"
