@@ -119,5 +119,7 @@ Route::middleware('auth')->group(function () {
     //jelajah angsi 2023
     Route::get('/angsi2023/permohonan', \App\Http\Livewire\Angsi\Permohonan::class)->name('angsi.permohonan');
 
+    Route::get("/gitpull", [App\Http\Controllers\ProcessController::class, 'gitpull']);
+
 
 });
