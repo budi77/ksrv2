@@ -111,15 +111,14 @@
             @foreach($fixtures as $fixture)
             @if($fixture->stage == 'Kumpulan')
                 <tr class="text-center">
-                    <td scope="row">{{ $fixture->order }}</td>
-                    <!-- <td>{{ $fixture->stage }}</td> -->
-                    <td>{{ $fixture->ext2 }}</td>
-                    <td>{{ $fixture->ext1 }}</td>
-                    <td>{{ $fixture->court }}</td>
-                    <td>{{ $fixture->contigent1->code }}</td>
-                    <td>{{ $fixture->result1 }}</td>
-                    <td>{{ $fixture->result2 }}</td>
-                    <td>{{ $fixture->contigent2->code }}</td>
+                    <td scope="row">{{ @$fixture->order }}</td>
+                    <td>{{ @$fixture->ext2 }}</td>
+                    <td>{{ @$fixture->ext1 }}</td>
+                    <td>{{ @$fixture->court }}</td>
+                    <td>{{ @$fixture->contigent1->code }}</td>
+                    <td>{{ @$fixture->result1 }}</td>
+                    <td>{{ @$fixture->result2 }}</td>
+                    <td>{{ @$fixture->contigent2->code }}</td>
                     
                 </tr>
             @endif
@@ -157,15 +156,14 @@
             @foreach($fixtures as $fixture)
             @if($fixture->stage == 'Separuh Akhir')
                 <tr class="text-center">
-                    <td scope="row">{{ $fixture->order }}</td>
-                    <!-- <td>{{ $fixture->stage }}</td> -->
-                    <td>{{ $fixture->ext2 }}</td>
-                    <td>{{ $fixture->ext1 }}</td>
-                    <td>{{ $fixture->court }}</td>
-                    <td>{{ $fixture->contigent1->code }}</td>
-                    <td>{{ $fixture->result1 }}</td>
-                    <td>{{ $fixture->result2 }}</td>
-                    <td>{{ $fixture->contigent2->code }}</td>
+                <td scope="row">{{ @$fixture->order }}</td>
+                    <td>{{ @$fixture->ext2 }}</td>
+                    <td>{{ @$fixture->ext1 }}</td>
+                    <td>{{ @$fixture->court }}</td>
+                    <td>{{ @$fixture->contigent1->code }}</td>
+                    <td>{{ @$fixture->result1 }}</td>
+                    <td>{{ @$fixture->result2 }}</td>
+                    <td>{{ @$fixture->contigent2->code }}</td>
                     
                 </tr>
             @endif
@@ -202,15 +200,14 @@
             @foreach($fixtures as $fixture)
             @if($fixture->stage == 'Tempat 3 / 4')
                 <tr class="text-center">
-                    <td scope="row">{{ $fixture->order }}</td>
-                    <!-- <td>{{ $fixture->stage }}</td> -->
-                    <td>{{ $fixture->ext2 }}</td>
-                    <td>{{ $fixture->ext1 }}</td>
-                    <td>{{ $fixture->court }}</td>
-                    <td>{{ $fixture->contigent1->code }}</td>
-                    <td>{{ $fixture->result1 }}</td>
-                    <td>{{ $fixture->result2 }}</td>
-                    <td>{{ $fixture->contigent2->code }}</td>
+                <td scope="row">{{ @$fixture->order }}</td>
+                    <td>{{ @$fixture->ext2 }}</td>
+                    <td>{{ @$fixture->ext1 }}</td>
+                    <td>{{ @$fixture->court }}</td>
+                    <td>{{ @$fixture->contigent1->code }}</td>
+                    <td>{{ @$fixture->result1 }}</td>
+                    <td>{{ @$fixture->result2 }}</td>
+                    <td>{{ @$fixture->contigent2->code }}</td>
                     
                 </tr>
             @endif
@@ -247,15 +244,14 @@
             @foreach($fixtures as $fixture)
             @if($fixture->stage == 'Akhir')
                 <tr class="text-center">
-                    <td scope="row">{{ $fixture->order }}</td>
-                    <!-- <td>{{ $fixture->stage }}</td> -->
-                    <td>{{ $fixture->ext2 }}</td>
-                    <td>{{ $fixture->ext1 }}</td>
-                    <td>{{ $fixture->court }}</td>
-                    <td>{{ $fixture->contigent1->code }}</td>
-                    <td>{{ $fixture->result1 }}</td>
-                    <td>{{ $fixture->result2 }}</td>
-                    <td>{{ $fixture->contigent2->code }}</td>
+                <td scope="row">{{ @$fixture->order }}</td>
+                    <td>{{ @$fixture->ext2 }}</td>
+                    <td>{{ @$fixture->ext1 }}</td>
+                    <td>{{ @$fixture->court }}</td>
+                    <td>{{ @$fixture->contigent1->code }}</td>
+                    <td>{{ @$fixture->result1 }}</td>
+                    <td>{{ @$fixture->result2 }}</td>
+                    <td>{{ @$fixture->contigent2->code }}</td>
                     
                 </tr>
             @endif
