@@ -2,7 +2,7 @@
 
 <div class="row">
 
-<div class='fw-bold h3 text-primary'> BOLA SEPAK</div>
+<div class='fw-bold h3 text-primary'> BOLA SEPAK (BS)</div>
 <hr>
 <div class="row">
     <h4><i class="las la-table"></i> KEDUDUKAN PASUKAN</h4>
