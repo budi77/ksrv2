@@ -62,7 +62,7 @@
     class="table table-sm table-bordered table-striped"
 >
     <thead>
-        <tr class="table-info text-center">
+        <tr class="bg-info text-center">
             <!-- <th scope="col">#</th> -->
             <!-- <th scope="col">Sukan</th> -->
             <th scope="col" width="4%">Rank</th>
