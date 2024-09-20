@@ -6,7 +6,7 @@
 <hr class="border-dashed">
 
 <div class="table-responsive">
-        <table class="table table-primary table-bordered table-striped text-center">
+        <table class="table table-bordered table-striped text-center">
             <thead class="">
                 <tr class="bg-secondary ">
                     <th scope="col" class="bg-primary bg-gradient">#</th>
@@ -19,11 +19,16 @@
                 
                 </tr>
             </thead>
-            <tbody>
+            <tbody class="bg-white">
             @foreach($standings as $key => $data)
                 <tr class="">
                     <td scope="row">{{ $loop->iteration }}</td>
-                    <td class="text-start">{{ $data->code }}</td>
+                    <td class="text-start"  >
+                        <!-- Base Buttons -->
+                        <button type="button" class="btn" style="background-color:{{ $data->ext2 }}"></button>
+
+                        <!-- <span class="badge style="style="background-color:{{ $data->ext2 }}">ss</span> -->
+                    {{ $data->code }}</td>
                     <td>{{ $data->first }}</td>
                     <td>{{ $data->second }}</td>
                     <td>{{ $data->third }}</td>

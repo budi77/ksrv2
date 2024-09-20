@@ -6,7 +6,7 @@
 <hr class="border-dashed">
 
 <div class="table-responsive">
-        <table class="table table-primary table-bordered table-striped text-center">
+        <table class="table table-bordered table-striped text-center">
             <thead class="">
                 <tr class="bg-secondary ">
                     <th scope="col" class="bg-primary bg-gradient">#</th>
@@ -19,11 +19,16 @@
                 
                 </tr>
             </thead>
-            <tbody>
+            <tbody class="bg-white">
             <?php $__currentLoopData = $standings; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $key => $data): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                 <tr class="">
                     <td scope="row"><?php echo e($loop->iteration); ?></td>
-                    <td class="text-start"><?php echo e($data->code); ?></td>
+                    <td class="text-start"  >
+                        <!-- Base Buttons -->
+                        <button type="button" class="btn" style="background-color:<?php echo e($data->ext2); ?>"></button>
+
+                        <!-- <span class="badge style="style="background-color:<?php echo e($data->ext2); ?>">ss</span> -->
+                    <?php echo e($data->code); ?></td>
                     <td><?php echo e($data->first); ?></td>
                     <td><?php echo e($data->second); ?></td>
                     <td><?php echo e($data->third); ?></td>
@@ -43,7 +48,7 @@
 
 
 
-<div class="h5 text-center pt-2">KEPUTUSAN AKHIR</div>
+<div class="h6 text-center pt-2">KEPUTUSAN AKHIR MENGIKUT ACARA</div>
 
 <hr class="border-dashed">
 <div class="row">
