@@ -9,13 +9,13 @@
         <table class="table table-bordered table-striped text-center">
             <thead class="">
                 <tr class="bg-secondary ">
-                    <th scope="col" class="bg-primary bg-gradient">#</th>
-                    <th scope="col" class="bg-primary bg-gradient text-start">PASUKAN</th>
-                    <th scope="col" class="bg-primary bg-gradient">E</th>
-                    <th scope="col" class="bg-primary bg-gradient">P</th>
-                    <th scope="col" class="bg-primary bg-gradient">G</th>
-                    <th scope="col" class="bg-primary bg-gradient">4</th>
-                    <th scope="col" class="bg-primary bg-gradient">MATA</th>
+                    <th scope="col" class="bg-dark bg-gradient text-white">#</th>
+                    <th scope="col" class="bg-dark bg-gradient text-start text-white">KONTIGEN</th>
+                    <th scope="col" class="bg-dark bg-gradient text-white">E</th>
+                    <th scope="col" class="bg-dark bg-gradient text-white">P</th>
+                    <th scope="col" class="bg-dark bg-gradient text-white">G</th>
+                    <th scope="col" class="bg-dark bg-gradient text-white">4</th>
+                    <th scope="col" class="bg-dark bg-gradient text-white">MATA</th>
                 
                 </tr>
             </thead>
