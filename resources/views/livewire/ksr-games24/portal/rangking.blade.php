@@ -62,10 +62,10 @@
     class="table table-sm table-bordered table-striped"
 >
     <thead>
-        <tr class="bg-info text-center">
+        <tr class="bg-success text-center">
             <!-- <th scope="col">#</th> -->
             <!-- <th scope="col">Sukan</th> -->
-            <th scope="col" width="4%">Rank</th>
+            <th scope="col" width="4%">#</th>
             <th scope="col">Kontigen</th>
         </tr>
     </thead>
