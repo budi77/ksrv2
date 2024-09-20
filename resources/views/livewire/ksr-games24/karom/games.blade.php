@@ -151,8 +151,7 @@
                             wire:model="mdate"
                         >
                             <option selected>-- Pilih --</option>
-                            <option value="27/9">27/9</option>
-                            <option value="28/9">28/9</option>
+                           
                             <option value="29/9">29/9</option>
                         </select>
                     </div>
@@ -284,15 +283,15 @@
             <tbody>
                 @foreach($fixtures as $fixture)
                 <tr class="text-center">
-                    <td scope="row">{{ $fixture->order }}</td>
-                    <td>{{ $fixture->stage }}</td>
-                    <td>{{ $fixture->ext2 }}</td>
-                    <td>{{ $fixture->ext1 }}</td>
-                    <td>{{ $fixture->court }}</td>
-                    <td>{{ $fixture->contigent1->name }}</td>
-                    <td>{{ $fixture->result1 }}</td>
-                    <td>{{ $fixture->contigent2->name }}</td>
-                    <td>{{ $fixture->result2 }}</td>
+                    <td scope="row">{{ @$fixture->order }}</td>
+                    <td>{{ @$fixture->stage }}</td>
+                    <td>{{ @$fixture->ext2 }}</td>
+                    <td>{{ @$fixture->ext1 }}</td>
+                    <td>{{ @$fixture->court }}</td>
+                    <td>{{ @$fixture->contigent1->name }}</td>
+                    <td>{{ @$fixture->result1 }}</td>
+                    <td>{{ @$fixture->contigent2->name }}</td>
+                    <td>{{ @$fixture->result2 }}</td>
                     <td>
                     <ul class="list-inline hstack gap-2 mb-0">
                                             <li class="list-inline-item" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" title="View">
