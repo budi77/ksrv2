@@ -23,7 +23,7 @@ class ProcessController extends Controller
       }
 
     public function optimize() {
-        $process = new Process(['/usr/bin/php', base_path('artisan'), 'optimize', '--stop-when-empty']);
+        $process = new Process(['/usr/bin/php', base_path('artisan'), 'optimize']);
 
         // $process = new Process(['php artisan optimize']);
         $process->setWorkingDirectory('/var/www/html/ksrv2');
