@@ -19,6 +19,6 @@ class Pbn extends Component
         // $standings = Contigent::whereVip(0)->get()->sortByDesc('blforth')->sortByDesc('blthird')->sortByDesc('blsecond')->sortByDesc('blfirst');
 
         $this->results = Standing::where('sport_id', $sport->id)->orderby('sport_id', 'DESC')->orderby('rank')->get();
-        return view('livewire.ksr-games24.portal.pbn')->extends('layouts.master-without-nav');
+        return view('livewire.ksr-games24.portal.pbn', compact('sport'))->extends('layouts.master-without-nav');
     }
 }

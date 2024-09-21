@@ -2,7 +2,7 @@
     <div class="container">
 
         <div class='fw-bold h3 ff-secondary text-center pt-2 cfs-22'> MENEMBAK</div>
-        <div class='fw-bold h ff-secondary text-center '> {{ @$sport_id->venue }}</div>
+        <div class='fw-bold h ff-secondary text-center '> {{ @$sport->venue }}</div>
         <div class="text-center h5"><a href="https://maps.app.goo.gl/EvGkvehyzhCAVt9m9"><i class="las la-map-marker-alt"></i> Google Maps</a></div>
 
         <hr>

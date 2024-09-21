@@ -21,7 +21,7 @@ class Mk extends Component
         $this->results = Standing::where('sport_id', $sport->id)->orderby('sport_id', 'DESC')->orderby('rank')->get();
 
         // dd($this->results);
-        $this->sports = Sport::where('id', $sport->id)->get();
-        return view('livewire.ksr-games24.portal.mk')->extends('layouts.master-without-nav');
+        // $this->sports = Sport::where('id', $sport->id)->get();
+        return view('livewire.ksr-games24.portal.mk',compact('sport'))->extends('layouts.master-without-nav');
     }
 }
