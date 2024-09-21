@@ -13,6 +13,7 @@ class Pbn extends Component
 
     public function render()
     {
+        
         $sport = Sport::whereName('PERBARISAN')->first();
 
         // dd($sport->id);
