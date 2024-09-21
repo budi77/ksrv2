@@ -21,7 +21,7 @@
                                         <li class="nav-item" role="presentation">
                                             <a class="nav-link" data-bs-toggle="tab" href="#arrow-profile" role="tab" aria-selected="false" tabindex="-1">
                                                 <span class="d-block d-sm-none"><i class="mdi mdi-account"></i></span>
-                                                <span class="d-none d-sm-block">Kontigen</span>
+                                                <span class="d-none d-sm-block">Kontijen</span>
                                             </a>
                                         </li>
                                         <li class="nav-item" role="presentation">

@@ -13,7 +13,7 @@
             <thead class="">
                 <tr class="bg-secondary ">
                     <th scope="col" class="bg-warning bg-gradient">#</th>
-                    <th scope="col" class="bg-warning bg-gradient text-start">KONTIGEN</th>
+                    <th scope="col" class="bg-warning bg-gradient text-start">KONTIJEN</th>
                     <th scope="col" class="bg-warning bg-gradient">E</th>
                     <th scope="col" class="bg-warning bg-gradient">P</th>
                     <th scope="col" class="bg-warning bg-gradient">G</th>
@@ -54,7 +54,7 @@
         <tr class="table-dark text-center">
            
             <th scope="col" width="4%">Rank</th>
-            <th scope="col">Kontigen</th>
+            <th scope="col">Kontijen</th>
         </tr>
     </thead>
     <tbody class="bg-white">

@@ -22,7 +22,7 @@
         <tr class="table-dark text-center">
            
             <th scope="col" width="4%">Rank</th>
-            <th scope="col">Kontigen</th>
+            <th scope="col">Kontijen</th>
         </tr>
     </thead>
     <tbody class="bg-white">

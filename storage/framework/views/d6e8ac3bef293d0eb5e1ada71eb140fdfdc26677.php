@@ -181,7 +181,7 @@
             <div class="row">
                 <div class="col-6">
                 <div class="mb-3">
-                    <label for="" class="form-label text-dark">Kontigen 1</label>
+                    <label for="" class="form-label text-dark">Kontijen 1</label>
                     <select
                         class="form-select"
                         name=""
@@ -217,7 +217,7 @@
                 <div class="col-6">
 
                 <div class="mb-3">
-                    <label for="" class="form-label text-dark">Kontigen 2</label>
+                    <label for="" class="form-label text-dark">Kontijen 2</label>
                     <select
                         class="form-select"
                         name=""

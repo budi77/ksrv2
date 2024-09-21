@@ -19,7 +19,7 @@
                 <thead>
                     <tr class="bg-success text-white">
                         <th scope="col" width="5%">RANK</th>
-                        <th scope="col">KONTIGEN</th>
+                        <th scope="col">KONTIJEN</th>
                     </tr>
                 </thead>
                 <tbody class="bg-white">

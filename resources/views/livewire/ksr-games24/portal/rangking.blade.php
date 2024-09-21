@@ -10,7 +10,7 @@
             <thead class="">
                 <tr class="bg-secondary ">
                     <th scope="col" class="bg-dark bg-gradient text-white">#</th>
-                    <th scope="col" class="bg-dark bg-gradient text-start text-white">KONTIGEN</th>
+                    <th scope="col" class="bg-dark bg-gradient text-start text-white">KONTIJEN</th>
                     <th scope="col" class="bg-dark bg-gradient text-white">E</th>
                     <th scope="col" class="bg-dark bg-gradient text-white">P</th>
                     <th scope="col" class="bg-dark bg-gradient text-white">G</th>
@@ -66,7 +66,7 @@
             <!-- <th scope="col">#</th> -->
             <!-- <th scope="col">Sukan</th> -->
             <th scope="col" width="4%">#</th>
-            <th scope="col">Kontigen</th>
+            <th scope="col">Kontijen</th>
         </tr>
     </thead>
     <tbody>

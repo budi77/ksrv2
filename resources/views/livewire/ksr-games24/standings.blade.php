@@ -101,7 +101,7 @@
                 </div>
 
                 <div class="mb-3">
-                        <label for="" class="form-label text-dark">Kontigen</label>
+                        <label for="" class="form-label text-dark">Kontijen</label>
                         <select
                             class="form-select"
                             wire:model="contigent_id"
@@ -140,7 +140,7 @@
                 <tr class="table-dark text-center">
                     
                     <th scope="col" width="4%">Rank</th>
-                    <th scope="col">Kontigen</th>
+                    <th scope="col">Kontijen</th>
                     <th scope="col"></th>
                 </tr>
             </thead>
@@ -244,7 +244,7 @@
             <h6>RANK : {{@$rank}}</h6>
 
               <div class="mb-3">
-                        <label for="" class="form-label text-dark">KONTIGEN :</label>
+                        <label for="" class="form-label text-dark">KONTIJEN :</label>
                         <select
                             class="form-select"
                             wire:model="contigent_id"

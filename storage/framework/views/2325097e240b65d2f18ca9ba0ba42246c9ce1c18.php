@@ -4,7 +4,7 @@
         <div class="col-4">
             <div class="card card-light">
                 <div class="card-body">
-                    <h4 class="card-title text-dark">MAKLUMAT KONTIGEN</h4>
+                    <h4 class="card-title text-dark">MAKLUMAT KONTIJEN</h4>
                     <div class="row">
                         <div class="col-6">
                             <div class="mb-3">
@@ -39,7 +39,7 @@
                     </div>
 
                     <div class="mb-3">
-                        <label for="" class="form-label text-dark">Kontigen</label>
+                        <label for="" class="form-label text-dark">Kontijen</label>
                         <select
                             class="form-select"
                             wire:model="contigent_id"

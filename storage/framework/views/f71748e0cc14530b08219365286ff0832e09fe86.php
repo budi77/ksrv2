@@ -5,7 +5,7 @@
             <div class="card card-light">
                 
                 <div class="card-body">
-                    <h4 class="card-title text-dark">MAKLUMAT KONTIGEN</h4>
+                    <h4 class="card-title text-dark">MAKLUMAT KONTIJEN</h4>
                     <div class="mb-3">
                       <label for="" class="form-label text-dark">Nama</label>
                       <input type="text"
@@ -47,7 +47,7 @@
         <div class="col-8">
             <div class="card">
                 <div class="card-body">
-                    <h4 class="card-title">SENARAI KONTIGEN</h4>
+                    <h4 class="card-title">SENARAI KONTIJEN</h4>
                     <div class="table-responsive ">
                         <table class="table table-sm table-striped">
                             <thead class="bg-dark text-white">
