@@ -4,6 +4,8 @@
 
 <div class='fw-bold h3 ff-secondary text-center pt-2 cfs-22'> BADMINTON</div>
 <div class='fw-bold h ff-secondary text-center '> <?php echo e(@$sport_id->venue); ?></div>
+<div class="text-center h5"><a href="https://maps.app.goo.gl/89HY4d29suWvx2op9"><i class="las la-map-marker-alt"></i> Google Maps</a></div>
+
 <hr>
 <div class="row">
     <h5><i class="las la-table"></i> KEDUDUKAN PASUKAN</h5>
@@ -110,15 +112,14 @@
             <?php $__currentLoopData = $fixtures; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $fixture): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
             <?php if($fixture->stage == 'Kumpulan'): ?>
                 <tr class="text-center">
-                    <td scope="row"><?php echo e($fixture->order); ?></td>
-                    <!-- <td><?php echo e($fixture->stage); ?></td> -->
-                    <td><?php echo e($fixture->ext2); ?></td>
-                    <td><?php echo e($fixture->ext1); ?></td>
-                    <td><?php echo e($fixture->court); ?></td>
-                    <td><?php echo e($fixture->contigent1->code); ?></td>
-                    <td><?php echo e($fixture->result1); ?></td>
-                    <td><?php echo e($fixture->result2); ?></td>
-                    <td><?php echo e($fixture->contigent2->code); ?></td>
+                    <td scope="row"><?php echo e(@$fixture->order); ?></td>
+                    <td><?php echo e(@$fixture->ext2); ?></td>
+                    <td><?php echo e(@$fixture->ext1); ?></td>
+                    <td><?php echo e(@$fixture->court); ?></td>
+                    <td><?php echo e(@$fixture->contigent1->code); ?></td>
+                    <td><?php echo e(@$fixture->result1); ?></td>
+                    <td><?php echo e(@$fixture->result2); ?></td>
+                    <td><?php echo e(@$fixture->contigent2->code); ?></td>
                     
                 </tr>
             <?php endif; ?>
@@ -156,15 +157,14 @@
             <?php $__currentLoopData = $fixtures; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $fixture): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
             <?php if($fixture->stage == 'Separuh Akhir'): ?>
                 <tr class="text-center">
-                    <td scope="row"><?php echo e($fixture->order); ?></td>
-                    <!-- <td><?php echo e($fixture->stage); ?></td> -->
-                    <td><?php echo e($fixture->ext2); ?></td>
-                    <td><?php echo e($fixture->ext1); ?></td>
-                    <td><?php echo e($fixture->court); ?></td>
-                    <td><?php echo e($fixture->contigent1->code); ?></td>
-                    <td><?php echo e($fixture->result1); ?></td>
-                    <td><?php echo e($fixture->result2); ?></td>
-                    <td><?php echo e($fixture->contigent2->code); ?></td>
+                <td scope="row"><?php echo e(@$fixture->order); ?></td>
+                    <td><?php echo e(@$fixture->ext2); ?></td>
+                    <td><?php echo e(@$fixture->ext1); ?></td>
+                    <td><?php echo e(@$fixture->court); ?></td>
+                    <td><?php echo e(@$fixture->contigent1->code); ?></td>
+                    <td><?php echo e(@$fixture->result1); ?></td>
+                    <td><?php echo e(@$fixture->result2); ?></td>
+                    <td><?php echo e(@$fixture->contigent2->code); ?></td>
                     
                 </tr>
             <?php endif; ?>
@@ -197,19 +197,18 @@
                
             </tr>
         </thead>
-        <tbody>
+        <tbody class="bg-white">
             <?php $__currentLoopData = $fixtures; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $fixture): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
             <?php if($fixture->stage == 'Tempat 3 / 4'): ?>
                 <tr class="text-center">
-                    <td scope="row"><?php echo e($fixture->order); ?></td>
-                    <!-- <td><?php echo e($fixture->stage); ?></td> -->
-                    <td><?php echo e($fixture->ext2); ?></td>
-                    <td><?php echo e($fixture->ext1); ?></td>
-                    <td><?php echo e($fixture->court); ?></td>
-                    <td><?php echo e($fixture->contigent1->code); ?></td>
-                    <td><?php echo e($fixture->result1); ?></td>
-                    <td><?php echo e($fixture->result2); ?></td>
-                    <td><?php echo e($fixture->contigent2->code); ?></td>
+                <td scope="row"><?php echo e(@$fixture->order); ?></td>
+                    <td><?php echo e(@$fixture->ext2); ?></td>
+                    <td><?php echo e(@$fixture->ext1); ?></td>
+                    <td><?php echo e(@$fixture->court); ?></td>
+                    <td><?php echo e(@$fixture->contigent1->code); ?></td>
+                    <td><?php echo e(@$fixture->result1); ?></td>
+                    <td><?php echo e(@$fixture->result2); ?></td>
+                    <td><?php echo e(@$fixture->contigent2->code); ?></td>
                     
                 </tr>
             <?php endif; ?>
@@ -242,19 +241,18 @@
                
             </tr>
         </thead>
-        <tbody>
+        <tbody class="bg-white">
             <?php $__currentLoopData = $fixtures; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $fixture): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
             <?php if($fixture->stage == 'Akhir'): ?>
                 <tr class="text-center">
-                    <td scope="row"><?php echo e($fixture->order); ?></td>
-                    <!-- <td><?php echo e($fixture->stage); ?></td> -->
-                    <td><?php echo e($fixture->ext2); ?></td>
-                    <td><?php echo e($fixture->ext1); ?></td>
-                    <td><?php echo e($fixture->court); ?></td>
-                    <td><?php echo e($fixture->contigent1->code); ?></td>
-                    <td><?php echo e($fixture->result1); ?></td>
-                    <td><?php echo e($fixture->result2); ?></td>
-                    <td><?php echo e($fixture->contigent2->code); ?></td>
+                <td scope="row"><?php echo e(@$fixture->order); ?></td>
+                    <td><?php echo e(@$fixture->ext2); ?></td>
+                    <td><?php echo e(@$fixture->ext1); ?></td>
+                    <td><?php echo e(@$fixture->court); ?></td>
+                    <td><?php echo e(@$fixture->contigent1->code); ?></td>
+                    <td><?php echo e(@$fixture->result1); ?></td>
+                    <td><?php echo e(@$fixture->result2); ?></td>
+                    <td><?php echo e(@$fixture->contigent2->code); ?></td>
                     
                 </tr>
             <?php endif; ?>

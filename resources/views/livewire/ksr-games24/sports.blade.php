@@ -42,6 +42,7 @@
                         <table class="table table-sm table-striped">
                             <thead class="bg-dark text-white">
                                 <tr>
+                                    <th scope="col">Id</th>
                                     <th scope="col">Nama Sukan</th>
                                     <th scope="col">Venue</th>
                                     <th scope="col">Icon</th>
@@ -52,6 +53,7 @@
                             <tbody>
                                 @forelse(@$results as $key => $data)
                                 <tr class="">
+                                    <td>{{ $data->id }}</td>
                                     <td>{{ $data->name }}</td>
                                     <td>{{ @$data->venue }}</td>
                                     <td>{{ @$data->icon }}</td>
