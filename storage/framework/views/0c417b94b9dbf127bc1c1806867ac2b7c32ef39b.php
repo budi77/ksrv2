@@ -1,9 +1,9 @@
 <div>
     <div class="container">
 
-        <div class='fw-bold h3 ff-secondary text-center pt-2 cfs-22'> MENEMBAK</div>
+        <div class='fw-bold h3 ff-secondary text-center pt-2 cfs-22'> PERBARISAN</div>
         <div class='fw-bold h ff-secondary text-center '> <?php echo e(@$sport_id->venue); ?></div>
-        <div class="text-center h5"><a href="https://maps.app.goo.gl/w5ufv6ddr3yGAX5L6"><i class="las la-map-marker-alt"></i> Google Maps</a></div>
+        <div class="text-center h5"><a href="https://maps.app.goo.gl/Fwe1B6UvRZRXXnm6A"><i class="las la-map-marker-alt"></i> Google Maps</a></div>
 
         <hr>
 
@@ -40,4 +40,5 @@
     </div>
 </div>
 
-<?php /**PATH C:\laragon\www\ksrv2\resources\views/livewire/ksr-games24/portal/mk.blade.php ENDPATH**/ ?>
+
+<?php /**PATH C:\laragon\www\ksrv2\resources\views/livewire/ksr-games24/portal/pbn.blade.php ENDPATH**/ ?>

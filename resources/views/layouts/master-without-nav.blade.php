@@ -93,6 +93,7 @@
         <a href=/maccgames24/program/ttw><i class="las la-volleyball-ball"></i> Tarik Tali (W)</a>
         <a href=/maccgames24/program/bw><i class="las la-volleyball-ball"></i> Bowling</a>
         <a href=/maccgames24/program/mk><i class="las la-volleyball-ball"></i> Menembak</a>
+        <a href=/maccgames24/program/pbn><i class="las la-volleyball-ball"></i> Perbarisan</a>
     </div>
     <a href="javascript:void(0);" class="icon" onclick="myFunction()">
         <i class="fa fa-bars"></i>

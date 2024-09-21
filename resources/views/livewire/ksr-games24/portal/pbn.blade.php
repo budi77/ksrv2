@@ -1,9 +1,9 @@
 <div>
     <div class="container">
 
-        <div class='fw-bold h3 ff-secondary text-center pt-2 cfs-22'> MENEMBAK</div>
+        <div class='fw-bold h3 ff-secondary text-center pt-2 cfs-22'> PERBARISAN</div>
         <div class='fw-bold h ff-secondary text-center '> {{ @$sport_id->venue }}</div>
-        <div class="text-center h5"><a href="https://maps.app.goo.gl/EvGkvehyzhCAVt9m9"><i class="las la-map-marker-alt"></i> Google Maps</a></div>
+        <div class="text-center h5"><a href="https://maps.app.goo.gl/Fwe1B6UvRZRXXnm6A"><i class="las la-map-marker-alt"></i> Google Maps</a></div>
 
         <hr>
 
@@ -39,4 +39,5 @@
 
     </div>
 </div>
+
 
