@@ -17,7 +17,7 @@
                     <thead class="bg-secondary ">
                         <tr class="bg-secondary ">
                             <th scope="col" class="bg-secondary bg-gradient">#</th>
-                            <th scope="col" class="bg-secondary bg-gradient">Team</th>
+                            <th scope="col" class="bg-secondary bg-gradient">KONTIGEN</th>
                             <th scope="col" class="bg-secondary bg-gradient">W</th>
                             <th scope="col" class="bg-secondary bg-gradient">L</th>
                             <th scope="col" class="bg-secondary bg-gradient">GF</th>
@@ -30,7 +30,7 @@
                     @foreach($a as $key => $data)
                         <tr class="">
                             <td scope="row">{{ $loop->iteration }}</td>
-                            <td>{{ $data->name }}</td>
+                            <td class="text-start">{{ $data->code }}</td>
                             <td>{{ $data->stwon }}</td>
                             <td>{{ $data->stlost }}</td>
                             <td>{{ $data->stgoal }}</td>
@@ -66,7 +66,7 @@
                     @foreach($b as $key => $data)
                         <tr class="">
                             <td scope="row">{{ $loop->iteration }}</td>
-                            <td>{{ $data->name }}</td>
+                            <td class="text-start">{{ $data->code }}</td>
                             <td>{{ $data->stwon }}</td>
                             <td>{{ $data->stlost }}</td>
                             <td>{{ $data->stgoal }}</td>
