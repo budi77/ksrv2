@@ -30,7 +30,7 @@
                     <tbody>
                     @foreach($a as $key => $data)
                         <tr class="">
-                            <td scope="row">{{ $data->ext1}}</td>
+                            <td scope="row">{{ $loop->iteration }}</td>
                             <td>{{ $data->code }}</td>
                             <td>{{ $data->bswon }}</td>
                             <td>{{ $data->bstied }}</td>

@@ -5,8 +5,23 @@
             <div class="card card-light">
                 <div class="card-body">
                     <h4 class="card-title text-dark">MAKLUMAT KONTIJEN</h4>
+
+                    <div class="mb-3">
+                        <label for="" class="form-label text-dark">Sukan</label>
+                        <select
+                            class="form-select"
+                            wire:model="sport_id"
+                        >
+                            <option selected>-- Sila Pilih --</option>
+                            <?php $__currentLoopData = $sports; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $index => $data): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                <option value="<?php echo e($data->id); ?>"><?php echo e($data->name); ?></option>
+                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                        </select>
+                    </div>
                     <div class="row">
                         <div class="col-6">
+                        
+
                             <div class="mb-3">
                             <label for="" class="form-label text-dark">Kumpulan</label>
                             <input type="text"
@@ -25,18 +40,7 @@
 
                     <!-- <?php echo e($sports); ?> -->
 
-                    <div class="mb-3">
-                        <label for="" class="form-label text-dark">Sukan</label>
-                        <select
-                            class="form-select"
-                            wire:model="sport_id"
-                        >
-                            <option selected>-- Sila Pilih --</option>
-                            <?php $__currentLoopData = $sports; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $index => $data): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                                <option value="<?php echo e($data->id); ?>"><?php echo e($data->name); ?></option>
-                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-                        </select>
-                    </div>
+                  
 
                     <div class="mb-3">
                         <label for="" class="form-label text-dark">Kontijen</label>

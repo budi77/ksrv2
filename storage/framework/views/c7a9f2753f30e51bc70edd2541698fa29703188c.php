@@ -42,6 +42,7 @@
                         <table class="table table-sm table-striped">
                             <thead class="bg-dark text-white">
                                 <tr>
+                                    <th scope="col">Id</th>
                                     <th scope="col">Nama Sukan</th>
                                     <th scope="col">Venue</th>
                                     <th scope="col">Icon</th>
@@ -52,6 +53,7 @@
                             <tbody>
                                 <?php $__empty_1 = true; $__currentLoopData = @$results; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $key => $data): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); $__empty_1 = false; ?>
                                 <tr class="">
+                                    <td><?php echo e($data->id); ?></td>
                                     <td><?php echo e($data->name); ?></td>
                                     <td><?php echo e(@$data->venue); ?></td>
                                     <td><?php echo e(@$data->icon); ?></td>

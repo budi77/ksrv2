@@ -22,10 +22,10 @@ class Bj extends Component
 
         $id = $this->sport_id->id;
         $a = Contigent::whereHas('grp', function($q) use($id) {
-             $q->where('name', 'A')->where('sport_id', $id);
+             $q->where('name', 'A')->where('sport_id', $id)->orderby('order');
          })->get()->sortByDesc('goaldifference')->sortByDesc('points');
         $b = Contigent::whereHas('grp', function($q) use($id) {
-             $q->where('name', 'B')->where('sport_id', $id);
+             $q->where('name', 'B')->where('sport_id', $id)->orderby('order');
          })->get()->sortByDesc('goaldifference')->sortByDesc('points');
          
          $fixtures = Fixture::where('sport_id', $id)->orderby('order')->get();

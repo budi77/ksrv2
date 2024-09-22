@@ -29,6 +29,7 @@
     <a class="btn btn-primary bg-gradient bg-animation" href="<?php echo e(route('ksrgames24.bw')); ?>" role="button">BOWLING</a>
     <a class="btn btn-primary bg-gradient bg-animation" href="<?php echo e(route('ksrgames24.bl')); ?>" role="button">BALAPAN</a>
     <a class="btn btn-primary bg-gradient bg-animation" href="<?php echo e(route('ksrgames24.mk')); ?>" role="button">MENEMBAK</a>
+    <a class="btn btn-primary bg-gradient bg-animation" href="<?php echo e(route('ksrgames24.pbn')); ?>" role="button">PERBARISAN</a>
         <!-- <button class="btn btn-primary" type="button">PROGRAM</button> -->
 
         <!-- <div class="row">

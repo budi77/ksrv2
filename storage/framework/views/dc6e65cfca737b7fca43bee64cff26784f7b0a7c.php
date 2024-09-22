@@ -28,7 +28,7 @@
                     <?php $__currentLoopData = $a; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $key => $data): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                         <tr class="">
                             <td scope="row"><?php echo e($loop->iteration); ?></td>
-                            <td><?php echo e($data->name); ?></td>
+                            <td class="text-start"><?php echo e($data->grp->name . $data->grp->order); ?> - <?php echo e($data->code); ?></td>
                             <td><?php echo e($data->bjwon); ?></td>
                             <td><?php echo e($data->bjtied); ?></td>
                             <td><?php echo e($data->bjlost); ?></td>
@@ -68,7 +68,7 @@
                     <?php $__currentLoopData = $b; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $key => $data): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                         <tr class="">
                             <td scope="row"><?php echo e($loop->iteration); ?></td>
-                            <td><?php echo e($data->name); ?></td>
+                            <td class="text-start"><?php echo e($data->grp->name . $data->grp->order); ?> - <?php echo e($data->code); ?></td>
                             <td><?php echo e($data->bjwon); ?></td>
                             <td><?php echo e($data->bjtied); ?></td>
                             <td><?php echo e($data->bjlost); ?></td>
@@ -156,9 +156,7 @@
                             wire:model="mdate"
                         >
                             <option selected>-- Pilih --</option>
-                            <option value="27/9">27/9</option>
-                            <option value="28/9">28/9</option>
-                            <option value="29/9">29/9</option>
+                            <option value="30/9">30/9</option>
                         </select>
                     </div>
                     

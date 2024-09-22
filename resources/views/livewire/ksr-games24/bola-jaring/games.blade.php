@@ -28,7 +28,7 @@
                     @foreach($a as $key => $data)
                         <tr class="">
                             <td scope="row">{{ $loop->iteration }}</td>
-                            <td>{{ $data->name }}</td>
+                            <td class="text-start">{{ $data->grp->name . $data->grp->order  }} - {{ $data->code }}</td>
                             <td>{{ $data->bjwon }}</td>
                             <td>{{ $data->bjtied }}</td>
                             <td>{{ $data->bjlost }}</td>
@@ -68,7 +68,7 @@
                     @foreach($b as $key => $data)
                         <tr class="">
                             <td scope="row">{{ $loop->iteration }}</td>
-                            <td>{{ $data->name }}</td>
+                            <td class="text-start">{{ $data->grp->name . $data->grp->order  }} - {{ $data->code }}</td>
                             <td>{{ $data->bjwon }}</td>
                             <td>{{ $data->bjtied }}</td>
                             <td>{{ $data->bjlost }}</td>

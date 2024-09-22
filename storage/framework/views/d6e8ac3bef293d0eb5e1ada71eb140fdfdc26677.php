@@ -27,7 +27,7 @@
                     <?php $__currentLoopData = $a; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $key => $data): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                         <tr class="">
                             <td scope="row"><?php echo e($loop->iteration); ?></td>
-                            <td><?php echo e($data->name); ?></td>
+                            <td class="text-start"><?php echo e($data->grp->name . $data->grp->order); ?> - <?php echo e($data->code); ?></td>
                             <td><?php echo e($data->btlwon); ?></td>
                             <td><?php echo e($data->btllost); ?></td>
                             <td><?php echo e($data->btlgoal); ?></td>
@@ -65,7 +65,7 @@
                     <?php $__currentLoopData = $b; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $key => $data): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                         <tr class="">
                             <td scope="row"><?php echo e($loop->iteration); ?></td>
-                            <td><?php echo e($data->name); ?></td>
+                            <td class="text-start"><?php echo e($data->grp->name . $data->grp->order); ?> - <?php echo e($data->code); ?></td>
                             <td><?php echo e($data->btlwon); ?></td>
                             <td><?php echo e($data->btllost); ?></td>
                             <td><?php echo e($data->btlgoal); ?></td>
@@ -101,7 +101,6 @@
                             <select class="form-select" wire:model="stage">
                                 <option selected>--Sila Pilih--</option>
                                 <option value="Kumpulan">Kumpulan</option>
-                                <option value="Suku Akhir">Suku Akhir</option>
                                 <option value="Separuh Akhir">Separuh Akhir</option>
                                 <option value="Tempat 3 / 4">Tempat ke 3 / 4</option>
                                 <option value="Akhir">Akhir</option>
@@ -153,7 +152,6 @@
                             wire:model="mdate"
                         >
                             <option selected>-- Pilih --</option>
-                            <option value="27/9">27/9</option>
                             <option value="28/9">28/9</option>
                             <option value="29/9">29/9</option>
                         </select>
@@ -286,15 +284,15 @@
             <tbody>
                 <?php $__currentLoopData = $fixtures; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $fixture): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                 <tr class="text-center">
-                    <td scope="row"><?php echo e($fixture->order); ?></td>
-                    <td><?php echo e($fixture->stage); ?></td>
-                    <td><?php echo e($fixture->ext2); ?></td>
-                    <td><?php echo e($fixture->ext1); ?></td>
-                    <td><?php echo e($fixture->court); ?></td>
-                    <td><?php echo e($fixture->contigent1->name); ?></td>
-                    <td><?php echo e($fixture->result1); ?></td>
-                    <td><?php echo e($fixture->contigent2->name); ?></td>
-                    <td><?php echo e($fixture->result2); ?></td>
+                    <td scope="row"><?php echo e(@$fixture->order); ?></td>
+                    <td><?php echo e(@$fixture->stage); ?></td>
+                    <td><?php echo e(@$fixture->ext2); ?></td>
+                    <td><?php echo e(@$fixture->ext1); ?></td>
+                    <td><?php echo e(@$fixture->court); ?></td>
+                    <td><?php echo e(@$fixture->contigent1->name); ?></td>
+                    <td><?php echo e(@$fixture->result1); ?></td>
+                    <td><?php echo e(@$fixture->contigent2->name); ?></td>
+                    <td><?php echo e(@$fixture->result2); ?></td>
                     <td>
                     <ul class="list-inline hstack gap-2 mb-0">
                                             <li class="list-inline-item" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" title="View">

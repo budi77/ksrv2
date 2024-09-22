@@ -18,10 +18,10 @@ class Btl extends Component
         $id = $this->sport_id->id;
 
         $a = Contigent::whereHas('grp', function($q) use($id) {
-            $q->where('name', 'A')->where('sport_id', $id);
+            $q->where('name', 'A')->where('sport_id', $id)->orderby('order');
         })->get()->sortByDesc('btlgoaldifference')->sortByDesc('btlpoints');
        $b = Contigent::whereHas('grp', function($q) use($id) {
-            $q->where('name', 'B')->where('sport_id', $id);
+            $q->where('name', 'B')->where('sport_id', $id)->orderby('order');
         })->get()->sortByDesc('btlgoaldifference')->sortByDesc('btlpoints');
 
         $fixtures = Fixture::where('sport_id', $this->sport_id->id)->orderby('order')->get();

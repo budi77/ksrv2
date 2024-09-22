@@ -21,10 +21,10 @@ class Bs extends Component
         $id = $this->sport_id->id;
 
         $a = Contigent::whereHas('grp', function($q) use($id) {
-             $q->where('name', 'A')->where('sport_id', $id);
+             $q->where('name', 'A')->where('sport_id', $id)->orderby('order');
          })->get()->sortByDesc('bsgoaldifference')->sortByDesc('bspoints');
         $b = Contigent::whereHas('grp', function($q) use($id) {
-             $q->where('name', 'B')->where('sport_id', $id);
+             $q->where('name', 'B')->where('sport_id', $id)->orderby('order');
          })->get()->sortByDesc('bsgoaldifference')->sortByDesc('bspoints');
          
          $fixtures = Fixture::where('sport_id', $id)->orderby('order')->get();
