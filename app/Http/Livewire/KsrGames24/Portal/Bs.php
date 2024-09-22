@@ -21,7 +21,7 @@ class Bs extends Component
         $id = $this->sport_id->id;
 
         $a = Contigent::whereHas('grp', function($q) use($id) {
-             $q->where('name', 'A')->where('sport_id', $id)->orderBy('order');
+             $q->where('name', 'A')->where('sport_id', $id)->orderBy('order','ASC');
          })->get()->sortByDesc('bsgoaldifference')->sortByDesc('bspoints');
         $b = Contigent::whereHas('grp', function($q) use($id) {
              $q->where('name', 'B')->where('sport_id', $id)->orderBy('order');
