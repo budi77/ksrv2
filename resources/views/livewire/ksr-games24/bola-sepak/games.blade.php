@@ -154,9 +154,9 @@
                             wire:model="mdate"
                         >
                             <option selected>-- Pilih --</option>
-                            <option value="27/9">28/9</option>
-                            <option value="28/9">29/9</option>
-                            <option value="29/9">30/9</option>
+                            <option value="28/9">28/9</option>
+                            <option value="29/9">29/9</option>
+                            <option value="30/9">30/9</option>
                         </select>
                     </div>
                     
