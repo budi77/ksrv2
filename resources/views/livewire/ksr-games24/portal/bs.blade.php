@@ -17,7 +17,7 @@
                     <thead class="bg-secondary ">
                         <tr class="bg-secondary ">
                             <th scope="col" class="bg-secondary bg-gradient">#</th>
-                            <th scope="col" class="bg-secondary bg-gradient">Team</th>
+                            <th scope="col" class="bg-secondary bg-gradient">KONTIJEN</th>
                             <th scope="col" class="bg-secondary bg-gradient">W</th>
                             <th scope="col" class="bg-secondary bg-gradient">D</th>
                             <th scope="col" class="bg-secondary bg-gradient">L</th>
@@ -57,7 +57,7 @@
                     <thead >
                         <tr>
                             <th scope="col" class="bg-info bg-gradient">#</th>
-                            <th scope="col" class="bg-info bg-gradient">Team</th>
+                            <th scope="col" class="bg-info bg-gradient">KONTIJEN</th>
                             <th scope="col" class="bg-info bg-gradient">W</th>
                             <th scope="col" class="bg-info bg-gradient">D</th>
                             <th scope="col" class="bg-info bg-gradient">L</th>
