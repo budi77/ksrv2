@@ -16,7 +16,7 @@
 
     <!-- Buttons Grid -->
 <div class="d-grid gap-2 pt-2" >
-    <a class="btn btn-primary bg-gradient btn-lg" href="{{ URL::asset('documents/maccgames24/BUKU_ATUCARA_PENGUKUHAN_JATI_DIRI_SPRM_2024.pdf') }}" role="button">BUKU ATUCARA</a>
+    <a class="btn btn-primary bg-gradient btn-lg" href="{{ URL::asset('documents/maccgames24/ATUCARA_KOVENSYEN_SPRM_2024.pdf') }}" role="button">BUKU ATUCARA</a>
     <a class="btn btn-secondary bg-gradient btn-lg" href="{{route('ksrgames24.program')}}" role="button">PROGRAM PENGUKUHAN JATI DIRI</a>
     <a class="btn btn-success bg-gradient btn-lg" href="{{ URL::asset('documents/maccgames24/JADUAL_SYARAT_AM_MACCGAMES24.pdf') }}" role="button">JADUAL & SYARAT AM</a>
     <a class="btn btn-info bg-gradient btn-lg" data-bs-toggle="modal" data-bs-target="#peta" role="button">PETA LOKASI</a>
