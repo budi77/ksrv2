@@ -12,11 +12,9 @@
 
 <div class="text-center h4 pt-6">PROGRAM PENGUKUHAN JATI DIRI SPRM 2024</div>
 <!-- <p class="text-center h4 text-muted">PROGRAM</p> -->
-
-
     <!-- Buttons Grid -->
 <div class="d-grid gap-2 pt-2" >
-    <a class="btn btn-primary bg-gradient btn-lg" href="<?php echo e(URL::asset('documents/maccgames24/buku_manual_printed_vip.pdf')); ?>" role="button">BUKU PROGRAM</a>
+    <a class="btn btn-primary bg-gradient btn-lg" href="<?php echo e(URL::asset('documents/maccgames24/ATUCARA_KOVENSYEN_SPRM_2024.pdf')); ?>" role="button">BUKU ATUCARA</a>
     <a class="btn btn-secondary bg-gradient btn-lg" href="<?php echo e(route('ksrgames24.program')); ?>" role="button">PROGRAM PENGUKUHAN JATI DIRI</a>
     <a class="btn btn-success bg-gradient btn-lg" href="<?php echo e(URL::asset('documents/maccgames24/JADUAL_SYARAT_AM_MACCGAMES24.pdf')); ?>" role="button">JADUAL & SYARAT AM</a>
     <a class="btn btn-info bg-gradient btn-lg" data-bs-toggle="modal" data-bs-target="#peta" role="button">PETA LOKASI</a>
@@ -26,6 +24,11 @@
 
 </div>
 
+</div>
+
+
+<div class="text-center position-bottom pt-4">
+<a href="https://www.freecounterstat.com" title="web hit counter"><img src="https://counter6.optistats.ovh/private/freecounterstat.php?c=446bn9peer1m6ph973ntsdr7jptyjep8" border="0" title="web hit counter" alt="web hit counter"></a>
 </div>
 
 <!-- Modal trigger button -->
