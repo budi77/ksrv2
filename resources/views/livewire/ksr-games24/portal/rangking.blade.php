@@ -14,7 +14,7 @@
                     <th scope="col" class="bg-dark bg-gradient text-white">E</th>
                     <th scope="col" class="bg-dark bg-gradient text-white">P</th>
                     <th scope="col" class="bg-dark bg-gradient text-white">G</th>
-                    <th scope="col" class="bg-dark bg-gradient text-white">4</th>
+                    <th scope="col" class="bg-dark bg-gradient text-white">4th</th>
                     <th scope="col" class="bg-dark bg-gradient text-white">MATA</th>
                 
                 </tr>
