@@ -80,7 +80,7 @@
                 
             
             </td>
-            <td class="text-primary">{{ @$d->contigent->name}}</td>
+            <td class="text-primary">{{ @$d->contigent->code}}</td>
             
             
         </tr>
