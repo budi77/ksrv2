@@ -15,8 +15,8 @@ class Bl extends Component
     {
         $standings = Contigent::whereVip(0)->get()->sortByDesc('blforth')->sortByDesc('blthird')->sortByDesc('blsecond')->sortByDesc('blfirst');
 
-        $this->results = Standing::whereIn('sport_id', ['14','15','16','17','18'])->orderby('sport_id', 'DESC')->orderby('rank')->get();
-        $this->sports = Sport::whereIn('id', ['14','15','16','17','18'])->get();
+        $this->results = Standing::whereIn('sport_id', ['14','15','16','17','13'])->orderby('sport_id', 'DESC')->orderby('rank')->get();
+        $this->sports = Sport::whereIn('id', ['14','15','16','17','13'])->get();
 
         return view('livewire.ksr-games24.portal.bl', compact('standings'))->extends('layouts.master-without-nav');
     }
