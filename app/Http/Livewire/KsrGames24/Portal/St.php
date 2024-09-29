@@ -20,10 +20,10 @@ class St extends Component
 
         $a = Contigent::whereHas('grp', function($q) use($id) {
             $q->where('name', 'A')->where('sport_id', $id)->orderby('order');
-        })->get()->sortByDesc('bdgoaldifference')->sortByDesc('bdpoints');
+        })->get()->sortByDesc('stgoaldifference')->sortByDesc('stpoints');
        $b = Contigent::whereHas('grp', function($q) use($id) {
             $q->where('name', 'B')->where('sport_id', $id)->orderby('order');
-        })->get()->sortByDesc('bdgoaldifference')->sortByDesc('bdpoints');
+        })->get()->sortByDesc('stgoaldifference')->sortByDesc('stpoints');
 
         $fixtures = Fixture::where('sport_id', $this->sport_id->id)->orderby('order')->get();
 
