@@ -16,7 +16,7 @@ class Games extends Component
 
     public function render()
     {        
-        $standings = Contigent::whereVip(0)->get()->sortByDesc('blforth')->sortByDesc('blthird')->sortByDesc('blsecond')->sortByDesc('blfirst');
+        $standings = Contigent::whereVip(0)->get()->sortByDesc('blforth')->sortByDesc('blthird')->sortByDesc('blsecond')->sortByDesc('blfirst')->sortByDesc('blstandingpoints');
         $this->sports = Sport::whereIn('id', ['14','15','16','17','13'])->get();
         $this->results = Standing::whereIn('sport_id', ['14','15','16','17','13'])->orderby('sport_id')->orderby('rank')->get();
 
