@@ -969,7 +969,7 @@ public function getFsAgainstResult2Attribute()
 
 public function getFsPointsAttribute()
 {
-    return $this->getFsWonAttribute() * 3;
+    return $this->getFsWonAttribute() * 3 + $this->getFsTiedAttribute() * 1;
 }
 
 public function getFsGoalAttribute()
