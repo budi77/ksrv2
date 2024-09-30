@@ -40,6 +40,9 @@
                
             </tbody>
         </table>
+        <div>
+            *Kedudukan kontigen adalah berdasarkan jumlah MATA terkumpul
+        </div>
 </div>
 
 </div>
