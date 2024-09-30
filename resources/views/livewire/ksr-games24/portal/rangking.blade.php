@@ -40,7 +40,7 @@
                
             </tbody>
         </table>
-        <div>
+        <div class="text-danger">
             *Kedudukan kontigen adalah berdasarkan jumlah MATA terkumpul
         </div>
 </div>
