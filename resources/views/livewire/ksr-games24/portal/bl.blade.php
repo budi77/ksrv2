@@ -19,8 +19,8 @@
                     <th scope="col" class="bg-warning bg-gradient">E</th>
                     <th scope="col" class="bg-warning bg-gradient">P</th>
                     <th scope="col" class="bg-warning bg-gradient">G</th>
-                    <th scope="col" class="bg-warning bg-gradient">4</th>
-                    <!-- <th scope="col" class="bg-warning bg-gradient">P</th> -->
+                    <th scope="col" class="bg-warning bg-gradient">4th</th>
+                    <th scope="col" class="bg-warning bg-gradient">P</th>
                 
                 </tr>
             </thead>
@@ -33,7 +33,7 @@
                     <td>{{ $data->blsecond }}</td>
                     <td>{{ $data->blthird }}</td>
                     <td>{{ $data->blforth }}</td>
-                    <!-- <td>{{ $data->standingpoints }}</td> -->
+                    <td>{{ $data->blstandingpoints }}</td>
               
                 </tr>
                 @endforeach

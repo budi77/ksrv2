@@ -95,6 +95,10 @@ public function getBlForthAttribute()
         ->whereIn('sport_id', ['14','15','16','17','13'])
         ->count();
 }
+public function getBlStandingPointsAttribute()
+{
+    return $this->getBlFirstAttribute() * 5 + $this->getBlSecondAttribute() * 3 + $this->getBlThirdAttribute() * 2 + $this->getBlForthAttribute() * 1;
+}
 
 
 
