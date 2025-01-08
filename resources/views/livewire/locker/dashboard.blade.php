@@ -55,6 +55,18 @@
                             </div>
                         </div>
                         <div>
+                            <p class="text-muted mb-1">No Telefon</p>
+                            <div class="fs-16">
+                                {{ $locker->tenant ? $locker->tenant->no_tel : '-' }}
+                            </div>
+                        </div>
+                        <div>
+                            <p class="text-muted mb-1">Emel</p>
+                            <div class="fs-16">
+                                {{ $locker->tenant ? $locker->tenant->emel : '-' }}
+                            </div>
+                        </div>
+                        <div>
                             <p class="text-muted mb-1">Bahagian</p>
                             <div class="fs-16">
                                 {{ $locker->tenant ? $locker->tenant->bahagian->name : '-' }}
