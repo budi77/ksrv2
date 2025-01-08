@@ -57,13 +57,13 @@
                         <div>
                             <p class="text-muted mb-1">No Telefon</p>
                             <div class="fs-16">
-                                {{ $locker->tenant ? $locker->tenant->no_tel : '-' }}
+                                {{ $locker->tenant ? $locker->tenant->tel_no : '-' }}
                             </div>
                         </div>
                         <div>
                             <p class="text-muted mb-1">Emel</p>
                             <div class="fs-16">
-                                {{ $locker->tenant ? $locker->tenant->emel : '-' }}
+                                {{ $locker->tenant ? $locker->tenant->email : '-' }}
                             </div>
                         </div>
                         <div>
