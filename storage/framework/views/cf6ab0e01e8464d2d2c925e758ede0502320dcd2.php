@@ -52,11 +52,15 @@
                                             <td><?php echo e(@$locker->gender); ?></td>
                                             <td><span class="badge bg-<?php echo e($locker->status == "OK" ? 'info' : 'danger'); ?>"><?php echo e($locker->status); ?></span></td>
                                             <td><?php echo e($locker->rate); ?></td>
-                                            <td class="table-active text-center"><?php echo e(@$locker->tenant->name); ?></td>
-                                            <td class="table-active text-center"><?php echo e(@$locker->tenant->period); ?></td>
-                                            <td class="table-active text-center"><?php echo e(@$locker->tenant->start); ?></td>
-                                            <td class="table-active text-center"><?php echo e(@$locker->tenant->end); ?></td>
-                                            <td class="table-active text-center"><?php echo e(@$locker->tenant->fees); ?></td>
+                                            <td class="text-start">
+                                                <p><?php echo e(@$locker->tenant->name); ?></p>
+                                                <p><?php echo e(@$locker->tenant->tel_no); ?></p>
+                                                <p><?php echo e(@$locker->tenant->email); ?></p>
+                                            </td>
+                                            <td class="text-center"><?php echo e(@$locker->tenant->period); ?></td>
+                                            <td class="text-center"><?php echo e(@$locker->tenant->start); ?></td>
+                                            <td class="text-center"><?php echo e(@$locker->tenant->end); ?></td>
+                                            <td class="text-center"><?php echo e(@$locker->tenant->fees); ?></td>
                                             <td class="text-end">
                                                 <div class="hstack gap-3 fs-15">
                                                     <a href="javascript:void(0);" class="link-primary" wire:click="add('<?php echo e(@$locker->tenant->id); ?>')" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Tooltip on top"><i class="ri-edit-box-line"></i></a>

@@ -61,11 +61,15 @@
                                             <td>{{ @$locker->gender }}</td>
                                             <td><span class="badge bg-{{ $locker->status == "OK" ? 'info' : 'danger' }}">{{ $locker->status }}</span></td>
                                             <td>{{ $locker->rate }}</td>
-                                            <td class="table-active text-center">{{ @$locker->tenant->name }}</td>
-                                            <td class="table-active text-center">{{ @$locker->tenant->period }}</td>
-                                            <td class="table-active text-center">{{ @$locker->tenant->start }}</td>
-                                            <td class="table-active text-center">{{ @$locker->tenant->end }}</td>
-                                            <td class="table-active text-center">{{ @$locker->tenant->fees }}</td>
+                                            <td class="text-start">
+                                                <p>{{ @$locker->tenant->name }}</p>
+                                                <p>{{ @$locker->tenant->tel_no }}</p>
+                                                <p>{{ @$locker->tenant->email }}</p>
+                                            </td>
+                                            <td class="text-center">{{ @$locker->tenant->period }}</td>
+                                            <td class="text-center">{{ @$locker->tenant->start }}</td>
+                                            <td class="text-center">{{ @$locker->tenant->end }}</td>
+                                            <td class="text-center">{{ @$locker->tenant->fees }}</td>
                                             <td class="text-end">
                                                 <div class="hstack gap-3 fs-15">
                                                     <a href="javascript:void(0);" class="link-primary" wire:click="add('{{ @$locker->tenant->id }}')" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Tooltip on top"><i class="ri-edit-box-line"></i></a>
