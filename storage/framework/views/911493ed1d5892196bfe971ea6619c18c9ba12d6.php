@@ -99,6 +99,23 @@
                 </li>
 
                 <li class="nav-item">
+                    <a class="nav-link menu-link" href="#sidebarLayouts" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarLayouts">
+                        <i class="ri-lock-2-line"></i> <span>Loker</span>
+                    </a>
+                    <div class="collapse menu-dropdown" id="sidebarLayouts">
+                        <ul class="nav nav-sm flex-column">
+                            <li class="nav-item">
+                                <a href="<?php echo e(route('locker.dashboard')); ?>"  class="nav-link">Tempahan</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="<?php echo e(route('locker')); ?>"  class="nav-link">Kemaskini</a>
+                            </li>
+                           
+                        </ul>
+                    </div>
+                </li> <!-- end Dashboard Menu -->
+
+                <li class="nav-item">
                     <a class="nav-link menu-link" href="<?php echo e(route('settings')); ?>">
                         <i class="ri-settings-5-line"></i> <span>Tetapan</span>
                     </a>
@@ -127,34 +144,11 @@
                     </div>
                 </li> -->
 
-                <li class="nav-item">
-                    <a class="nav-link menu-link" href="#sidebarLayouts" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarLayouts">
-                        <i class=" ri-pie-chart-line"></i> <span>KSRGames24</span>
-                    </a>
-                    <div class="collapse menu-dropdown" id="sidebarLayouts">
-                        <ul class="nav nav-sm flex-column">
-                            <li class="nav-item">
-                                <a href="<?php echo e(route('ksrgames24.parameter')); ?>"  class="nav-link">Parameters</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="<?php echo e(route('ksrgames24.fixtures')); ?>"  class="nav-link">Fixtures</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="<?php echo e(route('ksrgames24.standings')); ?>"  class="nav-link">Standings</a>
-                            </li>
-                            
-                           
-                        </ul>
-                    </div>
-                </li> <!-- end Dashboard Menu -->
+                
 
 
                
-                <li class="nav-item">
-                    <a class="nav-link menu-link" href="<?php echo e(route('locker.dashboard')); ?>">
-                        <i class="ri-store-3-line"></i> <span>Loker</span>
-                    </a>
-                </li>
+                
 
                
             </ul>

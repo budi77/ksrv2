@@ -1,45 +1,41 @@
 <div>
-@section('title')
+<?php $__env->startSection('title'); ?>
     LOKER
-@endsection
+<?php $__env->stopSection(); ?>
 
-@component('components.breadcrumb')
-    @slot('li_1')
+<?php $__env->startComponent('components.breadcrumb'); ?>
+    <?php $__env->slot('li_1'); ?>
         Dashboard
-    @endslot
-    @slot('title')
+    <?php $__env->endSlot(); ?>
+    <?php $__env->slot('title'); ?>
         Loker
-    @endslot
-@endcomponent
+    <?php $__env->endSlot(); ?>
+<?php echo $__env->renderComponent(); ?>
 
     <div class="row">
-    @foreach($lockers as $locker)
+    <?php $__currentLoopData = $lockers; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $locker): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
         <div class="col-xxl-4 col-sm-6 project-card">
             <div class="card">
                 <div class="card-body">
-                    <div class="p-3 mt-n3 mx-n3 bg-{{ $locker->tenant <> '' ? 'danger' : 'info' }} bg-gradient rounded-top">
+                    <div class="p-3 mt-n3 mx-n3 bg-<?php echo e($locker->tenant <> '' ? 'danger' : 'info'); ?> bg-gradient rounded-top">
                         <div class="d-flex align-items-center">
                             <div class="flex-grow-1">
-                                <h5 class="mb-0 fs-16"><a href="apps-projects-overview" class="text-body">{{ $locker->gender . $locker->locker_no }}</a></h5>
+                                <h5 class="mb-0 fs-16"><a href="apps-projects-overview" class="text-body"><?php echo e($locker->gender . $locker->locker_no); ?></a></h5>
                             </div>
                             <div class="flex-shrink-0">
                                 <div class="d-flex gap-1 align-items-center my-n2">
-                                    {{-- <button type="button" class="btn avatar-xs p-0 favourite-btn shadow-none active">
-                                        <span class="avatar-title bg-transparent fs-15">
-                                            <i class="ri-star-fill"></i>
-                                        </span>
-                                    </button> --}}
+                                    
                                     <div class="dropdown">
                                         <button class="btn btn-link text-muted p-1 mt-n1 py-0 text-decoration-none fs-15 shadow-none" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-horizontal icon-sm"><circle cx="12" cy="12" r="1"></circle><circle cx="19" cy="12" r="1"></circle><circle cx="5" cy="12" r="1"></circle></svg>
                                         </button>
 
                                         <div class="dropdown-menu dropdown-menu-end">
-                                            <a class="dropdown-item" href="javascript:void(0);" wire:click="add('{{ @$locker->id }}')" ><i class="ri-add-circle-fill align-bottom me-2 text-muted"></i> Tempah</a>
-                                            <a class="dropdown-item" href="javascript:void(0);" wire:click="edit('{{ @$locker->id }}')" ><i class="ri-pencil-fill align-bottom me-2 text-muted"></i> Kemaskini</a>
-                                            {{-- <a class="dropdown-item" href="apps-projects-create"><i class="ri-pencil-fill align-bottom me-2 text-muted"></i> Edit</a> --}}
-                                            {{-- <div class="dropdown-divider"></div> --}}
-                                            {{-- <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#removeProjectModal"><i class="ri-delete-bin-fill align-bottom me-2 text-muted"></i> Remove</a> --}}
+                                            <a class="dropdown-item" href="javascript:void(0);" wire:click="add('<?php echo e(@$locker->id); ?>')" ><i class="ri-add-circle-fill align-bottom me-2 text-muted"></i> Tempah</a>
+                                            <a class="dropdown-item" href="javascript:void(0);" wire:click="edit('<?php echo e(@$locker->id); ?>')" ><i class="ri-pencil-fill align-bottom me-2 text-muted"></i> Kemaskini</a>
+                                            
+                                            
+                                            
                                         </div>
                                     </div>
                                 </div>
@@ -52,85 +48,48 @@
                         <div>
                             <p class="text-muted mb-1">Nama Penyewa</p>
                             <div class="fs-16">
-                                {{ $locker->tenant ? $locker->tenant->name : '-' }}
+                                <?php echo e($locker->tenant ? $locker->tenant->name : '-'); ?>
+
                             </div>
                         </div>
                         <div>
                             <p class="text-muted mb-1">No Telefon</p>
                             <div class="fs-16">
-                                {{ $locker->tenant ? $locker->tenant->tel_no : '-' }}
+                                <?php echo e($locker->tenant ? $locker->tenant->tel_no : '-'); ?>
+
                             </div>
                         </div>
                         <div>
                             <p class="text-muted mb-1">Emel</p>
                             <div class="fs-16">
-                                {{ $locker->tenant ? $locker->tenant->email : '-' }}
+                                <?php echo e($locker->tenant ? $locker->tenant->email : '-'); ?>
+
                             </div>
                         </div>
                         <div>
                             <p class="text-muted mb-1">Bahagian</p>
                             <div class="fs-16">
-                                {{ $locker->tenant ? $locker->tenant->bahagian->name : '-' }}
+                                <?php echo e($locker->tenant ? $locker->tenant->bahagian->name : '-'); ?>
+
                             </div>
                         </div>
                             <div class="col-6">
                                 <div>
                                     <p class="text-muted mb-1">Bayaran</p>
-                                    <div class="badge bg-success text-white fs-12">RM{{ @$locker->tenant->fees ? @$locker->tenant->fees : "0" }}</div>
+                                    <div class="badge bg-success text-white fs-12">RM<?php echo e(@$locker->tenant->fees ? @$locker->tenant->fees : "0"); ?></div>
                                 </div>
                             </div>
                             <div class="col-6">
                                 <div>
                                     <p class="text-muted mb-1">Tarikh tamat</p>
-                                    <h5 class="fs-14">{{ @$locker->tenant->end ? Carbon\Carbon::parse(@$locker->tenant->end)->format('d/m/Y') : '-' }}</h5>
+                                    <h5 class="fs-14"><?php echo e(@$locker->tenant->end ? Carbon\Carbon::parse(@$locker->tenant->end)->format('d/m/Y') : '-'); ?></h5>
                                 </div>
                             </div>
                         </div>
 
-                        {{-- <div class="d-flex align-items-center mt-3">
-                            <p class="text-muted mb-0 me-2">Team :</p>
-                            <div class="avatar-group">
-                                <a href="javascript: void(0);" class="avatar-group-item shadow" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" data-bs-original-title="Donna Kline">
-                                    <div class="avatar-xxs">
-                                        <div class="avatar-title rounded-circle bg-danger">
-                                            D
-                                        </div>
-                                    </div>
-                                </a>
-                                <a href="javascript: void(0);" class="avatar-group-item shadow" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" aria-label="Lee Winton" data-bs-original-title="Lee Winton">
-                                    <div class="avatar-xxs">
-                                        <img src="http://velzon.laravel-material.themesbrand.com/build/images/users/avatar-5.jpg" alt="" class="rounded-circle img-fluid">
-                                    </div>
-                                </a>
-                                <a href="javascript: void(0);" class="avatar-group-item shadow" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" aria-label="Johnny Shorter" data-bs-original-title="Johnny Shorter">
-                                    <div class="avatar-xxs">
-                                        <img src="http://velzon.laravel-material.themesbrand.com/build/images/users/avatar-6.jpg" alt="" class="rounded-circle img-fluid">
-                                    </div>
-                                </a>
-                                <a href="javascript: void(0);" class="avatar-group-item shadow" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" data-bs-original-title="Add Members">
-                                    <div class="avatar-xxs">
-                                        <div class="avatar-title fs-16 rounded-circle bg-light border-dashed border text-primary">
-                                            +
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                        </div> --}}
+                        
                     </div>
-                    {{-- <div>
-                        <div class="d-flex mb-2">
-                            <div class="flex-grow-1">
-                                <div>Progress</div>
-                            </div>
-                            <div class="flex-shrink-0">
-                                <div>50%</div>
-                            </div>
-                        </div>
-                        <div class="progress progress-sm animated-progress bg-success-subtle">
-                            <div class="progress-bar bg-success" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%;">
-                            </div><!-- /.progress-bar -->
-                        </div><!-- /.progress -->
-                    </div> --}}
+                    
 
                 </div>
                 <!-- end card body -->
@@ -142,7 +101,7 @@
       
        
 
-    @endforeach
+    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
     </div>
 
 
@@ -151,7 +110,7 @@
         <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="modalTitleId">Maklumat Penyewa Loker : {{ @$locker_info->gender . @$locker_info->locker_no  }}</h5>
+                    <h5 class="modal-title" id="modalTitleId">Maklumat Penyewa Loker : <?php echo e(@$locker_info->gender . @$locker_info->locker_no); ?></h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
     
                 </div>
@@ -167,7 +126,7 @@
                               <label for="" class="form-label">No Telefon</label>
                               <input type="email"
                                 class="form-control" name="" id="" aria-describedby="helpId" placeholder="" wire:model.defer="tel_no">
-                              {{-- <small id="helpId" class="form-text text-muted">Help text</small> --}}
+                              
                             </div>
 
                         </div>
@@ -176,21 +135,21 @@
                               <label for="" class="form-label">Emel</label>
                               <input type="text"
                                 class="form-control" name="" id="" aria-describedby="helpId" placeholder="" wire:model.defer="email">
-                              {{-- <small id="helpId" class="form-text text-muted">Help text</small> --}}
+                              
                             </div>
                         </div>
                     </div>
                     <div class="mb-3">
                         <label for="" class="form-label">Bahagian</label>
                         <select class="form-select" wire:model.defer="department_id">
-                        @if(!empty($departments))
+                        <?php if(!empty($departments)): ?>
 
                             <option selected>--Pilih--</option>
-                            @foreach ($departments as $item)
-                                <option value="{{ $item->id }}" @selected($department_id == $item->id)>{{ $item->name }}</option>
+                            <?php $__currentLoopData = $departments; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                <option value="<?php echo e($item->id); ?>" <?php if($department_id == $item->id): echo 'selected'; endif; ?>><?php echo e($item->name); ?></option>
 
-                            @endforeach
-                        @endif
+                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                        <?php endif; ?>
                             
                         </select>
                     </div>
@@ -209,9 +168,23 @@
                         </div>
                         <div class="col-3">
                             <div class="mb-3">
-                              {{-- <label for="" class="form-label">No Telefon</label> --}}
+                              
                               <label for="" class="form-label">Tarikh Mula</label>
-                                <x-date-picker id="date" wire:model="start" autocomplete="off" value="" />
+                                <?php if (isset($component)) { $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4 = $component; } ?>
+<?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'components.date-picker','data' => ['id' => 'date','wire:model' => 'start','autocomplete' => 'off','value' => '']] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? (array) $attributes->getIterator() : [])); ?>
+<?php $component->withName('date-picker'); ?>
+<?php if ($component->shouldRender()): ?>
+<?php $__env->startComponent($component->resolveView(), $component->data()); ?>
+<?php if (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag && $constructor = (new ReflectionClass(Illuminate\View\AnonymousComponent::class))->getConstructor()): ?>
+<?php $attributes = $attributes->except(collect($constructor->getParameters())->map->getName()->all()); ?>
+<?php endif; ?>
+<?php $component->withAttributes(['id' => 'date','wire:model' => 'start','autocomplete' => 'off','value' => '']); ?>
+<?php echo $__env->renderComponent(); ?>
+<?php endif; ?>
+<?php if (isset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4)): ?>
+<?php $component = $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4; ?>
+<?php unset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4); ?>
+<?php endif; ?>
                             </div>
                         </div>
                         <div class="col-3">
@@ -252,7 +225,7 @@
     </div>
 
 
-    @section('script')
+    <?php $__env->startSection('script'); ?>
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
@@ -275,12 +248,13 @@
            
         });
     </script>
-    <script src="{{ URL::asset('/assets/js/app.min.js') }}"></script>
+    <script src="<?php echo e(URL::asset('/assets/js/app.min.js')); ?>"></script>
     <script src="https://unpkg.com/@popperjs/core@2"></script>
 
-    @endsection
+    <?php $__env->stopSection(); ?>
 
 
 
 
 </div>
+<?php /**PATH C:\laragon\www\ksrv2\resources\views/livewire/locker/dashboard.blade.php ENDPATH**/ ?>

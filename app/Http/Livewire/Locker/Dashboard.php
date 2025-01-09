@@ -15,7 +15,7 @@ class Dashboard extends Component
     use LivewireAlert;
 
     public $locker_info, $locker_id, $name = '', $department_id, $period, $start, $end, $fees = 0, $tel_no, $email, $departments, $total_fee;
-    public $membership, $member = 10, $non_member = 15;
+    public $membership, $member = 10, $non_member = 15, $data_id;
 
     public function render()
     {
@@ -40,13 +40,41 @@ class Dashboard extends Component
 
     }
 
+
+    public function edit($id)
+    {
+
+        // dd($id);
+        // $tenant = LockerTenant::whereId($id)->first();
+
+        $data = LockerTenant::whereLockerId($id)->first();
+
+        $this->name = $data->name;
+
+        $this->department_id = $data->department_id;
+        $this->period = $data->period;
+        $this->start = $data->start;
+        $this->end = $data->end;
+        $this->fees = $data->fees;
+        $this->tel_no = $data->tel_no;
+        $this->email = $data->email;
+        $this->membership = $data->extra1;
+        $this->locker_id = $id;
+
+        $this->data_id = $id;
+
+       
+        $this->dispatchBrowserEvent('show-add');
+
+    }
+
     public function store()
     {
 
         $this->end = Carbon::parse($this->start)->addMonths($this->period);
         // dd($this->department_id);
 
-        $store = LockerTenant::create([
+        $store = LockerTenant::updateOrCreate(['id' => $this->data_id],[
 
             'locker_id' => $this->locker_id,
             'name' => $this->name,
