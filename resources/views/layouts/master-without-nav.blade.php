@@ -73,7 +73,7 @@
 
   <!-- Top Navigation Menu -->
     <div class="topnav">
-    <a href="/maccgames24" class="active">MACC GAMES 24</a>
+<!--     <a href="/maccgames24" class="active">MACC GAMES 24</a>
     <div id="myLinks">
         
         <a href=/maccgames24>Home</a>
@@ -94,7 +94,7 @@
         <a href=/maccgames24/program/bw><i class="las la-volleyball-ball"></i> Bowling</a>
         <a href=/maccgames24/program/mk><i class="las la-volleyball-ball"></i> Menembak</a>
         <a href=/maccgames24/program/pbn><i class="las la-volleyball-ball"></i> Perbarisan</a>
-    </div>
+    </div> -->
     <a href="javascript:void(0);" class="icon" onclick="myFunction()">
         <i class="fa fa-bars"></i>
     </a>
