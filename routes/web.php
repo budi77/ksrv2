@@ -28,6 +28,10 @@ Route::get('/landing', function () {
 //Route::get('/patriotik2023/berjaya', \App\Http\Livewire\Patriotik\Success::class)->name('patriotik.berjaya');
 //Route::get('/patriotik2023', \App\Http\Livewire\Patriotik\Keputusan::class)->name('patriotik');
 
+Route::get('/patriotik2025', \App\Http\Livewire\Patriotik\Index::class)->name('patriotik');
+Route::get('/patriotik2025/berjaya', \App\Http\Livewire\Patriotik\Success::class)->name('patriotik.berjaya');
+Route::get('/patriotik2025', \App\Http\Livewire\Patriotik\Keputusan::class)->name('patriotik');
+
 Route::get('/semakan', \App\Http\Livewire\Member\Semakan::class)->name('semakan');
 
 //Route::get('/pancing2023', \App\Http\Livewire\Pancing\Borang::class)->name('pancing');
