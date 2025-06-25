@@ -12,7 +12,7 @@
                         <img src="{{ URL::asset('assets/images/KSR.png') }}" alt="" height="90">
                     </a>
                 </div>
-                <p class="mt-1 fs-18 fw-bold"> BORANG PENYERTAAN PERTANDINGAN NYANYIAN LAGU PATRIOTIK SEMPENA SAMBUTAN ULANGTAHUN SPRM KE 56 TAHUN 2023.</p>
+                <p class="mt-1 fs-18 fw-bold"> BORANG PENYERTAAN PERTANDINGAN NYANYIAN LAGU PATRIOTIK SEMPENA SAMBUTAN ULANGTAHUN SPRM KE 57 TAHUN 2025.</p>
                 {{-- <p class="mt-0 fs-20 fw-bold"></p> --}}
             </div>
         </div>
