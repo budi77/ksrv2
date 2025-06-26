@@ -80,7 +80,6 @@
                 <option selected>-- Sila Pilih --</option>
                 <option value="SOLO">SOLO</option>
                 <option value="BERKUMPULAN">BERKUMPULAN</option>
-                {{-- <option value="3">Three</option> --}}
                 </select>
             </div>
             </div> --}}
