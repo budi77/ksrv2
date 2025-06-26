@@ -10,7 +10,8 @@ use Carbon\Carbon;
 class Index extends Component
 {
 
-    public $departments, $penyertaan, $nama, $department_id, $alamat, $telefon, $emel, $tajuk_lagu, $penyanyi, $pautan, $extra1;
+    public $departments, $nama, $department_id, $alamat, $telefon, $emel, $tajuk_lagu, $penyanyi, $pautan, $extra1;
+    public $penyertaan = 'Kumpulan';
 
 
     public function mount()
