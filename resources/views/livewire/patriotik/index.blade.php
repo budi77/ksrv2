@@ -58,7 +58,7 @@
     </div>
 @endif
 
-<div class="alert alert-warning alert-dismissible alert-label-icon label-arrow fade show" role="alert">
+<div class="alert alert-danger alert-dismissible alert-label-icon label-arrow fade show" role="alert">
     <i class="ri-alert-line label-icon"></i>Anda <strong>DIWAJIBKAN</strong>  untuk membaca syarat-syarat pertandingan dahulu sebelum mengisi borang di bawah
     <button type="button" class="btn-close" data-bs-dismiss=" alert" aria-label="Close"></button>
 </div>
