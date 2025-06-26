@@ -180,7 +180,7 @@
                     <option value="Jalur Gemilang">Jalur Gemilang</option>
                     <option value="Kemegahan Negaraku">Kemegahan Negaraku</option>
                     <option value="Malaysiaku Gemilang">Malaysiaku Gemilang</option>
-                    <option value="Satu Malaysia">Satu Malaysia</option>
+                    <option value="Perwira">Perwira</option>
                     
                     </select>
             </div>
