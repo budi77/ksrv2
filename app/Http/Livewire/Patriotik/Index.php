@@ -19,20 +19,18 @@ class Index extends Component
     }
 
     protected $rules = [
-        'penyertaan' => 'required',
         'nama' => 'required',
         'department_id' => 'required',
         'alamat' => 'required',
         'telefon' => 'required',
         'emel' => 'required|email',
         'tajuk_lagu' => 'required',
-        'penyanyi' => 'required|max:20|integer',
+        'penyanyi' => 'required|max:22|integer',
         'pautan' => 'required',
         'extra1' => 'required',
     ];
 
     protected $messages = [
-        'penyertaan.required' => 'Sila pilih PENYERTAAN.',
         'nama.required' => 'Sila masukkan NAMA.',
         'department_id.required' => 'Sila pilih BAHAGIAN/NEGERI.',
         'alamat.required' => 'Sila masukkan ALAMAT.',
