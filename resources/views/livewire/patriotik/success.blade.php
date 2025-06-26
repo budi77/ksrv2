@@ -79,7 +79,7 @@
                                         </div>
                                     </div>
                                     <div class="flex-grow-1">
-                                        <p class="mb-0">Hanya 10 sahaja peserta yang layak akan dipilih ke peringkat akhir yang akan diadakan pada bulan September 2023 bertempat di Ibu Pejabat SPRM</p>
+                                        <p class="mb-0">Hanya 10 sahaja peserta yang layak akan dipilih ke peringkat akhir yang akan diadakan pada bulan 03 September 2025 bertempat di Ibu Pejabat SPRM</p>
                                     </div>
                                 </div>
                                 <div class="d-flex align-items-center">
