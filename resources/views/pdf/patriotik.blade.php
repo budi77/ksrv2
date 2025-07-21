@@ -41,7 +41,7 @@
     <div class="text-center">
         {{-- <img src="https://ksr.sprm.gov.my/assets/images/KSR.png" alt="" height="90"> --}}
 
-        <p class="fw-bold pt-2">PERTANDINGAN NYANYIAN LAGU PATRIOTIK SEMPENA SAMBUTAN ULANGTAHUN SPRM KE 56 TAHUN 2023.</p>
+        <p class="fw-bold pt-2">PERTANDINGAN NYANYIAN LAGU PATRIOTIK SEMPENA SAMBUTAN ULANGTAHUN SPRM KE 58 TAHUN 2025.</p>
     </div>
     <hr>
     {{-- {{ $result['nama'] }} --}}
