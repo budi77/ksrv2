@@ -12,7 +12,7 @@
                         <img src="{{ URL::asset('assets/images/KSR.png') }}" alt="" height="90">
                     </a>
                 </div>
-                <p class="mt-1 fs-18 fw-bold"> BORANG PENYERTAAN PERTANDINGAN NYANYIAN LAGU PATRIOTIK SEMPENA SAMBUTAN ULANGTAHUN SPRM KE 56 TAHUN 2023.</p>
+                <p class="mt-1 fs-18 fw-bold"> BORANG PENYERTAAN PERTANDINGAN NYANYIAN LAGU PATRIOTIK SEMPENA SAMBUTAN ULANGTAHUN SPRM KE 58 TAHUN 2025.</p>
                 {{-- <p class="mt-0 fs-20 fw-bold"></p> --}}
             </div>
         </div>
@@ -28,9 +28,9 @@
         </div>
     <div class="flex-grow-1">
     <h5 class="alert-heading">PERHATIAN!</h5>
-    <p class="mb-0">Borang ini hendaklah dihantar bersama pautan video persembahan nyanyian sebelum atau pada 11 Ogos 2023 (Jumaat) sebelum jam 04.00 petang.</p>
+    <p class="mb-0">Borang ini hendaklah dihantar bersama pautan video persembahan nyanyian sebelum atau pada 25 Julai 2025 (Jumaat) sebelum jam 04.00 petang.</p>
     <p class="mb-0">
-    Sebarang pertanyaan boleh hubungi Ps Harussani Bin Hamzah ditalian 03-88911791 / 012-4844521 atau Ps Omar Mokhtar Bin Jahari 03-88911801 / 017-2611004
+    Sebarang pertanyaan boleh hubungi P/PPj Zatun Najmiah binti Mohd Sabri (013-3332908) / PsK Harussani Bin Hamzah (012-4844521) / Ps Omar Mokhtar Bin Jahari  (017-2611004)
     <!-- Button trigger modal -->
     
     </p>
@@ -42,7 +42,7 @@
 
 
 
-    <a class="btn btn-primary btn-sm" target="_blank" href="{{ asset('/documents/Syarat_syarat_pertandingan_patriotik2023.pdf') }}" role="button"><i class="ri-file-download-line fs-14 me-1 align-top"></i>MUAT TURUN SYARAT SYARAT PERTANDINGAN</a>
+    <a class="btn btn-primary btn-sm" target="_blank" href="{{ asset('/documents/Syarat_Pertandingan_Lagu_Patriotik_Saringan2025.pdf') }}" role="button"><i class="ri-file-download-line fs-14 me-1 align-top"></i>MUAT TURUN SYARAT SYARAT PERTANDINGAN</a>
 
 </p>
 </div>
@@ -58,7 +58,7 @@
     </div>
 @endif
 
-<div class="alert alert-warning alert-dismissible alert-label-icon label-arrow fade show" role="alert">
+<div class="alert alert-danger alert-dismissible alert-label-icon label-arrow fade show" role="alert">
     <i class="ri-alert-line label-icon"></i>Anda <strong>DIWAJIBKAN</strong>  untuk membaca syarat-syarat pertandingan dahulu sebelum mengisi borang di bawah
     <button type="button" class="btn-close" data-bs-dismiss=" alert" aria-label="Close"></button>
 </div>
@@ -71,7 +71,7 @@
     <div class="card-body">
     <!-- Warning Alert -->
 
-            <div class="row mb-3">
+            {{-- <div class="row mb-3">
             <div class="col-lg-3">
             <label for="nameInput" class="form-label">KATEGORI</label>
             </div>
@@ -80,14 +80,13 @@
                 <option selected>-- Sila Pilih --</option>
                 <option value="SOLO">SOLO</option>
                 <option value="BERKUMPULAN">BERKUMPULAN</option>
-                {{-- <option value="3">Three</option> --}}
                 </select>
             </div>
-            </div>
+            </div> --}}
 
         <div class="row mb-3">
             <div class="col-lg-3">
-                <label for="websiteUrl" class="form-label">NAMA PESERTA / NAMA KUMPULAN</label>
+                <label for="websiteUrl" class="form-label">NAMA KUMPULAN</label>
             </div>
             <div class="col-lg-9">
                 <input type="text" class="form-control" wire:model.defer="nama"  >
@@ -178,14 +177,11 @@
             <div class="col-lg-9">
                 <select class="form-select mb-3" wire:model.defer="tajuk_lagu">
                     <option selected>-- Sila Pilih --</option>
-                    <option value="Warisan - Sudirman Hj Arshad">Warisan - Sudirman Hj Arshad</option>
-                    <option value="Standing In The Eyes Of The World - Ella">Standing In The Eyes Of The World - Ella</option>
-                    <option value="Negaraku - Joe Flizzow, Altimet, SonaOne dan Faizal Tahir ">Negaraku - Joe Flizzow, Altimet, SonaOne dan Faizal Tahir</option>
-                    <option value="Sejahtera Malaysia">Sejahtera Malaysia</option>
-                    <option value="Nyalakan Tekad">Nyalakan Tekad</option>
-                    <option value="Bahtera Merdeka">Bahtera Merdeka</option>
-                    <option value="Pahlawanku">Pahlawanku</option>
-                    {{-- <option value="3">Three</option> --}}
+                    <option value="Jalur Gemilang">Jalur Gemilang</option>
+                    <option value="Kemegahan Negaraku">Kemegahan Negaraku</option>
+                    <option value="Malaysiaku Gemilang">Malaysiaku Gemilang</option>
+                    <option value="Perwira">Perwira</option>
+                    
                     </select>
             </div>
             </div>

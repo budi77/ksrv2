@@ -28,7 +28,11 @@ Route::get('/landing', function () {
 //Route::get('/patriotik2023/berjaya', \App\Http\Livewire\Patriotik\Success::class)->name('patriotik.berjaya');
 //Route::get('/patriotik2023', \App\Http\Livewire\Patriotik\Keputusan::class)->name('patriotik');
 
-//Route::get('/semakan', \App\Http\Livewire\Member\Semakan::class)->name('semakan');
+Route::get('/patriotik2025', \App\Http\Livewire\Patriotik\Index::class)->name('patriotik');
+Route::get('/patriotik2025/berjaya', \App\Http\Livewire\Patriotik\Success::class)->name('patriotik.berjaya');
+//Route::get('/patriotik2025', \App\Http\Livewire\Patriotik\Keputusan::class)->name('patriotik');
+
+Route::get('/semakan', \App\Http\Livewire\Member\Semakan::class)->name('semakan');
 
 //Route::get('/pancing2023', \App\Http\Livewire\Pancing\Borang::class)->name('pancing');
 
@@ -76,7 +80,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/pdf/patriotik2023/{id}', [App\Http\Controllers\PDFController::class, 'patriotik'])->name('pdf.patriotik');
     Route::get('/pdf/meeting', [App\Http\Controllers\PDFController::class, 'generatePDF'])->name('pdf.generatePDF');
 
-    Route::get('/patriotik2023/permohonan/lihat', \App\Http\Livewire\Patriotik\Application::class)->name('patriotik.lihat');
+    Route::get('/patriotik2025/permohonan/lihat', \App\Http\Livewire\Patriotik\Application::class)->name('patriotik.lihat');
     
     Route::get('/pancing2023/permohonan', \App\Http\Livewire\Pancing\Senarai::class)->name('pancing.lihat');
 

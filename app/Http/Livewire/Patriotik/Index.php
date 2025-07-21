@@ -10,7 +10,8 @@ use Carbon\Carbon;
 class Index extends Component
 {
 
-    public $departments, $penyertaan, $nama, $department_id, $alamat, $telefon, $emel, $tajuk_lagu, $penyanyi, $pautan, $extra1;
+    public $departments, $nama, $department_id, $alamat, $telefon, $emel, $tajuk_lagu, $penyanyi, $pautan, $extra1;
+    public $penyertaan = 'Kumpulan';
 
 
     public function mount()
@@ -19,20 +20,18 @@ class Index extends Component
     }
 
     protected $rules = [
-        'penyertaan' => 'required',
         'nama' => 'required',
         'department_id' => 'required',
         'alamat' => 'required',
         'telefon' => 'required',
         'emel' => 'required|email',
         'tajuk_lagu' => 'required',
-        'penyanyi' => 'required|max:20|integer',
+        'penyanyi' => 'required|max:22|integer',
         'pautan' => 'required',
         'extra1' => 'required',
     ];
 
     protected $messages = [
-        'penyertaan.required' => 'Sila pilih PENYERTAAN.',
         'nama.required' => 'Sila masukkan NAMA.',
         'department_id.required' => 'Sila pilih BAHAGIAN/NEGERI.',
         'alamat.required' => 'Sila masukkan ALAMAT.',
@@ -49,7 +48,7 @@ class Index extends Component
     public function render()
     {
         
-        return view('livewire.patriotik.tutup')->extends('layouts.master-without-nav');
+        return view('livewire.patriotik.index')->extends('layouts.master-without-nav');
     }
 
     public function store()

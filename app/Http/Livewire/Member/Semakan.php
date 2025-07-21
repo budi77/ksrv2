@@ -30,7 +30,7 @@ class Semakan extends Component
                 $query->where('name', 'LIKE', '%'. $this->search . '%')
                       ->orWhere('email', 'LIKE' , '%'. $this->search . '%');
             })
-            ->with(['payment' => fn($q) => $q->where('year', '2023')])
+            ->with(['payment' => fn($q) => $q->where('year', '2024')])
             ->where('active','1')
             ->orderby('name')->get();
         } else {

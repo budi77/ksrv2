@@ -9,13 +9,13 @@
                             <img src="{{ URL::asset('assets/images/KSR.png') }}" alt="" height="70">
                         </a>
                     </div>
-                    <p class="mt-1 fs-16 fw-bold text-dark"> MESYUARAT AGONG KELAB SUKAN DAN REKREASI SPRM KALI KE 15 TAHUN 2024</p>
+                    <p class="mt-1 fs-16 fw-bold text-dark"> MESYUARAT AGONG KELAB SUKAN DAN REKREASI SPRM KALI KE 16 TAHUN 2025</p>
                     {{-- <p class="mt-0 fs-20 fw-medium text-dark">SURUHANJAYA PENCEGAHAN RASUAH MALAYSIA</p> --}}
                 </div>
             </div>
         </div>
 
-        <div class="list-group">
+<!--         <div class="list-group">
     <a href="{{url('storage/' . 'AGENDA_AGM15_KSR_TAHUN_2024.pdf')}}" target="_blank" class="list-group-item list-group-item-action text-primary"
         ><i class="bx bxs-file-pdf"></i> Agenda AGM KSR 2024</a
     >
@@ -24,7 +24,7 @@
     >
     <a href="{{url('storage/' . 'sKSR_SPRM_2023_Annual_Report.pdf')}}" target="_blank" class="list-group-item list-group-item-action text-primary"
         ><i class="bx bxs-file-pdf"></i> Laporan Tahunan KSR 2023</a
-    >
+    > -->
 </div>
 
 <br>
@@ -39,7 +39,7 @@
 
             <div class="card">
                 <div class="card-body">
-                    <p class="text-center fw-bold">Semakan Pembayaran Yuran Ahli Tahun 2023</p>
+                    <p class="text-center fw-bold">Semakan Pembayaran Yuran Ahli Tahun 2024</p>
 
                     <div class="row justify-content-center mb-4">
                         <div class="col-lg-6">
