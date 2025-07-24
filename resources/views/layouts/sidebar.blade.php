@@ -168,11 +168,11 @@
 
 
                
-                {{-- <li class="nav-item">
-                    <a class="nav-link menu-link" href="{{ route('locker.dashboard') }}">
-                        <i class="ri-store-3-line"></i> <span>Loker</span>
+                <li class="nav-item">
+                    <a class="nav-link menu-link" href="{{ route('patriotik.lihat') }}">
+                        <i class="ri-store-3-line"></i> <span>Patriotik 2025</span>
                     </a>
-                </li> --}}
+                </li>
 
                
             </ul>
