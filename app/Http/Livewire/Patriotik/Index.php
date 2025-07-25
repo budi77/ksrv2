@@ -48,7 +48,7 @@ class Index extends Component
     public function render()
     {
         
-        return view('livewire.patriotik.index')->extends('layouts.master-without-nav');
+        return view('livewire.patriotik.tutup')->extends('layouts.master-without-nav');
     }
 
     public function store()
